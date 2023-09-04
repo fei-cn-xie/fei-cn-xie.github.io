@@ -224,6 +224,39 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/2023/09/04/%E7%99%BD%E9%A9%B9%E8%BF%87%E9%9A%99/" target="_self">
+          白驹过隙
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/09/04/%E7%99%BD%E9%A9%B9%E8%BF%87%E9%9A%99/" target="_self">
+        <div>
+          时间实在是太快了，今天下班回来就在捣鼓这个博客，没想还没配置好又快到10点了，今天的日记和计划还没做啊！以前在学校的时候总觉得时间挺多的，现在工作依然保留这种错觉真的是不应该。要是现在不抓紧时间，以后只会越来越感慨时间的无情。 今天工作主要在给Devops poc的portal配置SSO，感觉有点难，之前没好好学springBoot，现在捣鼓起来真的蛮花时间的。过去所有欠下的债，现在来偿还也蛮痛苦
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-09-04 21:47" pubdate>
+              2023-09-04
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/2023/09/04/article/" target="_self">
           article
         </a>
@@ -258,7 +291,7 @@
       <h2 class="index-header">
         
         <a href="/2023/09/03/2023-09-03-%E9%9D%99%E4%B8%8B%E5%BF%83%E6%9D%A5/" target="_self">
-          
+          静下心来
         </a>
       </h2>
 
@@ -273,12 +306,19 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-09-03 21:39" pubdate>
+            <time datetime="2023-09-03 19:25" pubdate>
               2023-09-03
             </time>
           </div>
         
         
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/diary/">#diary</a>
+            
+          </div>
         
       </div>
     </article>
@@ -411,6 +451,42 @@
   
   
   
+  <script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2017, 09, 11, 00, 00, 00); //北京时间2018-2-13 00:00:00
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "本站已运行 " +diffYears+" 年 "+diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+    siteTime();
+  </script>
+
 </div>
 
   </footer>
