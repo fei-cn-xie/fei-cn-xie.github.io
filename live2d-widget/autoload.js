@@ -35,7 +35,9 @@ if (screen.width >= 768) {
 		initWidget({
 			waifuPath: live2d_path + "waifu-tips.json",
 			//apiPath: "https://live2d.fghrsh.net/api/",
-			cdnPath: "/live2d_api/" //"https://npm.elemecdn.com/akilar-live2dapi@latest",
+			//apiPath: "https://api.moechun.fun/php/live2d_api/",
+			apiPath: "https://live2d.fghrsh.net/api/",
+			// cdnPath: "https://npm.elemecdn.com/akilar-live2dapi@latest/" //"https://npm.elemecdn.com/akilar-live2dapi@latest",
 			tools: ["hitokoto", "asteroids", "switch-model", "switch-texture", "photo", "info", "quit"]
 		});
 	});
