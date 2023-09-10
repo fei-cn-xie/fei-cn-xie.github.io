@@ -35,8 +35,8 @@ if (screen.width >= 768) {
 		initWidget({
 			waifuPath: live2d_path + "waifu-tips.json",
 			//apiPath: "https://live2d.fghrsh.net/api/",
-			//apiPath: "https://api.moechun.fun/php/live2d_api/",
-			apiPath: "https://live2d.fghrsh.net/api/",
+			//apiPath: "https://api.moechun.fun/php/live2d_api/", //只有换装按钮，没有模型
+			apiPath: "https://live2d.fghrsh.net/api/",  // 这条api可以用于换装
 			// cdnPath: "https://npm.elemecdn.com/akilar-live2dapi@latest/" //"https://npm.elemecdn.com/akilar-live2dapi@latest",
 			tools: ["hitokoto", "asteroids", "switch-model", "switch-texture", "photo", "info", "quit"]
 		});
