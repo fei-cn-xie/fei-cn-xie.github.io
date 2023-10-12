@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>2023-10-12-D-稳定内核</title>
+    <link href="/2023/10/12/2023-10-12-D-%E7%A8%B3%E5%AE%9A%E5%86%85%E6%A0%B8/"/>
+    <url>/2023/10/12/2023-10-12-D-%E7%A8%B3%E5%AE%9A%E5%86%85%E6%A0%B8/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>马马虎虎度过一天，因为今天依然是没有项目的一天，所以没什么工作任务，这样的情况反而让我有点颓废了。今天一开始还是有给自己做计划，早饭吃了，然后练习吉他，在吉他练习之后应该是复习java，但是在练习吉他时没有确定停止练习的条件，太陶醉于练习吉他了，并且中间给自己安排了几把游戏，于是乎技术的学习便自然而然的搁置了。所以今天的计划没有完美地执行。</p><p>但是我并不应该因噎废食。每天的计划还是要确定的，因为如果仅靠自己头脑每次做的临时决定来度过每一天，这样的方式会让未来的我陷入更加艰难的处境。每天的计划虽然说不一定都是很完美的，但是至少每一天要怎么度过是通过我的大脑事先思考过的。如果是随遇而安地过日子，那么我的生活就是得过且过，变得枯燥乏味。我并不想做一个普普通通毫无作为的一个人，生当做人杰，即便我可能永远不能成为人中龙凤，但是只要我坚持在朝着这个方向努力，就这一奋斗过程的体验就已经足够了。</p><p><del>以后在设立或执行计划时，先确定计划的开始条件和结束条件，比如以后在进行吉他练习时，如果给自己设定的练习时间是2小时，那么在开始练习时，就将完成上一任务或计划后作为开始条件，</del></p><p>刚刚又想到，其实我在执行计划时，应该尽自己最大努力按照时间执行，然后在执行过程中保持专注，切勿胡思乱想。胡思乱想有一定的好处，但是一直胡思乱想就不必要了。我可以在以后给自己安排一个胡思乱想的时间，比如计划一个公园散步的时间，在这段时间内，我可以去胡思乱想，而在做其他任务时，就要时刻保持专注，并且随时将与任务无关的想法干掉。比如在练习吉他时，我就应该想如何提高指法速度，练习音准时就想如何把握各种音高，学习技术时，就想这种技术该怎么运用，等等。这样在执行计划时，才更容易保持专注。无法专注的根源其实就是想了太多与所该专注的事情无关的内容，这些内容占据了大脑，那还怎么保持专注。</p><p>所以在以后的学习过程中，任务一开始，就排除杂念，一心一意学习，直到该任务时间结束。如果任务紧凑时，还应该在一个任务结束时，立即停止对该任务的思考，休息调整一下，并准备开始下一个任务。</p><p>排除杂念的这种方式之前我一直运用到治疗失眠的方法中，这个应该属于冥想的一种方式。这个方法还是蛮有效的，以后在处理其他各类事情时，如果需要我保持专注，我应该使用这一种方式来让自己保持专注。</p><p>虽然文章标题写的是稳定内核，但是实际的内容更过多的是保持专注相关的内容。这也无妨，一开始的想法其实是比较模糊的，所以标题难免不对应文章内容，在边写边思考的过程中，才慢慢发现自己到底想要解决什么样的问题。标题不对应就不对应吧，以后我还会进行大量的写作，我可以慢慢在这个过程中把握思考和写作表达的技巧，现在就相当于发现了我存在的问题，一旦发现了问题，那么事情就简单了。一步一步解决问题即可！！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Diary</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>diary</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>2023-10-11-D-畏惧吗？</title>
     <link href="/2023/10/11/2023-10-11-D-%E7%95%8F%E6%83%A7%E5%90%97%EF%BC%9F/"/>
     <url>/2023/10/11/2023-10-11-D-%E7%95%8F%E6%83%A7%E5%90%97%EF%BC%9F/</url>
@@ -33,19 +58,21 @@
     <link href="/2023/10/11/2023-10-11-T-JAVA%E5%90%8E%E7%AB%AF/"/>
     <url>/2023/10/11/2023-10-11-T-JAVA%E5%90%8E%E7%AB%AF/</url>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="1-易忘知识点、"><a href="#1-易忘知识点、" class="headerlink" title="1. 易忘知识点、"></a>1. 易忘知识点、</h1><blockquote><p>用于记录已遗忘的知识点</p></blockquote><h2 id="1-1-基础语法"><a href="#1-1-基础语法" class="headerlink" title="1.1 基础语法"></a>1.1 基础语法</h2><ul><li>一个JAVA文件中的不同类中均可以有public static 方法， 并且可用<code>java 类名</code>的方式运行public static方法</li><li>javadoc 用于生成java文件的文档，使用方式<code>javadoc xxx.java</code>.</li><li>补码 &#x3D; 反码 + 1， 计算机运行使用补码<ul><li>正数：原码，反码，补码都一样：第一位是符号位，0代表正数，数值位为二进制数</li><li>负数：<ul><li>原码：第一位是符号位，1代表负数，数值位为2进制数</li><li>反码：第一位是符号位，1代表负数，数值位为对应原码的数值位取反</li><li>补码：反码数值位加1</li></ul></li></ul></li></ul><p>​</p>]]></content>
     
     
     <categories>
       
-      <category>Diary</category>
+      <category>Tech</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>diary</tag>
+      <tag>Tech</tag>
+      
+      <tag>Java</tag>
       
     </tags>
     
@@ -79,7 +106,7 @@
   
   
   <entry>
-    <title>绽放自己的生命</title>
+    <title>2023-10-02-D-绽放自己的生命</title>
     <link href="/2023/10/02/2023-10-02-D-%E7%BB%BD%E6%94%BE%E8%87%AA%E5%B7%B1%E7%9A%84%E7%94%9F%E5%91%BD/"/>
     <url>/2023/10/02/2023-10-02-D-%E7%BB%BD%E6%94%BE%E8%87%AA%E5%B7%B1%E7%9A%84%E7%94%9F%E5%91%BD/</url>
     
@@ -104,7 +131,7 @@
   
   
   <entry>
-    <title>好好体验美好的人生</title>
+    <title>2023-10-01-D-好好体验美好的人生</title>
     <link href="/2023/10/01/2023-10-01-D-%E5%A5%BD%E5%A5%BD%E4%BD%93%E9%AA%8C%E7%BE%8E%E5%A5%BD%E7%9A%84%E4%BA%BA%E7%94%9F/"/>
     <url>/2023/10/01/2023-10-01-D-%E5%A5%BD%E5%A5%BD%E4%BD%93%E9%AA%8C%E7%BE%8E%E5%A5%BD%E7%9A%84%E4%BA%BA%E7%94%9F/</url>
     
@@ -183,7 +210,7 @@
   
   
   <entry>
-    <title>文章管理</title>
+    <title>2023-09-19-E-文章管理</title>
     <link href="/2023/09/19/2023-09-19-E-%E6%96%87%E7%AB%A0%E7%AE%A1%E7%90%86/"/>
     <url>/2023/09/19/2023-09-19-E-%E6%96%87%E7%AB%A0%E7%AE%A1%E7%90%86/</url>
     
@@ -208,7 +235,7 @@
   
   
   <entry>
-    <title>金字塔原理</title>
+    <title>2023-09-18-R-金字塔原理</title>
     <link href="/2023/09/18/2023-09-19-R-%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86/"/>
     <url>/2023/09/18/2023-09-19-R-%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86/</url>
     
@@ -233,7 +260,7 @@
   
   
   <entry>
-    <title>人生啊人生</title>
+    <title>2023-09-18-D-人生啊人生</title>
     <link href="/2023/09/18/2023-09-18-D-%E4%BA%BA%E7%94%9F%E5%95%8A%E4%BA%BA%E7%94%9F/"/>
     <url>/2023/09/18/2023-09-18-D-%E4%BA%BA%E7%94%9F%E5%95%8A%E4%BA%BA%E7%94%9F/</url>
     
@@ -258,7 +285,7 @@
   
   
   <entry>
-    <title>不要心慌</title>
+    <title>2023-09-14-D-不要心慌</title>
     <link href="/2023/09/14/2023-09-14-D-%E4%B8%8D%E8%A6%81%E5%BF%83%E6%85%8C/"/>
     <url>/2023/09/14/2023-09-14-D-%E4%B8%8D%E8%A6%81%E5%BF%83%E6%85%8C/</url>
     
@@ -283,7 +310,7 @@
   
   
   <entry>
-    <title>情绪异常</title>
+    <title>2023-09-11-D-情绪异常</title>
     <link href="/2023/09/11/2023-09-11-D-%E6%83%85%E7%BB%AA%E5%BC%82%E5%B8%B8/"/>
     <url>/2023/09/11/2023-09-11-D-%E6%83%85%E7%BB%AA%E5%BC%82%E5%B8%B8/</url>
     
@@ -308,7 +335,7 @@
   
   
   <entry>
-    <title>思维疲惫</title>
+    <title>2023-09-10-D-思维疲惫</title>
     <link href="/2023/09/10/2023-09-10-D-%E6%80%9D%E7%BB%B4%E7%96%B2%E6%83%AB/"/>
     <url>/2023/09/10/2023-09-10-D-%E6%80%9D%E7%BB%B4%E7%96%B2%E6%83%AB/</url>
     
@@ -333,7 +360,7 @@
   
   
   <entry>
-    <title>开始正循环</title>
+    <title>2023-09-09-D-开始正循环</title>
     <link href="/2023/09/09/2023-09-09-D-%E5%BC%80%E5%A7%8B%E6%AD%A3%E5%BE%AA%E7%8E%AF/"/>
     <url>/2023/09/09/2023-09-09-D-%E5%BC%80%E5%A7%8B%E6%AD%A3%E5%BE%AA%E7%8E%AF/</url>
     
@@ -358,7 +385,7 @@
   
   
   <entry>
-    <title>清理伤疤</title>
+    <title>2023-09-09-清理伤疤</title>
     <link href="/2023/09/09/2023-09-09-D-%E6%B8%85%E7%90%86%E4%BC%A4%E7%96%A4/"/>
     <url>/2023/09/09/2023-09-09-D-%E6%B8%85%E7%90%86%E4%BC%A4%E7%96%A4/</url>
     
@@ -383,11 +410,11 @@
   
   
   <entry>
-    <title>寻找水源</title>
+    <title>2023-09-07-D-寻找水源</title>
     <link href="/2023/09/07/2023-09-07-D-%E5%AF%BB%E6%89%BE%E6%B0%B4%E6%BA%90/"/>
     <url>/2023/09/07/2023-09-07-D-%E5%AF%BB%E6%89%BE%E6%B0%B4%E6%BA%90/</url>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>        <div id="aplayer-RbPdvpas" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-RbPdvpas"),            narrow: false,            autoplay: false,            showlrc: 3,            music: {              title: "title",              author: "author",              url: "https://github.com/fei-cn-xie/music/blob/main/记录会.mp3",              pic: "",              lrc: "http://olfa3o6q1.bkt.clouddn.com/See%20You%20Again.lrc"            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script>        <div id="aplayer-ermYaZce" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-ermYaZce"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "title",              author: "author",              url: "/img/记录会.mp3",              pic: "",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><audio id="audio" controls="" preload="none" style="clear:both;display:block;margin:auto">      <source id="mp3" src="https://github.com/fei-cn-xie/music/blob/main/%E8%AE%B0%E5%BD%95%E4%BC%9A.mp3"></audio><p>昨晚偶然又重温了一下桃花心木，果然，不同年龄看相同的内容往往有着不同的感想。小学上课时只记得书本中的插画，至于其中的道理，也只是匆匆一瞥，并无在意。记得大学有一次暑假回家路上，也重温了一下这篇课文，道理是懂了，但是却没有正真做到去像那些积极生长的桃花心木一样，去主动寻找水源，主动获取阳光。现在，这篇课文又重新出现在了我的面前，我似乎意识到了我应该去自主生长了，当生活中有点风风雨雨，我也应该去独当一面了。我现在也像那些桃花心木一样，能够去主动寻找水源了，不过现在的我，显然还没有成为参天树一棵，接下来还会有许许多多不可知的风雨雷电。而我，对于这些风雨雷电，我并不畏惧。我想，我是这个世界上的一个独一无二的有自我意识的物质，只要我还在这个世界上存在着，那么我就不会被击倒！</p><p>最近的我，面临的风雨之一是对年龄的恐惧。我现在25了，但是我并不想接受这个现实，我还觉得我还年轻啊，怎么就25了。可是事实就是这样，我已经25了，而且紧接着是26，27，28，29，30… 如果我不去接受我自己，那么这每一个数字，接下来的每一年我都将在痛苦中度过。所以，25，有什么可怕的呢？是青春不再了吗？我想不是的，就像张卫健说的，只要有一颗充满活力的心，那么你就永远在青春里，为什么要伤春悲秋？为什么要自我否定？我能在这个世界健康的存在，那么怎么能让这点微不足道的小事情占据我的内心，占据我的生活。生活这么多姿多彩啊，你看那蓝蓝的天空，那白白的云朵，那翠绿鲜红的花草，那天空翱翔的雄鹰，那海里畅游的白豚，那草原奔腾的野马… 一切都是那么的生机盎然，一切都是那么精彩纷呈。所以啊，你为什么要悲伤呢？出去看看花草，看看天空的鸟儿，看看水里的鱼儿，看看这个美丽的世界，我，这一条鲜活的生命，也在这美好的世界上存在着呀！</p><p><img src="https://www.szxuexiao.com/uploadimages/keben/144216_4c5b65b554e60.jpg" alt="桃花心木"></p><p><img src="https://k.sinaimg.cn/n/translate/w1200h1816/20180119/GTIT-fyqtwzu8918579.jpg/w700d1q75cms.jpg?by=cms_fixed_width" alt="桃花心木"></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>        <div id="aplayer-VkzOLgfD" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-VkzOLgfD"),            narrow: false,            autoplay: false,            showlrc: 3,            music: {              title: "title",              author: "author",              url: "https://github.com/fei-cn-xie/music/blob/main/记录会.mp3",              pic: "",              lrc: "http://olfa3o6q1.bkt.clouddn.com/See%20You%20Again.lrc"            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script>        <div id="aplayer-lgOIWdsa" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-lgOIWdsa"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "title",              author: "author",              url: "/img/记录会.mp3",              pic: "",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><audio id="audio" controls="" preload="none" style="clear:both;display:block;margin:auto">      <source id="mp3" src="https://github.com/fei-cn-xie/music/blob/main/%E8%AE%B0%E5%BD%95%E4%BC%9A.mp3"></audio><p>昨晚偶然又重温了一下桃花心木，果然，不同年龄看相同的内容往往有着不同的感想。小学上课时只记得书本中的插画，至于其中的道理，也只是匆匆一瞥，并无在意。记得大学有一次暑假回家路上，也重温了一下这篇课文，道理是懂了，但是却没有正真做到去像那些积极生长的桃花心木一样，去主动寻找水源，主动获取阳光。现在，这篇课文又重新出现在了我的面前，我似乎意识到了我应该去自主生长了，当生活中有点风风雨雨，我也应该去独当一面了。我现在也像那些桃花心木一样，能够去主动寻找水源了，不过现在的我，显然还没有成为参天树一棵，接下来还会有许许多多不可知的风雨雷电。而我，对于这些风雨雷电，我并不畏惧。我想，我是这个世界上的一个独一无二的有自我意识的物质，只要我还在这个世界上存在着，那么我就不会被击倒！</p><p>最近的我，面临的风雨之一是对年龄的恐惧。我现在25了，但是我并不想接受这个现实，我还觉得我还年轻啊，怎么就25了。可是事实就是这样，我已经25了，而且紧接着是26，27，28，29，30… 如果我不去接受我自己，那么这每一个数字，接下来的每一年我都将在痛苦中度过。所以，25，有什么可怕的呢？是青春不再了吗？我想不是的，就像张卫健说的，只要有一颗充满活力的心，那么你就永远在青春里，为什么要伤春悲秋？为什么要自我否定？我能在这个世界健康的存在，那么怎么能让这点微不足道的小事情占据我的内心，占据我的生活。生活这么多姿多彩啊，你看那蓝蓝的天空，那白白的云朵，那翠绿鲜红的花草，那天空翱翔的雄鹰，那海里畅游的白豚，那草原奔腾的野马… 一切都是那么的生机盎然，一切都是那么精彩纷呈。所以啊，你为什么要悲伤呢？出去看看花草，看看天空的鸟儿，看看水里的鱼儿，看看这个美丽的世界，我，这一条鲜活的生命，也在这美好的世界上存在着呀！</p><p><img src="https://www.szxuexiao.com/uploadimages/keben/144216_4c5b65b554e60.jpg" alt="桃花心木"></p><p><img src="https://k.sinaimg.cn/n/translate/w1200h1816/20180119/GTIT-fyqtwzu8918579.jpg/w700d1q75cms.jpg?by=cms_fixed_width" alt="桃花心木"></p>]]></content>
     
     
     <categories>
@@ -408,7 +435,7 @@
   
   
   <entry>
-    <title>敞开心扉吧</title>
+    <title>2023-09-06-D-敞开心扉吧</title>
     <link href="/2023/09/06/2023-09-06-D-%E6%95%9E%E5%BC%80%E5%BF%83%E6%89%89%E5%90%A7/"/>
     <url>/2023/09/06/2023-09-06-D-%E6%95%9E%E5%BC%80%E5%BF%83%E6%89%89%E5%90%A7/</url>
     
@@ -433,7 +460,7 @@
   
   
   <entry>
-    <title>我感觉风浪要来了</title>
+    <title>2023-09-05-我感觉风浪要来了</title>
     <link href="/2023/09/05/2023-09-15-D-%E6%88%91%E6%84%9F%E8%A7%89%E9%A3%8E%E6%B5%AA%E8%A6%81%E6%9D%A5%E4%BA%86/"/>
     <url>/2023/09/05/2023-09-15-D-%E6%88%91%E6%84%9F%E8%A7%89%E9%A3%8E%E6%B5%AA%E8%A6%81%E6%9D%A5%E4%BA%86/</url>
     
@@ -458,7 +485,7 @@
   
   
   <entry>
-    <title>白驹过隙</title>
+    <title>2023-09-04-D-白驹过隙</title>
     <link href="/2023/09/04/2023-09-04-D-%E7%99%BD%E9%A9%B9%E8%BF%87%E9%9A%99/"/>
     <url>/2023/09/04/2023-09-04-D-%E7%99%BD%E9%A9%B9%E8%BF%87%E9%9A%99/</url>
     
@@ -483,9 +510,9 @@
   
   
   <entry>
-    <title>静下心来</title>
-    <link href="/2023/09/03/2023-09-03-%E9%9D%99%E4%B8%8B%E5%BF%83%E6%9D%A5/"/>
-    <url>/2023/09/03/2023-09-03-%E9%9D%99%E4%B8%8B%E5%BF%83%E6%9D%A5/</url>
+    <title>2023-09-03-D-静下心来</title>
+    <link href="/2023/09/03/2023-09-03-D-%E9%9D%99%E4%B8%8B%E5%BF%83%E6%9D%A5/"/>
+    <url>/2023/09/03/2023-09-03-D-%E9%9D%99%E4%B8%8B%E5%BF%83%E6%9D%A5/</url>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="静下心来"><a href="#静下心来" class="headerlink" title="静下心来"></a>静下心来</h1><p>慢下脚步，静下心来，冷静，欲速则不达，这些词汇总是是不是出现在我的脑海，但是我却一直没有真正做到过。过去的25年，除去懵懂无知的15年，从15岁到25岁这10年，我一直在在陷入急于求成的泥潭中，什么都想做，但是什么都没有真正的坚持下来。这个周末本打算好好分析一下自己的现状，但是一晃又虚度过去了，不过准确来说并不是虚度，周末看了强风吹拂这部动漫。我感觉我又充满了能量，我也想像清濑灰二一样，阳光，笃定，自信，充满活力。他一直在探索跑步的意义，并且不断地付出行动，无论是招收队员，还是给队员制定训练计划，他是那么的沉着冷静，他的信念从一开始就没有动摇过。而我，我活着的意义是什么呢？我应该最求什么呢？我似乎还并不知道，是不知道吗？仔细想想是自己不够冷静坚定，其实我有很多想要最求的东西，不过因为自己急于求成，让自己追求的梦想早早的在摇篮之中就因失去能量而逐渐枯萎。</p><p>我想要弹吉他，想要在中国，在这个世界循游演出，然而现在因为没有制定可行的计划并落实而止步于和弦转换，特别是大横按。学个吉他很难吗？我总容易把困难放大，是为什么？我有一双健全灵活的双手，视力正常的眼睛，听觉敏锐的耳朵，这就已经是非常大的优势了，而我还总在妄自菲薄，自己打击自己，让自己如负重担，何必呢？想想那些没有健全身体的人，我在抱怨什么呢？他们都能阳光积极的前进，而我却要如具腐尸一样停滞不前，这是不应该的。所以勇敢向前吧，去制定合理可行的计划，去追求自己的吉他之梦。</p><p>我还想去跑马拉松，看完强风吹拂，我感觉我也爱上了跑步🏃，以前的我也常常跑步，这个常常是在我记忆中的常常，我并不讨厌运动，相反，我很热爱它，但是过去的我因为经常被那些消极的人群影响了，他们不热爱运动，总在抱怨老师或学校的安排，我那个时候没有自己的独立思想，也跟着他们去了。渐渐地，我便开始的变得虚弱，感觉我像是一个病入膏肓的老人，经不起半点风吹雨打。但是，我不想这样啊。大学时期的我，并没有真正领悟到我应该去开始什么样的人生，我迷迷糊糊过了大学四年。大学四年之中，我感觉我并没有做什么真正又意义，没有做在我世界里惊天动地的事情，我觉得这是一件遗憾，过去的我太缺乏勇气了，也缺乏目标。大一尚且阳光自然，大二之后便渐渐有所迷失，不过当时看完平凡的世界，似乎又点燃了我的热情，那时候的豁然开朗也是值得欣慰的，记得大二暑假回家，最后从万僧寺徒步走到家中，虽有街坊异样眼光，但就是那次，我内心便逐渐开始强大，不再容易被别人的闲言碎语所击败。诶诶额，不对，本来想说自己大学的败退，怎么逐渐发现了光点？啊！我终于明白，我过去没有去真真记录与分析自己的行为，所以对于当时的状况，我做出的选择可能已经是一件比较明智的选择了。当然，仔细想想，有明智的选择，也有不明智的选择。面对困难，我退缩过，也无畏前进过，好的坏的都有。所以我并不算差劲，但也不算优秀。今后我要做的，就是保持头脑清醒，保持阳光积极，去丰富自己的人生。</p><p><img src="/img/IMG_5038.jpeg" alt="IMG_5038"></p><p>虽然上面写了一两大段文字，但是逻辑还是有点混乱，我并没有静下心来。现在的我，还是那么急躁。这种急躁来自诸多原因。第一，我没有在周末前安排周末的计划，只是大致的想了想周末要重新调整自己，到了周末总觉得时间充裕，计划也就没有制定，行为便混乱起来了。我现在需要明确一点，其实我还并没有强大稳定的内心，所以只是自己随便想想根本就不可能把事情做好。不仔细分析自己的行为，不认真给自己安排可行的计划，我还是会把我自己的人生荒废下去。第二，太在意别人的言论，就这一点，我总在反反复复，有时候明明不在意了，过了一段时间又开始了，应该是没有认真分析记录反思。不要去在意那些对你自己的行为产生消极影响的言语，他们，那些对你闲言碎语的人，那些对你唱衰的人，那些嘲笑讽刺你的人都不是你人生中值得关注的人，他们的存在，不是让你被击垮的，而是帮助你成长的。他们攻击越是猛烈，说明你的行为愈发正确，你就更应该勇往直前，因为阳光照到他们身上，他们会感到刺痛而声嘶力竭的嘶吼，他们惧怕阳光！所以，用阳光驱散他们吧！第三，想的远大于做的。我还是容易沉浸在幻想之中而不去行动，所有的事情并不是那么困难，我只需要一步一步，一步一步前进就能够去夺得自己的目标，就像今晚去拿卡一样，徒步往返5公里不一样完成了吗？而且在返程还是跑回来的。生命是多么的美妙，我不要总把自己困在自己的想象之中，我可以去做很多事情，而且这些事情都是非常非常非常有意义的，成为你自己，那就是知行合一。</p><p>今天时间是不够了，还有15分钟就到凌晨12点了，我应该早点休息了。冷静并不是一个一蹴而就的事情，我需要保持头脑清醒，在以后每一次的抉择之中一定要沉着冷静，先好好分析一下现状，再逐步开展下一步计划。吉他学习，英语学习，技术学习，阅读，健身，日记，这些事情明天要做好计划。计划不一定要完美，好的计划也是一步一步调整修正才出来的，所以先不必焦虑计划行不行得通，但是一定要制定。可以拿以前的计划分析一下，自己为什么没有坚持下来。加油！</p>]]></content>
     
@@ -502,9 +529,9 @@
   
   
   <entry>
-    <title>新的开始</title>
-    <link href="/2023/08/30/2023-08-30-%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/"/>
-    <url>/2023/08/30/2023-08-30-%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/</url>
+    <title>2023-08-30-D-新的开始</title>
+    <link href="/2023/08/30/2023-08-30-D-%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/"/>
+    <url>/2023/08/30/2023-08-30-D-%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/</url>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="1-新的开始之Blog"><a href="#1-新的开始之Blog" class="headerlink" title="1. 新的开始之Blog"></a>1. 新的开始之Blog</h1><p>在22年我曾搭过一个博客，但是在进入IBM之后就逐渐停止了维护，至今已过去一年多。昨天突然觉悟，我又想开始维护自己的博客了，我觉得维护这个博客不仅仅用来做一些技术学习的笔记，更多的是来记录我个人的成长以及内心的感悟，并指导自己未来的行为。因为我逐渐觉得在我过去近25年的光景中，我认认真真度过的时日并不多，大部分时间都像是一个无头苍蝇，而昨天摸鱼时幡然醒悟，我觉得也应该开始记录了。而且在看过【】的博客之后，愈发觉得在博客上记录自己的经历以及想法是一件非常有意义的事情。因此从此刻开始，我会慢慢地开始来记录自己的生活，记录自己的想法。</p><p>其实现在的我文笔还是比较差的，所以写博客也可以提升我的写作水平，希望以后的我写作时能行云流水，篇篇华章。</p><h1 id="2-新的开始之Technology"><a href="#2-新的开始之Technology" class="headerlink" title="2. 新的开始之Technology"></a>2. 新的开始之Technology</h1><p>自入职以来，我已经很少认真的学习IT技术了，原本的初心如今也忘得差不多了。而在8月初，项目经理给我安排了一个搭建DevOps流水线的任务，而这一次的这个任务又让我重新燃起了对技术的热情。虽然一开始一头雾水，但是因为自己比较擅长技术性的问题，在这个过程中遇到的麻烦都让我热情高涨。不过我个人的实力还是有点落后，毕竟之前没有做过搭建devops流水线的任务。在开始时，虽然我个人感觉良好，但是客户有点担心我做不出来，又找了一个做过devops的技术大佬来支持。不过客户是对的，要不是没有这位大佬来支持，我可能真做不出来😅。内容其实不复杂，但是由于没有经验，真正动手做还是一头雾水，就像是没有学过乘法表的人算乘法会很难一样。</p><p>话说远了，其实这次我是真正又燃起了技术的热情，而这热情并不是空穴来风。首先是前天看到up主祝野的视频，她那种笃定强大的精神状态深深触动了我，我觉得人生，青春应该像她这样才对，对自己的事情认认真真，把自己的未来紧紧握在自己手中。这种强硬的精神追求，这样坚定不移的理想信念，我是非常想要拥有的。而我在思考我到底应该做什么的时候，看到她的视频，我觉得我对技术的热情又在内心慢慢生根发芽了。她曾是华中科技大学的学生，以前主要发环艺类，建模类的视频，最近一次更新是她自20年来的第一支视频。她在最新的视频中轻描淡写地说出了她考了个清华大学的研究生，真的非常令人羡慕，而且是人机交互方向的，还是专业第一，复试第一。有那么一瞬间，我也想去考研了，可是一想到自己的年龄，今年就快25了，要是明年考研，即便是考上，后年开始读，等三年毕业就已经30了，有点后怕。不过以后还是该仔细想想，至少在今年年底决定好，到底要不要考研。如果实在不该去那不去也罢，自己也不会后悔。但是现在，虽然我没有真正决定还要不要考研，可我可以来学习我真正感兴趣的，擅长的东西，比如这些代码，这些电子机械小玩意，我觉得我会做出一些小成就的。而这中想法就是让我有热情的原因。当然除了热情，还有它背后能给我带来的收益，学习这些技术不仅可以给我带来巨大的成就感，而且在这个以科学技术作为第一生产力的时代，学习技术也可以让我有一个稳定的饭碗🥣。通过对技术的学习，提升自己的能力，完善自己的角色，我觉得也是人生之中不可多得的一件美事。所以且行且珍惜，没准10年或20年后，我会感谢我自己能认认真真学习技术的自己。</p>]]></content>
     
