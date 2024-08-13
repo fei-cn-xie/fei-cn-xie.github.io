@@ -4,7 +4,32 @@
   
   
   <entry>
-    <title>Kubernetes</title>
+    <title>2024-08-13-Tue-R-Creative_Guitar</title>
+    <link href="/2024/08/13/2024-08-13-Tue-R-Creative_Guitar/"/>
+    <url>/2024/08/13/2024-08-13-Tue-R-Creative_Guitar/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    
+    
+    <categories>
+      
+      <category>Reading</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Reading</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>2024-08-13-Wed-T-Kubernetes</title>
     <link href="/2024/08/13/2024-08-13-Wed-T-Kubernetes/"/>
     <url>/2024/08/13/2024-08-13-Wed-T-Kubernetes/</url>
     
@@ -31,7 +56,7 @@
   
   
   <entry>
-    <title>Git操作大全</title>
+    <title>2024-08-13-Wed-T-Git操作大全</title>
     <link href="/2024/08/13/2024-08-13-Wed-T-Git%E6%93%8D%E4%BD%9C%E5%A4%A7%E5%85%A8/"/>
     <url>/2024/08/13/2024-08-13-Wed-T-Git%E6%93%8D%E4%BD%9C%E5%A4%A7%E5%85%A8/</url>
     
@@ -58,7 +83,7 @@
   
   
   <entry>
-    <title>NodeJS配置</title>
+    <title>2024-08-13-Wed-T-NodeJS配置</title>
     <link href="/2024/08/13/2024-08-13-Wed-T-NodeJS%E9%85%8D%E7%BD%AE/"/>
     <url>/2024/08/13/2024-08-13-Wed-T-NodeJS%E9%85%8D%E7%BD%AE/</url>
     
@@ -85,7 +110,7 @@
   
   
   <entry>
-    <title>2024-08-13-快捷键大全</title>
+    <title>2024-08-13-Wed-T-快捷键大全</title>
     <link href="/2024/08/13/2024-08-13-Wed-T-%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/"/>
     <url>/2024/08/13/2024-08-13-Wed-T-%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/</url>
     
@@ -110,7 +135,7 @@
   
   
   <entry>
-    <title>2024-08-13-Hexo的瓶瓶罐罐</title>
+    <title>2024-08-13-Wed-T-Hexo的瓶瓶罐罐</title>
     <link href="/2024/08/13/2024-08-13-Wed-T-Hexo%E7%9A%84%E7%93%B6%E7%93%B6%E7%BD%90%E7%BD%90/"/>
     <url>/2024/08/13/2024-08-13-Wed-T-Hexo%E7%9A%84%E7%93%B6%E7%93%B6%E7%BD%90%E7%BD%90/</url>
     
@@ -166,7 +191,7 @@
     <link href="/2024/07/31/2024-07-31-Wed-T-Python%E7%8E%AF%E5%A2%83%E7%AE%A1%E7%90%86/"/>
     <url>/2024/07/31/2024-07-31-Wed-T-Python%E7%8E%AF%E5%A2%83%E7%AE%A1%E7%90%86/</url>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><ul><li>日记：D</li><li>总结反思：S</li><li>技术文章：T</li><li>读书笔记：R</li><li>效率管理：E</li></ul><p><code>index_img: /img/</code>; <code>summary:</code> </p></blockquote><h1 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h1><p>在使用Python开发时，遇到了很多配置环境的情形。有时需要安装不同版本的Python，有时需要安装不同的Python包，有时需要安装不同的Python包的不同版本。</p><p>最开始使用时我基本上都是看网上的教程，不同的Python项目可能使用不同的环境管理工具，不知不觉就用过了pip、conda、mamba、virtualenv、venv等等。这些工具各有优劣，有时候我也会混用，导致环境变量混乱，有时候还会出现冲突。</p><p>由于一直没有什么一致性，导致电脑上的Python环境比较乱，我自己也感觉云里雾里的，所以我打算总结一下这些工具的使用方法，以及它们的优缺点。最后会给出我自己推荐的一些使用方法。</p><h1 id="2-Python管理工具分类"><a href="#2-Python管理工具分类" class="headerlink" title="2.Python管理工具分类"></a>2.Python管理工具分类</h1><p>Python管理工具可以分为两类：</p><p>包管理工具：用于安装、卸载、更新Python包，如pip、conda、mamba等。</p><p>环境管理工具：用于管理Python环境，如venv、virtualenv、conda、mamba等。</p><p>我们这里主要讨论环境管理工具，因为包管理工具的使用方法比较简单，而且大多数情况下我们都会使用pip，所以这里不再赘述。</p><h1 id="3-Python环境管理工具"><a href="#3-Python环境管理工具" class="headerlink" title="3. Python环境管理工具"></a>3. Python环境管理工具</h1><h2 id="3-1-venv"><a href="#3-1-venv" class="headerlink" title="3.1 venv"></a>3.1 venv</h2><p>venv是Python自带的环境管理工具，其使用起来是最简单，也是最不需要操心的。<br>使用方法</p><ol><li><p>创建一个新的环境：<code>python -m venv .venv</code><br> 这样就会在当前目录下创建一个.venv的文件夹，里面包含了一个新的Python环境。当然，这里的.venv可以替换成任何你想要的名字，用.venv是因为这样可以创建一个自动隐藏的文件夹，在git中也很容易把它忽略掉。</p><p> 注意，这里的python是你想要创建环境的Python版本，如果你有多个Python版本，可以使用python3或者python3.10等。</p></li><li><p>激活这个环境：<br> <code>source .venv/bin/activate</code></p></li><li><p>安装Python包：<br> 在激活环境之后，使用pip安装Python包会把包安装到这个环境中，而不是全局环境。安装的包会放在.venv&#x2F;lib&#x2F;python3.10&#x2F;site-packages目录下。<br> <code>pip install numpy</code><br> 注意，这里的numpy是包名，你可以替换成任何你想要的包名。</p></li><li><p>退出环境：<br> 在环境中使用deactivate命令可以退出环境。<br> <code>deactivate</code><br>优缺点<br> 优点：<br> 原生工具，简单易用，不需要安装额外的软件。<br> 速度快，因为不需要下载额外的软件包。<br> 环境隔离，不会影响全局环境。<br> 可以在任何地方创建环境，不需要管理员权限。<br> 每个项目中的环境都在本项目目录下，与其他项目做到了物理隔离，不易弄混。<br> 缺点：<br> 每个项目都需要创建一个新的环境，如果有很多项目，会占用很多空间。<br> 无法共享环境，如果有多个项目使用同一个环境，需要重复创建。<br> 不好切换Python版本，每个环境都是一个Python版本，无法切换。<br> 只适用于Python 3.3及以上版本。<br> 简单来说，如果你不在意空间占用，不需要切换Python版本，那么venv是一个很好的选择。</p></li></ol><h2 id="3-2-virtualenv"><a href="#3-2-virtualenv" class="headerlink" title="3.2 virtualenv"></a>3.2 virtualenv</h2><pre><code class="hljs">由于venv有很大的占用空间的问题，所以有人开发了virtualenv，它是一个第三方的环境管理工具，可以解决venv的一些问题。virtualenv的使用方法和venv基本一样，只是需要安装virtualenv这个包。</code></pre><h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><pre><code class="hljs">1. 安装virtualenv：`pip install virtualenv`2. 创建一个新的环境：`virtualenv .venv`3. 如果你想指定Python版本，可以使用如下命令：`virtualenv -p python3.10 .venv`4. 激活这个环境：`source .venv/bin/activate`5. 安装Python包：`pip install numpy`6. 退出环境：`deactivate`</code></pre><p>但它和venv的区别在于，virtualenv会复用系统的Python库，不会重复安装，所以占用的空间会小很多。如果你不想复用系统的Python库，可以使用<code>--no-site-packages</code>选项，在本项目中安装全新的Python库。</p><p>优缺点<br>    优点：</p><pre><code class="hljs">    可以指定Python版本。    可以共享环境，不需要重复创建。    占用空间小，不会重复安装Python库。    适用于Python 2.7及以上版本。缺点：    非原生工具，需要安装额外的软件。    简单来说，如果你在意空间占用，且想要和venv相似的使用体验，那么virtualenv是一个很好的选择。</code></pre><h2 id="3-3-conda"><a href="#3-3-conda" class="headerlink" title="3.3 conda"></a>3.3 conda</h2><p>conda是一个非常强大的环境管理工具，它不仅可以管理Python环境，还可以管理其他语言的环境，如R、Julia等。<br>conda、Anaconda、miniconda、mamba、micromamba之间的关系<br>conda是Anaconda的一部分，Anaconda是一个数据科学家常用的工具包，里面包含了很多数据科学家常用的软件包，如numpy、pandas、scipy等。但有用户反映Anaconda安装的软件包太多，占用空间太大，所以有人开发了miniconda，它是Anaconda的精简版，只包含了conda和一些基本的软件包。</p><p>不管是Anaconda还是miniconda，都是使用conda这个包管理工具来管理环境，但conda在安装软件包时是单线程的，速度比较慢，所以有人开发了mamba，它是conda的一个加速版，速度比conda快很多。</p><p>mamba和conda的使用方法基本一样，只是在安装软件包时使用mamba代替conda。用户基本可以认为，mamba命令是conda命令的一个别名。</p><p>micromamba是mamba的一个精简版，micromamba的base环境是空的，不包含任何软件包。</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h1><p>在使用Python开发时，遇到了很多配置环境的情形。有时需要安装不同版本的Python，有时需要安装不同的Python包，有时需要安装不同的Python包的不同版本。</p><p>最开始使用时我基本上都是看网上的教程，不同的Python项目可能使用不同的环境管理工具，不知不觉就用过了pip、conda、mamba、virtualenv、venv等等。这些工具各有优劣，有时候我也会混用，导致环境变量混乱，有时候还会出现冲突。</p><p>由于一直没有什么一致性，导致电脑上的Python环境比较乱，我自己也感觉云里雾里的，所以我打算总结一下这些工具的使用方法，以及它们的优缺点。最后会给出我自己推荐的一些使用方法。</p><h1 id="2-Python管理工具分类"><a href="#2-Python管理工具分类" class="headerlink" title="2.Python管理工具分类"></a>2.Python管理工具分类</h1><p>Python管理工具可以分为两类：</p><p>包管理工具：用于安装、卸载、更新Python包，如pip、conda、mamba等。</p><p>环境管理工具：用于管理Python环境，如venv、virtualenv、conda、mamba等。</p><p>我们这里主要讨论环境管理工具，因为包管理工具的使用方法比较简单，而且大多数情况下我们都会使用pip，所以这里不再赘述。</p><h1 id="3-Python环境管理工具"><a href="#3-Python环境管理工具" class="headerlink" title="3. Python环境管理工具"></a>3. Python环境管理工具</h1><h2 id="3-1-venv"><a href="#3-1-venv" class="headerlink" title="3.1 venv"></a>3.1 venv</h2><p>venv是Python自带的环境管理工具，其使用起来是最简单，也是最不需要操心的。<br>使用方法</p><ol><li><p>创建一个新的环境：<code>python -m venv .venv</code><br> 这样就会在当前目录下创建一个.venv的文件夹，里面包含了一个新的Python环境。当然，这里的.venv可以替换成任何你想要的名字，用.venv是因为这样可以创建一个自动隐藏的文件夹，在git中也很容易把它忽略掉。</p><p> 注意，这里的python是你想要创建环境的Python版本，如果你有多个Python版本，可以使用python3或者python3.10等。</p></li><li><p>激活这个环境：<br> <code>source .venv/bin/activate</code></p></li><li><p>安装Python包：<br> 在激活环境之后，使用pip安装Python包会把包安装到这个环境中，而不是全局环境。安装的包会放在.venv&#x2F;lib&#x2F;python3.10&#x2F;site-packages目录下。<br> <code>pip install numpy</code><br> 注意，这里的numpy是包名，你可以替换成任何你想要的包名。</p></li><li><p>退出环境：<br> 在环境中使用deactivate命令可以退出环境。<br> <code>deactivate</code><br>优缺点<br> 优点：<br> 原生工具，简单易用，不需要安装额外的软件。<br> 速度快，因为不需要下载额外的软件包。<br> 环境隔离，不会影响全局环境。<br> 可以在任何地方创建环境，不需要管理员权限。<br> 每个项目中的环境都在本项目目录下，与其他项目做到了物理隔离，不易弄混。<br> 缺点：<br> 每个项目都需要创建一个新的环境，如果有很多项目，会占用很多空间。<br> 无法共享环境，如果有多个项目使用同一个环境，需要重复创建。<br> 不好切换Python版本，每个环境都是一个Python版本，无法切换。<br> 只适用于Python 3.3及以上版本。<br> 简单来说，如果你不在意空间占用，不需要切换Python版本，那么venv是一个很好的选择。</p></li></ol><h2 id="3-2-virtualenv"><a href="#3-2-virtualenv" class="headerlink" title="3.2 virtualenv"></a>3.2 virtualenv</h2><pre><code class="hljs">由于venv有很大的占用空间的问题，所以有人开发了virtualenv，它是一个第三方的环境管理工具，可以解决venv的一些问题。virtualenv的使用方法和venv基本一样，只是需要安装virtualenv这个包。</code></pre><h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><pre><code class="hljs">1. 安装virtualenv：`pip install virtualenv`2. 创建一个新的环境：`virtualenv .venv`3. 如果你想指定Python版本，可以使用如下命令：`virtualenv -p python3.10 .venv`4. 激活这个环境：`source .venv/bin/activate`5. 安装Python包：`pip install numpy`6. 退出环境：`deactivate`</code></pre><p>但它和venv的区别在于，virtualenv会复用系统的Python库，不会重复安装，所以占用的空间会小很多。如果你不想复用系统的Python库，可以使用<code>--no-site-packages</code>选项，在本项目中安装全新的Python库。</p><p>优缺点<br>    优点：</p><pre><code class="hljs">    可以指定Python版本。    可以共享环境，不需要重复创建。    占用空间小，不会重复安装Python库。    适用于Python 2.7及以上版本。缺点：    非原生工具，需要安装额外的软件。    简单来说，如果你在意空间占用，且想要和venv相似的使用体验，那么virtualenv是一个很好的选择。</code></pre><h2 id="3-3-conda"><a href="#3-3-conda" class="headerlink" title="3.3 conda"></a>3.3 conda</h2><p>conda是一个非常强大的环境管理工具，它不仅可以管理Python环境，还可以管理其他语言的环境，如R、Julia等。<br>conda、Anaconda、miniconda、mamba、micromamba之间的关系<br>conda是Anaconda的一部分，Anaconda是一个数据科学家常用的工具包，里面包含了很多数据科学家常用的软件包，如numpy、pandas、scipy等。但有用户反映Anaconda安装的软件包太多，占用空间太大，所以有人开发了miniconda，它是Anaconda的精简版，只包含了conda和一些基本的软件包。</p><p>不管是Anaconda还是miniconda，都是使用conda这个包管理工具来管理环境，但conda在安装软件包时是单线程的，速度比较慢，所以有人开发了mamba，它是conda的一个加速版，速度比conda快很多。</p><p>mamba和conda的使用方法基本一样，只是在安装软件包时使用mamba代替conda。用户基本可以认为，mamba命令是conda命令的一个别名。</p><p>micromamba是mamba的一个精简版，micromamba的base环境是空的，不包含任何软件包。</p>]]></content>
     
     
     <categories>
