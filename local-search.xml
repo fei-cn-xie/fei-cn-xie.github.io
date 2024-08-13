@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>2024-08-13-Tue-T-Rancher操作指北</title>
+    <link href="/2024/08/13/2024-08-13-Tue-T-Rancher%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8C%97/"/>
+    <url>/2024/08/13/2024-08-13-Tue-T-Rancher%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8C%97/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>Rancher 是一个 Kubernetes 管理工具，让你能在<code>任何地方</code>和<code>任何提供商</code>上部署和运行集群。<br>Rancher 可以创建来自 Kubernetes 托管服务提供商的集群，创建节点并安装 Kubernetes，或者导入在任何地方运行的现有 Kubernetes 集群。<br>Rancher 基于 Kubernetes 添加了新的功能，包括统一所有集群的身份验证和 RBAC，让系统管理员从一个位置控制全部集群的访问。<br>此外，Rancher 可以为集群和资源提供更精细的监控和告警，将日志发送到外部提供商，并通过应用商店（Application Catalog）直接集成 Helm。如果你拥有外部 CI&#x2F;CD 系统，你可以将其与 Rancher 对接。没有的话，你也可以使用 Rancher 提供的 Fleet 自动部署和升级工作负载。<br>Rancher 是一个 全栈式 的 Kubernetes 容器管理平台，为你提供在任何地方都能成功运行 Kubernetes 的工具。</p></blockquote><h1 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h1><p>Rancher 为 DevOps 工程师提供简单直接的用户界面，以管理其应用负载。用户不需要对 Kubernetes 有非常深入的了解，即可使用 Rancher。Rancher 应用商店包含一套实用的 DevOps 开发工具。Rancher 获得了多种云原生生态系统产品的认证，包括安全工具、监控系统、容器镜像仓库、存储和网络驱动等。</p><p>下图讲述了 Rancher 在 IT 管理团队和 DevOps 开发团队之间扮演的角色。DevOps 团队把他们的应用部署在他们选择的公有云或私有云上。IT 管理员负责查看并管理用户、集群、云服务的权限。</p><p><img src="/2024-08-13-Tue-T-Rancher%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8C%97/image.png" alt="alt text"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Tech</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Tech</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>2024-08-13-Tue-R-Creative_Guitar</title>
     <link href="/2024/08/13/2024-08-13-Tue-R-Creative_Guitar/"/>
     <url>/2024/08/13/2024-08-13-Tue-R-Creative_Guitar/</url>
@@ -196,14 +221,16 @@
     
     <categories>
       
-      <category>Diary</category>
+      <category>Thoughts</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>diary</tag>
+      <tag>thoughts</tag>
+      
+      <tag>posts</tag>
       
     </tags>
     
@@ -234,14 +261,14 @@
     
     <categories>
       
-      <category>Diary</category>
+      <category>Reading</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>diary</tag>
+      <tag>reading</tag>
       
     </tags>
     
@@ -281,7 +308,7 @@
     <link href="/2023/09/19/2023-09-19-E-%E6%96%87%E7%AB%A0%E7%AE%A1%E7%90%86/"/>
     <url>/2023/09/19/2023-09-19-E-%E6%96%87%E7%AB%A0%E7%AE%A1%E7%90%86/</url>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="文章管理"><a href="#文章管理" class="headerlink" title="文章管理"></a>文章管理</h1><blockquote><p>2023年9月19日生效</p></blockquote><p>时间-文章类型-文章名称</p><p>文章类型：</p><ul><li><p>日记随想：D : Diary</p></li><li><p>总结反思：S : Summary</p></li><li><p>技术文章：T : Tech</p></li><li><p>读书笔记：R : Reading</p></li><li><p>效率管理：E : Efficiency</p></li></ul><p><strong>日记</strong>： 记录一天经历的事件或所思所想</p><p><strong>技术文章</strong>：整理所学到的技术知识, 以及技术相关的工作学习收获</p><p><strong>读书笔记</strong>：整理每次阅读完一本书的知识点或者读后感。对于论述性书籍进行总结归纳，对于文学类书籍写读后感</p><p><strong>效率提升</strong>：记录能提升知识输入输出的方式。比如本文档可归为此分类。因为本文档用于阐述我所写文章的分类方式。</p><blockquote><ul><li>总结反思：S</li><li>技术文章：T</li><li>读书笔记：R</li><li>效率管理：E</li></ul><p><code>index_img: /img/</code>; <code>summary:</code> </p></blockquote><p><code>index_img</code> 用于设置博客文章在列表页面中的封面图片。你可以在文章的 Front-matter 中使用这个字段来指定图片的路径。</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">My</span> <span class="hljs-string">Blog</span> <span class="hljs-string">Post</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2024-08-11</span><br><span class="hljs-attr">tags:</span> [<span class="hljs-string">Hexo</span>, <span class="hljs-string">Blogging</span>]<br><span class="hljs-attr">index_img:</span> <span class="hljs-string">/img/my-image.jpg</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure><p>在这个例子中，<code>/img/my-image.jpg</code> 是图片的路径，表示你的<code>Hexo</code>站点根目录下的 <code>source/img/my-image.jpg</code></p><p><code>summary</code>用于在文章列表页面显示自定义的摘要文本。如果没有指定<code>summary</code>，<code>Hexo</code>通常会自动截取文章内容的前几行作为摘要。你可以在<code>Front-matter</code>中手动设置</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">My</span> <span class="hljs-string">Blog</span> <span class="hljs-string">Post</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2024-08-11</span><br><span class="hljs-attr">tags:</span> [<span class="hljs-string">Hexo</span>, <span class="hljs-string">Blogging</span>]<br><span class="hljs-attr">index_img:</span> <span class="hljs-string">/img/my-image.jpg</span><br><span class="hljs-attr">summary:</span> <span class="hljs-string">This</span> <span class="hljs-string">is</span> <span class="hljs-string">a</span> <span class="hljs-string">brief</span> <span class="hljs-string">summary</span> <span class="hljs-string">of</span> <span class="hljs-string">the</span> <span class="hljs-string">blog</span> <span class="hljs-string">post</span> <span class="hljs-string">that</span> <span class="hljs-string">will</span> <span class="hljs-string">appear</span> <span class="hljs-string">on</span> <span class="hljs-string">the</span> <span class="hljs-string">index</span> <span class="hljs-string">page.</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="文章管理"><a href="#文章管理" class="headerlink" title="文章管理"></a>文章管理</h1><blockquote><p>2023年9月19日生效</p></blockquote><p>时间-文章类型-文章名称</p><p>文章类型：</p><ul><li><p>日记随想：D : Thoughts</p></li><li><p>总结反思：S : Summary</p></li><li><p>技术文章：T : Tech</p></li><li><p>读书笔记：R : Reading</p></li><li><p>效率管理：E : Efficiency</p></li></ul><p><strong>日记</strong>： 记录一天经历的事件或所思所想</p><p><strong>技术文章</strong>：整理所学到的技术知识, 以及技术相关的工作学习收获</p><p><strong>读书笔记</strong>：整理每次阅读完一本书的知识点或者读后感。对于论述性书籍进行总结归纳，对于文学类书籍写读后感</p><p><strong>效率提升</strong>：记录能提升知识输入输出的方式。比如本文档可归为此分类。因为本文档用于阐述我所写文章的分类方式。</p><blockquote><ul><li>总结反思：S</li><li>技术文章：T</li><li>读书笔记：R</li><li>效率管理：E</li></ul><p><code>index_img: /img/</code>; <code>summary:</code> </p></blockquote><p><code>index_img</code> 用于设置博客文章在列表页面中的封面图片。你可以在文章的 Front-matter 中使用这个字段来指定图片的路径。</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">My</span> <span class="hljs-string">Blog</span> <span class="hljs-string">Post</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2024-08-11</span><br><span class="hljs-attr">tags:</span> [<span class="hljs-string">Hexo</span>, <span class="hljs-string">Blogging</span>]<br><span class="hljs-attr">index_img:</span> <span class="hljs-string">/img/my-image.jpg</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure><p>在这个例子中，<code>/img/my-image.jpg</code> 是图片的路径，表示你的<code>Hexo</code>站点根目录下的 <code>source/img/my-image.jpg</code></p><p><code>summary</code>用于在文章列表页面显示自定义的摘要文本。如果没有指定<code>summary</code>，<code>Hexo</code>通常会自动截取文章内容的前几行作为摘要。你可以在<code>Front-matter</code>中手动设置</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">My</span> <span class="hljs-string">Blog</span> <span class="hljs-string">Post</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2024-08-11</span><br><span class="hljs-attr">tags:</span> [<span class="hljs-string">Hexo</span>, <span class="hljs-string">Blogging</span>]<br><span class="hljs-attr">index_img:</span> <span class="hljs-string">/img/my-image.jpg</span><br><span class="hljs-attr">summary:</span> <span class="hljs-string">This</span> <span class="hljs-string">is</span> <span class="hljs-string">a</span> <span class="hljs-string">brief</span> <span class="hljs-string">summary</span> <span class="hljs-string">of</span> <span class="hljs-string">the</span> <span class="hljs-string">blog</span> <span class="hljs-string">post</span> <span class="hljs-string">that</span> <span class="hljs-string">will</span> <span class="hljs-string">appear</span> <span class="hljs-string">on</span> <span class="hljs-string">the</span> <span class="hljs-string">index</span> <span class="hljs-string">page.</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>]]></content>
     
     
     <categories>
