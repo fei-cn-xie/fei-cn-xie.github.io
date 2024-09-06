@@ -16,32 +16,30 @@
   <meta name="author" content="Fei">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Rancher 是一个 Kubernetes 管理工具，让你能在任何地方和任何提供商上部署和运行集群。    Rancher 可以创建来自 Kubernetes 托管服务提供商的集群，创建节点并安装 Kubernetes，或者导入在任何地方运行的现有 Kubernetes 集群。   Rancher 基于 Kubernetes 添加了新的功能，包括统一所有集群的身份验证和 RBAC，让系统管理员">
+    <meta name="description" content="Introduction虽然“容器是Linux”，但Podman也可以在Mac和Windows上运行，它提供了一个原生的Podman CLI，并嵌入了一个客户Linux系统来启动您的容器。此访客被称为Podman机器，并使用Podman机器命令进行管理。Mac和Windows上的Podman还监听Docker API客户端，支持直接使用基于Docker的工具和从您选择的语言进行编程访问。 容器仓库">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2024-08-13-Tue-T-Rancher操作指北">
-<meta property="og:url" content="https://fei-cn-xie.github.io/2024/08/13/2024-08-13-Tue-T-Rancher%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8C%97/index.html">
+<meta property="og:title" content="2024-09-04-Wed-T-Podman">
+<meta property="og:url" content="https://fei-cn-xie.github.io/2024/09/04/2024-09-04-Wed-T-Podman/index.html">
 <meta property="og:site_name" content="Fei">
-<meta property="og:description" content="Rancher 是一个 Kubernetes 管理工具，让你能在任何地方和任何提供商上部署和运行集群。    Rancher 可以创建来自 Kubernetes 托管服务提供商的集群，创建节点并安装 Kubernetes，或者导入在任何地方运行的现有 Kubernetes 集群。   Rancher 基于 Kubernetes 添加了新的功能，包括统一所有集群的身份验证和 RBAC，让系统管理员">
+<meta property="og:description" content="Introduction虽然“容器是Linux”，但Podman也可以在Mac和Windows上运行，它提供了一个原生的Podman CLI，并嵌入了一个客户Linux系统来启动您的容器。此访客被称为Podman机器，并使用Podman机器命令进行管理。Mac和Windows上的Podman还监听Docker API客户端，支持直接使用基于Docker的工具和从您选择的语言进行编程访问。 容器仓库">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://fei-cn-xie.github.io/2024/08/13/2024-08-13-Tue-T-Rancher%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8C%97/image.png">
-<meta property="og:image" content="https://fei-cn-xie.github.io/2024/08/13/2024-08-13-Tue-T-Rancher%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8C%97/image-2.png">
-<meta property="og:image" content="https://fei-cn-xie.github.io/2024/08/13/2024-08-13-Tue-T-Rancher%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8C%97/image-4.png">
-<meta property="article:published_time" content="2024-08-13T11:26:31.000Z">
-<meta property="article:modified_time" content="2024-08-16T07:34:01.469Z">
+<meta property="og:image" content="https://fei-cn-xie.github.io/image.png">
+<meta property="og:image" content="https://fei-cn-xie.github.io/image-1.png">
+<meta property="article:published_time" content="2024-09-04T06:06:50.000Z">
+<meta property="article:modified_time" content="2024-09-05T01:16:41.056Z">
 <meta property="article:author" content="Fei">
 <meta property="article:tag" content="Tech">
-<meta property="article:tag" content="Rancher">
-<meta property="article:tag" content="Kubernetes">
-<meta property="article:tag" content="DevOps">
-<meta property="article:tag" content="Cloud">
+<meta property="article:tag" content="Podman">
+<meta property="article:tag" content="Docker">
+<meta property="article:tag" content="Container">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://fei-cn-xie.github.io/2024/08/13/2024-08-13-Tue-T-Rancher%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8C%97/image.png">
+<meta name="twitter:image" content="https://fei-cn-xie.github.io/image.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>2024-08-13-Tue-T-Rancher操作指北 - Fei</title>
+  <title>2024-09-04-Wed-T-Podman - Fei</title>
   <script src="/live2d-widget/autoload.js"></script>
   <link rel="stylesheet" href="APlayer.min.css">
   <div id="aplayer"></div>
@@ -213,7 +211,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">2024-08-13-Tue-T-Rancher操作指北</span>
+            <span id="subtitle">2024-09-04-Wed-T-Podman</span>
           
         </div>
 
@@ -224,8 +222,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-08-13 19:26" pubdate>
-          August 13, 2024 pm
+        <time datetime="2024-09-04 14:06" pubdate>
+          September 4, 2024 pm
         </time>
       </span>
     
@@ -236,7 +234,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k words
+          1.1k words
         
       </span>
     
@@ -247,7 +245,7 @@
         
         
         
-          14 mins
+          10 mins
         
       </span>
     
@@ -294,35 +292,20 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">2024-08-13-Tue-T-Rancher操作指北</h1>
+            <h1 id="seo-header">2024-09-04-Wed-T-Podman</h1>
             
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p>Rancher 是一个 Kubernetes 管理工具，让你能在<code>任何地方</code>和<code>任何提供商</code>上部署和运行集群。  </p>
-</blockquote>
-<p>Rancher 可以创建来自 Kubernetes 托管服务提供商的集群，创建节点并安装 Kubernetes，或者导入在任何地方运行的现有 Kubernetes 集群。  </p>
-<p>Rancher 基于 Kubernetes 添加了新的功能，包括统一所有集群的身份验证和 RBAC，让系统管理员从一个位置控制全部集群的访问。<br>此外，Rancher 可以为集群和资源提供更精细的监控和告警，将日志发送到外部提供商，并通过应用商店（Application Catalog）直接集成 Helm。如果你拥有外部 CI&#x2F;CD 系统，你可以将其与 Rancher 对接。没有的话，你也可以使用 Rancher 提供的 Fleet 自动部署和升级工作负载。  </p>
-<p>Rancher 是一个 全栈式 的 Kubernetes 容器管理平台，为你提供在任何地方都能成功运行 Kubernetes 的工具。</p>
-<h1 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h1><p>Rancher 为 DevOps 工程师提供简单直接的用户界面，以管理其应用负载。用户不需要对 Kubernetes 有非常深入的了解，即可使用 Rancher。Rancher 应用商店包含一套实用的 DevOps 开发工具。Rancher 获得了多种云原生生态系统产品的认证，包括安全工具、监控系统、容器镜像仓库、存储和网络驱动等。</p>
-<p>下图讲述了 Rancher 在 IT 管理团队和 DevOps 开发团队之间扮演的角色。DevOps 团队把他们的应用部署在他们选择的公有云或私有云上。IT 管理员负责查看并管理用户、集群、云服务的权限。<br><img src="/2024/08/13/2024-08-13-Tue-T-Rancher%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8C%97/image.png" srcset="/img/loading.gif" lazyload alt="smdbs">)</p>
-<h2 id="1-1-Rancher-架构"><a href="#1-1-Rancher-架构" class="headerlink" title="1.1 Rancher 架构"></a>1.1 Rancher 架构</h2><h3 id="1-1-1-Rancher-Server-和-Components"><a href="#1-1-1-Rancher-Server-和-Components" class="headerlink" title="1.1.1 Rancher Server 和 Components"></a>1.1.1 Rancher Server 和 Components</h3><p>大多数 Rancher 2.x 软件均运行在 Rancher Server 上。Rancher Server 包括用于管理整个 Rancher 部署的所有软件组件。</p>
-<p>下图展示了 Rancher 2.x 的上层架构。下图中，Rancher Server 管理两个下游 Kubernetes 集群，其中一个由 RKE 创建，另一个由 Amazon EKS 创建。</p>
-<p>为了达到最佳性能和安全性，我们建议你为 Rancher Management Server 创建一个专用的 Kubernetes 集群。不建议在此集群上运行用户工作负载。部署 Rancher 后，你可以创建或导入集群来运行你的工作负载。</p>
-<p>下图介绍了用户如何通过 Rancher 的认证代理管理 Rancher 启动的 Kubernetes 集群和托管的 Kubernetes 集群：</p>
-<p>通过 Rancher 的认证代理管理 Kubernetes 集群</p>
-<p><img src="/2024/08/13/2024-08-13-Tue-T-Rancher%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8C%97/image-2.png" srcset="/img/loading.gif" lazyload alt="alt text">)</p>
-<h3 id="1-1-2-与下游集群通信"><a href="#1-1-2-与下游集群通信" class="headerlink" title="1.1.2 与下游集群通信"></a>1.1.2 与下游集群通信</h3><p>下图显示了 Cluster Controller、Cluster Agent 和 Node Agent 让 Rancher 控制下游集群的。</p>
-<ul>
-<li>与下游集群通信<br><img src="/2024/08/13/2024-08-13-Tue-T-Rancher%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8C%97/image-4.png" srcset="/img/loading.gif" lazyload alt="alt text">)</li>
-</ul>
-<ol>
-<li>认证代理<br>在此图中，名为 Bob 的用户希望查看在名为<code>User Cluster 1</code>的下游集群上运行的所有 Pod。在 Rancher 中，他可以运行<code>kubectl</code>命令来查看 Pod。Bob 通过<code>Rancher</code>的认证代理进行身份验证。</li>
-</ol>
-<p>认证代理将所有 Kubernetes API 调用转发到下游集群。它集成了本地身份验证、Active Directory 和 GitHub 等身份验证方式。在每个 Kubernetes API 调用请求时，认证代理会验证请求方的身份，并在转发给 Kubernetes master 节点之前，设置正确的 Kubernetes 消息头。</p>
-<p>Rancher 使用 ServiceAccount 与 Kubernetes 集群通信，该 ServiceAccount 为在 Pod 中运行的进程提供身份。</p>
-<p>默认情况下，Rancher 生成一个 kubeconfig 文件，文件包含凭证信息，用于为 Rancher Server 连接下游集群的 Kubernetes API Server 的代理。kubeconfig 文件 (kube_config_rancher-cluster.yml) 包含对集群的完全访问权限。</p>
+                <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>虽然“容器是Linux”，但Podman也可以在Mac和Windows上运行，它提供了一个原生的Podman CLI，并嵌入了一个客户Linux系统来启动您的容器。此访客被称为Podman机器，并使用Podman机器命令进行管理。Mac和Windows上的Podman还监听Docker API客户端，支持直接使用基于Docker的工具和从您选择的语言进行编程访问。</p>
+<h1 id="容器仓库"><a href="#容器仓库" class="headerlink" title="容器仓库"></a>容器仓库</h1><p>配置镜像仓库<br>打开配置文件 <code>/var/home/core/.config/containers/registries.conf</code></p>
+<figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs toml"><span class="hljs-attr">unqualified-search-registries</span> = [<span class="hljs-string">&quot;docker.io&quot;</span>, <span class="hljs-string">&quot;quay.io&quot;</span>, <span class="hljs-string">&quot;docker.m.daocloud.io&quot;</span>]<br><br><span class="hljs-section">[[registry]]</span><br><span class="hljs-attr">prefix</span> = <span class="hljs-string">&quot;docker.io&quot;</span><br><span class="hljs-attr">location</span> = <span class="hljs-string">&quot;registry-1.docker.io&quot;</span><br><br><span class="hljs-section">[[registry.mirror]]</span><br><span class="hljs-attr">location</span> = <span class="hljs-string">&quot;mirror.baidubce.com&quot;</span><br><br><span class="hljs-section">[[registry]]</span><br><span class="hljs-attr">prefix</span> = <span class="hljs-string">&quot;quay.io&quot;</span><br><span class="hljs-attr">location</span> = <span class="hljs-string">&quot;quay.io&quot;</span><br><br><span class="hljs-section">[[registry.mirror]]</span><br><span class="hljs-attr">location</span> = <span class="hljs-string">&quot;quay-mirror.qiniu.com&quot;</span><br><br><span class="hljs-section">[[registry]]</span><br><span class="hljs-attr">prefix</span> = <span class="hljs-string">&quot;docker.m.daocloud.io&quot;</span><br><span class="hljs-attr">location</span> = <span class="hljs-string">&quot;docker.m.daocloud.io&quot;</span><br><span class="hljs-comment">## [[registry]]</span><br><span class="hljs-comment">## prefix = &quot;example.com/foo&quot;</span><br><span class="hljs-comment">## insecure = false</span><br><span class="hljs-comment">## blocked = false</span><br><span class="hljs-comment">## location = &quot;internal-registry-for-example.com/bar&quot;</span><br><br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="底层原理"><a href="#底层原理" class="headerlink" title="底层原理"></a>底层原理</h1><p>Podman和Docker都可以直接在Linux上运行，但是如果是在Windows或者MacOS上，需要创建一个linux的虚拟机，让Docker和Podman在虚拟机中运行。Docker的方式是通过Docker Desktop来创建Linux虚拟机，而Podman则是需要手动<code>podman machine init</code>来创建Linux虚拟机。</p>
+<h3 id="Podman和Docker区别"><a href="#Podman和Docker区别" class="headerlink" title="Podman和Docker区别"></a>Podman和Docker区别</h3><p><img src="/image.png" srcset="/img/loading.gif" lazyload alt="alt text">)</p>
+<h3 id="Podman和Docker-与K8S"><a href="#Podman和Docker-与K8S" class="headerlink" title="Podman和Docker 与K8S"></a>Podman和Docker 与K8S</h3><p><img src="/image-1.png" srcset="/img/loading.gif" lazyload alt="alt text">)</p>
 
                 
               </div>
@@ -358,13 +341,11 @@
       
         <a href="/tags/Tech/" class="print-no-link">#Tech</a>
       
-        <a href="/tags/Rancher/" class="print-no-link">#Rancher</a>
+        <a href="/tags/Podman/" class="print-no-link">#Podman</a>
       
-        <a href="/tags/Kubernetes/" class="print-no-link">#Kubernetes</a>
+        <a href="/tags/Docker/" class="print-no-link">#Docker</a>
       
-        <a href="/tags/DevOps/" class="print-no-link">#DevOps</a>
-      
-        <a href="/tags/Cloud/" class="print-no-link">#Cloud</a>
+        <a href="/tags/Container/" class="print-no-link">#Container</a>
       
     </div>
   
@@ -376,8 +357,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>2024-08-13-Tue-T-Rancher操作指北</div>
-      <div>https://fei-cn-xie.github.io/2024/08/13/2024-08-13-Tue-T-Rancher操作指北/</div>
+      <div>2024-09-04-Wed-T-Podman</div>
+      <div>https://fei-cn-xie.github.io/2024/09/04/2024-09-04-Wed-T-Podman/</div>
     </div>
     <div class="license-meta">
       
@@ -389,7 +370,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>August 13, 2024</div>
+          <div>September 4, 2024</div>
         </div>
       
       
@@ -421,9 +402,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/08/15/2024-08-15-Thu-T-Linux%E6%93%8D%E4%BD%9C%E5%A4%A7%E5%85%A8/" title="2024-08-15-Thu-T-Linux操作大全">
+                      <a href="/2024/09/04/2024-09-04-Wed-T-Docker/" title="2024-09-04-Wed-T-Docker">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">2024-08-15-Thu-T-Linux操作大全</span>
+                        <span class="hidden-mobile">2024-09-04-Wed-T-Docker</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -431,8 +412,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/08/13/2024-08-13-Tue-R-Creative_Guitar/" title="2024-08-13-Tue-R-Creative_Guitar">
-                        <span class="hidden-mobile">2024-08-13-Tue-R-Creative_Guitar</span>
+                      <a href="/2024/08/15/2024-08-15-Thu-T-Linux%E6%93%8D%E4%BD%9C%E5%A4%A7%E5%85%A8/" title="2024-08-15-Thu-T-Linux操作大全">
+                        <span class="hidden-mobile">2024-08-15-Thu-T-Linux操作大全</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

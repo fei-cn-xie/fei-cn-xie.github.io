@@ -16,17 +16,23 @@
   <meta name="author" content="Fei">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
+    <meta name="description" content="1. 安装 Kubernetes1.1 生产环境考量通常，一个生产用 Kubernetes 集群环境与个人学习、开发或测试环境所使用的 Kubernetes 相比有更多的需求。 生产环境可能需要被很多用户安全地访问，需要提供一致的可用性，以及能够与需求变化相适配的资源。 在你决定在何处运行你的生产用 Kubernetes 环境（在本地或者在云端）， 以及你希望承担或交由他人承担的管理工作量时， 需">
+<meta property="og:type" content="article">
 <meta property="og:title" content="2024-08-13-Wed-T-Kubernetes">
 <meta property="og:url" content="https://fei-cn-xie.github.io/2024/08/13/2024-08-13-Wed-T-Kubernetes/index.html">
 <meta property="og:site_name" content="Fei">
+<meta property="og:description" content="1. 安装 Kubernetes1.1 生产环境考量通常，一个生产用 Kubernetes 集群环境与个人学习、开发或测试环境所使用的 Kubernetes 相比有更多的需求。 生产环境可能需要被很多用户安全地访问，需要提供一致的可用性，以及能够与需求变化相适配的资源。 在你决定在何处运行你的生产用 Kubernetes 环境（在本地或者在云端）， 以及你希望承担或交由他人承担的管理工作量时， 需">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://fei-cn-xie.github.io/2024/08/13/2024-08-13-Wed-T-Kubernetes/image.png">
+<meta property="og:image" content="https://fei-cn-xie.github.io/2024/08/13/2024-08-13-Wed-T-Kubernetes/image.png">
+<meta property="og:image" content="https://fei-cn-xie.github.io/2024/08/13/2024-08-13-Wed-T-Kubernetes/image-1.png">
 <meta property="article:published_time" content="2024-08-13T08:15:55.000Z">
-<meta property="article:modified_time" content="2024-08-13T15:12:21.788Z">
+<meta property="article:modified_time" content="2024-09-06T09:02:31.750Z">
 <meta property="article:author" content="Fei">
 <meta property="article:tag" content="Tech">
 <meta property="article:tag" content="Kubernetes">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://fei-cn-xie.github.io/2024/08/13/2024-08-13-Wed-T-Kubernetes/image.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -227,7 +233,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 words
+          4k words
         
       </span>
     
@@ -238,7 +244,7 @@
         
         
         
-          1 mins
+          34 mins
         
       </span>
     
@@ -290,7 +296,73 @@
             
               <div class="markdown-body">
                 
-                
+                <h1 id="1-安装-Kubernetes"><a href="#1-安装-Kubernetes" class="headerlink" title="1. 安装 Kubernetes"></a>1. 安装 Kubernetes</h1><h2 id="1-1-生产环境考量"><a href="#1-1-生产环境考量" class="headerlink" title="1.1 生产环境考量"></a>1.1 生产环境考量</h2><p>通常，一个生产用 Kubernetes 集群环境与个人学习、开发或测试环境所使用的 Kubernetes 相比有更多的需求。 生产环境可能需要被很多用户安全地访问，需要提供一致的可用性，以及能够与需求变化相适配的资源。</p>
+<p>在你决定在何处运行你的生产用 Kubernetes 环境（在本地或者在云端）， 以及你希望承担或交由他人承担的管理工作量时， 需要考察以下因素如何影响你对 Kubernetes 集群的需求</p>
+<ul>
+<li><strong>可用性</strong>：一个单机的 Kubernetes 学习环境 具有单点失效特点。创建高可用的集群则意味着需要考虑：<br>将控制面与工作节点分开<br>在多个节点上提供控制面组件的副本<br>为针对集群的 API 服务器 的流量提供负载均衡<br>随着负载的合理需要，提供足够的可用的（或者能够迅速变为可用的）工作节点</li>
+<li><strong>规模</strong>：如果你预期你的生产用 Kubernetes 环境要承受固定量的请求， 你可能可以针对所需要的容量来一次性完成安装。 不过，如果你预期服务请求会随着时间增长，或者因为类似季节或者特殊事件的原因而发生剧烈变化， 你就需要规划如何处理请求上升时对控制面和工作节点的压力，或者如何缩减集群规模以减少未使用资源的消耗。</li>
+<li><strong>安全性与访问管理</strong>：在你自己的学习环境 Kubernetes 集群上，你拥有完全的管理员特权。 但是针对运行着重要工作负载的共享集群，用户账户不止一两个时， 就需要更细粒度的方案来确定谁或者哪些主体可以访问集群资源。 你可以使用基于角色的访问控制（RBAC） 和其他安全机制来确保用户和负载能够访问到所需要的资源， 同时确保工作负载及集群自身仍然是安全的。 你可以通过管理策略和 容器资源 来针对用户和工作负载所可访问的资源设置约束。</li>
+</ul>
+<p>在自行构建 Kubernetes 生产环境之前， 请考虑将这一任务的部分或者全部交给云方案承包服务提供商或者其他 Kubernetes 合作伙伴。选项有：</p>
+<ul>
+<li><strong>无服务</strong>：仅是在第三方设备上运行负载，完全不必管理集群本身。 你需要为 CPU 用量、内存和磁盘请求等付费。</li>
+<li><strong>托管控制面</strong>：让供应商决定集群控制面的规模和可用性，并负责打补丁和升级等操作。</li>
+<li><strong>托管工作节点</strong>：配置一个节点池来满足你的需要，由供应商来确保节点始终可用，并在需要的时候完成升级。</li>
+<li><strong>集成</strong>：有一些供应商能够将 Kubernetes 与一些你可能需要的其他服务集成， 这类服务包括存储、容器镜像仓库、身份认证方法以及开发工具等。</li>
+</ul>
+<p>无论你是自行构造一个生产用 Kubernetes 集群还是与合作伙伴一起协作， 请审阅下面章节以评估你的需求，因为这关系到你的集群的控制面、工作节点、用户访问以及负载资源。</p>
+<h2 id="1-2-生产用集群安装"><a href="#1-2-生产用集群安装" class="headerlink" title="1.2 生产用集群安装"></a>1.2 生产用集群安装</h2><p>在生产质量的 Kubernetes 集群中，<strong>控制面</strong>用不同的方式来管理集群和可以分布到多个计算机上的服务（控制面可以管理集群和服务）。 每个工作节点则代表的是一个可配置来运行 Kubernetes Pod 的实体。</p>
+<p><strong>生产用控制面</strong>  </p>
+<p>最简单的 Kubernetes 集群中，整个控制面和工作节点服务都运行在同一台机器上。 你可以通过添加工作节点来提升环境运算能力，正如 Kubernetes 组件示意图所示。 如果只需要集群在很短的一段时间内可用，或者可以在某些事物出现严重问题时直接丢弃， 这种配置可能符合你的需要。<br><img src="/2024/08/13/2024-08-13-Wed-T-Kubernetes/image.png" srcset="/img/loading.gif" lazyload alt="Kubernetes组件示意图">)  </p>
+<p>如果你需要一个更为持久的、高可用的集群，那么就需要考虑扩展控制面的方式。 根据设计，运行在一台机器上的单机控制面服务不是高可用的。 如果你认为保持集群的正常运行并需要确保它在出错时可以被修复是很重要的， 可以考虑以下步骤：</p>
+<ul>
+<li><strong>选择部署工具</strong>：你可以使用类似 kubeadm、kops 和 kubespray 这类工具来部署控制面。 参阅使用<a target="_blank" rel="noopener" href="https://kubernetes.io/zh-cn/docs/setup/production-environment/tools/">部署工具安装</a> Kubernetes 以了解使用这类部署方法来完成生产就绪部署的技巧。 存在不同的容器运行时 可供你的部署采用。</li>
+<li><strong>管理证书</strong>：控制面服务之间的安全通信是通过证书来完成的。 证书是在部署期间自动生成的，或者你也可以使用自己的证书机构来生成它们。 参阅 PKI 证书和需求了解细节。</li>
+<li><strong>为 API 服务器配置负载均衡</strong>：配置负载均衡器来将外部的 API 请求散布给运行在不同节点上的 API 服务实例。 参阅创建外部负载均衡器了解细节。</li>
+<li><strong>分离并备份 etcd 服务</strong> ：etcd 服务可以运行于其他控制面服务所在的机器上， 也可以运行在不同的机器上以获得更好的安全性和可用性。 因为 etcd 存储着集群的配置数据，应该经常性地对 etcd 数据库进行备份， 以确保在需要的时候你可以修复该数据库。与配置和使用 etcd 相关的细节可参阅 etcd FAQ。 更多的细节可参阅为 Kubernetes 运维 etcd 集群 和使用 kubeadm 配置高可用的 etcd 集群。<br>创建多控制面系统：为了实现高可用性，控制面不应被限制在一台机器上。 如果控制面服务是使用某 init 服务（例如 systemd）来运行的，每个服务应该至少运行在三台机器上。 不过，将控制面作为服务运行在 Kubernetes Pod 中可以确保你所请求的个数的服务始终保持可用。 调度器应该是可容错的，但不是高可用的。 某些部署工具会安装 Raft 票选算法来对 Kubernetes 服务执行领导者选举。 如果主节点消失，另一个服务会被选中并接手相应服务。</li>
+<li><strong>跨多个可用区</strong>：如果保持你的集群一直可用这点非常重要，可以考虑创建一个跨多个数据中心的集群； 在云环境中，这些数据中心被视为可用区。若干个可用区在一起可构成地理区域。 通过将集群分散到同一区域中的多个可用区内，即使某个可用区不可用，整个集群能够继续工作的机会也大大增加。 更多的细节可参阅跨多个可用区运行。</li>
+<li><strong>管理演进中的特性</strong>：如果你计划长时间保留你的集群，就需要执行一些维护其健康和安全的任务。 例如，如果你采用 kubeadm 安装的集群， 则有一些可以帮助你完成 证书管理 和升级 kubeadm 集群 的指令。 参见管理集群了解一个 Kubernetes 管理任务的较长列表。</li>
+</ul>
+<h3 id="1-2-1-Kubeadm-安装"><a href="#1-2-1-Kubeadm-安装" class="headerlink" title="1.2.1 Kubeadm 安装"></a>1.2.1 Kubeadm 安装</h3><p>部署Kubernetes常用的工具有kubeadm、kops和kubespray。</p>
+<ul>
+<li>kubeadm: 适合需要灵活控制集群配置的用户，通常用于已有基础设施环境。</li>
+<li>kops: 适合在 AWS 或 GCE 上自动化部署和管理 Kubernetes 集群的用户，尤其是那些需要自动化云资源管理的团队。</li>
+<li>Kubespray: 适合在多种基础设施上部署高度定制化 Kubernetes 集群的用户，特别是在混合云或多云环境中。</li>
+</ul>
+<p><strong>准备开始</strong>  </p>
+<ul>
+<li>一台兼容的 Linux 主机。Kubernetes 项目为基于Debian 和 Red Hat 的 Linux 发行版以及一些不提供包管理器的发行版提供通用的指令。 （这里这个句子读起来真拗口）</li>
+<li>每台机器 2 GB 或更多的 RAM（如果少于这个数字将会影响你应用的运行内存）</li>
+<li>CPU 2 核心及以上</li>
+<li>集群中的所有机器的网络彼此均能相互连接（公网和内网都可以）</li>
+<li>节点之中不可以有重复的主机名、MAC 地址或 product_uuid。一般来讲，硬件设备会拥有唯一的地址，但是有些虚拟机的地址可能会重复。 Kubernetes 使用这些值来唯一确定集群中的节点。 如果这些值在每个节点上不唯一，可能会导致安装失败。</li>
+<li>开启机器上的某些端口。<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">nc 127.0.0.1 6443 -v  # 检查端口是否开放<br><span class="hljs-meta prompt_"># </span><span class="language-bash">你使用的 Pod 网络插件 (详见后续章节) 也可能需要开启某些特定端口。 由于各个 Pod 网络插件的功能都有所不同，请参阅他们各自文档中对端口的要求。</span><br></code></pre></td></tr></table></figure>
+<strong>安装容器运行时</strong><br>容器运行时是 Kubernetes 集群中运行 Pod 的基础。 Kubernetes 支持多种容器运行时，包括 Docker、containerd、CRI-O 和 Rkt。<blockquote>
+<p>说明：Docker Engine 没有实现 CRI， 而这是容器运行时在 Kubernetes 中工作所需要的。 为此，必须安装一个额外的服务 cri-dockerd。 cri-dockerd 是一个基于传统的内置 Docker 引擎支持的项目， 它在 1.24 版本从 kubelet 中移除。</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs awk">运行时	Unix 域套接字<br>containerd	unix:<span class="hljs-regexp">//</span><span class="hljs-regexp">/var/</span>run<span class="hljs-regexp">/containerd/</span>containerd.sock<br>CRI-O	unix:<span class="hljs-regexp">//</span><span class="hljs-regexp">/var/</span>run<span class="hljs-regexp">/crio/</span>crio.sock<br>Docker Engine（使用 cri-dockerd）	unix:<span class="hljs-regexp">//</span><span class="hljs-regexp">/var/</span>run/cri-dockerd.sock<br></code></pre></td></tr></table></figure>
+<p><strong>安装 kubeadm、kubelet 和 kubectl</strong></p>
+<p>你需要在每台机器上安装以下的软件包：</p>
+<ul>
+<li><p>kubeadm：用来初始化集群的指令。</p>
+</li>
+<li><p>kubelet：在集群中的每个节点上用来启动 Pod 和容器等。</p>
+</li>
+<li><p>kubectl：用来与集群通信的命令行工具。</p>
+</li>
+</ul>
+<h3 id="1-2-2-二进制包安装"><a href="#1-2-2-二进制包安装" class="headerlink" title="1.2.2 二进制包安装"></a>1.2.2 二进制包安装</h3><p><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1366693">阿里云论坛(上)</a><br><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1366697">阿里云论坛(中)</a><br><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1366699">阿里云论坛(下)</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40954652/article/details/123208590">CSDN k8s详细搭建步骤</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40954652/article/details/123254250">CSDN 高可用集群搭建</a></p>
+<h1 id="2-配置集群"><a href="#2-配置集群" class="headerlink" title="2. 配置集群"></a>2. 配置集群</h1><h1 id="3-helm"><a href="#3-helm" class="headerlink" title="3. helm"></a>3. helm</h1><h2 id="3-1-安装helm"><a href="#3-1-安装helm" class="headerlink" title="3.1 安装helm"></a>3.1 安装helm</h2><h2 id="3-2-配置helm"><a href="#3-2-配置helm" class="headerlink" title="3.2 配置helm"></a>3.2 配置helm</h2><h2 id="3-3-创建chart"><a href="#3-3-创建chart" class="headerlink" title="3.3 创建chart"></a>3.3 创建chart</h2><p><img src="/2024/08/13/2024-08-13-Wed-T-Kubernetes/image.png" srcset="/img/loading.gif" lazyload alt="alt text">)</p>
+<h1 id="4-常见疑问"><a href="#4-常见疑问" class="headerlink" title="4. 常见疑问"></a>4. 常见疑问</h1><h2 id="4-1-kubeadm-kubectl-kubelet-区别"><a href="#4-1-kubeadm-kubectl-kubelet-区别" class="headerlink" title="4.1 kubeadm kubectl kubelet 区别"></a>4.1 kubeadm kubectl kubelet 区别</h2><p><strong>kubeadm</strong><br>kubeadm是官方社区推出的一个用于快速部署kubernetes集群的工具。<br>这个工具能通过两条指令完成一个kubernetes集群的部署：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs linux"># 创建一个 Master 节点<br>kubeadm init<br><br># 将一个 Node 节点加入到当前集群中<br>kubeadm join &lt;Master节点的IP和端口 &gt;<br></code></pre></td></tr></table></figure>
+
+<p><strong>kubectl</strong><br>kubectl是Kubernetes集群的命令行工具，通过kubectl能够对集群本身进行管理，并能够在集群上进行容器化应用的安装和部署</p>
+<p><strong>kubelet</strong><br>Kubelet：master派到node节点代表，管理本机容器<br>一个集群中每个节点上运行的代理，它保证容器都运行在Pod中<br>负责维护容器的生命周期，同时也负责Volume(CSI) 和 网络(CNI)的管理<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/youzhouliu/article/details/124860773">https://blog.csdn.net/youzhouliu/article/details/124860773</a></p>
+<p><img src="/2024/08/13/2024-08-13-Wed-T-Kubernetes/image-1.png" srcset="/img/loading.gif" lazyload alt="kubeadm kubectl kubelet 区别">)</p>
+
                 
               </div>
             
