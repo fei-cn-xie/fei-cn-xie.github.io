@@ -26,8 +26,10 @@
 <meta property="og:image" content="http://example.com/vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E4%B8%89%E7%A7%8D%E6%A8%A1%E5%BC%8F.svg">
 <meta property="og:image" content="http://example.com/image.png">
 <meta property="og:image" content="http://example.com/image-2.png">
+<meta property="og:image" content="http://example.com/image-1.png">
+<meta property="og:image" content="http://example.com/image-3.png">
 <meta property="article:published_time" content="2024-08-15T06:04:56.000Z">
-<meta property="article:modified_time" content="2024-11-08T05:30:17.716Z">
+<meta property="article:modified_time" content="2024-11-12T04:33:00.526Z">
 <meta property="article:author" content="Fei">
 <meta property="article:tag" content="Tech">
 <meta property="article:tag" content="Linux">
@@ -227,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          9.4k words
+          18k words
         
       </span>
     
@@ -238,7 +240,7 @@
         
         
         
-          79 mins
+          152 mins
         
       </span>
     
@@ -503,7 +505,212 @@
 <h3 id="2-7-2-磁盘情况查询"><a href="#2-7-2-磁盘情况查询" class="headerlink" title="2.7.2 磁盘情况查询"></a>2.7.2 磁盘情况查询</h3><p><code>df -h</code>: 查看磁盘使用情况<br><code>du [选项] [文件或目录]</code>: 显示该目录及该目下目录或文件磁盘占用情况<br>  -<code>-h</code>: 显示时带计量单位, 如: 1K, 1M, 1G<br>  -<code>-s</code>: 仅显示该目录大小<br>  -<code>--max-depth</code>: 限制显示目录深度, 默认不限制<br>  -<code>-c</code>: 列出明细同时, 显示汇总(total)值<br>  -<code>-a</code>: 显示所有文件, 包括隐藏文件  </p>
 <h3 id="2-7-3-磁盘实用指令"><a href="#2-7-3-磁盘实用指令" class="headerlink" title="2.7.3 磁盘实用指令"></a>2.7.3 磁盘实用指令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">1. 统计/opt文件夹下“文件”的个数</span><br>ls -l /opt | grep &quot;^-&quot; | wc -l<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">2. 统计/opt文件夹下“目录”的个数</span><br>ls -l /opt | grep &quot;^d&quot; | wc -l<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">3. 统计/opt文件夹及子目录下“文件”的个数</span><br>ls -lR /opt | grep &quot;^-&quot; | wc -l<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">4. 以树状结构显示目录结构</span><br>tree /opt -L 2 # 显示深度为2<br> <br><br><br></code></pre></td></tr></table></figure>
 
-<h2 id="2-8-网络配置"><a href="#2-8-网络配置" class="headerlink" title="2.8 网络配置"></a>2.8 网络配置</h2><h2 id="2-9-进程管理"><a href="#2-9-进程管理" class="headerlink" title="2.9 进程管理"></a>2.9 进程管理</h2><h2 id="2-10-RPM、YUM和APT"><a href="#2-10-RPM、YUM和APT" class="headerlink" title="2.10 RPM、YUM和APT"></a>2.10 RPM、YUM和APT</h2><h2 id="2-11-用户管理"><a href="#2-11-用户管理" class="headerlink" title="2.11 用户管理"></a>2.11 用户管理</h2><h1 id="三、高级篇"><a href="#三、高级篇" class="headerlink" title="三、高级篇"></a>三、高级篇</h1><h2 id="3-1-日志管理"><a href="#3-1-日志管理" class="headerlink" title="3.1 日志管理"></a>3.1 日志管理</h2><h2 id="3-2-定制自己的linux"><a href="#3-2-定制自己的linux" class="headerlink" title="3.2 定制自己的linux"></a>3.2 定制自己的linux</h2><h2 id="3-3-Linux内核源码和内核升级"><a href="#3-3-Linux内核源码和内核升级" class="headerlink" title="3.3 Linux内核源码和内核升级"></a>3.3 Linux内核源码和内核升级</h2><h2 id="3-4-Linux备份与恢复"><a href="#3-4-Linux备份与恢复" class="headerlink" title="3.4 Linux备份与恢复"></a>3.4 Linux备份与恢复</h2><h2 id="3-5-Linux可视化管理webmin和bt运维工具"><a href="#3-5-Linux可视化管理webmin和bt运维工具" class="headerlink" title="3.5 Linux可视化管理webmin和bt运维工具"></a>3.5 Linux可视化管理webmin和bt运维工具</h2><h2 id="3-6-Linux入侵检测、权限划分、系统优化"><a href="#3-6-Linux入侵检测、权限划分、系统优化" class="headerlink" title="3.6 Linux入侵检测、权限划分、系统优化"></a>3.6 Linux入侵检测、权限划分、系统优化</h2><h2 id="3-7-Linux面试题"><a href="#3-7-Linux面试题" class="headerlink" title="3.7 Linux面试题"></a>3.7 Linux面试题</h2><h1 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1. 常用命令"></a>1. 常用命令</h1><h2 id="1-1-系统操作"><a href="#1-1-系统操作" class="headerlink" title="1.1 系统操作"></a>1.1 系统操作</h2><ul>
+<h2 id="2-8-网络配置"><a href="#2-8-网络配置" class="headerlink" title="2.8 网络配置"></a>2.8 网络配置</h2><p><img src="/image-1.png" srcset="/img/loading.gif" lazyload alt="alt text">)</p>
+<ul>
+<li>IP获取方式<ul>
+<li>DHCP 动态获取IP地址</li>
+<li>静态配置IP地址</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-8-1-静态配置IP地址"><a href="#2-8-1-静态配置IP地址" class="headerlink" title="2.8.1 静态配置IP地址"></a>2.8.1 静态配置IP地址</h3><p>直接修改配置文件来指定IP, 并可以连接到外网(推荐)  </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">CentOS 的ens33网卡配置为例</span><br>vim /etc/sysconfig/network-scripts/ifcfg-ens33<br><span class="hljs-meta prompt_"># </span><span class="language-bash">修改内容如下</span><br>DEVICE=eth0 # 接口名(设备, 网卡)<br>HWADDR=00:50:56:00:00:00 # 网卡MAC地址<br>TYPE= Ethernet # 网络类型<br>UUID= 01b0f841-c5c3-4a23-a6f2-035a83b0acb7 # 网卡唯一标识<br>NOBOOT=no # 系统启动时, 网络接口是否有效<br>BOOTPROTO= static # IP的配置方法, none(引导时不使用协议)|dhcp(动态分配)|bootp(bootp协议)|static(静态手动分配)<br>IPADDR= 192.168.1.100 # IP地址<br>GATEWAY= 192.168.1.1 # 网关IP地址<br>DNS1= 114.114.114.114 # DNS服务器IP地址<br><br></code></pre></td></tr></table></figure>
+
+<h3 id="2-8-2-设置主机名和hosts映射"><a href="#2-8-2-设置主机名和hosts映射" class="headerlink" title="2.8.2 设置主机名和hosts映射"></a>2.8.2 设置主机名和hosts映射</h3><p>为了方便记忆, 可以给Linux系统设置主机名, 也可以根据需要修改主机名<br><code>hostname</code>: 查看当前主机名<br>修改文件<code>/etc/hostname</code>文件, 修改主机名. 修改后重启生效<br>设置主机名和hosts映射: <code>vim /etc/hosts</code>  </p>
+<h3 id="2-8-3-主机名解析分析"><a href="#2-8-3-主机名解析分析" class="headerlink" title="2.8.3 主机名解析分析"></a>2.8.3 主机名解析分析</h3><p>实例: 用户在浏览器输入了<a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a><br><img src="/image-3.png" srcset="/img/loading.gif" lazyload alt="alt text">)</p>
+<h2 id="2-9-进程管理"><a href="#2-9-进程管理" class="headerlink" title="2.9 进程管理"></a>2.9 进程管理</h2><p>在linux中, 每个执行的程序都称为一个进程, 每一个进程都分配一个ID号(PID, 进程号)<br>每一个进程都可能以两种方式存在:  </p>
+<ul>
+<li>前台: 用户目前屏幕上可以进行操作的进程</li>
+<li>后台: 实际在运行中, 但是屏幕无法看到</li>
+</ul>
+<p>一般系统的服务都是以后台进程的方式存在, 而且都会常驻载系统中, 直到关机才结束  </p>
+<h3 id="2-9-1-查看与终止进程"><a href="#2-9-1-查看与终止进程" class="headerlink" title="2.9.1 查看与终止进程"></a>2.9.1 查看与终止进程</h3><ul>
+<li>显示系统执行的程序<ul>
+<li><code>ps</code>: 显示当前正在运行的进程  <ul>
+<li><code>ps -a</code>: 显示所有进程, 包括前台和后台进程  </li>
+<li><code>ps -u</code>: 以用户身份显示  </li>
+<li><code>ps -x</code>: 显示后台进程运行的参数</li>
+<li><code>ps -ef</code>: 以全格式显示当前所有进程, -e显示所有进程, -f全格式</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>终止进程<ul>
+<li><code>kill [选项] 进程号</code>: 终止进程<ul>
+<li><code>kill -9 进程号</code>: 强制终止进程, 强制终止进程, 即使该进程正在运行中, 也可以强制终止</li>
+</ul>
+</li>
+<li><code>killall 进程名称</code>: 终止进程名称为进程名称的进程</li>
+</ul>
+</li>
+</ul>
+<p>最佳实践:  </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">1. 踢掉某个非法登录用户</span><br>ps -aux | grep &quot;sshd&quot; # 通过查询sshd运行服务, 找到tom登录的进程号<br>kill 11421 # 强制终止11421进程, 从而让踢掉tom登录<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">2. 终止远程登录服务sshd, 在适当的时候再重启sshd服务</span><br>kill sshd服务对应的进程号<br>systemctl start sshd<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">3. 终止多个gedit</span><br>killall gedit <br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">4. 强制杀死一个终端(命令行)</span><br>ps -aux | grep &quot;bash&quot;<br>kill -9 10487 # 不使用-9参数, 无法终止终端命令行<br><br></code></pre></td></tr></table></figure>
+
+<p><strong>查看进程树</strong><br><code>pstree [选项]</code>: 可以更直观的来看进程信息  </p>
+<ul>
+<li><code>-p</code>: 显示进程的PID  </li>
+<li><code>-u</code>: 显示进程的用户名</li>
+</ul>
+<h3 id="2-9-2-服务-service-管理"><a href="#2-9-2-服务-service-管理" class="headerlink" title="2.9.2 服务(service)管理"></a>2.9.2 服务(service)管理</h3><p> service本质就是进程, 但是是运行在后台的, 通常都会监听某个端口, 等待其他进程的请求, 比如(mysql, sshd, 防火墙等). 因此我们又称为守护进程,   </p>
+<p> service管理指令:</p>
+<ul>
+<li><code>service|systemctl [选项] 服务名 [start|stop|restart|reload|status]</code>: 管理服务</li>
+</ul>
+<h3 id="2-9-3-服务管理"><a href="#2-9-3-服务管理" class="headerlink" title="2.9.3 服务管理"></a>2.9.3 服务管理</h3><p>Linux系统有7种运行级别, 常用的是3和5  </p>
+<ul>
+<li>0: 系统停机状态，系统默认运行级别不能设为0，否则不能正常启动。  </li>
+<li>1: 单用户工作状态，root权限，用于系统维护，禁止远程登陆。  </li>
+<li>2: 多用户状态(没有NFS)。NFS Network File System，即网络文件系统，用于挂载远程文件系统。  </li>
+<li>3: 完全的多用户状态(有NFS)，登陆后进入控制台命令行模式。  </li>
+<li>4: 系统未使用，保留。  </li>
+<li>5: X11控制台，登陆后进入图形GUI模式。  </li>
+<li>6: 系统正常关闭并重启，默认运行级别不能设为6，否则不能正常启动。</li>
+</ul>
+<p>开机流程说明:  </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">开机--&gt; BIOS --&gt; /boot --&gt; systemd进程 --&gt; 运行级别 --&gt; 运行级别对应的服务<br></code></pre></td></tr></table></figure>
+
+<p><strong>chkconfig</strong><br>通过chkconfig可以给服务各个级别设置自启动&#x2F;关闭<br>chkconfig指令管理的服务在&#x2F;etc&#x2F;etc&#x2F;init.d查看<br>基本语法: </p>
+<ul>
+<li><code>chkconfig --list</code> #显示服务在各个运行级别的自启动状态</li>
+<li><code>chkconfig --level 5 service_name [on|off]</code></li>
+<li>演示:(对network服务进行操作) <code>chkkonfig --level 3 network on</code></li>
+</ul>
+<p><strong>systemctl</strong><br>基本语法: <code>systemctl [start|stop|restart|reload|status] service_name</code><br>systemctl管理的指令在<code>/usr/lib/systemd/system</code>查看  </p>
+<ul>
+<li>systemctl设置服务自启动状态<ul>
+<li><code>systemctl list-unit-files | grep service_name</code>: 查看服务开机自启动状态</li>
+<li><code>systemctl enable service_name</code>: 设置开机自启动</li>
+<li><code>systemctl disable service_name</code>: 设置开机不启动</li>
+<li><code>systemctl is-enabled service_name</code>: 查看服务是否开机启动</li>
+</ul>
+</li>
+</ul>
+<p>案例: 查看当前防火墙的状态, 关闭防火墙和重启防火墙  </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs shell">ls -l /usr/lib/systemd/system/firewalld.service # 查看防火墙服务文件<br>systemctl list-unit-files | grep firewalld<br>systemctl status firewalld<br>systemctl stop firewalld<br>telnet 127.0.0.1 22 # 测试是否关闭<br><br></code></pre></td></tr></table></figure>
+
+<p><strong>防火墙firwall指令</strong>  </p>
+<ul>
+<li><code>firewall-cmd --permanenet --add-port=端口号/协议</code>: 打开端口   </li>
+<li><code>firewall-cmd --permanent --remove-port=端口号/协议</code>: 关闭端口  </li>
+<li><code>firewall-cmd --reload</code>: 重新加载, 才能生效</li>
+<li><code>firewall-cmd --query-port=端口号/协议</code>: 查看端口是否开放</li>
+<li><code>firewall-cmd --list-ports</code>: 查看已开放的端口</li>
+<li><code>firewall-cmd --list-all</code>: 查看防火墙状态</li>
+<li><code>netstat -antp</code>: 查看端口是否开放</li>
+</ul>
+<p><strong>动态监控进程top</strong><br>top与ps类似, 它们都用来显示正在执行的进程, Top与ps最大的不同之处, 在于top在执行一段时间可以更新正在运行的进程.<br>基本语法: <code>top [选项]</code>  </p>
+<ul>
+<li><code>-i</code>: 不显示任何限制或者僵死的进程</li>
+<li><code>-d 秒速</code>: 刷新间隔, 可以设置成0.1秒, 但是刷新间隔过短, 会导致top的cpu占用率非常高, 默认为3秒  </li>
+<li><code>-p 进程号</code>: 查看某个进程的详细信息</li>
+</ul>
+<p>交互操作: </p>
+<ul>
+<li><code>q</code>: 退出top</li>
+<li><code>d</code>: 修改刷新间隔</li>
+<li><code>k</code>: 杀死进程</li>
+<li><code>u</code>: 按用户筛选</li>
+<li><code>P</code>: 按CPU使用率排序, 默认</li>
+<li><code>M</code>: 按内存使用率排序</li>
+<li><code>N</code>: 按进程号排序</li>
+</ul>
+<p><strong>监控网络状态netstat</strong><br>基本语法: <code>netstat [选项]</code>  </p>
+<ul>
+<li><code>-an</code>: 按一定顺序排列输出</li>
+<li><code>-p</code>: 显示进程号和进程名</li>
+</ul>
+<h2 id="2-10-RPM和APT"><a href="#2-10-RPM和APT" class="headerlink" title="2.10 RPM和APT"></a>2.10 RPM和APT</h2><p>RPM 用于互联网下载包的打包及安装工具, 它包含在某些Linux发行版中, 比如CentOS, Fedora等。  </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">查询已安装的软件包</span><br>rpm -q [包名] # 查看是否已安装指定的软件包<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">查询安装的所有软件包</span><br>rpm -qa # 列出系统中所有已安装的软件包<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">查询软件包的信息</span><br>rpm -qi [包名] # 查看某个已安装包的详细信息<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">查询软件包文件列表</span><br>rpm -ql [包名] # 显示某个已安装包包含的文件<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">查询文件属于哪个软件包</span><br>rpm -qf [文件路径] # 通过文件路径查询它所属的软件包<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">安装软件包</span><br>rpm -ivh [包文件名] # 安装指定的 .rpm 包文件 (-i安装, -v显示详细信息, -h显示进度条)<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">升级软件包</span><br>rpm -Uvh [包文件名] # 升级或安装软件包 (-U升级或安装)<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">仅升级已安装的软件包</span><br>rpm -Fvh [包文件名] # 仅升级已安装的软件包（如包未安装则不操作）<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">卸载软件包</span><br>rpm -e [包名] # 卸载已安装的包（需指定包名而非文件名）<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">验证软件包完整性</span><br>rpm -V [包名] # 验证指定包中的文件是否已被更改<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">检查安装包文件的依赖关系</span><br>rpm -qpR [包文件名] # 检查安装某个 .rpm 包文件时可能存在的依赖关系<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">检查已安装包的依赖</span><br>rpm -qR [包名] # 检查已安装的包的依赖关系<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">显示包文件的说明信息（不安装）</span><br>rpm -qip [包文件名] # 查看指定 .rpm 包文件的描述信息<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">显示包文件包含的文件列表（不安装）</span><br>rpm -qlp [包文件名] # 查看指定 .rpm 包文件中包含的文件列表<br><br></code></pre></td></tr></table></figure>
+
+<p>APT  </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">更新软件包列表</span><br>sudo apt update # 从软件源获取最新的包信息，但不安装更新<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">升级所有已安装的软件包</span><br>sudo apt upgrade # 安装所有已安装包的最新版本（不会移除包）<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">升级所有已安装的软件包，并允许移除旧包</span><br>sudo apt full-upgrade # 在需要时移除冲突的旧包，以完成系统的全面升级<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">安装软件包</span><br>sudo apt install [包名] # 安装指定软件包，如果已安装则不重复安装<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">安装特定版本的软件包</span><br>sudo apt install [包名]=[版本号] # 安装指定版本的软件包<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">卸载软件包（保留配置文件）</span><br>sudo apt remove [包名] # 卸载指定软件包，但保留配置文件<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">完全卸载软件包（包含配置文件）</span><br>sudo apt purge [包名] # 完全卸载指定软件包及其配置文件<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">自动移除不再需要的依赖包</span><br>sudo apt autoremove # 移除安装时自动添加、但现在已不再需要的依赖包<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">搜索软件包</span><br>apt search [关键词] # 在包列表中搜索与关键词匹配的包<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">显示软件包的信息</span><br>apt show [包名] # 显示指定包的详细信息（包括描述、依赖等）<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">查看软件包是否已安装</span><br>dpkg -l | grep [包名] # 使用 dpkg 列出并过滤出指定包的信息<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">列出软件包的依赖关系</span><br>apt depends [包名] # 列出指定包的依赖关系<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">列出包的反向依赖（哪些包依赖此包）</span><br>apt rdepends [包名] # 列出指定包的反向依赖关系<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">清理下载的包缓存</span><br>sudo apt clean # 清空 /var/cache/apt/archives 中的已下载包文件<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">清除已删除软件包的缓存文件</span><br>sudo apt autoclean # 清除不再需要的包缓存文件（已删除包的缓存）<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">检查系统中是否有未满足的依赖</span><br>sudo apt check # 检查系统中是否存在依赖问题<br><br></code></pre></td></tr></table></figure>
+
+
+<h2 id="2-11-Shell编程"><a href="#2-11-Shell编程" class="headerlink" title="2.11 Shell编程"></a>2.11 Shell编程</h2><p>Shell是一个命令行解释器, 它为用户提供了一个向Linux内核发送请求以便运行程序的界面系统级程序, 用户可以用shell来启动、挂起、停止甚至是编写一些程序  </p>
+<h3 id="2-11-1-执行方式"><a href="#2-11-1-执行方式" class="headerlink" title="2.11.1 执行方式"></a>2.11.1 执行方式</h3><ol>
+<li>脚本的格式要求:<ul>
+<li>脚本以<code>#/bin/bash</code>开头  </li>
+<li>脚本需要有可执行权限</li>
+</ul>
+</li>
+<li>脚本常用执行方式:<ul>
+<li>直接执行脚本：<code>sh 脚本文件名</code></li>
+<li>脚本文件执行：<code>./脚本文件名</code> (需要添加执行权限 +x)</li>
+</ul>
+</li>
+</ol>
+<p>案例: </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">!/bin/bash <span class="hljs-comment"># 声明解释器, 一般默认是bash, 所以有时候没有添加这一行也会执行后续内容</span></span><br>echo &quot;Hello World!&quot;<br></code></pre></td></tr></table></figure>
+
+
+<h3 id="2-11-2-Shell中的变量"><a href="#2-11-2-Shell中的变量" class="headerlink" title="2.11.2 Shell中的变量"></a>2.11.2 Shell中的变量</h3><ol>
+<li>普通变量：<ul>
+<li><code>set</code> 显示当前shell中所有的变量</li>
+<li>系统变量<ul>
+<li>$HOSTNAME</li>
+<li>$USER</li>
+<li>$PATH</li>
+<li>$HOME</li>
+<li>定义环境变量: <code>export VAR_NAME=VALUE</code></li>
+</ul>
+</li>
+<li>自定义变量<ul>
+<li>变量定义规则: 可以由字母数字下划线组成, 但是不能以数字开头; 等号两边不能有空格; 变量名一般大写</li>
+<li>定义变量: <code>变量名=值</code></li>
+<li>引用变量：<code>$变量名</code></li>
+<li>删除变量：<code>unset 变量名</code></li>
+<li>声明静态变量：<code>readonly 变量名</code> (静态变量不能被unset, 也不能被修改)</li>
+</ul>
+</li>
+<li>将命令返回值赋值给变量: 使用用反引号或者是括号</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs shell">A=`date`<br>echo &quot;$A&quot;<br><br>C=(date)<br>echo &quot;$C&quot;<br><br></code></pre></td></tr></table></figure>
+<ol start="4">
+<li><p>Shell脚本多行注释: </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell">:&lt;&lt;! 内容 <br>内容<br>!<br><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>位置参数变量<br>  当执行一个shell脚本时, 如果希望获取命令行的参数信息, 可以使用位置参数变量.<br>  比如: <code>./myshell.sh 100 200</code></p>
+</li>
+</ol>
+<ul>
+<li>基本语法:<ul>
+<li><code>$n</code>: n为数字, 0代表命令本身(不含参数), 1-9代表第一到第九个参数, 参数超过十个(包含10), 使用大括号, 例如<code>$&#123;12&#125;</code></li>
+<li><code>$*</code>: 代表命令行中所有的参数, 把所有参数看成一个整体</li>
+<li><code>$@</code>: 代表命令行中所有的参数, 把每个参数看成单独个体</li>
+<li><code>$#</code>: 代表命令行中参数的个数</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>预定义变量<br>   shell设计者事先已经定义好的变量, 可以直接在shell中使用.</li>
+</ol>
+<ul>
+<li><code>$$</code>: 当前进程的进程号</li>
+<li><code>$!</code>: 后台运行的最后一个进程的进程号</li>
+<li><code>$?</code>: 最后一次执行命令的返回状态, 如果变量为0, 则说明上一个命令执行成功</li>
+</ul>
+<h3 id="2-11-3-Shell中的运算符"><a href="#2-11-3-Shell中的运算符" class="headerlink" title="2.11.3 Shell中的运算符"></a>2.11.3 Shell中的运算符</h3><p>   基本语法:</p>
+<ol>
+<li><code>$((运算式))</code>, <code>$[运算式]</code>, <code>expr 运算式</code></li>
+<li><code>expr</code>运算符之间需要有空格, 加、减、乘、除、取余用<code>+, -, \*, /, %</code>表示</li>
+</ol>
+<h3 id="2-11-4-条件判断"><a href="#2-11-4-条件判断" class="headerlink" title="2.11.4 条件判断"></a>2.11.4 条件判断</h3><p>   基本语法: </p>
+<ol>
+<li><code>[ condition ]</code>: 非空返回true, 可以使用<code>$?</code>验证, 0为true, 1为false(注意: condition前后需要有空格)</li>
+</ol>
+<p>   if判读:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">基本语法</span><br>if [ condition ]; then<br>Do some things<br>fi<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">或者</span><br>if [ condition ]<br>then<br>Do some things<br>fi<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">或者</span><br>if [ condition ]<br>then<br>Do some things<br>elif [ condition ]<br>then<br>Do other things<br>else<br>then<br>Don&#x27;t do it<br>fi<br><br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">数值比较</span><br>-eq：等于<br>    if [ &quot;$a&quot; -eq &quot;$b&quot; ]; then<br>      echo &quot;a equals b&quot;<br>    fi<br><br>-ne：不等于<br>    if [ &quot;$a&quot; -ne &quot;$b&quot; ]; then<br>      echo &quot;a is not equal to b&quot;<br>    fi<br><br>-lt：小于<br>    if [ &quot;$a&quot; -lt &quot;$b&quot; ]; then<br>      echo &quot;a is less than b&quot;<br>    fi<br><br>-le：小于或等于<br>    if [ &quot;$a&quot; -le &quot;$b&quot; ]; then<br>      echo &quot;a is less than or equal to b&quot;<br>    fi<br><br>-gt：大于<br>    if [ &quot;$a&quot; -gt &quot;$b&quot; ]; then<br>      echo &quot;a is greater than b&quot;<br>    fi<br><br>-ge：大于或等于<br>    if [ &quot;$a&quot; -ge &quot;$b&quot; ]; then<br>      echo &quot;a is greater than or equal to b&quot;<br>    fi<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">字符串比较</span><br>=：字符串相等<br>    if [ &quot;$str1&quot; = &quot;$str2&quot; ]; then<br>      echo &quot;Strings are equal&quot;<br>    fi<br><br>!=：字符串不相等<br>    if [ &quot;$str1&quot; != &quot;$str2&quot; ]; then<br>      echo &quot;Strings are not equal&quot;<br>    fi<br><br>-z：字符串为空<br>    if [ -z &quot;$str1&quot; ]; then<br>      echo &quot;str1 is empty&quot;<br>    fi<br><br>-n：字符串不为空<br>    if [ -n &quot;$str2&quot; ]; then<br>      echo &quot;str2 is not empty&quot;<br>    fi<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">文件判断</span><br>-e：文件存在<br>    if [ -e &quot;$file&quot; ]; then<br>      echo &quot;File exists&quot;<br>    fi<br><br>-f：文件存在且为普通文件<br>    if [ -f &quot;$file&quot; ]; then<br>      echo &quot;File is a regular file&quot;<br>    fi<br><br>-d：文件存在且为目录<br>    if [ -d &quot;$file&quot; ]; then<br>      echo &quot;It is a directory&quot;<br>    fi<br><br>-r：文件存在且可读<br>    if [ -r &quot;$file&quot; ]; then<br>      echo &quot;File is readable&quot;<br>    fi<br><br>-w：文件存在且可写<br>    if [ -w &quot;$file&quot; ]; then<br>      echo &quot;File is writable&quot;<br>    fi<br><br>-x：文件存在且可执行<br>    if [ -x &quot;$file&quot; ]; then<br>      echo &quot;File is executable&quot;<br>    fi<br><br>-s：文件存在且大小大于 0<br>    if [ -s &quot;$file&quot; ]; then<br>      echo &quot;File size is greater than 0&quot;<br>    fi<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">逻辑运算</span><br>-a：逻辑与（AND）<br>    if [ -r &quot;$file&quot; -a -w &quot;$file&quot; ]; then<br>      echo &quot;File is readable and writable&quot;<br>    fi<br><br>-o：逻辑或（OR）<br>    if [ -r &quot;$file&quot; -o -w &quot;$file&quot; ]; then<br>      echo &quot;File is readable or writable&quot;<br>    fi<br><br>!：逻辑非（NOT）<br>    if [ ! -x &quot;$file&quot; ]; then<br>      echo &quot;File is not executable&quot;<br>    fi<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">组合条件</span><br>&amp;&amp;：条件1和条件2都为真<br>    if [ &quot;$a&quot; -lt &quot;$b&quot; ] &amp;&amp; [ &quot;$str1&quot; != &quot;$str2&quot; ]; then<br>      echo &quot;a is less than b and str1 is not equal to str2&quot;<br>    fi<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">使用双中括号（更适合字符串和正则匹配）</span><br>[[ ... ]]：字符串和正则表达式匹配<br>    if [[ &quot;$str1&quot; =~ ^h.*o$ ]]; then<br>      echo &quot;str1 matches the regex pattern&quot;<br>    fi<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">示例：检查变量是否为空</span><br>-z：字符串为空<br>    if [ -z &quot;$var&quot; ]; then<br>      echo &quot;var is empty&quot;<br>    fi<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">示例：检查文件是否存在且可执行</span><br>-x：文件存在且可执行<br>    if [ -x &quot;$file&quot; ]; then<br>      echo &quot;File is executable&quot;<br>    fi<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">示例：两个条件都为真</span><br>&amp;&amp;：条件1和条件2都为真<br>    if [ &quot;$a&quot; -eq 5 ] &amp;&amp; [ &quot;$b&quot; -eq 10 ]; then<br>      echo &quot;Both conditions are true&quot;<br>    fi<br><br></code></pre></td></tr></table></figure>
+
+<h3 id="2-11-5-case语句"><a href="#2-11-5-case语句" class="headerlink" title="2.11.5 case语句"></a>2.11.5 case语句</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">基本语法</span><br>case $变量名 in<br>&quot;var1&quot;)<br>Do the thing of var1<br>;;<br>&quot;var2&quot;)<br>Do the thing of var2<br>&#x27;&#x27;<br>&quot;var3&quot;)<br>Do the thing of var3<br>*)<br>Do the things that are not the case var1, var2, var3<br>esac<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-11-6-循环控制"><a href="#2-11-6-循环控制" class="headerlink" title="2.11.6 循环控制"></a>2.11.6 循环控制</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash"><span class="hljs-keyword">for</span> 循环基本语法分</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">基本语法 1</span><br>for var in var1 var2 var3<br>do<br>Do some repeate things<br>done<br><span class="hljs-meta prompt_">#</span><span class="language-bash">例如</span><br>for i in $@<br>do<br>echo $i<br>done<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">基本语法 2</span><br>for (( start_var;condition;var_change))<br>do <br>Do sone repeate things<br>done<br><span class="hljs-meta prompt_">#</span><span class="language-bash">例如</span><br>for ((i=0;i&lt;9;i++))<br>do<br>echo $i<br>done<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash"><span class="hljs-keyword">while</span> 循环</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">基本语法</span><br>while [ condition ] # 注意空格<br>do<br>Do some things repeately<br>done<br><br><br></code></pre></td></tr></table></figure>
+
+
+<h1 id="三、高级篇"><a href="#三、高级篇" class="headerlink" title="三、高级篇"></a>三、高级篇</h1><h2 id="3-1-日志管理"><a href="#3-1-日志管理" class="headerlink" title="3.1 日志管理"></a>3.1 日志管理</h2><h2 id="3-2-定制自己的linux"><a href="#3-2-定制自己的linux" class="headerlink" title="3.2 定制自己的linux"></a>3.2 定制自己的linux</h2><h2 id="3-3-Linux内核源码和内核升级"><a href="#3-3-Linux内核源码和内核升级" class="headerlink" title="3.3 Linux内核源码和内核升级"></a>3.3 Linux内核源码和内核升级</h2><h2 id="3-4-Linux备份与恢复"><a href="#3-4-Linux备份与恢复" class="headerlink" title="3.4 Linux备份与恢复"></a>3.4 Linux备份与恢复</h2><h2 id="3-5-Linux可视化管理webmin和bt运维工具"><a href="#3-5-Linux可视化管理webmin和bt运维工具" class="headerlink" title="3.5 Linux可视化管理webmin和bt运维工具"></a>3.5 Linux可视化管理webmin和bt运维工具</h2><h2 id="3-6-Linux入侵检测、权限划分、系统优化"><a href="#3-6-Linux入侵检测、权限划分、系统优化" class="headerlink" title="3.6 Linux入侵检测、权限划分、系统优化"></a>3.6 Linux入侵检测、权限划分、系统优化</h2><h2 id="3-7-Linux面试题"><a href="#3-7-Linux面试题" class="headerlink" title="3.7 Linux面试题"></a>3.7 Linux面试题</h2><h1 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1. 常用命令"></a>1. 常用命令</h1><h2 id="1-1-系统操作"><a href="#1-1-系统操作" class="headerlink" title="1.1 系统操作"></a>1.1 系统操作</h2><ul>
 <li>查看系统信息：<code>uname -a</code></li>
 <li>查看系统版本：<code>cat /etc/issue</code></li>
 <li>查看系统发行版：<code>cat /etc/os-release</code>， <code>lsb_release -a</code></li>
