@@ -23,11 +23,9 @@
 <meta property="og:site_name" content="Fei">
 <meta property="og:description" content="Rancher 是一个 Kubernetes 管理工具，让你能在任何地方和任何提供商上部署和运行集群。    Rancher 可以创建来自 Kubernetes 托管服务提供商的集群，创建节点并安装 Kubernetes，或者导入在任何地方运行的现有 Kubernetes 集群。   Rancher 基于 Kubernetes 添加了新的功能，包括统一所有集群的身份验证和 RBAC，让系统管理员">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/image.png">
-<meta property="og:image" content="http://example.com/image-2.png">
-<meta property="og:image" content="http://example.com/image-4.png">
+<meta property="og:image" content="http://example.com/img/2024-08-13-Tue-T-Rancher%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8C%97/image.png">
 <meta property="article:published_time" content="2024-08-13T11:26:31.000Z">
-<meta property="article:modified_time" content="2024-10-12T10:37:27.580Z">
+<meta property="article:modified_time" content="2024-11-23T13:33:42.430Z">
 <meta property="article:author" content="Fei">
 <meta property="article:tag" content="Tech">
 <meta property="article:tag" content="Rancher">
@@ -35,7 +33,7 @@
 <meta property="article:tag" content="DevOps">
 <meta property="article:tag" content="Cloud">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/image.png">
+<meta name="twitter:image" content="http://example.com/img/2024-08-13-Tue-T-Rancher%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8C%97/image.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -290,16 +288,16 @@
 <p>Rancher 基于 Kubernetes 添加了新的功能，包括统一所有集群的身份验证和 RBAC，让系统管理员从一个位置控制全部集群的访问。<br>此外，Rancher 可以为集群和资源提供更精细的监控和告警，将日志发送到外部提供商，并通过应用商店（Application Catalog）直接集成 Helm。如果你拥有外部 CI&#x2F;CD 系统，你可以将其与 Rancher 对接。没有的话，你也可以使用 Rancher 提供的 Fleet 自动部署和升级工作负载。  </p>
 <p>Rancher 是一个 全栈式 的 Kubernetes 容器管理平台，为你提供在任何地方都能成功运行 Kubernetes 的工具。</p>
 <h1 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h1><p>Rancher 为 DevOps 工程师提供简单直接的用户界面，以管理其应用负载。用户不需要对 Kubernetes 有非常深入的了解，即可使用 Rancher。Rancher 应用商店包含一套实用的 DevOps 开发工具。Rancher 获得了多种云原生生态系统产品的认证，包括安全工具、监控系统、容器镜像仓库、存储和网络驱动等。</p>
-<p>下图讲述了 Rancher 在 IT 管理团队和 DevOps 开发团队之间扮演的角色。DevOps 团队把他们的应用部署在他们选择的公有云或私有云上。IT 管理员负责查看并管理用户、集群、云服务的权限。<br><img src="/image.png" srcset="/img/loading.gif" lazyload alt="smdbs">)</p>
+<p>下图讲述了 Rancher 在 IT 管理团队和 DevOps 开发团队之间扮演的角色。DevOps 团队把他们的应用部署在他们选择的公有云或私有云上。IT 管理员负责查看并管理用户、集群、云服务的权限。<br><img src="/img/2024-08-13-Tue-T-Rancher%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8C%97/image.png" srcset="/img/loading.gif" lazyload alt="smdbs"></p>
 <h2 id="1-1-Rancher-架构"><a href="#1-1-Rancher-架构" class="headerlink" title="1.1 Rancher 架构"></a>1.1 Rancher 架构</h2><h3 id="1-1-1-Rancher-Server-和-Components"><a href="#1-1-1-Rancher-Server-和-Components" class="headerlink" title="1.1.1 Rancher Server 和 Components"></a>1.1.1 Rancher Server 和 Components</h3><p>大多数 Rancher 2.x 软件均运行在 Rancher Server 上。Rancher Server 包括用于管理整个 Rancher 部署的所有软件组件。</p>
 <p>下图展示了 Rancher 2.x 的上层架构。下图中，Rancher Server 管理两个下游 Kubernetes 集群，其中一个由 RKE 创建，另一个由 Amazon EKS 创建。</p>
 <p>为了达到最佳性能和安全性，我们建议你为 Rancher Management Server 创建一个专用的 Kubernetes 集群。不建议在此集群上运行用户工作负载。部署 Rancher 后，你可以创建或导入集群来运行你的工作负载。</p>
 <p>下图介绍了用户如何通过 Rancher 的认证代理管理 Rancher 启动的 Kubernetes 集群和托管的 Kubernetes 集群：</p>
 <p>通过 Rancher 的认证代理管理 Kubernetes 集群</p>
-<p><img src="/image-2.png" srcset="/img/loading.gif" lazyload alt="alt text">)</p>
+<p><img src="/img/2024-08-13-Tue-T-Rancher%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8C%97/image-2.png" srcset="/img/loading.gif" lazyload alt="alt text"></p>
 <h3 id="1-1-2-与下游集群通信"><a href="#1-1-2-与下游集群通信" class="headerlink" title="1.1.2 与下游集群通信"></a>1.1.2 与下游集群通信</h3><p>下图显示了 Cluster Controller、Cluster Agent 和 Node Agent 让 Rancher 控制下游集群的。</p>
 <ul>
-<li>与下游集群通信<br><img src="/image-4.png" srcset="/img/loading.gif" lazyload alt="alt text">)</li>
+<li>与下游集群通信<br><img src="/img/2024-08-13-Tue-T-Rancher%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8C%97/image-4.png" srcset="/img/loading.gif" lazyload alt="alt text"></li>
 </ul>
 <ol>
 <li>认证代理<br>在此图中，名为 Bob 的用户希望查看在名为<code>User Cluster 1</code>的下游集群上运行的所有 Pod。在 Rancher 中，他可以运行<code>kubectl</code>命令来查看 Pod。Bob 通过<code>Rancher</code>的认证代理进行身份验证。</li>
