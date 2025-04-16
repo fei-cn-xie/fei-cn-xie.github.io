@@ -1,0 +1,743 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/boy.webp">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Fei">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="1. 介绍在使用Python开发时，遇到了很多配置环境的情形。有时需要安装不同版本的Python，有时需要安装不同的Python包，有时需要安装不同的Python包的不同版本。 最开始使用时我基本上都是看网上的教程，不同的Python项目可能使用不同的环境管理工具，不知不觉就用过了pip、conda、mamba、virtualenv、venv等等。这些工具各有优劣，有时候我也会混用，导致环境变量混">
+<meta property="og:type" content="article">
+<meta property="og:title" content="20240731-Wed-T-Python环境管理">
+<meta property="og:url" content="http://example.com/2024/07/31/2024-07-31-Wed-T-Python%E7%8E%AF%E5%A2%83%E7%AE%A1%E7%90%86/index.html">
+<meta property="og:site_name" content="Fei">
+<meta property="og:description" content="1. 介绍在使用Python开发时，遇到了很多配置环境的情形。有时需要安装不同版本的Python，有时需要安装不同的Python包，有时需要安装不同的Python包的不同版本。 最开始使用时我基本上都是看网上的教程，不同的Python项目可能使用不同的环境管理工具，不知不觉就用过了pip、conda、mamba、virtualenv、venv等等。这些工具各有优劣，有时候我也会混用，导致环境变量混">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/img/auto_index_img.jpg">
+<meta property="article:published_time" content="2024-07-31T03:56:19.000Z">
+<meta property="article:modified_time" content="2025-04-16T09:00:27.668Z">
+<meta property="article:author" content="Fei">
+<meta property="article:tag" content="thoughts">
+<meta property="article:tag" content="posts">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/auto_index_img.jpg">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>20240731-Wed-T-Python环境管理 - Fei</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5-a","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fei</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">20240731-Wed-T-Python环境管理</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-07-31 11:56" pubdate>
+          July 31, 2024 am
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.4k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          20 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">20240731-Wed-T-Python环境管理</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h1><p>在使用Python开发时，遇到了很多配置环境的情形。有时需要安装不同版本的Python，有时需要安装不同的Python包，有时需要安装不同的Python包的不同版本。</p>
+<p>最开始使用时我基本上都是看网上的教程，不同的Python项目可能使用不同的环境管理工具，不知不觉就用过了pip、conda、mamba、virtualenv、venv等等。这些工具各有优劣，有时候我也会混用，导致环境变量混乱，有时候还会出现冲突。</p>
+<p>由于一直没有什么一致性，导致电脑上的Python环境比较乱，我自己也感觉云里雾里的，所以我打算总结一下这些工具的使用方法，以及它们的优缺点。最后会给出我自己推荐的一些使用方法。</p>
+<h1 id="2-Python管理工具分类"><a href="#2-Python管理工具分类" class="headerlink" title="2.Python管理工具分类"></a>2.Python管理工具分类</h1><p>Python管理工具可以分为两类：</p>
+<p>包管理工具：用于安装、卸载、更新Python包，如pip、conda、mamba等。</p>
+<p>环境管理工具：用于管理Python环境，如venv、virtualenv、conda、mamba等。</p>
+<p>我们这里主要讨论环境管理工具，因为包管理工具的使用方法比较简单，而且大多数情况下我们都会使用pip，所以这里不再赘述。</p>
+<h1 id="3-Python环境管理工具"><a href="#3-Python环境管理工具" class="headerlink" title="3. Python环境管理工具"></a>3. Python环境管理工具</h1><h2 id="3-1-venv"><a href="#3-1-venv" class="headerlink" title="3.1 venv"></a>3.1 venv</h2><p>venv是Python自带的环境管理工具，其使用起来是最简单，也是最不需要操心的。<br>使用方法</p>
+<ol>
+<li><p>创建一个新的环境：<code>python -m venv .venv</code><br> 这样就会在当前目录下创建一个.venv的文件夹，里面包含了一个新的Python环境。当然，这里的.venv可以替换成任何你想要的名字，用.venv是因为这样可以创建一个自动隐藏的文件夹，在git中也很容易把它忽略掉。</p>
+<p> 注意，这里的python是你想要创建环境的Python版本，如果你有多个Python版本，可以使用python3或者python3.10等。</p>
+</li>
+<li><p>激活这个环境：<br> <code>source .venv/bin/activate</code></p>
+</li>
+<li><p>安装Python包：<br> 在激活环境之后，使用pip安装Python包会把包安装到这个环境中，而不是全局环境。安装的包会放在.venv&#x2F;lib&#x2F;python3.10&#x2F;site-packages目录下。<br> <code>pip install numpy</code><br> 注意，这里的numpy是包名，你可以替换成任何你想要的包名。</p>
+</li>
+<li><p>退出环境：<br> 在环境中使用deactivate命令可以退出环境。<br> <code>deactivate</code><br>优缺点<br> 优点：<br> 原生工具，简单易用，不需要安装额外的软件。<br> 速度快，因为不需要下载额外的软件包。<br> 环境隔离，不会影响全局环境。<br> 可以在任何地方创建环境，不需要管理员权限。<br> 每个项目中的环境都在本项目目录下，与其他项目做到了物理隔离，不易弄混。<br> 缺点：<br> 每个项目都需要创建一个新的环境，如果有很多项目，会占用很多空间。<br> 无法共享环境，如果有多个项目使用同一个环境，需要重复创建。<br> 不好切换Python版本，每个环境都是一个Python版本，无法切换。<br> 只适用于Python 3.3及以上版本。<br> 简单来说，如果你不在意空间占用，不需要切换Python版本，那么venv是一个很好的选择。</p>
+</li>
+</ol>
+<h2 id="3-2-virtualenv"><a href="#3-2-virtualenv" class="headerlink" title="3.2 virtualenv"></a>3.2 virtualenv</h2><pre><code class="hljs">由于venv有很大的占用空间的问题，所以有人开发了virtualenv，它是一个第三方的环境管理工具，可以解决venv的一些问题。
+virtualenv的使用方法和venv基本一样，只是需要安装virtualenv这个包。
+</code></pre>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><pre><code class="hljs">1. 安装virtualenv：`pip install virtualenv`
+2. 创建一个新的环境：`virtualenv .venv` (在当前目录下创建一个.venv文件夹)
+3. 如果你想指定Python版本，可以使用如下命令：`virtualenv -p python3.10 .venv`
+4. 激活这个环境：`source .venv/bin/activate`
+5. 安装Python包：`pip install numpy`
+6. 退出环境：`deactivate`
+</code></pre>
+<p>创建环境激活后，VSCode可自动识别</p>
+<p>但它和venv的区别在于，virtualenv会复用系统的Python库，不会重复安装，所以占用的空间会小很多。如果你不想复用系统的Python库，可以使用<code>--no-site-packages</code>选项，在本项目中安装全新的Python库。</p>
+<p>优缺点<br>    优点：</p>
+<pre><code class="hljs">    可以指定Python版本。
+    可以共享环境，不需要重复创建。
+    占用空间小，不会重复安装Python库。
+    适用于Python 2.7及以上版本。
+缺点：
+
+    非原生工具，需要安装额外的软件。
+    简单来说，如果你在意空间占用，且想要和venv相似的使用体验，那么virtualenv是一个很好的选择。
+</code></pre>
+<h2 id="3-3-conda"><a href="#3-3-conda" class="headerlink" title="3.3 conda"></a>3.3 conda</h2><p>conda是一个非常强大的环境管理工具，它不仅可以管理Python环境，还可以管理其他语言的环境，如R、Julia等。<br>conda、Anaconda、miniconda、mamba、micromamba之间的关系<br>conda是Anaconda的一部分，Anaconda是一个数据科学家常用的工具包，里面包含了很多数据科学家常用的软件包，如numpy、pandas、scipy等。但有用户反映Anaconda安装的软件包太多，占用空间太大，所以有人开发了miniconda，它是Anaconda的精简版，只包含了conda和一些基本的软件包。</p>
+<p>不管是Anaconda还是miniconda，都是使用conda这个包管理工具来管理环境，但conda在安装软件包时是单线程的，速度比较慢，所以有人开发了mamba，它是conda的一个加速版，速度比conda快很多。</p>
+<p>mamba和conda的使用方法基本一样，只是在安装软件包时使用mamba代替conda。用户基本可以认为，mamba命令是conda命令的一个别名。</p>
+<p>micromamba是mamba的一个精简版，micromamba的base环境是空的，不包含任何软件包。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Thoughts/" class="category-chain-item">Thoughts</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/thoughts/" class="print-no-link">#thoughts</a>
+      
+        <a href="/tags/posts/" class="print-no-link">#posts</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>20240731-Wed-T-Python环境管理</div>
+      <div>http://example.com/2024/07/31/2024-07-31-Wed-T-Python环境管理/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>Fei</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>July 31, 2024</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/08/11/2024-08-11-Sun-T-Nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/" title="2024-08-11-Sun-T-Nginx反向代理配置">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">2024-08-11-Sun-T-Nginx反向代理配置</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/10/15/2023-10-15-R-%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6/" title="2023-10-15-R-如何阅读一本书">
+                        <span class="hidden-mobile">2023-10-15-R-如何阅读一本书</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'fei-cn-xie/fei-cn-xie.github.io');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
