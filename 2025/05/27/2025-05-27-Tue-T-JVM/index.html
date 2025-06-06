@@ -1,0 +1,1020 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/boy.webp">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Fei">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="[TOC]   内存与垃圾回收篇 🛠  字节码与类的加载篇 ✈  性能监控与调优篇 🚀  大厂面试篇   １ JVM与Java体系结构 JVM根本不关心在其内部的程序是由什么语言编写的, 它只关心字节码文件 JVM特点:  自动内存管理 自动垃圾回收功能  1.1 JVM 结构简图终于搞懂了Java8的内存结构，再也不纠结方法区和常量池了！-腾讯云开发者社区-腾讯云   1.2 Java代码执">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2025-05-27-Tue-T-JVM">
+<meta property="og:url" content="http://example.com/2025/05/27/2025-05-27-Tue-T-JVM/index.html">
+<meta property="og:site_name" content="Fei">
+<meta property="og:description" content="[TOC]   内存与垃圾回收篇 🛠  字节码与类的加载篇 ✈  性能监控与调优篇 🚀  大厂面试篇   １ JVM与Java体系结构 JVM根本不关心在其内部的程序是由什么语言编写的, 它只关心字节码文件 JVM特点:  自动内存管理 自动垃圾回收功能  1.1 JVM 结构简图终于搞懂了Java8的内存结构，再也不纠结方法区和常量池了！-腾讯云开发者社区-腾讯云   1.2 Java代码执">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/img/2025-05-27-Tue-T-JVM/image-20250529140117385.png">
+<meta property="article:published_time" content="2025-05-26T23:33:22.000Z">
+<meta property="article:modified_time" content="2025-06-06T07:45:10.445Z">
+<meta property="article:author" content="Fei">
+<meta property="article:tag" content="Tech">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/2025-05-27-Tue-T-JVM/image-20250529140117385.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>2025-05-27-Tue-T-JVM - Fei</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5-a","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fei</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">2025-05-27-Tue-T-JVM</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-05-27 07:33" pubdate>
+          May 27, 2025 am
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          12k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          97 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">2025-05-27-Tue-T-JVM</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>[TOC]</p>
+<p><img src="/img/2025-05-27-Tue-T-JVM/image-20250529140117385.png" srcset="/img/loading.gif" lazyload alt="image-20250529140117385"></p>
+<ol>
+<li><p>内存与垃圾回收篇 🛠</p>
+</li>
+<li><p>字节码与类的加载篇 ✈</p>
+</li>
+<li><p>性能监控与调优篇 🚀</p>
+</li>
+<li><p>大厂面试篇</p>
+</li>
+</ol>
+<h2 id="１-JVM与Java体系结构"><a href="#１-JVM与Java体系结构" class="headerlink" title="１ JVM与Java体系结构"></a>１ JVM与Java体系结构</h2><p><img src="/img/2025-05-27-Tue-T-JVM/image-20250527075524269.png" srcset="/img/loading.gif" lazyload alt="image-20250527075524269"></p>
+<p>JVM根本不关心在其内部的程序是由什么语言编写的, 它只关心<code>字节码文件</code></p>
+<p>JVM特点:</p>
+<ul>
+<li>自动内存管理</li>
+<li>自动垃圾回收功能</li>
+</ul>
+<h3 id="1-1-JVM-结构简图"><a href="#1-1-JVM-结构简图" class="headerlink" title="1.1 JVM 结构简图"></a>1.1 JVM 结构简图</h3><p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1810426">终于搞懂了Java8的内存结构，再也不纠结方法区和常量池了！-腾讯云开发者社区-腾讯云</a></p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1420980/biyx8kz2je.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/img/2025-05-27-Tue-T-JVM/image-20250527090721744.png" srcset="/img/loading.gif" lazyload alt="image-20250527090721744"></p>
+<h3 id="1-2-Java代码执行流程"><a href="#1-2-Java代码执行流程" class="headerlink" title="1.2 Java代码执行流程"></a>1.2 Java代码执行流程</h3><p><img src="/img/2025-05-27-Tue-T-JVM/image-20250527092219444.png" srcset="/img/loading.gif" lazyload alt="image-20250527092219444"></p>
+<h3 id="1-3-JVM的架构模型"><a href="#1-3-JVM的架构模型" class="headerlink" title="1.3 JVM的架构模型"></a>1.3 JVM的架构模型</h3><p>Java编译器输入的指令流基本上是一种基于栈的指令集架构,另外一种指令集架构则是基于寄存器的指令集架构</p>
+<ul>
+<li><strong>基于栈的指令集</strong>：适合跨平台、安全性高的场景（如 JVM），但效率较低。</li>
+<li><strong>基于寄存器的指令集</strong>：适合高性能本地执行（如 CPU 指令），但依赖硬件。</li>
+<li><strong>JVM 的权衡</strong>：通过栈架构实现跨平台，再通过 JIT 编译优化为寄存器指令，兼顾灵活性和性能。</li>
+</ul>
+<p><strong>最终结论</strong>：<br>Java 选择栈架构是为了跨平台和安全性，而现代 JVM 通过运行时优化（JIT）弥补了性能差距。</p>
+<p>执行反编译</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><code class="hljs sh">PS D:\Users\fei\gitrepo\gulimall\java-foundation\target\classes\com\JVM\chapter01&gt; javap -v .\StackStruTest.class<br>Classfile /D:/Users/fei/gitrepo/gulimall/java-foundation/target/classes/com/JVM/chapter01/StackStruTest.class<br>  Last modified 2025年5月27日; size 442 bytes<br>  SHA-256 checksum 675d068f509639e5a688e3ca50cbc237c8459f36e78347be553c9e8f98f736ac<br>  Compiled from <span class="hljs-string">&quot;StackStruTest.java&quot;</span><br>public class com.JVM.chapter01.StackStruTest<br>  minor version: 0<br>  major version: 61<br>  flags: (0x0021) ACC_PUBLIC, ACC_SUPER<br>  this_class: <span class="hljs-comment">#7                          // com/JVM/chapter01/StackStruTest</span><br>  super_class: <span class="hljs-comment">#2                         // java/lang/Object</span><br>  interfaces: 0, fields: 0, methods: 2, attributes: 1<br>Constant pool:<br>   <span class="hljs-comment">#1 = Methodref          #2.#3          // java/lang/Object.&quot;&lt;init&gt;&quot;:()V</span><br>   <span class="hljs-comment">#2 = Class              #4             // java/lang/Object</span><br>   <span class="hljs-comment">#3 = NameAndType        #5:#6          // &quot;&lt;init&gt;&quot;:()V</span><br>   <span class="hljs-comment">#4 = Utf8               java/lang/Object</span><br>   <span class="hljs-comment">#5 = Utf8               &lt;init&gt;</span><br>   <span class="hljs-comment">#6 = Utf8               ()V</span><br>   <span class="hljs-comment">#7 = Class              #8             // com/JVM/chapter01/StackStruTest</span><br>   <span class="hljs-comment">#8 = Utf8               com/JVM/chapter01/StackStruTest</span><br>   <span class="hljs-comment">#9 = Utf8               Code</span><br>  <span class="hljs-comment">#10 = Utf8               LineNumberTable</span><br>  <span class="hljs-comment">#11 = Utf8               LocalVariableTable</span><br>  <span class="hljs-comment">#12 = Utf8               this</span><br>  <span class="hljs-comment">#13 = Utf8               Lcom/JVM/chapter01/StackStruTest;</span><br>  <span class="hljs-comment">#14 = Utf8               main</span><br>  <span class="hljs-comment">#15 = Utf8               ([Ljava/lang/String;)V</span><br>  <span class="hljs-comment">#16 = Utf8               args</span><br>  <span class="hljs-comment">#17 = Utf8               [Ljava/lang/String;</span><br>  <span class="hljs-comment">#18 = Utf8               i</span><br>  <span class="hljs-comment">#19 = Utf8               I</span><br>  <span class="hljs-comment">#20 = Utf8               SourceFile</span><br>  <span class="hljs-comment">#21 = Utf8               StackStruTest.java</span><br>&#123;<br>  public com.JVM.chapter01.StackStruTest();<br>    descriptor: ()V<br>    flags: (0x0001) ACC_PUBLIC<br>    Code:<br>      stack=1, locals=1, args_size=1<br>         0: aload_0<br>         1: invokespecial <span class="hljs-comment">#1                  // Method java/lang/Object.&quot;&lt;init&gt;&quot;:()V</span><br>         4: <span class="hljs-built_in">return</span><br>      LineNumberTable:<br>        line 3: 0<br>      LocalVariableTable:<br>        Start  Length  Slot  Name   Signature<br>            0       5     0  this   Lcom/JVM/chapter01/StackStruTest;<br><br>  public static void main(java.lang.String[]);<br>    descriptor: ([Ljava/lang/String;)V<br>    flags: (0x0009) ACC_PUBLIC, ACC_STATIC<br>    Code:<br>      stack=1, locals=2, args_size=1<br>         0: iconst_5<br>         1: istore_1<br>         2: <span class="hljs-built_in">return</span><br>      LineNumberTable:<br>        line 5: 0<br>        line 7: 2<br>      LocalVariableTable:<br>        Start  Length  Slot  Name   Signature<br>            0       3     0  args   [Ljava/lang/String;<br>            2       1     1     i   I<br>&#125;<br>SourceFile: <span class="hljs-string">&quot;StackStruTest.java&quot;</span><br><br></code></pre></td></tr></table></figure>
+
+
+
+<p>由于跨平台的特性, Java的指令都是根据栈来设计的</p>
+<p>栈型指令系统: 跨平台性, 指令集小, 指令多; 执行性能比寄存器差</p>
+<h3 id="1-4-JVM的生命周期"><a href="#1-4-JVM的生命周期" class="headerlink" title="1.4 JVM的生命周期"></a>1.4 JVM的生命周期</h3><ul>
+<li>虚拟机的启动</li>
+<li>虚拟机的执行</li>
+<li>虚拟机的退出</li>
+</ul>
+<p><img src="/img/2025-05-27-Tue-T-JVM/image-20250529140634756.png" srcset="/img/loading.gif" lazyload alt="image-20250529140634756"></p>
+<p><a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/24/">JDK 24 Documentation - Home</a></p>
+<h1 id="内存结构"><a href="#内存结构" class="headerlink" title="内存结构"></a>内存结构</h1><h2 id="1-程序计数器"><a href="#1-程序计数器" class="headerlink" title="1. 程序计数器"></a>1. 程序计数器</h2><p>Program Counter Register 程序计数器(寄存器)</p>
+<p>作用: 记住下一条JVM指令的执行地址</p>
+<p>特点:</p>
+<ol>
+<li>线程私有的: 时间片结束, 依然可以获取本线程的程序计数器. <strong>每个线程有自己的程序计数器</strong></li>
+<li>不会存在内存溢出: JVM规范中规定了不允许程序计数器出现内存溢出</li>
+</ol>
+<h2 id="2-虚拟机栈"><a href="#2-虚拟机栈" class="headerlink" title="2. 虚拟机栈"></a>2. 虚拟机栈</h2><h3 id="2-1-定义"><a href="#2-1-定义" class="headerlink" title="2.1 定义"></a>2.1 定义</h3><p>栈: 线程运行时需要的内存空间</p>
+<p>栈帧: 每个栈由多个栈帧组成, 栈帧是每个方法运行需要的内存空间</p>
+<p><strong>每个线程只能有一个<code>活动栈帧</code>, 对应着当前正在执行的方法</strong></p>
+<p>问题辨析: </p>
+<ol>
+<li>垃圾回收是否涉及栈内存?  不涉及, 栈内存中只有与方法调用相关的栈帧内存,栈帧内存在每次方法调用结束后会自动释放.  垃圾回收用于管理堆内存</li>
+<li>栈内存分配越大越好吗?  (Xss用于指定栈内存大小) 栈内存越大, 总内存不变, 所运行的线程就会变少</li>
+<li>方法内的局部变量是否线程安全? 逃逸分析<ol>
+<li>如果局部变量没有逃离该方法, 则是线程安全的</li>
+</ol>
+</li>
+</ol>
+<h3 id="2-2-栈内存溢出"><a href="#2-2-栈内存溢出" class="headerlink" title="2.2 栈内存溢出"></a>2.2 栈内存溢出</h3><ul>
+<li>栈帧过多导致栈内存溢出: 栈帧的内存超过了线程所分配的栈内存 (例如 错误的递归调用)</li>
+<li>栈帧过大导致栈内存溢出:</li>
+</ul>
+<h3 id="2-3-线程运行诊断"><a href="#2-3-线程运行诊断" class="headerlink" title="2.3 线程运行诊断"></a>2.3 线程运行诊断</h3><p>案例1: CPU占用过多</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 1. 用top定位哪个进程对cpu的占用过高</span><br>top <br><span class="hljs-comment"># 2. 用ps定位哪个线程对cpu的占用过高</span><br>ps H -eo pid,tid,%cpu | grep 进程<span class="hljs-built_in">id</span>   <span class="hljs-comment"># ps用于查询进程线程信息</span><br><span class="hljs-comment"># 3. jstack： 根据线程id查看有问题的线程</span><br>jstack 进程<span class="hljs-built_in">id</span><br><span class="hljs-comment"># 4. 根据提示信息找到对应的代码行数</span><br></code></pre></td></tr></table></figure>
+
+
+
+<p>案例2: 程序运行很长时间没有结果</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 根据jstack提示信息找到死锁对应的代码行数</span><br>jstack 进程<span class="hljs-built_in">id</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="3-本地方法栈"><a href="#3-本地方法栈" class="headerlink" title="3. 本地方法栈"></a>3. 本地方法栈</h2><p><img src="/img/2025-05-27-Tue-T-JVM/image-20250531105542818.png" srcset="/img/loading.gif" lazyload alt="image-20250531105542818"></p>
+<p>本地方式是只操作系统的原生方法, Java代码通过调用这些方法与cpu和内存打交道</p>
+<p>在Java代码中, 使用<code>native</code>关键字标识本地方法</p>
+<p>本地方法栈: 用于运行本地方法的栈</p>
+<h2 id="4-堆"><a href="#4-堆" class="headerlink" title="4. 堆"></a>4. 堆</h2><p><strong>线程共享区域</strong></p>
+<h3 id="4-1-定义"><a href="#4-1-定义" class="headerlink" title="4.1 定义"></a>4.1 定义</h3><p>Heap(堆)通过new关键字, 创建对象都会使用堆内存</p>
+<p>特点:</p>
+<ul>
+<li>线程共享, 堆中对象都需要考虑线程安全的问题</li>
+<li>有垃圾回收机制</li>
+</ul>
+<h3 id="4-2-堆内存溢出"><a href="#4-2-堆内存溢出" class="headerlink" title="4.2 堆内存溢出"></a>4.2 堆内存溢出</h3><p>案例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">HeapTest</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">ArrayList</span> <span class="hljs-variable">list</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>();<br>        <span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        a = <span class="hljs-string">&quot;hello&quot;</span><br>        <span class="hljs-keyword">try</span> &#123;<br><br>            <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) &#123;<br>                list.add(a); <br>                a = a + a<br>                i++;<br>            &#125;<br>        &#125;<span class="hljs-keyword">catch</span> (Throwable e) &#123;<br>            System.out.println(i);<br>            e.printStackTrace();<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>自定已堆空间： <code>-Xmx8m</code>: 修改堆空间为8M</p>
+<h3 id="4-3-堆内存诊断"><a href="#4-3-堆内存诊断" class="headerlink" title="4.3 堆内存诊断"></a>4.3 堆内存诊断</h3><h4 id="1）jps工具"><a href="#1）jps工具" class="headerlink" title="1）jps工具"></a>1）jps工具</h4><p>查看当前系统中有哪些Java工程，以及对应的进程id</p>
+<h4 id="2）jmap工具"><a href="#2）jmap工具" class="headerlink" title="2）jmap工具"></a>2）jmap工具</h4><p>查看堆内存占用情况</p>
+<p><code>jmap -heap 进程id</code></p>
+<h4 id="3）jconsole工具"><a href="#3）jconsole工具" class="headerlink" title="3）jconsole工具"></a>3）jconsole工具</h4><p>图形界面的，多功能的监测工具，可以连续监测</p>
+<h4 id="4）jvisualvm"><a href="#4）jvisualvm" class="headerlink" title="4）jvisualvm"></a>4）jvisualvm</h4><p>案例1： 诊断工具使用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">HeapDemo2</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> InterruptedException &#123;<br>        System.out.println(<span class="hljs-string">&quot;1. 堆内存测试&quot;</span>);<br>        Thread.sleep(<span class="hljs-number">30000</span>);<br>        <span class="hljs-type">byte</span>[] arr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">byte</span>[<span class="hljs-number">1024</span> * <span class="hljs-number">1024</span> * <span class="hljs-number">10</span>]; <span class="hljs-comment">// 10MB</span><br>        System.out.println(<span class="hljs-string">&quot;2. 10MB创建成功&quot;</span>);<br>        Thread.sleep(<span class="hljs-number">30000</span>);<br>        arr = <span class="hljs-literal">null</span>;<br>        System.gc();<br>        System.out.println(<span class="hljs-string">&quot;3. 垃圾回收&quot;</span>);<br>        Thread.sleep(<span class="hljs-number">30000</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>案例2： 垃圾回收后，内存占用依然很高</p>
+<p><code>jps --&gt; jmap --&gt; jvisualvm</code></p>
+<h2 id="5-方法区"><a href="#5-方法区" class="headerlink" title="5. 方法区"></a>5. 方法区</h2><p><img src="https://ask.qcloudimg.com/http-save/yehe-1420980/biyx8kz2je.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/img/2025-05-27-Tue-T-JVM/image-20250531165306993.png" srcset="/img/loading.gif" lazyload alt="image-20250531165306993"></p>
+<h3 id="5-1-定义"><a href="#5-1-定义" class="headerlink" title="5.1 定义"></a>5.1 定义</h3><p><strong>存储类的</strong></p>
+<p>逻辑上是堆的组成部分</p>
+<p><strong>方法区（Method Area）</strong> 是 <strong>Java 虚拟机（JVM）</strong> 运行时数据区的一部分，用于存储 <strong>类信息、常量、静态变量、即时编译器编译后的代码</strong> 等数据。它是所有线程共享的内存区域，在 JVM 启动时创建，逻辑上属于 <strong>堆（Heap）的一部分</strong>，但具体实现可能不同</p>
+<h3 id="5-2-组成"><a href="#5-2-组成" class="headerlink" title="5.2 组成"></a>5.2 组成</h3><p><img src="/img/2025-05-27-Tue-T-JVM/image-20250531165950232.png" srcset="/img/loading.gif" lazyload alt="image-20250531165950232"></p>
+<h3 id="5-3-方法区内存溢出"><a href="#5-3-方法区内存溢出" class="headerlink" title="5.3 方法区内存溢出"></a>5.3 方法区内存溢出</h3><ul>
+<li>Java1.8以前会导致永久代内存溢出</li>
+<li>1.8之后会导致元空间内存溢出</li>
+</ul>
+<p>演示元空间内存溢出</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 演示元空间内存溢出</span><br><span class="hljs-comment"> * -XX:MaxMetaspaceSize=8m</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MetaSpaceOutOfMemory</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">ClassLoader</span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">try</span> &#123;<br>            <span class="hljs-type">MetaSpaceOutOfMemory</span> <span class="hljs-variable">m</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MetaSpaceOutOfMemory</span>();<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10000</span>; i++,j++) &#123;<br>                <span class="hljs-comment">//ClassWriter是用于生成 类的二进制字节码</span><br>                <span class="hljs-type">ClassWriter</span> <span class="hljs-variable">classWriter</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ClassWriter</span>(<span class="hljs-number">0</span>);<br>                <span class="hljs-comment">// 版本号， public，类名，包名，父类，实现的接口</span><br>                classWriter.visit(Opcodes.V1_8,Opcodes.ACC_PUBLIC,<span class="hljs-string">&quot;Class&quot;</span> + i,<span class="hljs-literal">null</span>,<span class="hljs-string">&quot;java/lang/Object&quot;</span>,<span class="hljs-literal">null</span>);<br><br>                <span class="hljs-comment">//返回二进制字节码</span><br>                <span class="hljs-type">byte</span>[] byteArray = classWriter.toByteArray();<br>                <span class="hljs-comment">//执行类的加载</span><br>                m.defineClass(<span class="hljs-string">&quot;Class&quot;</span> + i, byteArray, <span class="hljs-number">0</span>, byteArray.length);<br><br>            &#125;<br>        &#125;<span class="hljs-keyword">finally</span> &#123;<br>            System.out.println(j);<br>        &#125;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>场景：</p>
+<ul>
+<li>spring</li>
+<li>mybatis</li>
+</ul>
+<h3 id="5-4-运行时常量池"><a href="#5-4-运行时常量池" class="headerlink" title="5.4 运行时常量池"></a>5.4 运行时常量池</h3><p><img src="/img/2025-05-27-Tue-T-JVM/image-20250531172149452.png" srcset="/img/loading.gif" lazyload alt="image-20250531172149452"></p>
+<p>Java程序需要运行， 就需要先转化为二进制的字节码文件， 而字节码由<code>类的基本信息</code>、<code>类的常量池</code>、<code>类的方法定义</code>三部分以及<code>虚拟机指令</code>组成。</p>
+<p>案例：使用<code>javap -c 类名.class</code>反编译字节码文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//原始代码</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Pool</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;Hello World&quot;</span>);<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">// javap -v Pool.class反编译后的代码</span><br><br><span class="hljs-comment">// 1. 类的基本信息</span><br>Classfile /D:/Users/fei/gitrepo/gulimall/java-foundation/target/classes/com/JVM/chapter01/Pool.<span class="hljs-keyword">class</span><br>  <span class="hljs-title class_">Last</span> modified <span class="hljs-number">2025</span>年<span class="hljs-number">5</span>月<span class="hljs-number">31</span>日; size <span class="hljs-number">551</span> bytes<br>  SHA-<span class="hljs-number">256</span> checksum 685b230badb0ecfbb0269e956bbb39aa205913c435f86d19c86a7f40d34224a3<br>  Compiled from <span class="hljs-string">&quot;Pool.java&quot;</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">com</span>.JVM.chapter01.Pool<br>  minor version: <span class="hljs-number">0</span><br>  major version: <span class="hljs-number">61</span><br>  flags: (<span class="hljs-number">0x0021</span>) ACC_PUBLIC, ACC_SUPER<br>  this_class: #<span class="hljs-number">21</span>                         <span class="hljs-comment">// com/JVM/chapter01/Pool</span><br>  super_class: #<span class="hljs-number">2</span>                         <span class="hljs-comment">// java/lang/Object</span><br>  interfaces: <span class="hljs-number">0</span>, fields: <span class="hljs-number">0</span>, methods: <span class="hljs-number">2</span>, attributes: <span class="hljs-number">1</span><br>      <br><span class="hljs-comment">//2. 常量池</span><br>Constant pool:<br>   #<span class="hljs-number">1</span> = Methodref          #<span class="hljs-number">2.</span>#<span class="hljs-number">3</span>          <span class="hljs-comment">// java/lang/Object.&quot;&lt;init&gt;&quot;:()V</span><br>   #<span class="hljs-number">2</span> = Class              #<span class="hljs-number">4</span>             <span class="hljs-comment">// java/lang/Object</span><br>   #<span class="hljs-number">3</span> = NameAndType        #<span class="hljs-number">5</span>:#<span class="hljs-number">6</span>          <span class="hljs-comment">// &quot;&lt;init&gt;&quot;:()V</span><br>   #<span class="hljs-number">4</span> = Utf8               java/lang/Object<br>   #<span class="hljs-number">5</span> = Utf8               &lt;init&gt;<br>   #<span class="hljs-number">6</span> = Utf8               ()V<br>   #<span class="hljs-number">7</span> = Fieldref           #<span class="hljs-number">8.</span>#<span class="hljs-number">9</span>          <span class="hljs-comment">// java/lang/System.out:Ljava/io/PrintStream;</span><br>   #<span class="hljs-number">8</span> = Class              #<span class="hljs-number">10</span>            <span class="hljs-comment">// java/lang/System</span><br>   #<span class="hljs-number">9</span> = NameAndType        #<span class="hljs-number">11</span>:#<span class="hljs-number">12</span>        <span class="hljs-comment">// out:Ljava/io/PrintStream;</span><br>  #<span class="hljs-number">10</span> = Utf8               java/lang/System<br>  #<span class="hljs-number">11</span> = Utf8               out<br>  #<span class="hljs-number">12</span> = Utf8               Ljava/io/PrintStream;<br>  #<span class="hljs-number">13</span> = String             #<span class="hljs-number">14</span>            <span class="hljs-comment">// Hello World</span><br>  #<span class="hljs-number">14</span> = Utf8               Hello World<br>  #<span class="hljs-number">15</span> = Methodref          #<span class="hljs-number">16.</span>#<span class="hljs-number">17</span>        <span class="hljs-comment">// java/io/PrintStream.println:(Ljava/lang/String;)V</span><br>  #<span class="hljs-number">16</span> = Class              #<span class="hljs-number">18</span>            <span class="hljs-comment">// java/io/PrintStream</span><br>  #<span class="hljs-number">17</span> = NameAndType        #<span class="hljs-number">19</span>:#<span class="hljs-number">20</span>        <span class="hljs-comment">// println:(Ljava/lang/String;)V</span><br>  #<span class="hljs-number">18</span> = Utf8               java/io/PrintStream<br>  #<span class="hljs-number">19</span> = Utf8               println<br>  #<span class="hljs-number">20</span> = Utf8               (Ljava/lang/String;)V<br>  #<span class="hljs-number">21</span> = Class              #<span class="hljs-number">22</span>            <span class="hljs-comment">// com/JVM/chapter01/Pool</span><br>  #<span class="hljs-number">22</span> = Utf8               com/JVM/chapter01/Pool<br>  #<span class="hljs-number">23</span> = Utf8               Code<br>  #<span class="hljs-number">24</span> = Utf8               LineNumberTable<br>  #<span class="hljs-number">25</span> = Utf8               LocalVariableTable<br>  #<span class="hljs-number">26</span> = Utf8               <span class="hljs-built_in">this</span><br>  #<span class="hljs-number">27</span> = Utf8               Lcom/JVM/chapter01/Pool;<br>  #<span class="hljs-number">28</span> = Utf8               main<br>  #<span class="hljs-number">29</span> = Utf8               ([Ljava/lang/String;)V<br>  #<span class="hljs-number">30</span> = Utf8               args<br>  #<span class="hljs-number">31</span> = Utf8               [Ljava/lang/String;<br>  #<span class="hljs-number">32</span> = Utf8               SourceFile<br>  #<span class="hljs-number">33</span> = Utf8               Pool.java<br>                            <br><span class="hljs-comment">// 3. 类的方法定义</span><br>&#123;<br>  <span class="hljs-keyword">public</span> com.JVM.chapter01.Pool(); <span class="hljs-comment">// 构造方法</span><br>    descriptor: ()V<br>    flags: (<span class="hljs-number">0x0001</span>) ACC_PUBLIC<br>    Code:<br>      stack=<span class="hljs-number">2</span>, locals=<span class="hljs-number">1</span>, args_size=<span class="hljs-number">1</span><br>         <span class="hljs-number">0</span>: getstatic     #<span class="hljs-number">7</span>                  <span class="hljs-comment">// Field java/lang/System.out:Ljava/io/PrintStream;</span><br>         <span class="hljs-number">3</span>: ldc           #<span class="hljs-number">13</span>                 <span class="hljs-comment">// String Hello World</span><br>         <span class="hljs-number">5</span>: invokevirtual #<span class="hljs-number">15</span>                 <span class="hljs-comment">// Method java/io/PrintStream.println:(Ljava/lang/String;)V</span><br>         <span class="hljs-number">8</span>: <span class="hljs-keyword">return</span><br>      LineNumberTable:<br>        line <span class="hljs-number">5</span>: <span class="hljs-number">0</span><br>        line <span class="hljs-number">6</span>: <span class="hljs-number">8</span><br>      LocalVariableTable:<br>        Start  Length  Slot  Name   Signature<br>            <span class="hljs-number">0</span>       <span class="hljs-number">9</span>     <span class="hljs-number">0</span>  args   [Ljava/lang/String;<br>&#125;<br>SourceFile: <span class="hljs-string">&quot;Pool.java&quot;</span><br><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><p>常量池就是一张表，虚拟机指令根据这些常量表找到要执行的类名，方法名，参数类型、字面量(值)等信息</p>
+</li>
+<li><p>运行时常量池，常量池是<code>*.class</code>文件中的，当该类被加载，它的常量池信息就会被放入到运行时常量池，并把里面的符号地址变为真正的内存地址</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">StringTable</span> &#123;<br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     * 常量池中的信息都会被加载到运行时常量池， 这时候 a, b , ab都是常量池中的符号，还没有转化为Java字符串对象</span><br><span class="hljs-comment">     * 0： ldc #7  会把a转化为 &quot;a&quot; 字符串对象， 然后在StringTable中找，是否有相同的字符串。 StringTable在数据结构上时Hash表，无法扩容</span><br><span class="hljs-comment">     * astore_1 没有找到，将 &quot;a&quot; 存储到StringTable</span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">String</span> <span class="hljs-variable">s1</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;a&quot;</span>;<br>        <span class="hljs-type">String</span> <span class="hljs-variable">s2</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;b&quot;</span>;<br>        <span class="hljs-type">String</span> <span class="hljs-variable">s3</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;ab&quot;</span>;<br>        <span class="hljs-type">String</span> <span class="hljs-variable">s4</span> <span class="hljs-operator">=</span> s1 + s2; <span class="hljs-comment">// new String(&quot;ab&quot;); // s4在堆中，因为 s1, s2为变量，编译时不能确定s4的值. </span><br>        <span class="hljs-type">String</span> <span class="hljs-variable">s5</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;a&quot;</span> + <span class="hljs-string">&quot;b&quot;</span>; <span class="hljs-comment">// javac 在编译期间的优化， a， b为常量， 编译时能确定s5就是ab</span><br>        <span class="hljs-type">String</span> <span class="hljs-variable">s6</span> <span class="hljs-operator">=</span> s4.intern(); <span class="hljs-comment">// s4在StringTable中没有&quot;ab&quot;时会自动放入串池，反之则否</span><br><br>        System.out.println(s3 == s4); <span class="hljs-comment">// false</span><br>        System.out.println(s3 == s5); <span class="hljs-comment">// true</span><br>        System.out.println(s3 == s6); <span class="hljs-comment">// true</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="/img/2025-05-27-Tue-T-JVM/image-20250531172149452.png" srcset="/img/loading.gif" lazyload alt="image-20250531172149452"></p>
+<h3 id="5-5-StringTable"><a href="#5-5-StringTable" class="headerlink" title="5.5 StringTable"></a>5.5 StringTable</h3><ul>
+<li><p>常量池中的字符串仅仅是符号，第一次用到时才变为对象。</p>
+</li>
+<li><p>利用串池（stringTable）的机制， 避免重复创建相同的字符串</p>
+</li>
+<li><p>字符串的拼接原理时StringBuilder（1.8）</p>
+</li>
+<li><p>字符串拼接原理时编译期优化</p>
+</li>
+<li><p>可以使用intern方法，主动将串池中还没有的字符串对象放入串池。<code>s4.intren()</code></p>
+</li>
+</ul>
+<p><code>--XX:UseGCOverheadLimit</code>阻止应用长时间无响应（大于98%的时间花在了垃圾回收 and 小于2%堆空间被恢复） </p>
+<h3 id="5-6-StringTable-垃圾回收"><a href="#5-6-StringTable-垃圾回收" class="headerlink" title="5.6 StringTable 垃圾回收"></a>5.6 StringTable 垃圾回收</h3><ul>
+<li>演示StringTable垃圾回收</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//-Xmx10m  堆内存10m</span><br><span class="hljs-comment">//-XX:+PrintStringTableStatistics  打印串池中统计信息</span><br><span class="hljs-comment">//-XX:+PrintGCDetails -verbose:gc 打印垃圾回收细节</span><br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">StringTableGC</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">try</span> &#123;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">100000</span>; j++) &#123;<br>                String.valueOf(j).intern();<br>                i++;<br>            &#125;<br>        &#125;<span class="hljs-keyword">catch</span> (Throwable e) &#123;<br>            e.printStackTrace();<br>        &#125;<span class="hljs-keyword">finally</span> &#123;<br>            System.out.println(i);<br>        &#125;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<h3 id="5-7-StringTable-性能调优"><a href="#5-7-StringTable-性能调优" class="headerlink" title="5.7 StringTable 性能调优"></a>5.7 StringTable 性能调优</h3><p>实际就是调整StringTable中哈希表的桶的个数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// -XX:StringTableSize=20000</span><br><span class="hljs-comment">// java17 自动扩容为2的阶乘</span><br></code></pre></td></tr></table></figure>
+
+<p>在进行大量字符串操作时，可以将字符串放入StringTable，减少堆内存的使用。因为StringTable中不会存在相同的字符串。</p>
+<h2 id="6-直接内存"><a href="#6-直接内存" class="headerlink" title="6. 直接内存"></a>6. 直接内存</h2><h3 id="6-1-定义"><a href="#6-1-定义" class="headerlink" title="6.1 定义"></a>6.1 定义</h3><p>直接内存是操作系统内存。</p>
+<ul>
+<li><strong>常见于NIO操作，用于数据缓存区</strong></li>
+</ul>
+<blockquote>
+<p>Java NIO（New Input&#x2F;Output 或 Non-blocking I&#x2F;O）是从Java 1.4版本开始引入的一种新的I&#x2F;O系统，它解决了传统的I&#x2F;O系统中同步阻塞的问题，提供了更高效的I&#x2F;O处理方法。Java NIO不仅可以提高性能，还可以提供更好的可伸缩性。</p>
+<p>在Java NIO中，数据总是从通道读入缓冲区，或者从缓冲区写入通道。Selector会不断地轮询注册在其上的通道，当发现某个通道有I&#x2F;O事件时，就能够快速定位到可以进行I&#x2F;O操作的通道，进行数据处理。</p>
+</blockquote>
+<ul>
+<li><strong>Java进行分配和回收成本比较高，但读写性能高</strong></li>
+<li><strong>不受JVM内存回收管理</strong></li>
+</ul>
+<ol>
+<li>使用Java缓冲区（堆内存中）<code>new byte[1024*1024]</code></li>
+</ol>
+<p><img src="/img/2025-05-27-Tue-T-JVM/image-20250603101013145.png" srcset="/img/loading.gif" lazyload alt="image-20250603101013145"></p>
+<ol start="2">
+<li>分配直接内存：<code>ByteBuffer.allocateDirect(1024*1024)</code></li>
+</ol>
+<p><img src="/img/2025-05-27-Tue-T-JVM/image-20250603101321957.png" srcset="/img/loading.gif" lazyload alt="image-20250603101321957"></p>
+<h3 id="6-2-直接内存释放"><a href="#6-2-直接内存释放" class="headerlink" title="6.2 直接内存释放"></a>6.2 直接内存释放</h3><ul>
+<li><p>通过Unsafe对象进行管理（Unsafe对象只能通过反射创建）。主动调用freeMemory方法</p>
+</li>
+<li><p>ByteBuffer的实现类内部，使用了Cleaner（虚引用）来监测ByteBuffer对象，一但ByteBuffer对象被垃圾回收，那么就会由ReferenceHandler线程通过Cleaner的clean方法调用freeMemory来释放直接内存</p>
+</li>
+</ul>
+<p><strong>参数介绍</strong></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">-XX:+DisableExplicitGC 禁用显示调用垃圾回收System.gc();<br></code></pre></td></tr></table></figure>
+
+<p>使用此参数后，则分配直接内存后无法显示直接释放</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">ByteBuffer</span> <span class="hljs-variable">buffer</span> <span class="hljs-operator">=</span> ByteBuffer.allocateDirect(<span class="hljs-number">1024</span>*<span class="hljs-number">1024</span>);<span class="hljs-comment">// 10MB</span><br><span class="hljs-comment">// 以下操作无效</span><br>buffer = <span class="hljs-literal">null</span>;<br>System.gc();<br><br><span class="hljs-comment">//可以使用Unsafe对象对直接内存进行释放</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h1><h2 id="1-如何判断对象可以回收"><a href="#1-如何判断对象可以回收" class="headerlink" title="1. 如何判断对象可以回收"></a>1. 如何判断对象可以回收</h2><h3 id="1-1-引用计数法"><a href="#1-1-引用计数法" class="headerlink" title="1.1 引用计数法"></a>1.1 引用计数法</h3><p>定义一个<code>count</code>来记录某个对象被引用了多少次</p>
+<p>可能出现循环引用的问题</p>
+<h3 id="1-2-可达性分析法"><a href="#1-2-可达性分析法" class="headerlink" title="1.2 可达性分析法"></a>1.2 <strong>可达性分析法</strong></h3><p>JVM采用的本方法。</p>
+<ul>
+<li><p>确定根对象：一定不能被垃圾回收的对象叫根对象</p>
+<ul>
+<li><strong>是否是基本类对象</strong></li>
+<li><strong>是否是加锁对象（synchronized）</strong></li>
+<li><strong>是否在活动栈帧中被引用</strong></li>
+</ul>
+</li>
+<li><p>JVM种的垃圾回收器采用可达性分析来探索所有存活的对象</p>
+</li>
+<li><p>扫描堆中的对象，看是否能够沿着GC Root对象为起点的引用链找到该对象，找不到，表示可以回收</p>
+</li>
+</ul>
+<h3 id="1-3-四种引用"><a href="#1-3-四种引用" class="headerlink" title="1.3 四种引用"></a>1.3 四种引用</h3><h4 id="强引用"><a href="#强引用" class="headerlink" title="强引用"></a><strong>强引用</strong></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">byte</span>[] b = <span class="hljs-keyword">new</span> <span class="hljs-title class_">byte</span>[<span class="hljs-number">1024</span>]; <span class="hljs-comment">//强引用</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>软引用</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//1. 直接用法</span><br>SoftReference&lt;<span class="hljs-type">byte</span>[]&gt; ref = <span class="hljs-keyword">new</span> <span class="hljs-title class_">SoftReference</span>&lt;&gt;(<span class="hljs-keyword">new</span> <span class="hljs-title class_">byte</span>[<span class="hljs-number">1024</span>]); <span class="hljs-comment">// 软引用（java.lang.ref.SoftReference） </span><br><br><span class="hljs-comment">//2. 使用引用队列释放软引用</span><br>ReferenceQueue&lt;<span class="hljs-type">byte</span>[]&gt; queue = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ReferenceQueue</span>&lt;&gt;();<br>SoftReference&lt;<span class="hljs-type">byte</span>[]&gt; ref = <span class="hljs-keyword">new</span> <span class="hljs-title class_">SoftReference</span>&lt;&gt;(<span class="hljs-keyword">new</span> <span class="hljs-title class_">byte</span>[<span class="hljs-number">1024</span>],queue); <span class="hljs-comment">// byte[]回收时，ref被加入queue</span><br>queue.poll(); <br></code></pre></td></tr></table></figure>
+
+<p><strong>弱引用</strong> Full GC清理</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">WeakReference&lt;<span class="hljs-type">byte</span>[]&gt; ref = <span class="hljs-keyword">new</span> <span class="hljs-title class_">WeakReference</span>&lt;&gt;(<span class="hljs-keyword">new</span> <span class="hljs-title class_">byte</span>[<span class="hljs-number">1024</span>]); <span class="hljs-comment">// 弱引用</span><br><span class="hljs-comment">// 也可使用RefrenceQueue来对弱引用本身进行释放</span><br><span class="hljs-comment">// Suppose that the garbage collector determines at a certain point in time that an object is weakly reachable.</span><br></code></pre></td></tr></table></figure>
+
+
+
+<p>虚引用： </p>
+<p>终结器引用</p>
+<p><img src="/img/2025-05-27-Tue-T-JVM/image-20250604081832232.png" srcset="/img/loading.gif" lazyload alt="image-20250604081832232"></p>
+<h2 id="2-垃圾回收算法"><a href="#2-垃圾回收算法" class="headerlink" title="2. 垃圾回收算法"></a>2. 垃圾回收算法</h2><h3 id="2-1-标记清除-Mark-Sweep"><a href="#2-1-标记清除-Mark-Sweep" class="headerlink" title="2.1 标记清除 Mark Sweep"></a>2.1 标记清除 Mark Sweep</h3><ul>
+<li><strong>通过标记需要清除的内存地址，进行逻辑清除</strong></li>
+<li>速度快</li>
+<li>容易产生内存碎片</li>
+</ul>
+<h3 id="2-2-标记整理-Mark-Compact"><a href="#2-2-标记整理-Mark-Compact" class="headerlink" title="2.2 标记整理 Mark Compact"></a>2.2 标记整理 Mark Compact</h3><ul>
+<li><strong>先<code>标记</code>需要清除的对象地址</strong></li>
+<li><strong>再将其余对象地址进行<code>整理</code>，让已分配内存更紧凑，减少内存碎片</strong></li>
+<li>没有内存碎片</li>
+</ul>
+<h3 id="2-3-复制-Copy"><a href="#2-3-复制-Copy" class="headerlink" title="2.3 复制 Copy"></a>2.3 复制 Copy</h3><ul>
+<li><strong>将内存区划分为大小相等的<code>两个区</code>，<code>FROM</code> 区、<code>TO</code>区</strong></li>
+<li><strong>在FROM区进行内存分配，TO区空闲</strong></li>
+<li><strong>先对需要清理的对象地址进行<code>标记</code></strong></li>
+<li><strong>将FROM尚存活的对象顺序复制到TO区</strong></li>
+<li><strong>交换FROM 和 TO指向，原来的FROM变成TO区, TO区变成FROM区</strong></li>
+<li>不产生内存碎片</li>
+<li>空间利用率低</li>
+</ul>
+<p>JVM 会根据情况采用上述三种算法进行垃圾回收</p>
+<h2 id="3-分代垃圾回收"><a href="#3-分代垃圾回收" class="headerlink" title="3. 分代垃圾回收"></a>3. 分代垃圾回收</h2><p><img src="/img/2025-05-27-Tue-T-JVM/image-20250604093903824.png" srcset="/img/loading.gif" lazyload alt="image-20250604093903824"></p>
+<ul>
+<li>对象首先分配到伊甸园</li>
+<li>若伊甸园空间不足, 触发<code>minor GC</code>, 引发<code>stop the world</code>. 伊甸园中存活的对象复制到幸存区To，FROM区存活次数小于某个特定值的，且存活的对象复制到TO区，FROM存活次数超过某个特定值的对象赋值到老年代，FROM和TO指向地址互换 </li>
+<li>若老年代空间不足, 先尝试触发<code>minor GC</code>, 如果空间还是不足, 触发<code>full GC</code>, 触发的<code>STW</code>时间更长. 老年代和新生代的<code>都会进行GC</code>, 新生代部分和minor gc一个规则进行GC. 如果full GC之后还是内存不足, 则报<code>内存溢出异常</code></li>
+</ul>
+<p><img src="/img/2025-05-27-Tue-T-JVM/image-20250604095613504.png" srcset="/img/loading.gif" lazyload alt="image-20250604095613504"></p>
+<h3 id="3-1-相关VM参数"><a href="#3-1-相关VM参数" class="headerlink" title="3.1 相关VM参数"></a>3.1 相关VM参数</h3><table>
+<thead>
+<tr>
+<th>含义</th>
+<th>参数</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>堆的初始大小</td>
+<td><code>-Xms</code></td>
+<td>start</td>
+</tr>
+<tr>
+<td>堆的最大大小</td>
+<td><code>-Xmx</code>或<code>-XX:MaxHeapSize=size</code></td>
+<td>max</td>
+</tr>
+<tr>
+<td>新生代大小</td>
+<td><code>-Xmn</code>或<code>-XX:NewSize=size -XX:MaxNewSize=size</code></td>
+<td>new</td>
+</tr>
+<tr>
+<td>幸存区比例(动态)</td>
+<td><code>-XX:InitialSurvivorRatio=ratio</code>或<code>-XX:+UseAdaptiveSizePolicy</code></td>
+<td></td>
+</tr>
+<tr>
+<td>幸存区比例</td>
+<td><code>-XX:SurvivorRatio=ratio</code></td>
+<td>大的对象无法放入幸存区时,直接放入老年代</td>
+</tr>
+<tr>
+<td>晋升阈值</td>
+<td><code>-XX:MaxTenuringThreshold=threshold</code></td>
+<td></td>
+</tr>
+<tr>
+<td>晋升详情</td>
+<td><code>-XX:+PrintTenuringDistribution</code></td>
+<td></td>
+</tr>
+<tr>
+<td>GC详情</td>
+<td><code>-XX:+PrintGCDetails -verbose:gc</code></td>
+<td></td>
+</tr>
+<tr>
+<td>FullGC前MinorGC</td>
+<td><code>+XX:+ScanvengeBeforeFullGC</code></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>大对象</li>
+</ul>
+<p>Eden放不下的大对象会直接放到老年代，不会触发minor GC</p>
+<h2 id="4-垃圾回收器"><a href="#4-垃圾回收器" class="headerlink" title="4. 垃圾回收器"></a>4. 垃圾回收器</h2><p><a target="_blank" rel="noopener" href="https://tech.meituan.com/2020/08/06/new-zgc-practice-in-meituan.html">新一代垃圾回收器ZGC的探索与实践 - 美团技术团队</a></p>
+<p><a target="_blank" rel="noopener" href="https://dev.java/learn/jvm/tool/garbage-collection/java-specifics/">Java 中的垃圾回收 - Dev.java</a></p>
+<h3 id="4-1-串行"><a href="#4-1-串行" class="headerlink" title="4.1 串行"></a>4.1 串行</h3><ul>
+<li>单线程</li>
+<li>堆内存较小、适合个人电脑</li>
+</ul>
+<h3 id="4-2-吞吐量优先"><a href="#4-2-吞吐量优先" class="headerlink" title="4.2 吞吐量优先"></a>4.2 吞吐量优先</h3><ul>
+<li>多线程</li>
+<li>堆内存较大、多核CPU</li>
+<li>回收数量大，高延迟</li>
+</ul>
+<h3 id="4-3-响应时间优先"><a href="#4-3-响应时间优先" class="headerlink" title="4.3 响应时间优先"></a>4.3 响应时间优先</h3><ul>
+<li>多线程</li>
+<li>堆内存较大、多核CPU</li>
+<li>快速回收、低延迟</li>
+</ul>
+<h3 id="4-4-G1-（Garbage-First"><a href="#4-4-G1-（Garbage-First" class="headerlink" title="4.4 G1 （Garbage First)"></a>4.4 G1 （Garbage First)</h3><p><img src="/img/2025-05-27-Tue-T-JVM/image-20250605203958484.png" srcset="/img/loading.gif" lazyload alt="image-20250605203958484"></p>
+<h4 id="G1回收阶段"><a href="#G1回收阶段" class="headerlink" title="G1回收阶段"></a>G1回收阶段</h4><p><img src="/img/2025-05-27-Tue-T-JVM/image-20250605204224351.png" srcset="/img/loading.gif" lazyload alt="image-20250605204224351"></p>
+<p><img src="/img/2025-05-27-Tue-T-JVM/image-20250605204638079.png" srcset="/img/loading.gif" lazyload alt="image-20250605204638079"></p>
+<h2 id="5-垃圾回收调优"><a href="#5-垃圾回收调优" class="headerlink" title="5. 垃圾回收调优"></a>5. 垃圾回收调优</h2>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Tech/" class="category-chain-item">Tech</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Tech/" class="print-no-link">#Tech</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>2025-05-27-Tue-T-JVM</div>
+      <div>http://example.com/2025/05/27/2025-05-27-Tue-T-JVM/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>Fei</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>May 27, 2025</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/05/29/2025-05-29-Thu-T-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="2025-05-29-Thu-T-设计模式">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">2025-05-29-Thu-T-设计模式</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/04/17/2025-04-17-Thu-T-%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96/" title="2025-04-17-Thu-T-苍穹外卖">
+                        <span class="hidden-mobile">2025-04-17-Thu-T-苍穹外卖</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'fei-cn-xie/fei-cn-xie.github.io');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
