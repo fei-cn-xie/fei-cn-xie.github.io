@@ -1,0 +1,1425 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/boy.webp">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Fei">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="规则引擎 Drools1. 简介业务规则引擎，业务规则管理系统， BRMS。 规则引擎的主要思想是将应用程序中的业务决策部分分离出来，并使用预定义的语义模块编写业务决策（业务规则），由用户或者开发者在需要时进行配置管理。 规则引擎并不是一个具体的技术框架，而是指一类系统，即业务规则管理系统。市面上常见产品有drools，VisualRules，iLog等 规则引擎实现了将业务规则从程序代码中分离出">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2025-08-16-Sat-T-Drools规则引擎">
+<meta property="og:url" content="http://example.com/2025/08/16/2025-08-16-Sat-T-Drools%E8%A7%84%E5%88%99%E5%BC%95%E6%93%8E/index.html">
+<meta property="og:site_name" content="Fei">
+<meta property="og:description" content="规则引擎 Drools1. 简介业务规则引擎，业务规则管理系统， BRMS。 规则引擎的主要思想是将应用程序中的业务决策部分分离出来，并使用预定义的语义模块编写业务决策（业务规则），由用户或者开发者在需要时进行配置管理。 规则引擎并不是一个具体的技术框架，而是指一类系统，即业务规则管理系统。市面上常见产品有drools，VisualRules，iLog等 规则引擎实现了将业务规则从程序代码中分离出">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/img/2025-08-16-Sat-T-Drools%E8%A7%84%E5%88%99%E5%BC%95%E6%93%8E/image-20250825192409884.png">
+<meta property="article:published_time" content="2025-08-16T03:38:05.000Z">
+<meta property="article:modified_time" content="2025-10-01T07:17:33.761Z">
+<meta property="article:author" content="Fei">
+<meta property="article:tag" content="Tech">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/2025-08-16-Sat-T-Drools%E8%A7%84%E5%88%99%E5%BC%95%E6%93%8E/image-20250825192409884.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>2025-08-16-Sat-T-Drools规则引擎 - Fei</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5-a","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fei</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">2025-08-16-Sat-T-Drools规则引擎</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-08-16 11:38" pubdate>
+          August 16, 2025 am
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          33k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          280 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">2025-08-16-Sat-T-Drools规则引擎</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="规则引擎-Drools"><a href="#规则引擎-Drools" class="headerlink" title="规则引擎 Drools"></a>规则引擎 Drools</h1><h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h2><p>业务规则引擎，业务规则管理系统， BRMS。</p>
+<p>规则引擎的主要思想是将应用程序中的业务决策部分分离出来，并使用预定义的语义模块编写业务决策（业务规则），由用户或者开发者在需要时进行配置管理。</p>
+<p>规则引擎并不是一个具体的技术框架，而是指一类系统，即业务规则管理系统。市面上常见产品有drools，VisualRules，iLog等</p>
+<p>规则引擎实现了将业务规则从程序代码中分离出来，接收数据输入，解释业务规则，并根据业务规则做出业务决策。</p>
+<h3 id="1-1-优点"><a href="#1-1-优点" class="headerlink" title="1.1 优点"></a>1.1 优点</h3><ul>
+<li>业务规则和系统代码解耦，实现业务规则的集中管理</li>
+<li>在不重启服务的情况下，可随时对业务规则进行扩展和维护（热更新）</li>
+<li>可以动态修改业务规则，从而快速响应业务方的需求变更，大大提高了生产效率。</li>
+</ul>
+<h3 id="1-2-应用场景"><a href="#1-2-应用场景" class="headerlink" title="1.2 应用场景"></a>1.2 应用场景</h3><ul>
+<li>风控系统：风险贷款、风险评估</li>
+<li>反欺诈项目：银行贷款、征信验证</li>
+<li>决策平台：财务计算</li>
+<li>促销平台：满减、打折</li>
+</ul>
+<h3 id="1-3-快速案例"><a href="#1-3-快速案例" class="headerlink" title="1.3 快速案例"></a>1.3 快速案例</h3><ul>
+<li>引入maven依赖</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--drools--&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.drools<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>drools-compiler<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>7.50.0.Final<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.drools<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>drools-mvel<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>7.50.0.Final<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>定义Entity</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.learning.drools.entity;<br><br><span class="hljs-keyword">import</span> lombok.Data;<br><br><span class="hljs-meta">@Data</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Order</span> &#123;<br>    <span class="hljs-keyword">private</span> Double originalPrice;<br>    <span class="hljs-keyword">private</span> Double realPrice;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>定义kmodule.xml</li>
+</ul>
+<p>在resources&#x2F;META-INF文件夹下创建<code>kmodule.xml</code>文件</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;?xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span> ?&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">kmodule</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.drools.org/xsd/kmodule&quot;</span>&gt;</span><br>    <span class="hljs-comment">&lt;!--name：指定kbase名称，任意但必须唯一， packages：规则文件的目录（在resources目录下）， default： 指定当前kbase是否为默认--&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">kbase</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;myKbase1&quot;</span> <span class="hljs-attr">packages</span>=<span class="hljs-string">&quot;rules&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span><br>        <span class="hljs-comment">&lt;!--name: 指定session名称，任意但必须唯一， default： 当前session是否为默认--&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">ksession</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;ksession-rule&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;true&quot;</span>/&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">kbase</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">kmodule</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>定义drl规则文件</li>
+</ul>
+<p>在resource下的rules文件夹下定义<code>discountRules.drl</code>文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs shell">package rules<br>import com.learning.drools.entity.Order // 引入entity<br><br><br>// 第一条规则: 所购图书少于100元，没有优惠<br>rule &quot;rule_discount_1&quot;<br>    when<br>        $order:Order(originalPrice &lt; 100)  // 模式匹配，到规则引擎中（工作内存）查找Order对象，查找originalPrice &lt; 100 的对象; $order是对这个对象的别名<br><br>    then<br>        $order.setRealPrice($order.getOriginalPrice());<br>        System.out.println(&quot;规则1：没有优惠&quot;);<br>    end<br><br>// 规则二： 价格在100 - 200 优惠20元<br><br>rule &quot;rule_discount_2&quot;<br>    when<br>        $order:Order(originalPrice &gt;=100 &amp;&amp; originalPrice &lt; 200)<br>    then<br>        $order.setRealPrice($order.getOriginalPrice() - 20);<br>        System.out.println(&quot;规则2：价格在100 - 200， 优惠20元&quot;);<br>    end<br><br>// 规则三： 价格在200 - 300 优惠50元<br><br>rule &quot;rule_discount_3&quot;<br>    when $order:Order(originalPrice &gt;=200 &amp;&amp; originalPrice &lt; 300)<br>    then<br>        $order.setRealPrice($order.getOriginalPrice() - 50);<br>        System.out.println(&quot;规则三：价格在200 - 300， 优惠50元&quot;);<br>    end<br><br>// 规则四： 价格在300 以上优惠100元<br><br>rule &quot;rule_discount_4&quot;<br>    when $order:Order(originalPrice &gt;= 300)<br>    then $order.setRealPrice($order.getOriginalPrice() - 100);<br>        System.out.println(&quot;规则四： 价格在300以上， 优惠100元&quot;);<br>    end<br><br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="1-4-规则引擎的构成"><a href="#1-4-规则引擎的构成" class="headerlink" title="1.4  规则引擎的构成"></a>1.4  规则引擎的构成</h3><ul>
+<li>Working Memory（工作内存）</li>
+<li>Rule Base（规则库）</li>
+<li>Inference Engine（推理引擎）<ul>
+<li>Pattern Matcher（匹配器） &#x2F;&#x2F; 匹配符合条件的规则，将其加入到议程中</li>
+<li>Agenda（议程） &#x2F;&#x2F; 即将执行的规则就在议程中</li>
+<li>Execution Engine（执行引擎）</li>
+</ul>
+</li>
+</ul>
+<p><img src="/img/2025-08-16-Sat-T-Drools%E8%A7%84%E5%88%99%E5%BC%95%E6%93%8E/image-20250825192409884.png" srcset="/img/loading.gif" lazyload alt="image-20250825192409884"></p>
+<h3 id="1-5-规则引擎相关概念说明"><a href="#1-5-规则引擎相关概念说明" class="headerlink" title="1.5 规则引擎相关概念说明"></a>1.5 规则引擎相关概念说明</h3><p><img src="/img/2025-08-16-Sat-T-Drools%E8%A7%84%E5%88%99%E5%BC%95%E6%93%8E/image-20250901104358086.png" srcset="/img/loading.gif" lazyload alt="image-20250901104358086"></p>
+<h4 id="1-5-1-Working-memory"><a href="#1-5-1-Working-memory" class="headerlink" title="1.5.1 Working memory"></a>1.5.1 Working memory</h4><p>工作内存： drools会从工作内存中获取数据并和规则文件中定义的规则进行模式匹配，所以我们开发的应用程序只需要将我们的数据插入到working Memory中即可。 例如<code>kiesession.insert(order)</code></p>
+<h4 id="1-5-2-Fact"><a href="#1-5-2-Fact" class="headerlink" title="1.5.2 Fact"></a>1.5.2 Fact</h4><p>事实： 是指在drools规则应用中，将一个普通的Java Bean 插入到工作内存中后的对象就是Fact对象。</p>
+<h4 id="1-5-3-Rule-Base"><a href="#1-5-3-Rule-Base" class="headerlink" title="1.5.3 Rule Base"></a>1.5.3 Rule Base</h4><p>规则库： 在规则文件中定义的规则都会被加载到规则库中。</p>
+<h4 id="1-5-4-Pattern-Matcher"><a href="#1-5-4-Pattern-Matcher" class="headerlink" title="1.5.4 Pattern Matcher"></a>1.5.4 Pattern Matcher</h4><p>匹配器： 将Rule Base中的规则与工作内存中的Fact对象进行匹配，成功匹配的规则放入Agenda中。</p>
+<h4 id="1-5-5-Agenda"><a href="#1-5-5-Agenda" class="headerlink" title="1.5.5 Agenda"></a>1.5.5 Agenda</h4><p>议程：用于存放通过匹配器进行模式匹配后被激活的规则</p>
+<h4 id="1-5-6-Execution-Engine"><a href="#1-5-6-Execution-Engine" class="headerlink" title="1.5.6 Execution Engine"></a>1.5.6 Execution Engine</h4><p>执行引擎： 执行Agenda中被激活的规则。</p>
+<h3 id="1-6-规则引擎执行的过程"><a href="#1-6-规则引擎执行的过程" class="headerlink" title="1.6 规则引擎执行的过程"></a>1.6 规则引擎执行的过程</h3><ol>
+<li>将初始数据（Fact）输入到工作内存中</li>
+<li>使用匹配器将规则库中的规则和Fact比较</li>
+<li>如果执行规则存在冲突，即同时激活了多个规则，将冲突的规则放入冲突集合</li>
+<li>解决冲突，将激活的规则按照顺序放入Agenda</li>
+<li>执行Agenda中的规则，重复2~5，直到执行完Agenda中所有的规则。</li>
+</ol>
+<h3 id="1-7-Kie介绍"><a href="#1-7-Kie介绍" class="headerlink" title="1.7 Kie介绍"></a>1.7 Kie介绍</h3><p>KIE（Knowledgek Is Everything) </p>
+<p><img src="/img/2025-08-16-Sat-T-Drools%E8%A7%84%E5%88%99%E5%BC%95%E6%93%8E/image-20250826163829635.png" srcset="/img/loading.gif" lazyload alt="image-20250826163829635"></p>
+<h2 id="2-Drools基础语法"><a href="#2-Drools基础语法" class="headerlink" title="2. Drools基础语法"></a>2. Drools基础语法</h2><h3 id="2-1-关键字"><a href="#2-1-关键字" class="headerlink" title="2.1 关键字"></a>2.1 关键字</h3><ul>
+<li>package：包名，只限于逻辑上的管理，同一个包名下的查询或者函数可以直接调用</li>
+<li>import：用于导入类或者静态方法</li>
+<li>global：全局变量</li>
+<li>function： 自定义函数</li>
+<li>query： 查询</li>
+<li>rule end ： 规则体</li>
+</ul>
+<p>Drools支持的规则文件，除了<code>drl</code>形式，还有excel 文件类型的。</p>
+<h3 id="2-2-规则体语法结构"><a href="#2-2-规则体语法结构" class="headerlink" title="2.2 规则体语法结构"></a>2.2 规则体语法结构</h3><p>规则体是规则文件内容中的重要组成部分，是进行业务规则判断，处理业务结果的部分。</p>
+<p>规则体语法结构如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sh">rule <span class="hljs-string">&quot;rule_name&quot;</span><br>	attributes<br>	when<br>		LHS(Left hand side) // 为空的话，默认为<span class="hljs-literal">true</span><br>    <span class="hljs-keyword">then</span><br>    	RHS(Right hand side) <br>end<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-3-注释"><a href="#2-3-注释" class="headerlink" title="2.3 注释"></a>2.3 注释</h3><ul>
+<li>单行：<code>//</code></li>
+<li>多行: <code>/* */</code></li>
+</ul>
+<h3 id="2-4-Pattern-模式匹配"><a href="#2-4-Pattern-模式匹配" class="headerlink" title="2.4 Pattern 模式匹配"></a>2.4 Pattern 模式匹配</h3><p>Pattern语法结构为： <code>绑定的变量名: Object(Field约束)</code></p>
+<p>官方建议绑定的变量名使用<code>$</code>开头</p>
+<p>例如： <code>$order:Order(originalPrice &lt; 100)  // 需要满足工作内存中存在Order对象, 并且这个Order对象的orginalPrice属性的值小于100</code></p>
+<p> LHS部分可以定义多个pattern，多个pattern可以使用<code>and</code>或者<code>or</code>连接，例如：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs sh">rule <span class="hljs-string">&quot;rule_discount_2&quot;</span><br>    when<br>        <span class="hljs-variable">$order</span>:Order(originalPrice &gt;=100 &amp;&amp; originalPrice &lt; 200) and<br>        <span class="hljs-variable">$order</span>:Order(originalPrice == 200) or<br>        <span class="hljs-variable">$order</span>:Order(realPrice == 1000)<br>    <span class="hljs-keyword">then</span><br>        <span class="hljs-variable">$order</span>.setRealPrice(<span class="hljs-variable">$order</span>.getOriginalPrice() - 20);<br>        System.out.println(<span class="hljs-string">&quot;规则2：价格在100 - 200， 优惠20元&quot;</span>);<br>end<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-5-比较操作符"><a href="#2-5-比较操作符" class="headerlink" title="2.5 比较操作符"></a>2.5 比较操作符</h3><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&gt;</td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td></td>
+</tr>
+<tr>
+<td>&gt;&#x3D;</td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;&#x3D;</td>
+<td></td>
+</tr>
+<tr>
+<td>&#x3D;&#x3D;</td>
+<td></td>
+</tr>
+<tr>
+<td>!&#x3D;</td>
+<td></td>
+</tr>
+<tr>
+<td>contains</td>
+<td>检查一个Fact对象的某个属性值是否包含一个指定的对象值</td>
+</tr>
+<tr>
+<td>not contains</td>
+<td>检查一个Fact对象的某个属性值是否不包含一个指定的对象值</td>
+</tr>
+<tr>
+<td>memberOf</td>
+<td>判断一个Fact对象的某个属性是否在一个或多个集合中</td>
+</tr>
+<tr>
+<td>not memberOf</td>
+<td>判断一个Fact对象的某个属性是否不在一个或多个集合中</td>
+</tr>
+<tr>
+<td>matches</td>
+<td>判断一个Fact对象的属性是否与提供的标准Java正则表达式进行匹配</td>
+</tr>
+<tr>
+<td>not matches</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>语法</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs sh">// contains | not contains<br>Object(Field[Collection/Array] contains value)<br>Object(Field[Collection/Array] not contains value)<br><br>// memeberOf | not memberOf<br>Object(feild memberOf value[Collection/Array])<br>Object(feild not memberOf value[Collection/Array])<br><br>// matches | not matches<br>Object(feild matches <span class="hljs-string">&quot;正则表达式&quot;</span>)<br>Object(feild not matches <span class="hljs-string">&quot;正则表达式&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>案例</p>
+<ul>
+<li>创建一个Java实体类Fact</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.learning.drools.entity;<br><span class="hljs-keyword">import</span> lombok.Data;<br><span class="hljs-keyword">import</span> java.util.List;<br><br><span class="hljs-meta">@Data</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ComparisonOperatorEntity</span> &#123;<br>    <span class="hljs-keyword">private</span> String names;<br>    <span class="hljs-keyword">private</span> List&lt;String&gt; list;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>定义<code>drl</code>文件</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs sh">package rules<br>import com.learning.drools.entity.ComparisonOperatorEntity<br><br>// 测试contains<br>rule <span class="hljs-string">&quot;rule1&quot;</span><br>    when<br>        ComparisonOperatorEntity(names contains <span class="hljs-string">&quot;judy&quot;</span>) //后面没有用到，所以不用绑定变量名<br>        ComparisonOperatorEntity(list contains  names) // 不写or或者and默认为and关系<br>    <span class="hljs-keyword">then</span><br>        System.out.println(<span class="hljs-string">&quot;规则1触发:contains&quot;</span>);<br>end<br><br>// 测试memberOf<br>rule <span class="hljs-string">&quot;rule2&quot;</span><br>    when<br>        ComparisonOperatorEntity(<span class="hljs-string">&quot;tome&quot;</span> memberOf list)<br>    <span class="hljs-keyword">then</span><br>        System.out.println(<span class="hljs-string">&quot;规则2： memberOf&quot;</span>);<br>end<br><br>// 测试matches<br><br>rule <span class="hljs-string">&quot;rule3&quot;</span><br>    when<br>        ComparisonOperatorEntity(names matches <span class="hljs-string">&quot;ju.*&quot;</span>)<br>    <span class="hljs-keyword">then</span><br>        System.out.println(<span class="hljs-string">&quot;规则3： matches&quot;</span>);<br>end<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>测试</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Test</span><br><span class="hljs-keyword">void</span>  <span class="hljs-title function_">testOperator</span><span class="hljs-params">()</span>&#123;<br>    <span class="hljs-comment">//获取kieService</span><br>    <span class="hljs-type">KieServices</span> <span class="hljs-variable">kieServices</span> <span class="hljs-operator">=</span> KieServices.Factory.get();<br>    <span class="hljs-comment">//获取container</span><br>    <span class="hljs-type">KieContainer</span> <span class="hljs-variable">kContainer</span> <span class="hljs-operator">=</span> kieServices.newKieClasspathContainer();<br>    <span class="hljs-comment">// 获取session</span><br>    <span class="hljs-type">KieSession</span> <span class="hljs-variable">kieSession</span> <span class="hljs-operator">=</span> kContainer.newKieSession();<br><br>    <span class="hljs-type">ComparisonOperatorEntity</span> <span class="hljs-variable">fact</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ComparisonOperatorEntity</span>();<br>    fact.setNames(<span class="hljs-string">&quot;judy&quot;</span>);<br>    fact.setList(<span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;()&#123;<br>        &#123;<br>            add(<span class="hljs-string">&quot;judy&quot;</span>);<br>            add(<span class="hljs-string">&quot;tome&quot;</span>);<br>            add(<span class="hljs-string">&quot;张三&quot;</span>);<br>        &#125;<br>    &#125;);<br><br>    kieSession.insert(fact);<br>    kieSession.fireAllRules();<br>    kieSession.dispose();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-6-执行指定的规则"><a href="#2-6-执行指定的规则" class="headerlink" title="2.6 执行指定的规则"></a>2.6 执行指定的规则</h3><ul>
+<li>指定规则触发条件：rule name</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Test</span><br><span class="hljs-keyword">void</span>  <span class="hljs-title function_">testCertainRule</span><span class="hljs-params">()</span>&#123;<br>    <span class="hljs-comment">//获取kieService</span><br>    <span class="hljs-type">KieServices</span> <span class="hljs-variable">kieServices</span> <span class="hljs-operator">=</span> KieServices.Factory.get();<br>    <span class="hljs-comment">//获取container</span><br>    <span class="hljs-type">KieContainer</span> <span class="hljs-variable">kContainer</span> <span class="hljs-operator">=</span> kieServices.newKieClasspathContainer();<br>    <span class="hljs-comment">// 获取session</span><br>    <span class="hljs-type">KieSession</span> <span class="hljs-variable">kieSession</span> <span class="hljs-operator">=</span> kContainer.newKieSession();<br><br>    <span class="hljs-type">ComparisonOperatorEntity</span> <span class="hljs-variable">fact</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ComparisonOperatorEntity</span>();<br>    fact.setNames(<span class="hljs-string">&quot;judy&quot;</span>);<br>    fact.setList(<span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;()&#123;<br>        &#123;<br>            add(<span class="hljs-string">&quot;judy&quot;</span>);<br>            add(<span class="hljs-string">&quot;tome&quot;</span>);<br>            add(<span class="hljs-string">&quot;张三&quot;</span>);<br>        &#125;<br>    &#125;);<br><br>    kieSession.insert(fact);<br>    <span class="hljs-comment">// kieSession.fireAllRules();</span><br>    <span class="hljs-comment">// kieSession.fireAllRules(new RuleNameEqualsAgendaFilter(&quot;rule1&quot;));  // 按照名称选择规则执行</span><br>    <span class="hljs-comment">// kieSession.fireAllRules(new RuleNameMatchesAgendaFilter(&quot;rule[1-2]&quot;)); // 按照正则表达式执行</span><br>    kieSession.fireAllRules(<span class="hljs-keyword">new</span> <span class="hljs-title class_">RuleNameStartsWithAgendaFilter</span>(<span class="hljs-string">&quot;rule&quot;</span>)); <span class="hljs-comment">// 按照以rule开头的规则名选择执行</span><br>    kieSession.dispose();<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="2-7-Drools内置方法"><a href="#2-7-Drools内置方法" class="headerlink" title="2.7 Drools内置方法"></a>2.7 Drools内置方法</h3><p>规则文件的RHS部分的主要作用是通过插入，删除或者修改工作内存中的Fact数据，来达到控制规则引擎执行的目的。</p>
+<p>Drools提供了一些方法可以用来操作工作内存中的数据，操作完成后规则引擎会重新进行相关规则的匹配。原来没有匹配成功的规则在此修改之后有可能就会匹配成功了。</p>
+<ul>
+<li>创建实体类</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.learning.drools.entity;<br><br><span class="hljs-keyword">import</span> lombok.Data;<br><span class="hljs-meta">@Data</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Student</span> &#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> id;<br>    <span class="hljs-keyword">private</span> String name;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> age;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>创建规则文件<ul>
+<li>常见内置方法<ul>
+<li>update：更新fact，导致重新匹配规则</li>
+<li>insert：插入一个fact对象到工作内存，导致规则重新匹配</li>
+<li>retract：删除工作内存中的数据，导致规则重新匹配</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><code class="hljs sh">package rules<br><br>import com.learning.drools.entity.Student<br><br>// 测试update内置方法<br>rule <span class="hljs-string">&quot;stu_rule1&quot;</span><br>    when<br>        <span class="hljs-variable">$s</span>:Student(age &gt;= 14 &amp;&amp; age &lt; 18)<br>    <span class="hljs-keyword">then</span><br>        <span class="hljs-variable">$s</span>.setAge(18);<br>        update(<span class="hljs-variable">$s</span>); // update 更新了Fact对象，会导致规则重新匹配。所以之后stu_rule2也会执行。如果没有update，age = 15 触发了rule1但是不会触发rule2规则<br>        System.out.println(<span class="hljs-string">&quot;规则1触发：&quot;</span> + <span class="hljs-variable">$s</span>);<br>end<br><br>// 测试update内置方法,<br>rule <span class="hljs-string">&quot;stu_rule2&quot;</span><br>    when<br>        <span class="hljs-variable">$s</span>:Student(age &gt;= 18)<br>    <span class="hljs-keyword">then</span><br>        <span class="hljs-variable">$s</span>.setName(<span class="hljs-string">&quot;成年人：&quot;</span> + <span class="hljs-variable">$s</span>.getName());<br>        System.out.println(<span class="hljs-string">&quot;规则2触发：&quot;</span> + <span class="hljs-variable">$s</span>);<br>end<br><br>// 用于测试insert<br>rule <span class="hljs-string">&quot;stu_rule3&quot;</span><br>    when<br>        <span class="hljs-variable">$s</span>:Student(<span class="hljs-built_in">id</span> == 3 || name == <span class="hljs-string">&quot;tom&quot;</span>)<br>    <span class="hljs-keyword">then</span><br>        Student jerrySon = new Student();<br>        jerrySon.setAge(18);<br>        insert(jerrySon);<br>        System.out.println(<span class="hljs-string">&quot;规则3执行&quot;</span> + jerrySon); <br>end<br><br><br>// 用于测试retract<br>rule <span class="hljs-string">&quot;stu_rule4&quot;</span><br>    when<br>        <span class="hljs-variable">$s</span>:Student(<span class="hljs-built_in">id</span> == 3 || name == <span class="hljs-string">&quot;tom&quot;</span>)<br>    <span class="hljs-keyword">then</span><br>        retract(<span class="hljs-variable">$s</span>);<br>        System.out.println(<span class="hljs-string">&quot;规则4执行&quot;</span>);<br>end<br><br>// 用于测试retract<br>rule <span class="hljs-string">&quot;stu_rule5&quot;</span><br>    when<br>        <span class="hljs-variable">$s</span>:Student(<span class="hljs-built_in">id</span> == 3 || name == <span class="hljs-string">&quot;tom&quot;</span>) // 由于stu_rule4在工作内存中删除了这个fact，因此此规则匹配失败<br>    <span class="hljs-keyword">then</span><br>        retract(<span class="hljs-variable">$s</span>);<br>        System.out.println(<span class="hljs-string">&quot;规则5执行&quot;</span>);<br>end<br><br></code></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>测试</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Test</span><br><span class="hljs-keyword">void</span> <span class="hljs-title function_">testFunction</span><span class="hljs-params">()</span>&#123;<br>    <span class="hljs-type">KieServices</span> <span class="hljs-variable">kieServices</span> <span class="hljs-operator">=</span> KieServices.Factory.get();<br>    <span class="hljs-type">KieContainer</span> <span class="hljs-variable">kContainer</span> <span class="hljs-operator">=</span> kieServices.newKieClasspathContainer();<br>    <span class="hljs-type">KieSession</span> <span class="hljs-variable">kieSession</span> <span class="hljs-operator">=</span> kContainer.newKieSession();<br><br>    <span class="hljs-type">Student</span> <span class="hljs-variable">student</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>();<br>    student.setId(<span class="hljs-number">1</span>);<br>    student.setName(<span class="hljs-string">&quot;tom&quot;</span>);<br>    student.setAge(<span class="hljs-number">15</span>);<br><br>    kieSession.insert(student);<br>    kieSession.fireAllRules();<br>    kieSession.dispose();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="3-规则属性"><a href="#3-规则属性" class="headerlink" title="3. 规则属性"></a>3. 规则属性</h2><p>规则体的构成如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sh">rule <span class="hljs-string">&quot;rule_name&quot;</span><br>	attributes<br>	when<br>		LHS<br>    <span class="hljs-keyword">then</span><br>    	RHS<br>end<br></code></pre></td></tr></table></figure>
+
+<p>Drools提供的属性如下表</p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>salience</td>
+<td>指定规则的执行优先级，salience 10, 数字越大，优先级越高，越先执行 <code>salience 11</code></td>
+</tr>
+<tr>
+<td>dialect</td>
+<td>指定规则使用的语言类型，取值为Java或mvel  <code>dialect java</code></td>
+</tr>
+<tr>
+<td>enabled</td>
+<td>指定规则是否启用 <code>enabled true</code></td>
+</tr>
+<tr>
+<td>date-effective</td>
+<td>指定规则生效的时间 <code>data-effective &#39;yyyy-MM-dd HH:mm:ss&#39;</code> Java代码中设置<code>System.setProperty(&quot;drools.dateformat&quot;,&quot;yyyy-MM-dd HH:mm:ss&quot;);</code></td>
+</tr>
+<tr>
+<td>date-expires</td>
+<td>指定规则失效时间 <code>date-expires &#39;date&#39;</code></td>
+</tr>
+<tr>
+<td>activation-group</td>
+<td>激活分组，具有相同分组名称的规则只能有一个规则触发 <code>activation-group &#39;group1&#39; </code></td>
+</tr>
+<tr>
+<td>agenda-group</td>
+<td>议程分组，只有获取焦点的组中的规则才有可能触发 <code>agenda-group &#39;group2&#39;</code> <br />获取焦点：  java 代码或规则文件<code>kieSession.getAgenda().getAgendaGroup(&quot;group2&quot;).setFocus();</code>  <code>auto-focus true</code></td>
+</tr>
+<tr>
+<td>timer</td>
+<td>定时器，指定规则触发的时间： <br />方式一：<code>timer(int: t1 t2)</code> t1表示几秒后执行，t2表示每隔几秒执行一次，t2是可选参数 <code>timer(3s 2s)</code><br />方式二：<code>timer(cron: 秒分时日月周[年])</code>  <code>timer(cron: 0/1 * * * * ？)</code></td>
+</tr>
+<tr>
+<td>auto-focus</td>
+<td>自动获取焦点，一般结合agenda-group一起使用 <code>auto-focus true</code>  组内只要有一个规则配置了，其他规则也会生效</td>
+</tr>
+<tr>
+<td>no-loop</td>
+<td>防止死循环 <code>no-loop true</code></td>
+</tr>
+</tbody></table>
+<h2 id="4-Drools高级语法"><a href="#4-Drools高级语法" class="headerlink" title="4. Drools高级语法"></a>4. Drools高级语法</h2><ul>
+<li>package：包名，只限于逻辑上的管理，同一个包名下的查询或者函数可以直接调用</li>
+<li>import：用于导入类或者静态方法</li>
+<li>global：全局变量</li>
+<li>function： 自定义函数</li>
+<li>query： 查询</li>
+<li>rule end ： 规则体</li>
+</ul>
+<p>Drools支持的规则文件，除了<code>drl</code>形式，还有excel 文件类型的。</p>
+<h3 id="4-1-Global-全局变量"><a href="#4-1-Global-全局变量" class="headerlink" title="4.1 Global 全局变量"></a>4.1 Global 全局变量</h3><p>global关键字用于在规则文件中定义全局变量， 语法结构为 <code>global 对象类型  对象名称</code></p>
+<p>注意事项：</p>
+<ol>
+<li>对于包装类型，在一个规则中修改了global的值，只针对该规则生效</li>
+<li>如果是集合类型或者Java Bean时，在一个规则中修改了global的值，对于Java代码和所有的规则都生效。</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">global java.lang.Integer count<br></code></pre></td></tr></table></figure>
+
+<h3 id="4-2-query查询"><a href="#4-2-query查询" class="headerlink" title="4.2 query查询"></a>4.2 query查询</h3><p>query查询提供了一种查询工作内存中符合约束条件的Fact对象的简单方法。它仅包含规则文件中的LHS部分，不用指定when 和then并且以end结束。语法结构如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sh">query <span class="hljs-string">&quot;查询名称&quot;</span> <br>	LHS<br>end<br></code></pre></td></tr></table></figure>
+
+<p>例子</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs sh">// <span class="hljs-built_in">test</span> query<br><br>package rules<br>import com.learning.drools.entity.Student<br><br><br>query <span class="hljs-string">&quot;query_1&quot;</span><br>    <span class="hljs-variable">$s</span>:Student(age == 18)<br>end<br><br>query <span class="hljs-string">&quot;query_2&quot;</span> (String studentName)<br>    <span class="hljs-variable">$s</span>:Student(age &lt; 18 &amp;&amp; studentName == <span class="hljs-string">&quot;张三&quot;</span>)<br>end<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">void</span> <span class="hljs-title function_">testQuery</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> InterruptedException &#123;<br><br>    System.setProperty(<span class="hljs-string">&quot;drools.dateformat&quot;</span>,<span class="hljs-string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>);<br>    <span class="hljs-type">KieServices</span> <span class="hljs-variable">kieServices</span> <span class="hljs-operator">=</span> KieServices.Factory.get();<br>    <span class="hljs-type">KieContainer</span> <span class="hljs-variable">kContainer</span> <span class="hljs-operator">=</span> kieServices.newKieClasspathContainer();<br>    <span class="hljs-type">KieSession</span> <span class="hljs-variable">kieSession</span> <span class="hljs-operator">=</span> kContainer.newKieSession();<br>    <span class="hljs-comment">//kieSession.setGlobal(&quot;num&quot;,1);</span><br>    kieSession.setGlobal(<span class="hljs-string">&quot;name&quot;</span>,<span class="hljs-string">&quot;张三&quot;</span>);<br>    <span class="hljs-type">Student</span> <span class="hljs-variable">student</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>();<br>    student.setId(<span class="hljs-number">1</span>);<br>    student.setName(<span class="hljs-string">&quot;tom&quot;</span>);<br>    student.setAge(<span class="hljs-number">18</span>);<br>    kieSession.insert(student);<br>    System.out.println(kieSession.getQueryResults(<span class="hljs-string">&quot;query_1&quot;</span>).size());<br>    System.out.println(<span class="hljs-string">&quot;==================&quot;</span>);<br>    <span class="hljs-type">Student</span> <span class="hljs-variable">student1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>();<br>    student1.setId(<span class="hljs-number">2</span>);<br><br>    student1.setName(<span class="hljs-string">&quot;张三&quot;</span>);<br>    student1.setAge(<span class="hljs-number">15</span>);<br>    kieSession.insert(student1);<br>    System.out.println(kieSession.getQueryResults(<span class="hljs-string">&quot;query_2&quot;</span>, <span class="hljs-string">&quot;张三&quot;</span>).size());<br><br>    kieSession.dispose();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-3-function-函数"><a href="#4-3-function-函数" class="headerlink" title="4.3 function 函数"></a>4.3 function 函数</h3><p>function关键字可以在规则文件中定义函数，就相当于Java类中的方法一样。可以在规则体中调用定义的函数。使用函数的好处使可以将业务逻辑集中放置到一个地方，根据需要可以对函数进行修改。函数定义的语法结构如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-keyword">function</span> 返回值类型 函数名(可选参数)&#123;<br>	//逻辑代码<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>例子：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs sh">package rules<br>import com.learning.drools.entity.Student<br><br><span class="hljs-keyword">function</span> String sayHello(String name)&#123;<br>    System.out.println(<span class="hljs-string">&quot;函数调用&quot;</span>);<br>    <span class="hljs-built_in">return</span> <span class="hljs-string">&quot;hello&quot;</span> + name;<br>&#125;<br><br><br>rule <span class="hljs-string">&quot;rule_function&quot;</span><br>    when<br>        <span class="hljs-variable">$s</span>:Student(age &gt; 60)<br>    <span class="hljs-keyword">then</span><br>        String res = sayHello(<span class="hljs-variable">$s</span>.getName());<br>        System.out.println(<span class="hljs-string">&quot;规则 then内容 ： &quot;</span> + res);<br>end<br></code></pre></td></tr></table></figure>
+
+<h3 id="4-4-LHS加强"><a href="#4-4-LHS加强" class="headerlink" title="4.4 LHS加强"></a>4.4 LHS加强</h3><h4 id="4-4-1-复合值限制in-not-in"><a href="#4-4-1-复合值限制in-not-in" class="headerlink" title="4.4.1 复合值限制in &#x2F; not in"></a>4.4.1 复合值限制in &#x2F; not in</h4><p>类似于SQL中的in</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-variable">$s</span>:Student(name <span class="hljs-keyword">in</span> (<span class="hljs-string">&quot;张三&quot;</span>,<span class="hljs-string">&quot;李四&quot;</span>,<span class="hljs-string">&quot;王五&quot;</span>));<br><span class="hljs-variable">$s</span>:Student(name not <span class="hljs-keyword">in</span> (<span class="hljs-string">&quot;张三&quot;</span>,<span class="hljs-string">&quot;李四&quot;</span>,<span class="hljs-string">&quot;王五&quot;</span>));<br></code></pre></td></tr></table></figure>
+
+<h4 id="4-4-2-条件元素eval"><a href="#4-4-2-条件元素eval" class="headerlink" title="4.4.2 条件元素eval"></a>4.4.2 条件元素eval</h4><p>eval用于规则体的LHS部分，并返回一个Boolean类型的值。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">eval</span>(<span class="hljs-literal">true</span>)<br><span class="hljs-built_in">eval</span>(<span class="hljs-literal">false</span>)<br><span class="hljs-built_in">eval</span>(1 == 1)<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="4-4-3-条件元素-not"><a href="#4-4-3-条件元素-not" class="headerlink" title="4.4.3 条件元素 not"></a>4.4.3 条件元素 not</h4><p>not用于判断工作内存中是否存在某个Fact对象，如果不存在则返回true，如果存在则返回false。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs sh">rule <span class="hljs-string">&quot;lhs_not&quot;</span><br>    when<br>        not Student(age &lt; 38)<br>    <span class="hljs-keyword">then</span><br>        System.out.println(<span class="hljs-string">&quot;大于38&quot;</span>);<br>end<br></code></pre></td></tr></table></figure>
+
+<h4 id="4-4-4-条件元素exists"><a href="#4-4-4-条件元素exists" class="headerlink" title="4.4.4 条件元素exists"></a>4.4.4 条件元素exists</h4><p>与not相反</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs sh">rule <span class="hljs-string">&quot;lhs_not&quot;</span><br>    when<br>        exists Student(age &lt; 38)<br>    <span class="hljs-keyword">then</span><br>        System.out.println(<span class="hljs-string">&quot;小于38&quot;</span>);<br>end<br></code></pre></td></tr></table></figure>
+
+<p>使用exists与不使用exists区别</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">exists Student() //只会触发一次<br>Student() //可能触发多次<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="4-4-5-规则继承"><a href="#4-4-5-规则继承" class="headerlink" title="4.4.5 规则继承"></a>4.4.5 规则继承</h4><p>规则之间可以使用extends关键字进行规则条件部分的继承，类似于Java类之间的继承</p>
+<p>例如</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs sh">package rules<br>import com.learning.drools.entity.Student<br><br>rule <span class="hljs-string">&quot;ext_1&quot;</span><br>    when <br>        Student(age &lt; 50)  // <span class="hljs-comment"># 只有when部分会被继承</span><br>    <span class="hljs-keyword">then</span><br>        System.out.println(<span class="hljs-string">&quot;规则1触发&quot;</span>); // <span class="hljs-comment"># then部分不会被继承</span><br>end<br><br>rule <span class="hljs-string">&quot;ext_2&quot;</span> extends <span class="hljs-string">&quot;ext_1&quot;</span> // <span class="hljs-comment"># 继承了ext_1, 所以只有ext_1条件满足时才会执行ext_2</span><br>    when<br>		Student(age &gt; 40) <br>    <span class="hljs-keyword">then</span><br>        System.out.println(<span class="hljs-string">&quot;规则2触发&quot;</span>);<br>end<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-5-RHS-加强"><a href="#4-5-RHS-加强" class="headerlink" title="4.5 RHS 加强"></a>4.5 RHS 加强</h3><p>RHS是规则体的重要组成部分，当LHS部分的条件匹配成功后，对应的RHS部分就会触发执行。一般在RHS部分中需要进行业务处理。</p>
+<p>在RHS部分Drools为我们提供了一个内置对象，名称就是drools。本小节介绍几个drools对象提供的方法</p>
+<h4 id="4-5-1-halt"><a href="#4-5-1-halt" class="headerlink" title="4.5.1 halt"></a>4.5.1 halt</h4><p>halt方法用于立即终止后面所有规则的执行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs sh">rule <span class="hljs-string">&quot;rhs_halt1&quot;</span><br>    when<br>    <span class="hljs-keyword">then</span><br>        System.out.println(<span class="hljs-string">&quot;halt1规则触发&quot;</span>);<br>        drools.halt(); // 当前方法执行后，后续规则终止执行<br>end<br><br>rule <span class="hljs-string">&quot;rhs_halt2&quot;</span><br>    when<br>    <span class="hljs-keyword">then</span><br>        System.out.println(<span class="hljs-string">&quot;halt2规则触发&quot;</span>);<br>end<br></code></pre></td></tr></table></figure>
+
+<h4 id="4-5-2-getWorkingMemory"><a href="#4-5-2-getWorkingMemory" class="headerlink" title="4.5.2 getWorkingMemory"></a>4.5.2 getWorkingMemory</h4><p>getWorkingMembory方法用于返回工作内存对象</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sh">rule <span class="hljs-string">&quot;rhs_getWM&quot;</span><br>    when<br>    <span class="hljs-keyword">then</span><br>        System.out.println(<span class="hljs-string">&quot;工作内存对象：&quot;</span> + drools.getWorkingMemory().getFactCount());<br>end<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="4-5-3-getRule"><a href="#4-5-3-getRule" class="headerlink" title="4.5.3 getRule"></a>4.5.3 getRule</h4><p>getRule方法的作用是返回规则对象本身</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sh">rule <span class="hljs-string">&quot;rhs_getRule&quot;</span><br>    when<br>    <span class="hljs-keyword">then</span><br>        System.out.println(<span class="hljs-string">&quot;规则本身&quot;</span> + drools.getRule().getName());<br>end<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="4-6-规则编码规范"><a href="#4-6-规则编码规范" class="headerlink" title="4.6 规则编码规范"></a>4.6 规则编码规范</h3><ul>
+<li>所有的规则文件（drl）应统一放在一个规定的文件夹中，如何&#x2F;rules文件夹</li>
+<li>书写的每个规则应尽量加上注释。注释要清晰明了，言简意赅</li>
+<li>同一个类型的对象尽量放在一个规则文件中，如所有Student类型的对象尽量放在一个规则文件中</li>
+<li>规则结果部分（RHS）尽量不要有条件语句，如(if…)。尽量不要有复杂的逻辑和深层的嵌套语句</li>
+<li>每个规则最好都加上salience属性，明确执行顺序</li>
+<li>Drools默认dialect为java，避免使用mvel</li>
+</ul>
+<h2 id="5-SpringBoot整合Drools"><a href="#5-SpringBoot整合Drools" class="headerlink" title="5. SpringBoot整合Drools"></a>5. SpringBoot整合Drools</h2><ul>
+<li>pom</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;?xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span>?&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">project</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span> <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span><br><span class="hljs-tag">         <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">modelVersion</span>&gt;</span>4.0.0<span class="hljs-tag">&lt;/<span class="hljs-name">modelVersion</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">parent</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>3.5.5<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">relativePath</span>/&gt;</span> <span class="hljs-comment">&lt;!-- lookup parent from repository --&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">parent</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.learning.drools<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>drools<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>0.0.1-SNAPSHOT<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>drools<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">description</span>&gt;</span>drools<span class="hljs-tag">&lt;/<span class="hljs-name">description</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">url</span>/&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">licenses</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">license</span>/&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">licenses</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">developers</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">developer</span>/&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">developers</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">scm</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">connection</span>/&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">developerConnection</span>/&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">tag</span>/&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">url</span>/&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">scm</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">properties</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">java.version</span>&gt;</span>17<span class="hljs-tag">&lt;/<span class="hljs-name">java.version</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">properties</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br><br><br>        <span class="hljs-comment">&lt;!--drools--&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.drools<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>drools-compiler<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>7.50.0.Final<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br><span class="hljs-comment">&lt;!--        &lt;dependency&gt;--&gt;</span><br><span class="hljs-comment">&lt;!--            &lt;groupId&gt;org.drools&lt;/groupId&gt;--&gt;</span><br><span class="hljs-comment">&lt;!--            &lt;artifactId&gt;drools-mvel&lt;/artifactId&gt;--&gt;</span><br><span class="hljs-comment">&lt;!--            &lt;version&gt;7.50.0.Final&lt;/version&gt;--&gt;</span><br><span class="hljs-comment">&lt;!--        &lt;/dependency&gt;--&gt;</span><br><span class="hljs-comment">&lt;!--        --&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.drools<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>drools-core<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>7.50.0.Final<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br>        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.drools<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>drools-templates<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>7.50.0.Final<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br>        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.kie<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>kie-api<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>7.50.0.Final<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br>        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.kie<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>kie-spring<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">exclusions</span>&gt;</span><br>                <span class="hljs-tag">&lt;<span class="hljs-name">exclusion</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-tx<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>                <span class="hljs-tag">&lt;/<span class="hljs-name">exclusion</span>&gt;</span><br>                <span class="hljs-tag">&lt;<span class="hljs-name">exclusion</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-beans<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>                <span class="hljs-tag">&lt;/<span class="hljs-name">exclusion</span>&gt;</span><br>                <span class="hljs-tag">&lt;<span class="hljs-name">exclusion</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-core<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>                <span class="hljs-tag">&lt;/<span class="hljs-name">exclusion</span>&gt;</span><br>                <span class="hljs-tag">&lt;<span class="hljs-name">exclusion</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-context<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>                <span class="hljs-tag">&lt;/<span class="hljs-name">exclusion</span>&gt;</span><br>            <span class="hljs-tag">&lt;/<span class="hljs-name">exclusions</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>7.50.0.Final<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br>        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>test<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.projectlombok<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>lombok<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>annotationProcessor<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span><br><br>    <span class="hljs-tag">&lt;<span class="hljs-name">build</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">plugins</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span><br>                <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>                <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>            <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">plugins</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">build</span>&gt;</span><br><br><span class="hljs-tag">&lt;/<span class="hljs-name">project</span>&gt;</span><br><br></code></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>config</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.learning.drools.config;<br><br><span class="hljs-keyword">import</span> org.kie.api.KieBase;<br><span class="hljs-keyword">import</span> org.kie.api.KieServices;<br><span class="hljs-keyword">import</span> org.kie.api.runtime.KieContainer;<br><span class="hljs-keyword">import</span> org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;<br><span class="hljs-keyword">import</span> org.springframework.context.annotation.Bean;<br><span class="hljs-keyword">import</span> org.springframework.context.annotation.Configuration;<br><br><span class="hljs-meta">@Configuration</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">DroolsConfig</span> &#123;<br><br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-type">KieServices</span> <span class="hljs-variable">kieServices</span> <span class="hljs-operator">=</span> KieServices.Factory.get();<br><br>    <span class="hljs-meta">@Bean</span><br>    <span class="hljs-meta">@ConditionalOnMissingBean</span> <span class="hljs-comment">// 先查找再创建</span><br>    <span class="hljs-keyword">public</span> KieBase <span class="hljs-title function_">kieBase</span><span class="hljs-params">()</span>&#123;<br>        System.setProperty(<span class="hljs-string">&quot;drools.dateformat&quot;</span>,<span class="hljs-string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>);<br><br>        <span class="hljs-type">KieContainer</span> <span class="hljs-variable">kContainer</span> <span class="hljs-operator">=</span> kieServices.newKieClasspathContainer();<br>        <span class="hljs-keyword">return</span> kContainer.getKieBase();<br>    &#125;<br><br>    <span class="hljs-meta">@Bean</span><br>    <span class="hljs-meta">@ConditionalOnMissingBean</span> <span class="hljs-comment">// 先查找再创建</span><br>    <span class="hljs-keyword">public</span> KieContainer <span class="hljs-title function_">kieContainer</span><span class="hljs-params">()</span>&#123;<br>        <span class="hljs-keyword">return</span> kieServices.newKieClasspathContainer();<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>service</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Service</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">RuleService</span> &#123;<br>    <span class="hljs-meta">@Autowired</span><br>    <span class="hljs-keyword">private</span> KieBase kieBase;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">rule</span><span class="hljs-params">()</span>&#123;<br>        <span class="hljs-type">KieSession</span> <span class="hljs-variable">kieSession</span> <span class="hljs-operator">=</span> kieBase.newKieSession();<br>        kieSession.fireAllRules(<span class="hljs-keyword">new</span> <span class="hljs-title class_">RuleNameStartsWithAgendaFilter</span>(<span class="hljs-string">&quot;hello&quot;</span>));<br>        kieSession.dispose();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>controller</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@RestController</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">RuleController</span> &#123;<br><br>    <span class="hljs-meta">@Autowired</span><br>    <span class="hljs-keyword">private</span> RuleService ruleService;<br><br>    <span class="hljs-meta">@GetMapping(&quot;/rule&quot;)</span><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">rule</span><span class="hljs-params">()</span> &#123;<br>        ruleService.rule();<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;success&quot;</span>;<br>    &#125;<br><br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="6-WorkBench"><a href="#6-WorkBench" class="headerlink" title="6. WorkBench"></a>6. WorkBench</h2><p><img src="/img/2025-08-16-Sat-T-Drools%E8%A7%84%E5%88%99%E5%BC%95%E6%93%8E/image-20250901104411752.png" srcset="/img/loading.gif" lazyload alt="image-20250901104411752"></p>
+<p>Drools是整个KIE项目中的一个组件，Drools还包括一个Drools-WB的模块，它是一个可视化的规则编辑器。</p>
+<p>使用workbench可以在浏览器中创建数据对象，创建规则文件，创建测试场景并将规则部署到maven仓库供其他应用使用。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">docker pull jboss/business-central-workbench:7.52.0.Final<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">docker run -p 8080:8080 -p 8001:8001 -d --name workbench jboss/business-central-workbench:7.50.0.Final<br></code></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>创建用户</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 进入bin，为Kie-Server添加一个具有kie-server角色的用户</span><br>./add-user.sh -a -u kieserver -p kieserver1! -g kie-server<br><br>./add-user.sh -a -u workbench -p workbench! -g admin,kie-server,rest-all<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 默认角色有</span><br>  ROLE        DESCRIPTION<br>  *************************************************<br>  admin       The administrator<br>  analyst     The analyst<br>  kiemgmt     KIE management user<br>  rest-all    Rest API permissions<br>  Accounting  Accounting role<br>  PM          Project manager role<br>  HR          Human resources role<br>  sales       Sales role<br>  IT          IT role<br><br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="6-1-使用方式"><a href="#6-1-使用方式" class="headerlink" title="6.1 使用方式"></a>6.1 使用方式</h3><ul>
+<li>创建空间、项目</li>
+<li>创建数据对象</li>
+<li>创建DRL规则文件</li>
+<li>创建测试场景</li>
+<li>设置KieBase和KieSession</li>
+</ul>
+<p>kieBase的软件包就是drl的package地址</p>
+<p>kiesession有两种状态</p>
+<ol>
+<li><p>stateful	</p>
+</li>
+<li><p>stateless</p>
+</li>
+</ol>
+<ul>
+<li>编译、构建、部署</li>
+<li>在项目中使用部署的规则</li>
+</ul>
+<h2 id="7-案例"><a href="#7-案例" class="headerlink" title="7. 案例"></a>7. 案例</h2><h3 id="7-1-个人所得税计算"><a href="#7-1-个人所得税计算" class="headerlink" title="7.1 个人所得税计算"></a>7.1 个人所得税计算</h3><h4 id="7-1-1-计算规则"><a href="#7-1-1-计算规则" class="headerlink" title="7.1.1 计算规则"></a>7.1.1 计算规则</h4><table>
+<thead>
+<tr>
+<th>规则编号</th>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>计算应纳税所得额</td>
+<td>税前工资 - 5000</td>
+</tr>
+<tr>
+<td>2</td>
+<td>设置税率，应纳税所得额 &lt;&#x3D; 1500</td>
+<td>税率0.03， 速算扣除数为0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>设置税率，应纳税所得额 &lt;&#x3D; 4500</td>
+<td>税率0.1， 速算扣除数为105</td>
+</tr>
+<tr>
+<td>4</td>
+<td>设置税率，应纳税所得额 &lt;&#x3D; 9000</td>
+<td>税率0.2， 速算扣除数为555</td>
+</tr>
+<tr>
+<td>5</td>
+<td>设置税率，应纳税所得额 &lt;&#x3D; 35000</td>
+<td>税率0.25， 速算扣除数为1005</td>
+</tr>
+<tr>
+<td>6</td>
+<td>设置税率，应纳税所得额 &lt;&#x3D; 55000</td>
+<td>税率0.3， 速算扣除数为2755</td>
+</tr>
+<tr>
+<td>7</td>
+<td>设置税率，应纳税所得额 &lt;&#x3D; 80000</td>
+<td>税率0.35， 速算扣除数为5505</td>
+</tr>
+<tr>
+<td>8</td>
+<td>设置税率，应纳税所得额 &gt; 80000</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>计算税后工资</td>
+<td>扣税额 &#x3D; 应缴纳税所得额*税率 - 速算扣除数<br />税后工资 &#x3D; 税前工资 - 扣税额</td>
+</tr>
+</tbody></table>
+<h4 id="7-1-2-编写drl"><a href="#7-1-2-编写drl" class="headerlink" title="7.1.2 编写drl"></a>7.1.2 编写drl</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br></pre></td><td class="code"><pre><code class="hljs sh">package rules<br><br>import com.learning.drools.owntax.entity.Calculation<br><br>rule <span class="hljs-string">&quot;r1&quot;</span><br><br>    when<br>    <span class="hljs-keyword">then</span><br>        System.out.println(<span class="hljs-string">&quot;ok&quot;</span>);<br>end<br><br>// 第一类: 计算应纳税所得额<br>// 第二类： 计算税<br>// 第三类： 计算税后工资<br><br>/**<br>    private double wage; // 税前工资<br>    private double wageMore;  // 应纳税所得额<br>    private double cess;// 税率<br>    private double preMinus; //速算扣除数<br>    private double wageMinus; // 扣税额<br>    private double actualWage; //税后工资<br>*/<br>rule <span class="hljs-string">&quot;计算应纳税所得额&quot;</span><br>    salience 100<br>    date-effective <span class="hljs-string">&quot;2022-09-01&quot;</span><br>    no-loop <span class="hljs-literal">true</span> // 防止更改后发生死循环<br>    when<br>        <span class="hljs-variable">$cal</span>:Calculation(wage &gt; 5000)<br>    <span class="hljs-keyword">then</span><br>        <span class="hljs-variable">$cal</span>.setWageMore(<span class="hljs-variable">$cal</span>.getWage() - 3500);<br>        update(<span class="hljs-variable">$cal</span>); // 工作内存中更新<br>end<br><br>rule <span class="hljs-string">&quot;设置税率，应纳税所得额 &lt;= 1500&quot;</span><br>    salience 99<br>    date-effective <span class="hljs-string">&quot;2022-09-01&quot;</span><br>    activation-group <span class="hljs-string">&quot;SetCessGroup&quot;</span> // 保证计算税率的规则只能有一个规则被触发<br>    no-loop <span class="hljs-literal">true</span><br>    when<br>        <span class="hljs-variable">$cal</span>:Calculation(wageMore &gt; 0 &amp;&amp; wageMore &lt;= 1500)<br>    <span class="hljs-keyword">then</span><br>        <span class="hljs-variable">$cal</span>.setCess(0.03);<br>        <span class="hljs-variable">$cal</span>.setPreMinus(0);<br>        <span class="hljs-variable">$cal</span>.setWageMinus(<span class="hljs-variable">$cal</span>.getWageMore() * <span class="hljs-variable">$cal</span>.getCess() - <span class="hljs-variable">$cal</span>.getPreMinus());<br>        update(<span class="hljs-variable">$cal</span>); // 工作内存中更新<br>end<br><br>rule <span class="hljs-string">&quot;设置税率，应纳税所得额 &lt;= 4500&quot;</span><br>        salience 98<br>        date-effective <span class="hljs-string">&quot;2022-09-01&quot;</span><br>        activation-group <span class="hljs-string">&quot;SetCessGroup&quot;</span> // 保证计算税率的规则只能有一个规则被触发<br>        no-loop <span class="hljs-literal">true</span><br>        when<br>            <span class="hljs-variable">$cal</span>:Calculation(wageMore &gt; 1500 &amp;&amp; wageMore &lt;= 4500)<br>        <span class="hljs-keyword">then</span><br>            <span class="hljs-variable">$cal</span>.setCess(0.1);<br>            <span class="hljs-variable">$cal</span>.setPreMinus(105);<br>            <span class="hljs-variable">$cal</span>.setWageMinus(<span class="hljs-variable">$cal</span>.getWageMore() * <span class="hljs-variable">$cal</span>.getCess() - <span class="hljs-variable">$cal</span>.getPreMinus());<br>            update(<span class="hljs-variable">$cal</span>); // 工作内存中更新<br>end<br><br>rule <span class="hljs-string">&quot;设置税率，应纳税所得额 &lt;= 9000&quot;</span><br>        salience 97<br>        date-effective <span class="hljs-string">&quot;2022-09-01&quot;</span><br>        activation-group <span class="hljs-string">&quot;SetCessGroup&quot;</span> // 保证计算税率的规则只能有一个规则被触发<br>        no-loop <span class="hljs-literal">true</span><br>        when<br>            <span class="hljs-variable">$cal</span>:Calculation(wageMore &gt; 4500 &amp;&amp; wageMore &lt;= 9000)<br>        <span class="hljs-keyword">then</span><br>            <span class="hljs-variable">$cal</span>.setCess(0.2);<br>            <span class="hljs-variable">$cal</span>.setPreMinus(555);<br>            <span class="hljs-variable">$cal</span>.setWageMinus(<span class="hljs-variable">$cal</span>.getWageMore() * <span class="hljs-variable">$cal</span>.getCess() - <span class="hljs-variable">$cal</span>.getPreMinus());<br>            update(<span class="hljs-variable">$cal</span>); // 工作内存中更新<br>end<br><br>rule <span class="hljs-string">&quot;设置税率，应纳税所得额 &lt;= 35000&quot;</span><br>        salience 96<br>        date-effective <span class="hljs-string">&quot;2022-09-01&quot;</span><br>        activation-group <span class="hljs-string">&quot;SetCessGroup&quot;</span> // 保证计算税率的规则只能有一个规则被触发<br>        no-loop <span class="hljs-literal">true</span><br>        when<br>            <span class="hljs-variable">$cal</span>:Calculation(wageMore &gt; 9000 &amp;&amp; wageMore &lt;= 35000)<br>        <span class="hljs-keyword">then</span><br>            <span class="hljs-variable">$cal</span>.setCess(0.25);<br>            <span class="hljs-variable">$cal</span>.setPreMinus(1005);<br>            <span class="hljs-variable">$cal</span>.setWageMinus(<span class="hljs-variable">$cal</span>.getWageMore() * <span class="hljs-variable">$cal</span>.getCess() - <span class="hljs-variable">$cal</span>.getPreMinus());<br>            update(<span class="hljs-variable">$cal</span>); // 工作内存中更新<br>end<br><br>rule <span class="hljs-string">&quot;设置税率，应纳税所得额 &lt;= 55000&quot;</span><br>        salience 95<br>        date-effective <span class="hljs-string">&quot;2022-09-01&quot;</span><br>        activation-group <span class="hljs-string">&quot;SetCessGroup&quot;</span> // 保证计算税率的规则只能有一个规则被触发<br>        no-loop <span class="hljs-literal">true</span><br>        when<br>            <span class="hljs-variable">$cal</span>:Calculation(wageMore &gt; 35000 &amp;&amp; wageMore &lt;= 55000)<br>        <span class="hljs-keyword">then</span><br>            <span class="hljs-variable">$cal</span>.setCess(0.3);<br>            <span class="hljs-variable">$cal</span>.setPreMinus(2755);<br>            <span class="hljs-variable">$cal</span>.setWageMinus(<span class="hljs-variable">$cal</span>.getWageMore() * <span class="hljs-variable">$cal</span>.getCess() - <span class="hljs-variable">$cal</span>.getPreMinus());<br>            update(<span class="hljs-variable">$cal</span>); // 工作内存中更新<br>end<br><br>rule <span class="hljs-string">&quot;设置税率，应纳税所得额 &lt;= 80000&quot;</span><br>        salience 94<br>        date-effective <span class="hljs-string">&quot;2022-09-01&quot;</span><br>        activation-group <span class="hljs-string">&quot;SetCessGroup&quot;</span> // 保证计算税率的规则只能有一个规则被触发<br>        no-loop <span class="hljs-literal">true</span><br>        when<br>            <span class="hljs-variable">$cal</span>:Calculation(wageMore &gt; 55000 &amp;&amp; wageMore &lt;= 80000)<br>        <span class="hljs-keyword">then</span><br>            <span class="hljs-variable">$cal</span>.setCess(0.5);<br>            <span class="hljs-variable">$cal</span>.setPreMinus(5505);<br>            <span class="hljs-variable">$cal</span>.setWageMinus(<span class="hljs-variable">$cal</span>.getWageMore() * <span class="hljs-variable">$cal</span>.getCess() - <span class="hljs-variable">$cal</span>.getPreMinus());<br>            update(<span class="hljs-variable">$cal</span>); // 工作内存中更新<br>end<br><br>rule <span class="hljs-string">&quot;计算税后工资&quot;</span><br>        salience 93<br>        date-effective <span class="hljs-string">&quot;2022-09-01&quot;</span><br>        no-loop <span class="hljs-literal">true</span><br>        when<br>            <span class="hljs-variable">$cal</span>:Calculation(wage &gt; 0)<br>        <span class="hljs-keyword">then</span><br>            <span class="hljs-variable">$cal</span>.setActualWage(<span class="hljs-variable">$cal</span>.getWage() - <span class="hljs-variable">$cal</span>.getWageMinus());<br>            update(<span class="hljs-variable">$cal</span>); // 工作内存中更新<br>end<br></code></pre></td></tr></table></figure>
+
+<h4 id="7-1-3-配置"><a href="#7-1-3-配置" class="headerlink" title="7.1.3 配置"></a>7.1.3 配置</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Configuration</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">DroolsConfig</span> &#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> KieServices kieServices;<br><br>    DroolsConfig()&#123;<br>        System.setProperty(<span class="hljs-string">&quot;drools.dateformat&quot;</span>,<span class="hljs-string">&quot;yyyy-MM-dd&quot;</span>);<br>        kieServices = KieServices.Factory.get();<br><br>    &#125;<br><br>    <span class="hljs-meta">@Bean</span><br>    <span class="hljs-meta">@ConditionalOnMissingBean</span><br>    <span class="hljs-keyword">public</span> KieBase <span class="hljs-title function_">kieBase</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-type">KieContainer</span> <span class="hljs-variable">kieContainer</span> <span class="hljs-operator">=</span> kieServices.newKieClasspathContainer();<br>        <span class="hljs-keyword">return</span> kieContainer.getKieBase();<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--resource/META-INF/kmodule.xml--&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">kmodule</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.drools.org/xsd/kmodule&quot;</span>&gt;</span><br>    <span class="hljs-comment">&lt;!--name：指定kbase名称，任意但必须唯一， packages：规则文件的目录， default： 指定当前kbase是否为默认--&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">kbase</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;myKbase1&quot;</span> <span class="hljs-attr">packages</span>=<span class="hljs-string">&quot;rules&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span><br>        <span class="hljs-comment">&lt;!--name: 指定session名称，任意但必须唯一， default： 当前session是否为默认--&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">ksession</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;ksession-rule&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;true&quot;</span>/&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">kbase</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">kmodule</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="7-1-4-java代码"><a href="#7-1-4-java代码" class="headerlink" title="7.1.4 java代码"></a>7.1.4 java代码</h4><ul>
+<li>controller</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@RestController</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">OwnTaxController</span> &#123;<br><br><br>    <span class="hljs-meta">@Autowired</span><br>    <span class="hljs-keyword">private</span> OwnTaxService ownTaxService;<br><br>    <span class="hljs-meta">@GetMapping(&quot;/calc/&#123;wage&#125;&quot;)</span><br>    <span class="hljs-keyword">public</span> Calculation <span class="hljs-title function_">calc</span><span class="hljs-params">( <span class="hljs-meta">@PathVariable</span> Double wage)</span> &#123;<br>        <span class="hljs-keyword">return</span> ownTaxService.CalculateOwnTax(wage);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>service</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Service</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">OwnTaxService</span> &#123;<br><br><br>    <span class="hljs-meta">@Autowired</span><br>    <span class="hljs-keyword">private</span> KieBase kieBase;<br><br>    <span class="hljs-keyword">public</span> Calculation <span class="hljs-title function_">CalculateOwnTax</span><span class="hljs-params">(Double wage)</span> &#123;<br>       <span class="hljs-comment">// Calculation calculation = Calculation.builder().wage(wage).build();</span><br>        <span class="hljs-type">Calculation</span> <span class="hljs-variable">calculation</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Calculation</span>();<br>        calculation.setWage(wage);<br><br>        <span class="hljs-type">KieSession</span> <span class="hljs-variable">kieSession</span> <span class="hljs-operator">=</span> kieBase.newKieSession();<br>        kieSession.insert(calculation);<br>        kieSession.fireAllRules();<br>        kieSession.dispose();<br>        <span class="hljs-keyword">return</span> calculation;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>entity</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.learning.drools.owntax.entity;<br><span class="hljs-keyword">import</span> lombok.Data;<br><br><span class="hljs-meta">@Data</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Calculation</span> &#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">double</span> wage; <span class="hljs-comment">// 税前工资</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">double</span> wageMore;  <span class="hljs-comment">// 应纳税所得额</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">double</span> cess;<span class="hljs-comment">// 税率</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">double</span> preMinus; <span class="hljs-comment">//速算扣除数</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">double</span> wageMinus; <span class="hljs-comment">// 扣税额</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">double</span> actualWage; <span class="hljs-comment">//税后工资</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="7-2-信用卡申请"><a href="#7-2-信用卡申请" class="headerlink" title="7.2 信用卡申请"></a>7.2 信用卡申请</h3><h4 id="7-2-1-计算规则"><a href="#7-2-1-计算规则" class="headerlink" title="7.2.1 计算规则"></a>7.2.1 计算规则</h4><ul>
+<li>合法性检查</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>规则编号</th>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>检查学历与薪水</td>
+<td>如果申请人没房没车，同时学历大专以下，月薪少于5000，那么不通过</td>
+</tr>
+<tr>
+<td>2</td>
+<td>检查学历与薪水</td>
+<td>如果申请人没房没车，同时学历大专或本科，并且月薪少于3000，那么不通过</td>
+</tr>
+<tr>
+<td>3</td>
+<td>检查学历与薪水</td>
+<td>如果申请人没房也没车，同时学历为本科以上，并且月薪少于2000，同时之前没有信用卡的，那么不通过</td>
+</tr>
+<tr>
+<td>4</td>
+<td>检查申请人已有的信用卡数量</td>
+<td>如果申请人现有的信用卡数量大于10，那么不通过</td>
+</tr>
+</tbody></table>
+<ul>
+<li>信用卡额度</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>规则编号</th>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>规则1</td>
+<td>如果申请人有房有车，或者月收入在20000以上，那么额度为15000</td>
+</tr>
+<tr>
+<td>2</td>
+<td>规则2</td>
+<td>没房没车，收入在10000 ~ 20000，额度为6000</td>
+</tr>
+<tr>
+<td>3</td>
+<td>规则3</td>
+<td>没房没车，收入在10000以下，额度为3000</td>
+</tr>
+<tr>
+<td>4</td>
+<td>规则4</td>
+<td>有房没车或者有车没房，收入在10000以下，额度为5000</td>
+</tr>
+<tr>
+<td>5</td>
+<td>规则5</td>
+<td>有房没车或者有车没房，收入在10000~20000，额度为8000</td>
+</tr>
+</tbody></table>
+<h4 id="7-2-2-配置"><a href="#7-2-2-配置" class="headerlink" title="7.2.2 配置"></a>7.2.2 配置</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br>    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.projectlombok<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>lombok<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">optional</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">optional</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>test<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br>    <span class="hljs-comment">&lt;!--drools--&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.drools<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>drools-compiler<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>7.50.0.Final<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br>    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.drools<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>drools-core<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>7.50.0.Final<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br>    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.drools<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>drools-templates<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>7.50.0.Final<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;?xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span> ?&gt;</span><br><span class="hljs-comment">&lt;!--resource/META-INF/kmodule.xml--&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">kmodule</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.drools.org/xsd/kmodule&quot;</span>&gt;</span><br>    <span class="hljs-comment">&lt;!--name：指定kbase名称，任意但必须唯一， packages：规则文件的目录， default： 指定当前kbase是否为默认--&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">kbase</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;myKbase1&quot;</span> <span class="hljs-attr">packages</span>=<span class="hljs-string">&quot;rules&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span><br>        <span class="hljs-comment">&lt;!--name: 指定session名称，任意但必须唯一， default： 当前session是否为默认--&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">ksession</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;ksession-rule&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;true&quot;</span>/&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">kbase</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">kmodule</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Configuration</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">DroolsConfig</span> &#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> KieServices kieServices;<br><br>    DroolsConfig()&#123;<br>        System.setProperty(<span class="hljs-string">&quot;drools.dateformat&quot;</span>,<span class="hljs-string">&quot;yyyy-MM-dd&quot;</span>);<br>        kieServices = KieServices.Factory.get();<br><br>    &#125;<br><br>    <span class="hljs-meta">@Bean</span><br>    <span class="hljs-meta">@ConditionalOnMissingBean</span><br>    <span class="hljs-keyword">public</span> KieBase <span class="hljs-title function_">kieBase</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-type">KieContainer</span> <span class="hljs-variable">kieContainer</span> <span class="hljs-operator">=</span> kieServices.newKieClasspathContainer();<br>        <span class="hljs-keyword">return</span> kieContainer.getKieBase();<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="7-2-3-编写drl"><a href="#7-2-3-编写drl" class="headerlink" title="7.2.3 编写drl"></a>7.2.3 编写drl</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><code class="hljs sh">package rules<br>import com.learning.drools.owntax.entity.Person<br><br><br>// 合法性检查<br>rule <span class="hljs-string">&quot;检查学历或薪水1&quot;</span><br>    salience 100<br>    activation-group <span class="hljs-string">&quot;credit_check&quot;</span><br>    no-loop <span class="hljs-literal">true</span><br>    when<br>        <span class="hljs-variable">$person</span>:Person(!hasHouse &amp;&amp; !hasCar &amp;&amp; salary &lt; 5000 &amp;&amp; educationCode &lt; 1)<br>    <span class="hljs-keyword">then</span><br>        <span class="hljs-variable">$person</span>.setHasCredit(<span class="hljs-literal">false</span>);<br>        update(<span class="hljs-variable">$person</span>)<br>        drools.halt(); // 审核不通过直接退出<br>end<br><br>rule <span class="hljs-string">&quot;检查学历或薪水2&quot;</span><br>    salience 99<br>    activation-group <span class="hljs-string">&quot;credit_check&quot;</span><br>    no-loop <span class="hljs-literal">true</span><br>    when<br>        <span class="hljs-variable">$person</span>:Person(!hasHouse &amp;&amp; !hasCar &amp;&amp; salary &lt; 3000 &amp;&amp; (educationCode == 1 || educationCode == 2))<br>    <span class="hljs-keyword">then</span><br>        <span class="hljs-variable">$person</span>.setHasCredit(<span class="hljs-literal">false</span>);<br>        update(<span class="hljs-variable">$person</span>)<br>        drools.halt(); // 审核不通过直接退出<br>end<br><br>rule <span class="hljs-string">&quot;检查学历或薪水3&quot;</span><br>    salience 98<br>    activation-group <span class="hljs-string">&quot;credit_check&quot;</span><br>    no-loop <span class="hljs-literal">true</span><br>    when<br>        <span class="hljs-variable">$person</span>:Person(!hasHouse &amp;&amp; !hasCar &amp;&amp; salary &lt; 2000 &amp;&amp; educationCode &gt; 2 &amp;&amp; creditCardNum &lt;= 0)<br>    <span class="hljs-keyword">then</span><br>        <span class="hljs-variable">$person</span>.setHasCredit(<span class="hljs-literal">false</span>);<br>        update(<span class="hljs-variable">$person</span>)<br>        drools.halt(); // 审核不通过直接退出<br>end<br><br>rule <span class="hljs-string">&quot;检查学历或薪水4&quot;</span><br>    salience 97<br>    activation-group <span class="hljs-string">&quot;credit_check&quot;</span><br>    no-loop <span class="hljs-literal">true</span><br>    when<br>        <span class="hljs-variable">$person</span>:Person(creditCardNum &gt; 10)<br>    <span class="hljs-keyword">then</span><br>        <span class="hljs-variable">$person</span>.setHasCredit(<span class="hljs-literal">false</span>);<br>        update(<span class="hljs-variable">$person</span>)<br>        drools.halt(); // 审核不通过直接退出<br>end<br><br>// 信用卡额度<br><br>rule <span class="hljs-string">&quot;信用卡额度规则1&quot;</span><br>    salience 90<br>    activation-group <span class="hljs-string">&quot;credit_quota&quot;</span><br>    no-loop <span class="hljs-literal">true</span><br>    when<br>        <span class="hljs-variable">$person</span>:Person( hasCredit &amp;&amp; (hasCar &amp;&amp; hasHouse || salary &gt; 20000) )<br>    <span class="hljs-keyword">then</span><br>        <span class="hljs-variable">$person</span>.setQuota(15000.0);<br>        update(<span class="hljs-variable">$person</span>)<br>        System.out.println(<span class="hljs-variable">$person</span>);<br>end<br><br>rule <span class="hljs-string">&quot;信用卡额度规则2&quot;</span><br>    salience 89<br>    activation-group <span class="hljs-string">&quot;credit_quota&quot;</span><br>    no-loop <span class="hljs-literal">true</span><br>    when<br>        <span class="hljs-variable">$person</span>:Person( hasCredit &amp;&amp; (!hasCar &amp;&amp; !hasHouse &amp;&amp; (salary &gt;= 10000 &amp;&amp; salary &lt;= 20000)) )<br>    <span class="hljs-keyword">then</span><br>        <span class="hljs-variable">$person</span>.setQuota(6000.0);<br>        update(<span class="hljs-variable">$person</span>)<br>end<br><br>rule <span class="hljs-string">&quot;信用卡额度规则3&quot;</span><br>    salience 88<br>    activation-group <span class="hljs-string">&quot;credit_quota&quot;</span><br>    no-loop <span class="hljs-literal">true</span><br>    when<br>        <span class="hljs-variable">$person</span>:Person( hasCredit &amp;&amp; (!hasCar &amp;&amp; !hasHouse &amp;&amp; salary &lt; 10000) )<br>    <span class="hljs-keyword">then</span><br>        <span class="hljs-variable">$person</span>.setQuota(3000.0);<br>        update(<span class="hljs-variable">$person</span>)<br>end<br><br>rule <span class="hljs-string">&quot;信用卡额度规则4&quot;</span><br>    salience 87<br>    activation-group <span class="hljs-string">&quot;credit_quota&quot;</span><br>    no-loop <span class="hljs-literal">true</span><br>    when<br>        <span class="hljs-variable">$person</span>:Person( hasCredit &amp;&amp; (hasCar || hasHouse) &amp;&amp; salary &lt; 10000)<br>    <span class="hljs-keyword">then</span><br>        <span class="hljs-variable">$person</span>.setQuota(5000.0);<br>        update(<span class="hljs-variable">$person</span>)<br>end<br><br>rule <span class="hljs-string">&quot;信用卡额度规则5&quot;</span><br>    salience 86<br>    activation-group <span class="hljs-string">&quot;credit_quota&quot;</span><br>    no-loop <span class="hljs-literal">true</span><br>    when<br>        <span class="hljs-variable">$person</span>:Person( hasCredit &amp;&amp; (hasCar || hasHouse) &amp;&amp; ( salary &gt; 10000 &amp;&amp; salary &lt;= 20000))<br>    <span class="hljs-keyword">then</span><br>        <span class="hljs-variable">$person</span>.setQuota(8000.0);<br>        update(<span class="hljs-variable">$person</span>)<br>end<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="7-2-4-Java代码"><a href="#7-2-4-Java代码" class="headerlink" title="7.2.4 Java代码"></a>7.2.4 Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Service</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CredCardService</span> &#123;<br><br>    <span class="hljs-meta">@Autowired</span><br>    <span class="hljs-keyword">private</span> KieBase kieBase;<br><br>    <span class="hljs-keyword">public</span> Person <span class="hljs-title function_">executeRule</span><span class="hljs-params">(Person person)</span>&#123;<br>        <span class="hljs-type">KieSession</span> <span class="hljs-variable">kieSession</span> <span class="hljs-operator">=</span> kieBase.newKieSession();<br>        kieSession.insert(person);<br>        kieSession.fireAllRules();<br>        kieSession.dispose();<br>        <span class="hljs-keyword">return</span> person;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<h3 id="7-3-保险产品准入规则"><a href="#7-3-保险产品准入规则" class="headerlink" title="7.3 保险产品准入规则"></a>7.3 保险产品准入规则</h3><h4 id="7-3-1-决策表"><a href="#7-3-1-决策表" class="headerlink" title="7.3.1 决策表"></a>7.3.1 决策表</h4><p>Drools除了支持drl形式的文件外，还支持xls格式的文件（即，excel文件）。这种xls格式的文件通常称为决策表（decision table）。</p>
+<p>决策表是一个“精确而紧凑的”表示条件逻辑的方式，非常适合商业级别的规则。决策表与现有的drl文件可以无缝替换。Drools提供了响应的API可以将xls文件编译为drl格式的字符串。</p>
+<p><img src="/img/2025-08-16-Sat-T-Drools%E8%A7%84%E5%88%99%E5%BC%95%E6%93%8E/image-20250902132037926.png" srcset="/img/loading.gif" lazyload alt="image-20250902132037926"></p>
+<p>决策表语法：</p>
+<table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>说明</th>
+<th>是否必须</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>RuleSet</td>
+<td>相当于drl文件中的package</td>
+<td>必须，只能有一个。如果没有设置RuleSet对应的值，则使用默认rule_table</td>
+</tr>
+<tr>
+<td>Sequential</td>
+<td>取值为Boolean，true表示规则从上到下顺序执行，false表示乱序</td>
+<td>可选</td>
+</tr>
+<tr>
+<td>Import</td>
+<td>相当于drl中的import，用逗号分隔</td>
+<td>可选</td>
+</tr>
+<tr>
+<td>Variables</td>
+<td>相当于drl 中的global，如果有多个全局变量则中间用逗号分隔</td>
+<td>可选</td>
+</tr>
+<tr>
+<td>RuleTable</td>
+<td>它指示了后面将会有一批rule，RuleTable的名称将会作为以后生成rule的前缀</td>
+<td>必须</td>
+</tr>
+<tr>
+<td>CONDITION</td>
+<td>规则条件关键字，相当于drl文件中的when。下面两行则表示LHS部分，第三行为注释行，从第四行开始，每一行代表一条规则</td>
+<td>每一个规则至少有一个</td>
+</tr>
+<tr>
+<td>ACTION</td>
+<td>相当于drl中的then</td>
+<td>每个规则至少一个</td>
+</tr>
+<tr>
+<td>NO-LOOP</td>
+<td></td>
+<td>可选</td>
+</tr>
+<tr>
+<td>AGENDA-GROUP</td>
+<td>议程分组，只有获取焦点的组中的规则才有可能触发 <code>agenda-group &#39;group2&#39;</code> <br />获取焦点：  java 代码或规则文件<code>kieSession.getAgenda().getAgendaGroup(&quot;group2&quot;).setFocus();</code>  <code>auto-focus true</code></td>
+<td>可选</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>在决策表中经常使用到占位符，语法为<code>$number</code>,用于替换每条规则中设置的具体值。</p>
+<h4 id="7-3-2-测试案例"><a href="#7-3-2-测试案例" class="headerlink" title="7.3.2 测试案例"></a>7.3.2 测试案例</h4><ul>
+<li>准备决策表</li>
+</ul>
+<p><img src="/img/2025-08-16-Sat-T-Drools%E8%A7%84%E5%88%99%E5%BC%95%E6%93%8E/image-20250902154431628.png" srcset="/img/loading.gif" lazyload alt="image-20250902154431628"></p>
+<ul>
+<li>格式转换</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> KieSession <span class="hljs-title function_">getKieSessionByXML</span><span class="hljs-params">(String realPath)</span> <span class="hljs-keyword">throws</span> FileNotFoundException &#123;<br>    <span class="hljs-type">File</span> <span class="hljs-variable">file</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">File</span>(realPath);<br>    <span class="hljs-type">FileInputStream</span> <span class="hljs-variable">fileInputStream</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">FileInputStream</span>(file);<br>    <span class="hljs-type">SpreadsheetCompiler</span> <span class="hljs-variable">compiler</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">SpreadsheetCompiler</span>();<br>    <span class="hljs-type">String</span> <span class="hljs-variable">compile</span> <span class="hljs-operator">=</span> compiler.compile(fileInputStream, InputType.XLS);<br>    System.out.println(compile);<br><br>    <span class="hljs-type">KieHelper</span> <span class="hljs-variable">kieHelper</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">KieHelper</span>();<br>    kieHelper.addContent(compile, ResourceType.DRL);<br>    <span class="hljs-keyword">return</span> kieHelper.build().newKieSession();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>测试</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Test</span><br><span class="hljs-keyword">void</span> <span class="hljs-title function_">contextLoads</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> FileNotFoundException &#123;<br><br>    <span class="hljs-type">KieSession</span> <span class="hljs-variable">kieSessionByXML</span> <span class="hljs-operator">=</span> KieSessionUtils.getKieSessionByXML(<span class="hljs-string">&quot;D:\\Users\\fei\\gitrepo\\owntax\\src\\main\\resources\\rules\\decisionTable.xls&quot;</span>);<br>    <span class="hljs-type">Person</span> <span class="hljs-variable">person</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Person</span>();<br>    person.setAge(<span class="hljs-number">20</span>);<br>    person.setSalary(<span class="hljs-number">34.0</span>);<br>    kieSessionByXML.insert(person);<br>    kieSessionByXML.fireAllRules();<br>    kieSessionByXML.dispose();<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="7-3-3-规则说明"><a href="#7-3-3-规则说明" class="headerlink" title="7.3.3 规则说明"></a>7.3.3 规则说明</h4><p>以下规则全部满足才能准入成功</p>
+<table>
+<thead>
+<tr>
+<th>规则编号</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>保险公司是：PICC</td>
+</tr>
+<tr>
+<td>2</td>
+<td>销售区域是：北京、天津</td>
+</tr>
+<tr>
+<td>3</td>
+<td>投保年龄是：0 ~17 岁</td>
+</tr>
+<tr>
+<td>4</td>
+<td>保险期间是：20，25，30年</td>
+</tr>
+<tr>
+<td>5</td>
+<td>缴费方式是：一次性交清或年缴</td>
+</tr>
+<tr>
+<td>6</td>
+<td>保险期与缴费期规则一：保险期间为20年，缴费期间最长10年缴费，且不能选择一次性交清</td>
+</tr>
+<tr>
+<td>7</td>
+<td>保险期与缴费期规则一：保险期间为25年，缴费期间最长15年缴费，且不能选择一次性交清</td>
+</tr>
+<tr>
+<td>8</td>
+<td>保险期与缴费期规则一：保险期间为30年，缴费期间最长20年缴费，且不能选择一次性交清</td>
+</tr>
+<tr>
+<td>9</td>
+<td>被保人要求：（投保年龄 + 保险期间）不得大于40周岁</td>
+</tr>
+<tr>
+<td>10</td>
+<td>保险金额规则：投保时约定，最低5万元，超过的部分必须为1000元的整数倍</td>
+</tr>
+<tr>
+<td>11</td>
+<td>出单基本保额限额规则：线上出单基本保额限额62.5万元，超过62.5万元需要配合转线下出单</td>
+</tr>
+</tbody></table>
+<p>本案例中规则文件是一个excel文件，业务人员可以直接更改这个文件中指标的值，系统不需要做任何变更</p>
+<h4 id="7-3-4-配置"><a href="#7-3-4-配置" class="headerlink" title="7.3.4 配置"></a>7.3.4 配置</h4><p>同上</p>
+<h4 id="7-3-5-编写决策表"><a href="#7-3-5-编写决策表" class="headerlink" title="7.3.5 编写决策表"></a>7.3.5 编写决策表</h4><p><img src="/img/2025-08-16-Sat-T-Drools%E8%A7%84%E5%88%99%E5%BC%95%E6%93%8E/image-20250902182730510.png" srcset="/img/loading.gif" lazyload alt="image-20250902182730510"></p>
+<h4 id="7-3-6-Java代码"><a href="#7-3-6-Java代码" class="headerlink" title="7.3.6 Java代码"></a>7.3.6 Java代码</h4><ul>
+<li>utils</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> KieSession <span class="hljs-title function_">getKieSessionByXML</span><span class="hljs-params">(String realPath)</span> <span class="hljs-keyword">throws</span> FileNotFoundException &#123;<br>    <span class="hljs-type">File</span> <span class="hljs-variable">file</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">File</span>(realPath);<br>    <span class="hljs-type">FileInputStream</span> <span class="hljs-variable">fileInputStream</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">FileInputStream</span>(file);<br>    <span class="hljs-type">SpreadsheetCompiler</span> <span class="hljs-variable">compiler</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">SpreadsheetCompiler</span>();<br>    <span class="hljs-type">String</span> <span class="hljs-variable">compile</span> <span class="hljs-operator">=</span> compiler.compile(fileInputStream, InputType.XLS);<br>    System.out.println(compile);<br><br>    <span class="hljs-type">KieHelper</span> <span class="hljs-variable">kieHelper</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">KieHelper</span>();<br><br>    kieHelper.addContent(compile, ResourceType.DRL);<br>    <span class="hljs-type">Results</span> <span class="hljs-variable">verify</span> <span class="hljs-operator">=</span> kieHelper.verify();<br>    <span class="hljs-keyword">if</span>(verify.hasMessages(Message.Level.ERROR)) &#123;<br>        System.out.println(<span class="hljs-string">&quot;规则文件语法异常 Errors found: &quot;</span> + verify.getMessages(Message.Level.ERROR));<br>    &#125;<br>    <span class="hljs-keyword">return</span> kieHelper.build().newKieSession();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>service</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> List&lt;String&gt; <span class="hljs-title function_">insuranceInfoCheck</span><span class="hljs-params">(InsuranceInfo insuranceInfo)</span> <span class="hljs-keyword">throws</span> Exception &#123;<br>    <span class="hljs-type">KieSession</span> <span class="hljs-variable">kieSession</span> <span class="hljs-operator">=</span> KieSessionUtils.getKieSessionByXML(<span class="hljs-string">&quot;D:\\Users\\fei\\gitrepo\\owntax\\src\\main\\resources\\rules\\insurance.xls&quot;</span>);<br>    kieSession.getAgenda().getAgendaGroup(<span class="hljs-string">&quot;sign&quot;</span>).setFocus();<br>    kieSession.insert(insuranceInfo);<br>    ArrayList&lt;String&gt; listRules = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>    kieSession.setGlobal(<span class="hljs-string">&quot;listResults&quot;</span>, listRules);<br>    kieSession.fireAllRules();<br>    <span class="hljs-keyword">return</span> listRules;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Tech/" class="category-chain-item">Tech</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Tech/" class="print-no-link">#Tech</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>2025-08-16-Sat-T-Drools规则引擎</div>
+      <div>http://example.com/2025/08/16/2025-08-16-Sat-T-Drools规则引擎/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>Fei</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>August 16, 2025</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/09/10/2025-09-10-Wed-T-Kubernetes/" title="2025-09-10-Wed-T-Kubernetes">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">2025-09-10-Wed-T-Kubernetes</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/08/07/2025-08-07-Thu-T-%E5%93%81%E8%BE%BE%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F/" title="2025-08-07-Thu-T-品达通用权限系统">
+                        <span class="hidden-mobile">2025-08-07-Thu-T-品达通用权限系统</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'fei-cn-xie/fei-cn-xie.github.io');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

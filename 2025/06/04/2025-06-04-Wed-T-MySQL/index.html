@@ -1,0 +1,1711 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/boy.webp">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Fei">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="基础123456# mysql启动net start mysql80net stop mysql80# 客户端连接mysql -h 172.168.0.1 -P 3306 -u root -p  数据模型:  数据库 表  1. SQL1.1 通用语法 1.2 SQL分类 1.3 DDL 定义库、表、字段数据库 查询所有数据库  1SHOW DATABASES;   查询当前数据库  1SELE">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2025-06-04-Wed-T-MySQL">
+<meta property="og:url" content="http://example.com/2025/06/04/2025-06-04-Wed-T-MySQL/index.html">
+<meta property="og:site_name" content="Fei">
+<meta property="og:description" content="基础123456# mysql启动net start mysql80net stop mysql80# 客户端连接mysql -h 172.168.0.1 -P 3306 -u root -p  数据模型:  数据库 表  1. SQL1.1 通用语法 1.2 SQL分类 1.3 DDL 定义库、表、字段数据库 查询所有数据库  1SHOW DATABASES;   查询当前数据库  1SELE">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/img/2025-06-04-Wed-T-MySQL/image-20250604155522222.png">
+<meta property="article:published_time" content="2025-06-04T07:51:12.000Z">
+<meta property="article:modified_time" content="2025-10-01T07:17:33.761Z">
+<meta property="article:author" content="Fei">
+<meta property="article:tag" content="Tech">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/2025-06-04-Wed-T-MySQL/image-20250604155522222.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>2025-06-04-Wed-T-MySQL - Fei</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5-a","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fei</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">2025-06-04-Wed-T-MySQL</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-06-04 15:51" pubdate>
+          June 4, 2025 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          34k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          286 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">2025-06-04-Wed-T-MySQL</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604155522222.png" srcset="/img/loading.gif" lazyload alt="image-20250604155522222"></p>
+<h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># mysql启动</span><br>net start mysql80<br>net stop mysql80<br><br><span class="hljs-comment"># 客户端连接</span><br>mysql -h 172.168.0.1 -P 3306 -u root -p<br></code></pre></td></tr></table></figure>
+
+<p>数据模型:</p>
+<ul>
+<li>数据库</li>
+<li>表</li>
+</ul>
+<h2 id="1-SQL"><a href="#1-SQL" class="headerlink" title="1. SQL"></a>1. SQL</h2><h3 id="1-1-通用语法"><a href="#1-1-通用语法" class="headerlink" title="1.1 通用语法"></a>1.1 通用语法</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604160652005.png" srcset="/img/loading.gif" lazyload alt="image-20250604160652005"></p>
+<h3 id="1-2-SQL分类"><a href="#1-2-SQL分类" class="headerlink" title="1.2 SQL分类"></a>1.2 SQL分类</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604160812093.png" srcset="/img/loading.gif" lazyload alt="image-20250604160812093"></p>
+<h3 id="1-3-DDL-定义库、表、字段"><a href="#1-3-DDL-定义库、表、字段" class="headerlink" title="1.3 DDL 定义库、表、字段"></a>1.3 DDL 定义库、表、字段</h3><h4 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a><code>数据库</code></h4><ul>
+<li>查询所有数据库</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SHOW DATABASES;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>查询当前数据库</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SELECT DATABASE();<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>创建数据库</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs mysql">CREATE DATABASE [IF NOT EXISTS] 数据库名 [DEFAULT CHARSET 字符集] [COLLATE 排序规则]<br><br><br># 字符集： utf8mb4是推荐选项，因为它支持更全面的Unicode字符集，包括Emoji表情 （多语言推荐）<br><br># 排序规则： 排序规则通常与字符集相关联，如utf8mb4_unicode_ci  （多语言推荐）<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>删除</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">DROP DATABASE [IF EXISTS] 数据库名;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>使用</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs MYSQL">USE 数据库名;<br></code></pre></td></tr></table></figure>
+
+<h4 id="表-和-字段"><a href="#表-和-字段" class="headerlink" title="表 和 字段"></a><code>表</code> 和 <code>字段</code></h4><ul>
+<li>查询当前数据库所有表</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SHOW TABLES;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>查询表结构</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs MYSQL">DESC 表名;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>查询指定表的建表语句</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SHOW CREATE TABLE 表名;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>创建表</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs mysql">CREATE TABLE 表名(<br>	字段1 字段类型 [COMMENT 注释],<br>    字段2 字段类型 [COMMENT 注释]<br>)[COMMENT 表注释]<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>修改</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 添加字段<br>ALTER TABLE 表名 ADD 字段名 类型 [COMMENT 注释] [约束];<br><br># 更新字段<br>ALTER TABLE 表名 CHANGE 旧字段名 新字段名 类型 [COMMENT 注释] [约束]<br><br># 删除字段<br>ALTER TABLE 表名 DROP 字段名;<br><br># 修改表名<br>ALTER TABLE 表名 RENAME TO 新表名;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>删除表</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs mysql">DROP TABLE [IF EXISTS] 表名;<br><br># 删除指定表，并重新创建该表<br>TRUNCATE TABLE 表名<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-4-DML-操作表-增删改"><a href="#1-4-DML-操作表-增删改" class="headerlink" title="1.4 DML 操作表 增删改"></a>1.4 DML 操作表 增删改</h3><h3 id="INSERT"><a href="#INSERT" class="headerlink" title="INSERT"></a><code>INSERT</code></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 全部字段<br>INSERT INTO 表名 VALUES(值1，值2，值3...);<br># 指定字段<br>INSERT INTO 表名 (字段1，字段2，字段3...) VALUES (值1，值2，值3...);<br></code></pre></td></tr></table></figure>
+
+<h3 id="UPDATE"><a href="#UPDATE" class="headerlink" title="UPDATE"></a><code>UPDATE</code></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">UPDATE `table_name` SET fild1=value1, fild2=value2 where fild3=value3; <br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="DELETE"><a href="#DELETE" class="headerlink" title="DELETE"></a><code>DELETE</code></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mysql">DELETE FROM `table_name` [WHERE `condition`]<br># WHERE 条件下，删除满足该条件下的所有数据<br></code></pre></td></tr></table></figure>
+
+<h3 id="1-5-DQL-查询"><a href="#1-5-DQL-查询" class="headerlink" title="1.5 DQL 查询"></a>1.5 DQL 查询</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SELECT<br>	DISTINCT 字段列表   # DISTINCT 去除重复数据记录<br>FROM <br>	表名列表<br>WHERE<br>	条件列表  # 判空IS NULL ，NOT NULL<br>GROUP BY        # 配合聚合函数count, max, min, avg, sum<br>	分组字段列表<br>HAVING<br>	分组后条件列表   <br>ORDER BY<br>	排序字段列表 ASC<br>LIMIT<br>	分页参数  # LIMT 起始索引，查询记录数<br>			  # 起始索引： （页码-1）* 每页记录数<br>			  # 如果查第一页，起始索引可以省略，LIMIT 10 （查询前十条数据）<br><br></code></pre></td></tr></table></figure>
+
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604164826296.png" srcset="/img/loading.gif" lazyload alt="image-20250604164826296"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604165941592.png" srcset="/img/loading.gif" lazyload alt="image-20250604165941592"></p>
+<h3 id="1-6-DCL-控制"><a href="#1-6-DCL-控制" class="headerlink" title="1.6 DCL 控制"></a>1.6 DCL 控制</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604170017252.png" srcset="/img/loading.gif" lazyload alt="image-20250604170017252"></p>
+<h3 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a><code>用户管理</code></h3><ul>
+<li>查询用户</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mysql">USE mysql; # 切换为系统数据库<br>SELECT * FROM user; # 查询用户表<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>创建用户</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">CREATE USER &#x27;用户名&#x27;@&#x27;主机名&#x27; IDENTIFIED BY &#x27;密码&#x27;;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>修改用户密码</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">ALTER USER &#x27;用户名&#x27;@&#x27;主机名&#x27; IDENTIFIED WITH mysql_native_password BY &#x27;新密码&#x27;;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>删除用户</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">DROP USER &#x27;用户名&#x27;@&#x27;主机名&#x27;;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>权限管理</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 查询权限<br>SHOW GRANTS FOR &#x27;用户名&#x27;@&#x27;主机&#x27;; <br><br>#授权<br>GRANT 权限列表 ON 数据库名.表名 TO &#x27;用户名&#x27;@&#x27;主机名&#x27;; # GRANT all<br><br>#撤销权限<br>REVOKE 权限列表 ON 数据库名.表名 TO &#x27;用户名&#x27;@&#x27;主机名&#x27;;<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-函数"><a href="#2-函数" class="headerlink" title="2. 函数"></a>2. 函数</h2><h3 id="2-1-字符串函数"><a href="#2-1-字符串函数" class="headerlink" title="2.1 字符串函数"></a>2.1 字符串函数</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604171720613.png" srcset="/img/loading.gif" lazyload alt="image-20250604171720613"></p>
+<h3 id="2-2-数值函数"><a href="#2-2-数值函数" class="headerlink" title="2.2 数值函数"></a>2.2 数值函数</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604171814521.png" srcset="/img/loading.gif" lazyload alt="image-20250604171814521"></p>
+<h3 id="2-3-日期函数"><a href="#2-3-日期函数" class="headerlink" title="2.3 日期函数"></a>2.3 日期函数</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604171832586.png" srcset="/img/loading.gif" lazyload alt="image-20250604171832586"></p>
+<h3 id="2-4-流程函数"><a href="#2-4-流程函数" class="headerlink" title="2.4 流程函数"></a>2.4 流程函数</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604171855399.png" srcset="/img/loading.gif" lazyload alt="image-20250604171855399"></p>
+<h2 id="3-约束"><a href="#3-约束" class="headerlink" title="3. 约束"></a>3. 约束</h2><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604172031174.png" srcset="/img/loading.gif" lazyload alt="image-20250604172031174"></p>
+<ul>
+<li>外键</li>
+</ul>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604172507291.png" srcset="/img/loading.gif" lazyload alt="image-20250604172507291"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604173025138.png" srcset="/img/loading.gif" lazyload alt="image-20250604173025138"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs mysql">CREATE TABLE t2(<br>	id INT,<br>    CONSTRAINT key_name FOREIGN KEY t2_feild REFERENCES t1(t1_feild)<br>)<br><br></code></pre></td></tr></table></figure>
+
+<h3 id="外键约束行为"><a href="#外键约束行为" class="headerlink" title="外键约束行为"></a>外键约束行为</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604173116908.png" srcset="/img/loading.gif" lazyload alt="image-20250604173116908"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604173349437.png" srcset="/img/loading.gif" lazyload alt="image-20250604173349437"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">ALTER TABLE 表名 ADD CONSTRAINT 外键名称 FOREIGN KEY (外键字段) REFERENCES 主表名(主表字段) ON UPDATE CASCADE ON DELETE CASCADE<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="4-多表查询"><a href="#4-多表查询" class="headerlink" title="4. 多表查询"></a>4. 多表查询</h2><h3 id="4-1-多表关系"><a href="#4-1-多表关系" class="headerlink" title="4.1 多表关系"></a>4.1 多表关系</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604173857807.png" srcset="/img/loading.gif" lazyload alt="image-20250604173857807"></p>
+<ul>
+<li>一对多</li>
+<li>多对多</li>
+<li>一对一</li>
+</ul>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604174017395.png" srcset="/img/loading.gif" lazyload alt="image-20250604174017395"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604174135732.png" srcset="/img/loading.gif" lazyload alt="image-20250604174135732"></p>
+<h3 id="4-2-内连接"><a href="#4-2-内连接" class="headerlink" title="4.2 内连接"></a>4.2 内连接</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 隐式内连接<br>SELECT 字段名 from 表名 表1,表2 where 条件;<br><br># 显示内连接<br>SELECT 字段名 FROM 表1 [INNER] JOIN 表2 ON 连接条件;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-3-外连接"><a href="#4-3-外连接" class="headerlink" title="4.3 外连接"></a>4.3 外连接</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 左外连接<br>SELECT 字段列表 FROM 表1 LEFT [OUTER] JOIN 表2 ON 条件;<br><br># 右外连接<br>SELECT 字段列表 FROM 表1 RIGHT [OUTER] JOIN 表2 ON 条件;<br></code></pre></td></tr></table></figure>
+
+<h3 id="4-4-自连接"><a href="#4-4-自连接" class="headerlink" title="4.4 自连接"></a>4.4 自连接</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SELECT 表名 FROM 表A 别名1 JOIN 表A 别名2 ON 条件;<br></code></pre></td></tr></table></figure>
+
+<h3 id="4-5-联合查询-union"><a href="#4-5-联合查询-union" class="headerlink" title="4.5 联合查询 union"></a>4.5 联合查询 <code>union</code></h3><p>作用：合并多次的查询记录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SELECT 字段列表 FROM 表 ... # <br>UNION [ALL] # 使用ALL字段，则直接合并，不去重．不使用则去重<br>SELECT 字段列表 FROM 表 ...;<br></code></pre></td></tr></table></figure>
+
+<p>注意事项：<code>使用union，列数和字段类型必须完全一致</code></p>
+<h3 id="4-6-子查询"><a href="#4-6-子查询" class="headerlink" title="4.6 子查询"></a>4.6 子查询</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SELECT * FROM 表名 where column1 = (SELECT column1 FROM t2);<br></code></pre></td></tr></table></figure>
+
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604180332681.png" srcset="/img/loading.gif" lazyload alt="image-20250604180332681"></p>
+<p><code>IN</code>,<code>NOT IN</code>, <code>ANY</code>, <code>SOME</code>, <code>ALL</code></p>
+<ul>
+<li>行子查询</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">select * from emp where (salary,managerid) = (select salary, managerid) from emp where name = &quot;jack&quot;);<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>表子查询</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">select * from emp where (job,salary) in (select job, salary from emp where name in (&quot;jack&quot;,&quot;tom&quot;));<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="5-事务"><a href="#5-事务" class="headerlink" title="5. 事务"></a>5. 事务</h2><h3 id="5-1-事务简介"><a href="#5-1-事务简介" class="headerlink" title="5.1 事务简介"></a>5.1 事务简介</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604181302549.png" srcset="/img/loading.gif" lazyload alt="image-20250604181302549"></p>
+<h3 id="5-2-事务操作"><a href="#5-2-事务操作" class="headerlink" title="5.2 事务操作"></a>5.2 事务操作</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604181623060.png" srcset="/img/loading.gif" lazyload alt="image-20250604181623060"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs mysql">select @@autocommit=0; # 设置为手动(0), 自动(1)<br><br>#事务操作： INSERT UPDATE DELETE<br><br>ROLLBACK;<br>COMMIT;<br><br></code></pre></td></tr></table></figure>
+
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604181849485.png" srcset="/img/loading.gif" lazyload alt="image-20250604181849485"></p>
+<h3 id="5-3-事务四大特性-ACID"><a href="#5-3-事务四大特性-ACID" class="headerlink" title="5.3 事务四大特性 ACID"></a>5.3 事务四大特性 <code>ACID</code></h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604182104302.png" srcset="/img/loading.gif" lazyload alt="image-20250604182104302"></p>
+<h3 id="5-4-并发事务问题"><a href="#5-4-并发事务问题" class="headerlink" title="5.4 并发事务问题"></a>5.4 并发事务问题</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604182325095.png" srcset="/img/loading.gif" lazyload alt="image-20250604182325095"></p>
+<p>幻读针对插入操作</p>
+<h3 id="5-5-事务隔离级别"><a href="#5-5-事务隔离级别" class="headerlink" title="5.5 事务隔离级别"></a>5.5 事务隔离级别</h3><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/392569386/answer/1434210648?utm_psn=1913696328606803034">在数据库中不可重复读和幻读到底应该怎么分？ - 知乎</a></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250604192142355.png" srcset="/img/loading.gif" lazyload alt="image-20250604192142355"></p>
+<p>Mysql默认使用<code>Repeatable Read</code>, Oracle默认<code>Read Commited</code></p>
+<ul>
+<li>查看事务隔离级别</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SELECT @@TRANSACTION_ISOLATION;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>设置事务隔离级别</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SET [SESSION|GLOBAL] TRANSACTION ISOLATION LEVEL &#123;READ UNCOMMITTED | READ COMMITTED | REPEATABLE READ | SERIALIZABLE&#125;<br># SESSION 代表仅对当前窗口的事务有效<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs mysql">READ UNCOMMITTED  # 发生脏读<br>READ COMMITTED # 解决脏读，发生不可重复读<br>REPEATABLE READ # 解决不可重复读，发生幻读<br>SERIALIZABLE # 解决幻读<br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h1><h2 id="1-存储引擎"><a href="#1-存储引擎" class="headerlink" title="1. 存储引擎"></a>1. 存储引擎</h2><h3 id="1-1-MySQL体系结构"><a href="#1-1-MySQL体系结构" class="headerlink" title="1.1 MySQL体系结构"></a>1.1 MySQL体系结构</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606164331353.png" srcset="/img/loading.gif" lazyload alt="image-20250606164331353"></p>
+<p>index【索引】在存储引擎层，所以不同的引擎，索引会有所不同</p>
+<h3 id="1-2-存储引擎简介"><a href="#1-2-存储引擎简介" class="headerlink" title="1.2 存储引擎简介"></a>1.2 存储引擎简介</h3><p>存储引擎是存储数据、建立索引、更新&#x2F;查询数据等技术的实现方式。<code>存储引擎是基于表的</code>，而不是基于库的，所以存储引擎也可以被称为表类型。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs mysql">-- 指定存储引擎<br>create table tableName(<br>	fieldA INT,<br>    fieldB CHAR,<br>    ...<br>)ENGINE=INNODB [COMMENT comments];<br><br># 查看可支持的存储引擎<br>show engines;<br></code></pre></td></tr></table></figure>
+
+
+
+<table>
+<thead>
+<tr>
+<th>Engine Name</th>
+<th>Support</th>
+<th>Comment</th>
+<th>Transactions</th>
+<th>XA</th>
+<th>Savepoints</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>InnoDB</td>
+<td>DEFAULT</td>
+<td>Supports transactions, row-level locking, and foreign keys</td>
+<td>YES</td>
+<td>YES</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>FEDERATED</td>
+<td>NO</td>
+<td>Federated MySQL storage engine</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>MRG_MYISAM</td>
+<td>YES</td>
+<td>Collection of identical MyISAM tables</td>
+<td>NO</td>
+<td>NO</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>MEMORY</td>
+<td>YES</td>
+<td>Hash based, stored in memory, useful for temporary tables</td>
+<td>NO</td>
+<td>NO</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>BLACKHOLE</td>
+<td>YES</td>
+<td>&#x2F;dev&#x2F;null storage engine (anything you write to it disappears)</td>
+<td>NO</td>
+<td>NO</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>MyISAM</td>
+<td>YES</td>
+<td>MyISAM storage engine</td>
+<td>NO</td>
+<td>NO</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>CSV</td>
+<td>YES</td>
+<td>CSV storage engine</td>
+<td>NO</td>
+<td>NO</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>ARCHIVE</td>
+<td>YES</td>
+<td>Archive storage engine</td>
+<td>NO</td>
+<td>NO</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>PERFORMANCE_SCHEMA</td>
+<td>YES</td>
+<td>Performance Schema</td>
+<td>NO</td>
+<td>NO</td>
+<td>NO</td>
+</tr>
+</tbody></table>
+<h3 id="1-3-存储引擎特点"><a href="#1-3-存储引擎特点" class="headerlink" title="1.3 存储引擎特点"></a>1.3 存储引擎特点</h3><ul>
+<li>InnoDB</li>
+</ul>
+<p>InnoDB是一种兼顾高可靠性和高性能的通用存储引擎，在Mysql 5.5后，InnoDB是默认的mysql存储引擎</p>
+<p>特点： </p>
+<ol>
+<li>DML操作遵循<code>ACID</code>模型，支持<code>事务</code>； </li>
+<li><code>行级锁</code>，提高并发访问性能；</li>
+<li>支持<code>外键约束</code>，保证数据完整性和准确性</li>
+</ol>
+<p>文件：</p>
+<p><code>xxx.ibd</code>: xxx代表表名，innoDB引擎每一张表都会在磁盘有一个表空间文件，存储该表的表结构(frm,sdi), 数据和索引</p>
+<p>InnoDB逻辑存储结构</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606171408426.png" srcset="/img/loading.gif" lazyload alt="image-20250606171408426"></p>
+<ul>
+<li>MyISAM</li>
+</ul>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606171618509.png" srcset="/img/loading.gif" lazyload alt="image-20250606171618509"></p>
+<ul>
+<li>Memory</li>
+</ul>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606171724142.png" srcset="/img/loading.gif" lazyload alt="image-20250606171724142"></p>
+<h3 id="1-4-存储引擎选择"><a href="#1-4-存储引擎选择" class="headerlink" title="1.4 存储引擎选择"></a>1.4 存储引擎选择</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606171851208.png" srcset="/img/loading.gif" lazyload alt="image-20250606171851208"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606172004352.png" srcset="/img/loading.gif" lazyload alt="image-20250606172004352"></p>
+<p>MyISAM: 日志数据、评论、 （被mongdb替换）</p>
+<p>Memory：创建的临时表可使用，当作缓存 （redis替换）</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606172305454.png" srcset="/img/loading.gif" lazyload alt="image-20250606172305454"></p>
+<h2 id="2-索引"><a href="#2-索引" class="headerlink" title="2. 索引"></a>2. <code>索引</code></h2><h3 id="2-1-索引概述"><a href="#2-1-索引概述" class="headerlink" title="2.1 索引概述"></a>2.1 索引概述</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606172841099.png" srcset="/img/loading.gif" lazyload alt="image-20250606172841099"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606173032686.png" srcset="/img/loading.gif" lazyload alt="image-20250606173032686"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606173229830.png" srcset="/img/loading.gif" lazyload alt="image-20250606173229830"></p>
+<p>2.2 索引结构</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606173430648.png" srcset="/img/loading.gif" lazyload alt="image-20250606173430648"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606173559862.png" srcset="/img/loading.gif" lazyload alt="image-20250606173559862"></p>
+<ul>
+<li>B树</li>
+</ul>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606180150275.png" srcset="/img/loading.gif" lazyload alt="image-20250606180150275"></p>
+<ul>
+<li>B+树</li>
+</ul>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606180043757.png" srcset="/img/loading.gif" lazyload alt="image-20250606180043757"></p>
+<ul>
+<li>Hash表</li>
+</ul>
+<p>​	<img src="/img/2025-06-04-Wed-T-MySQL/image-20250606180313434.png" srcset="/img/loading.gif" lazyload alt="image-20250606180313434"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606180334427.png" srcset="/img/loading.gif" lazyload alt="image-20250606180334427"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606180429222.png" srcset="/img/loading.gif" lazyload alt="image-20250606180429222"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606180611604.png" srcset="/img/loading.gif" lazyload alt="image-20250606180611604"></p>
+<h3 id="2-3-索引分类"><a href="#2-3-索引分类" class="headerlink" title="2.3 索引分类"></a>2.3 索引分类</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606180626814.png" srcset="/img/loading.gif" lazyload alt="image-20250606180626814"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606180817479.png" srcset="/img/loading.gif" lazyload alt="image-20250606180817479"></p>
+<ul>
+<li>聚集索引<ul>
+<li>如果存在主键，主键索引就是聚集索引</li>
+<li>如果不存在，将使用第一个唯一索引作为聚集索引</li>
+<li>都不存在，则自动生成一个rowid作为隐藏的聚集索引</li>
+</ul>
+</li>
+</ul>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606181326651.png" srcset="/img/loading.gif" lazyload alt="image-20250606181326651"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606181442659.png" srcset="/img/loading.gif" lazyload alt="image-20250606181442659"></p>
+<h3 id="2-4-索引语法"><a href="#2-4-索引语法" class="headerlink" title="2.4 索引语法"></a>2.4 索引语法</h3><h4 id="创建索引"><a href="#创建索引" class="headerlink" title="创建索引"></a><strong>创建索引</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">CREATE [UNIQUE|FULLTEXT] INDEX index_name ON `table_name` (index_col_name,...);<br></code></pre></td></tr></table></figure>
+
+<p>index_name用来</p>
+<p>小括号里表示一个索引可以关联多个字段（联合索引）</p>
+<h4 id="查看索引"><a href="#查看索引" class="headerlink" title="查看索引"></a>查看索引</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SHOW INDEX FROM `table_name`;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="使用索引"><a href="#使用索引" class="headerlink" title="使用索引"></a>使用索引</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> <span class="hljs-keyword">user</span> USE INDEX (index_name) <span class="hljs-keyword">where</span> id <span class="hljs-operator">=</span> <span class="hljs-number">1</span> <br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="删除索引"><a href="#删除索引" class="headerlink" title="删除索引"></a>删除索引</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">DROP INDEX index_name ON `table_name`;<br></code></pre></td></tr></table></figure>
+
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606182848786.png" srcset="/img/loading.gif" lazyload alt="image-20250606182848786"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 1<br>CREATE INDEX idx_user_name on tb_user(name); # 常规索引，不需要指定索引类型<br><br># 2<br>CREATE UNIQUE idx_phone ON tb_user(phone); # 创建唯一索引<br><br># 3<br>CREATE INDEX idx_user_pro_age_status ON tb_user(profession,age,status); # 字段顺序有讲究<br><br># 4<br>CREATE UNIQUE idx_user_email ON tb_user(email);<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h3 id="2-5-SQL性能分析"><a href="#2-5-SQL性能分析" class="headerlink" title="2.5 SQL性能分析"></a>2.5 SQL性能分析</h3><h4 id="SQL执行频率"><a href="#SQL执行频率" class="headerlink" title="SQL执行频率"></a>SQL执行频率</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 查看服务器的状态信息<br>SHOW [SESSION|GLOBAL] STATUS; <br><br># 查看增删改查频率<br>SHOW GLOBAL STATUS LIKE &#x27;Com_____&#x27;; # 几个下划线代表几个字符<br></code></pre></td></tr></table></figure>
+
+<h4 id="慢查询日志"><a href="#慢查询日志" class="headerlink" title="慢查询日志"></a>慢查询日志</h4><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250606185518937.png" srcset="/img/loading.gif" lazyload alt="image-20250606185518937"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 查询慢查询日志是否开启<br>show variables like &#x27;slow_query_log&#x27;; # 慢查询日志默认关闭<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-comment"># MySQL配置文件中开启慢查询日志</span><br><span class="hljs-comment"># 开启开关</span><br><span class="hljs-attr">slow_query_log</span>=<span class="hljs-string">1</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"># 设置日志记录时间，此处设置为2秒，代表SQL语句的执行时间超过2秒，就会被视为慢查询，记录到日志中</span><br><span class="hljs-attr">long_query_time</span>=<span class="hljs-string">2</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 慢查询日志存放地址<br>/var/lib/mysql/xxx.log<br></code></pre></td></tr></table></figure>
+
+<h4 id="profile详情-每条语句耗时查询"><a href="#profile详情-每条语句耗时查询" class="headerlink" title="profile详情 - 每条语句耗时查询"></a>profile详情 - 每条语句耗时查询</h4><p>show profiles能够在做SQL 优化时帮助我们了解时间都耗费到哪里</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 查看当前数据库是否支持profile操作<br>SELECT @@have_profiling;<br><br># profiling默认是关闭的，可以通过set语句在session/g<br>SELECT @@profiling;<br>SET profiling=1;<br><br># 查看每一条SQL耗时的基本情况<br>SHOW PROFILES;<br><br># 查看指定query_id的SQL语句在各个阶段的耗时情况<br>SHOW profile for query query_id;<br><br># 查看指定query_id的SQL语句在各个阶段的cpu使用情况<br>SHOW profile cpu for query query_id;<br></code></pre></td></tr></table></figure>
+
+<h4 id="explain执行计划"><a href="#explain执行计划" class="headerlink" title="explain执行计划"></a><code>explain</code>执行计划</h4><p>通过EXPLAIN或DESC命令获取MySQL如何执行SELECT语句信息，包括SELECT语句执行过程中表如何连接和连接的顺序</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 直接在select语句之前加上关键字 explain / desc<br>EXPLAIN SELECT column_... FROM table_name_... where condition_...;<br><br># id, select_type, table, partitions, type, possible_keys, key, key_len, ref, rows, filtered, Extra<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><p>id: 表的执行顺序。id相同，则从上往下执行。如果id不相同，则值大的先执行</p>
+</li>
+<li><p>select_type: 表示select的类型。SIMPLE简单表（无表连接或子查询）；PRIMARY（主查询，即最外层的查询）；UNION（连接的第二个或者后面的查询），SUBQUERY(子查询)</p>
+</li>
+<li><p><code>type</code>：表示连接类型。性能由好到差依次是：NULL，system、const、eq_ref、ref、range、index、all</p>
+<ul>
+<li><p>NULL：不访问任何表</p>
+</li>
+<li><p>system：访问系统表</p>
+</li>
+<li><p>const：唯一索引查询 (select * from table_name where id &#x3D; 1)</p>
+</li>
+<li><p>ref：非唯一性索引查询 (select * from table_name where name &#x3D; “zs”)</p>
+</li>
+<li><p>eq_ref: 连表查询的等值比较有唯一索引(<code>select a.*, b.* from a,b where a.id = b.id</code> 如果a.id是a唯一索引，则a为eq_ref )</p>
+</li>
+<li><p>index：用了索引，但遍历整个索引树 (select * from table_name)</p>
+</li>
+<li><p>all: 全表扫描</p>
+</li>
+</ul>
+</li>
+<li><p><code>possible_key</code>: 显示可能应用在这张表上的索引，一个或多个</p>
+</li>
+<li><p><code>key</code>： 实际用到的索引</p>
+</li>
+<li><p><code>key_len</code>: 使用的索引字节数（索引最大可能长度）越短越好</p>
+</li>
+<li><p>rows：预估值，需要执行查询的行数</p>
+</li>
+<li><p>filtered：查询结果行数占读取行数的百分比%</p>
+</li>
+<li><p><code>Extra</code>: 额外信息</p>
+</li>
+</ul>
+<h3 id="2-6-索引使用"><a href="#2-6-索引使用" class="headerlink" title="2.6 索引使用"></a>2.6 索引使用</h3><p>在未使用索引时，执行如下sql效率低</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SELECT * FROM table_a where name = &quot;zs&quot;;<br></code></pre></td></tr></table></figure>
+
+<p>针对name字段建立索引</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs mysql">CREATE INDEX idx_a_name on table_a(name); # 注意：创建索引也需要耗时（构建B+树数据结构）<br><br># 查看当前表索引<br>SHOW INDEX FROM table_a;<br></code></pre></td></tr></table></figure>
+
+<p>然后再次执行相同查询，效率提高</p>
+<h4 id="最左前缀法则"><a href="#最左前缀法则" class="headerlink" title="最左前缀法则"></a>最左前缀法则</h4><p>如果索引了多列（<strong>联合索引</strong>：一个索引关联了多个字段），要遵循最左前缀法则。最左前缀法则指从索引的最左列开始，并且不跳过索引中的列。如果跳跃某一列，则索引将部分失效（后面的字段索引失效）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 背景table_a 表中有三个字段的联合索引 name age gender <br><br># 1. 联合索引全部生效<br>SELECT * FROM table_a where name = &quot;zs&quot; and age = 18 and gender = &quot;man&quot;;  <br>SELECT * FROM table_a where age = 18 and gender = &quot;man&quot; and name = &quot;zs&quot;; # 也会生效，因为name存在<br><br># 2. 联合索引部分生效 name字段生效<br>SELECT * FROM table_a where name = &quot;zs&quot; and gender = &quot;man&quot;;<br><br># 3. 联合索引全部失效<br>SELECT * FROM table_a where age = 18 and gender = &quot;man&quot;;<br></code></pre></td></tr></table></figure>
+
+<h4 id="范围查询"><a href="#范围查询" class="headerlink" title="范围查询"></a>范围查询</h4><p><strong>联合索引</strong>中，如果出现范围查询<code>(&gt;,&lt;)</code>,范围查询右侧的列索引将失效</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs mysql">#  最右侧列 gender 失效<br>SELECT * FROM table_a where name = &quot;zs&quot; and age &gt; 18 and gender = &quot;man&quot;;<br><br># 使用大于等于 &gt;= 则不失效<br>SELECT * FROM table_a where name = &quot;zs&quot; and age &gt;= 18 and gender = &quot;man&quot;;<br></code></pre></td></tr></table></figure>
+
+<h4 id="索引列运算"><a href="#索引列运算" class="headerlink" title="索引列运算"></a>索引列运算</h4><p>不要在索引列上进行运算操作，否则索引会失效</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 索引name失效，不走索引<br>SELECT * FROM table_a where SUBSTRING(name,1,1);<br></code></pre></td></tr></table></figure>
+
+<h4 id="字符串查询需要加引号"><a href="#字符串查询需要加引号" class="headerlink" title="字符串查询需要加引号"></a>字符串查询需要加引号</h4><p>字符串不加引号时，有时SQL也会执行，但是索引失效</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 背景：phone是索引字段<br>SELECT * FROM table_a where phone = 123; # 隐式类型转换，索引失效<br></code></pre></td></tr></table></figure>
+
+<h4 id="模糊查询"><a href="#模糊查询" class="headerlink" title="% 模糊查询"></a>% 模糊查询</h4><p>头部模糊匹配，索引会失效。如果是尾部模糊匹配，索引不失效</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 头部模糊匹配，索引失效<br>SELECT * FROM table_a WHERE name like &#x27;%三&#x27;; # 全表扫描 ALL<br><br># 尾部模糊匹配，索引不失效<br>SELECT * FROM table_a WHERE name like &quot;张%&quot;<br></code></pre></td></tr></table></figure>
+
+<h4 id="OR连接的条件"><a href="#OR连接的条件" class="headerlink" title="OR连接的条件"></a>OR连接的条件</h4><p>使用OR语句，如果OR前后都有索引，索引才会生效</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 背景 id 和 name为索引字段, home为普通字段<br><br># 索引生效<br>SELECT * FROM table_a where id = 1 or name = &quot;zs&quot;; # 使用到两个索引<br><br># 不走索引<br>SELECT * FROM table_a where name = &#x27;zs&#x27; or home = &#x27;china&#x27;; # 全表扫描，使用0个索引<br></code></pre></td></tr></table></figure>
+
+<h4 id="数据分布影响"><a href="#数据分布影响" class="headerlink" title="数据分布影响"></a>数据分布影响</h4><p>如果MySQL评估使用索引比全表查询更慢,则不使用索引;</p>
+<p>即:</p>
+<p>如果查询最终的结果数量超过了全表的一半则不走索引, 使用全表查询</p>
+<p>如果查询的最终结果数量小于全表的一半, 则走索引</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 不走索引<br>explain select * from pms_attr where attr_id is not null;<br></code></pre></td></tr></table></figure>
+
+<h4 id="SQL语句添加索引提示"><a href="#SQL语句添加索引提示" class="headerlink" title="SQL语句添加索引提示"></a>SQL语句添加索引提示</h4><p>多个索引都可能用到的情况下, MySQL会进行自动选择.</p>
+<p>也可以给MySQL提示使用哪个索引.</p>
+<ul>
+<li><code>USE INDEX</code> 建议使用某个索引</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SELECT * FROM table_a USE INDEX(idx_name) where name = &quot;zs&quot;; <br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><code>IGNORE INDEX</code> 不使用某索引</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SELECT * FROM table_a IGNORE INDEX(idx_name_age_gender) WHERE name = &quot;zs&quot;;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><code>FORCE INDEX</code> 强制使用某个索引</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SELECT * FROM table_a FORCE INDEX(idx_name) WHERE name = &#x27;zs&#x27;;<br></code></pre></td></tr></table></figure>
+
+<h4 id="覆盖索引-select-id-name"><a href="#覆盖索引-select-id-name" class="headerlink" title="覆盖索引 select id, name"></a>覆盖索引 <code>select id, name</code></h4><p>尽量使用覆盖索引, select id, name</p>
+<ul>
+<li><del>using where, using index : 表示没有回表查询</del></li>
+<li><del>仅有using index: 表示使用了回表查询</del></li>
+</ul>
+<p>不要使用 select *, 因为select * 很容易出现回表查询</p>
+<h4 id="前缀索引"><a href="#前缀索引" class="headerlink" title="前缀索引"></a>前缀索引</h4><p>某些字段为字符串时(varchar,text等),直接建立它们的索引会让索引长度很大, 浪费大量的磁盘IO, 影响查询效率. 此时只将字符串的一部分前缀建立索引, 这样可以节省空间,并提高索引效率. </p>
+<ul>
+<li>语法</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">CREATE INDEX idx_xxx on table_a(column_name(n));<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>前缀长度</li>
+</ul>
+<p>根据索引的选择性来确定, 当出现某个字符串的时候, 匹配前面n个字符, 刚好满足每次匹配时只有一个选择, 则为最佳长度.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SELECT COUNT(DISTINCT(SUBSTRING(column_name,1,n)))/ count(*) FROM table_a; # n尽可能小，结果刚好为1就是最佳长度<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="单列索引与联合索引"><a href="#单列索引与联合索引" class="headerlink" title="单列索引与联合索引"></a>单列索引与联合索引</h4><p>单列索引: 一个索引只包含单个列</p>
+<p>联合索引: 一个索引包含多个列</p>
+<p>在业务场景中,如果存在多个查询条件, 考虑对于查询字段建立索引时, 建议建立联合索引, 而非单列索引</p>
+<h3 id="2-7-索引设计原则"><a href="#2-7-索引设计原则" class="headerlink" title="2.7 索引设计原则"></a>2.7 索引设计原则</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250611160453981.png" srcset="/img/loading.gif" lazyload alt="image-20250611160453981"></p>
+<h2 id="3-SQL优化"><a href="#3-SQL优化" class="headerlink" title="3. SQL优化"></a>3. SQL优化</h2><ul>
+<li>创建10万条数据</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">START</span> TRANSACTION;<br><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">PROCEDURE</span> IF <span class="hljs-keyword">EXISTS</span> insert_10W;<br>DELIMITER ;;<br><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">PROCEDURE</span> insert_10W()<br><span class="hljs-keyword">begin</span><br>	<span class="hljs-keyword">declare</span> i <span class="hljs-type">int</span>;<br>    <span class="hljs-keyword">SET</span> i <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;<br>	WHILE i <span class="hljs-operator">&lt;=</span> <span class="hljs-number">100000</span> DO<br>        <span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-keyword">user</span> (id,name, age,dpt, <span class="hljs-type">date</span>) <span class="hljs-keyword">VALUES</span> (i, CONCAT(<span class="hljs-string">&#x27;name_&#x27;</span>, i), i <span class="hljs-operator">%</span> <span class="hljs-number">120</span>, CONCAT(&quot;dpt&quot;, i), DATE_ADD(CURDATE(), <span class="hljs-type">INTERVAL</span> i <span class="hljs-keyword">DAY</span>));<br>		<span class="hljs-keyword">SET</span> i <span class="hljs-operator">=</span> i <span class="hljs-operator">+</span> <span class="hljs-number">1</span>;<br>	<span class="hljs-keyword">END</span> WHILE;<br><span class="hljs-keyword">END</span>;;<br>DELIMITER ;<br><span class="hljs-keyword">CALL</span> insert_10W();<br><span class="hljs-keyword">COMMIT</span>;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>开启trace</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">set</span> session optimizer_trace<span class="hljs-operator">=</span>&quot;enabled=on&quot;,end_markers_in_json<span class="hljs-operator">=</span><span class="hljs-keyword">on</span>; <span class="hljs-comment">-- 开启trace</span><br><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> <span class="hljs-keyword">user</span> <span class="hljs-keyword">where</span> name <span class="hljs-keyword">like</span> &quot;name&quot;; # 执行语句<br><br><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> information_schema.OPTIMIZER_TRACE; # 查看trace<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-1-insert优化"><a href="#3-1-insert优化" class="headerlink" title="3.1 insert优化"></a>3.1 insert优化</h3><ul>
+<li>批量插入</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">INSERT INTO table_a value(1,&quot;tom&quot;), (2,&quot;jerry&quot;);<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>手动事务提交</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs mysql">start transaction;<br>insert...;<br>insert...;<br>commit;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>主键顺序插入</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">主键按照递增的顺序插入<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>大批量数据使用load</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 1. 连接服务器时，加参数<br>mysql --local-infile -u root -p<br># 2. 设置全局参数local_infile = 1; 开启从本地加载文件的开关<br>set global local_infile = 1;<br># 3. 执行load指令将准备好的数据加载到表结构中<br>load data local infile &quot;/root/sql.log&quot; into table table_name_a fields terminated by &#x27;,&#x27; lines terminated by &#x27;\n&#x27;;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-2-主键优化"><a href="#3-2-主键优化" class="headerlink" title="3.2 主键优化"></a>3.2 主键优化</h3><ul>
+<li>数据组织方式</li>
+</ul>
+<p>innodb中, 表都是根据主键顺序组织存放的, 这种表是索引组织表(IOT).</p>
+<ul>
+<li><code>页分裂</code></li>
+</ul>
+<p>主键如果不按照顺序插入, 就可能会导致页分裂</p>
+<ul>
+<li>页合并</li>
+</ul>
+<p>删除数据时, 如果某个页中的记录小于阈值(默认50%), 则可能发生页合并</p>
+<ul>
+<li>主键设计原则<ul>
+<li>满足业务需求的情况下，尽量降低主键的长度</li>
+<li>插入数据时，尽量选择顺序插入，选择使用AUTO_INCREMENT自增主键</li>
+<li>尽量不要使用UUID做主键或者是其他自然主键,如身份证号 (无序,且长度太长)</li>
+<li>业务操作时,尽量避免对主键的修改</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-3-order-by优化"><a href="#3-3-order-by优化" class="headerlink" title="3.3 order by优化"></a>3.3 order by优化</h3><ul>
+<li>Using index:效率高,通过有序索引顺序扫描, 直接返回有序数据</li>
+<li>Using filesort: 不通过索引顺序排序, 效率低</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">CREATE INDEX idx_age_name on table_a(age asc, name desc);<br></code></pre></td></tr></table></figure>
+
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250613111029322.png" srcset="/img/loading.gif" lazyload alt="image-20250613111029322"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs conf"># 配置文件示例 (my.cnf)<br>[mysqld]<br>sort_buffer_size = 2M  # 从1-4MB开始测试<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-4-group-by-优化"><a href="#3-4-group-by-优化" class="headerlink" title="3.4 group by 优化"></a>3.4 group by 优化</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250613111559638.png" srcset="/img/loading.gif" lazyload alt="image-20250613111559638"></p>
+<h3 id="3-5-limit优化"><a href="#3-5-limit优化" class="headerlink" title="3.5 limit优化"></a>3.5 limit优化</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SELECT * FROM table_a limit 9000000,10;<br># 这条sql会排序9000010条记录，但只返回10条数据。 排序代价非常大<br><br># 优化：覆盖索引+子查询<br>SELECT t.* from table_a t, (SELECT id FROM table_a LIMIT 9000000,10) ai where t.id = ai.id;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-6-count优化"><a href="#3-6-count优化" class="headerlink" title="3.6 count优化"></a>3.6 count优化</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250613113738046.png" srcset="/img/loading.gif" lazyload alt="image-20250613113738046"></p>
+<p>优化思路: 自己计数 (Redis) <code>select count(1) from table_a</code> 存到Redis</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250613114236264.png" srcset="/img/loading.gif" lazyload alt="image-20250613114236264"></p>
+<h3 id="3-7-update优化"><a href="#3-7-update优化" class="headerlink" title="3.7 update优化"></a>3.7 update优化</h3><p>如果update时是根据某个没有索引的字段进行更新时, 行级锁会上升为表级锁. 所以更新字段时, 要根据索引字段进行更新</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250613124623172.png" srcset="/img/loading.gif" lazyload alt="image-20250613124623172"></p>
+<h2 id="4-视图-存储过程-触发器"><a href="#4-视图-存储过程-触发器" class="headerlink" title="4. 视图&#x2F;存储过程&#x2F;触发器"></a>4. 视图&#x2F;存储过程&#x2F;触发器</h2><h3 id="4-1-视图"><a href="#4-1-视图" class="headerlink" title="4.1 视图"></a>4.1 视图</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618083638051.png" srcset="/img/loading.gif" lazyload alt="image-20250618083638051"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250613132627288.png" srcset="/img/loading.gif" lazyload alt="image-20250613132627288"></p>
+<h3 id="4-2-存储过程"><a href="#4-2-存储过程" class="headerlink" title="4.2 存储过程"></a>4.2 存储过程</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250613133952139.png" srcset="/img/loading.gif" lazyload alt="image-20250613133952139"></p>
+<h3 id="4-3-存储函数"><a href="#4-3-存储函数" class="headerlink" title="4.3 存储函数"></a>4.3 存储函数</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250613134217622.png" srcset="/img/loading.gif" lazyload alt="image-20250613134217622"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250613134238689.png" srcset="/img/loading.gif" lazyload alt="image-20250613134238689"></p>
+<p>注意: 在命令行中，执行创建存储过程的SQL时，，需要通过关键字 delimiter 指定SQL语句的结束符</p>
+<p>if loop while</p>
+<h3 id="4-4-触发器"><a href="#4-4-触发器" class="headerlink" title="4.4 触发器"></a>4.4 触发器</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250613134905258.png" srcset="/img/loading.gif" lazyload alt="image-20250613134905258"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250613135009475.png" srcset="/img/loading.gif" lazyload alt="image-20250613135009475"></p>
+<h3 id="4-5-总结"><a href="#4-5-总结" class="headerlink" title="4.5 总结"></a>4.5 总结</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250613135247419.png" srcset="/img/loading.gif" lazyload alt="image-20250613135247419"></p>
+<h2 id="5-锁"><a href="#5-锁" class="headerlink" title="5. 锁"></a>5. 锁</h2><h3 id="5-1-概述"><a href="#5-1-概述" class="headerlink" title="5.1 概述"></a>5.1 概述</h3><p>锁是计算机协调多个进程或线程并发访问某一资源的机制.</p>
+<h3 id="5-2-全局锁"><a href="#5-2-全局锁" class="headerlink" title="5.2 全局锁"></a>5.2 全局锁</h3><p>全局锁对整个数据库实例进行加锁, 加锁后的整个实例就处于只读状态.</p>
+<p>最典型的应用场景是做全库的逻辑备份.  对所有表进行锁定, 保证数据一致性.</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617113315269.png" srcset="/img/loading.gif" lazyload alt="image-20250617113315269"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617114054518.png" srcset="/img/loading.gif" lazyload alt="image-20250617114054518"></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 检查磁盘空间是否充足：</span><br><span class="hljs-built_in">df</span> -h<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 配置账户权限<br>GRANT SELECT, RELOAD, LOCK TABLES, REPLICATION CLIENT ON *.* TO &#x27;backup_user&#x27;@&#x27;localhost&#x27; IDENTIFIED BY &#x27;密码&#x27;;  <br>FLUSH PRIVILEGES;<br><br># 添加全局锁, 对某个数据库服务的所有数据库进行加锁<br>FLUSH TABLES WITH READ LOCK; <br></code></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 逻辑备份<br># 备份单个库 操作系统命令行运行<br>mysqldump -u 用户 -p 密码 --databases 库名 &gt; /路径/备份名.sql   <br># 备份所有库<br>mysqldump -u 用户 -p 密码 --all-databases &gt; /路径/全量备份.sql  <br># 压缩备份<br>mysqldump -u 用户 -p 密码 库名 | gzip &gt; 备份.sql.gz<br><br># 解锁<br>UNLOCK TABLES;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>特点<ul>
+<li>如果在主库上备份,那么在备份期间都不能执行更新. 业务基本上就得停摆</li>
+<li>如果在从库上备份,那么在备份期间从库不能执行主库同步过来的二进制日志(binlog), 会导致主从延迟.</li>
+</ul>
+</li>
+<li>在InnoDB中, 可以在备份时加上参数<code>--single-transaction</code>参数来完成不加锁的一致性数据备份.</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">mysqldump --single-transaction -uroot -proot -h192.168.56.2 test_lock &gt; test.sql <span class="hljs-comment"># 底层通过快照读实现</span><br></code></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h3 id="5-3-表级锁"><a href="#5-3-表级锁" class="headerlink" title="5.3 表级锁"></a>5.3 表级锁</h3><p>每次操作锁住整张表. </p>
+<p>分类: </p>
+<ul>
+<li>表锁</li>
+<li>元数据锁(meta data lock, MDL)</li>
+<li>意向锁</li>
+</ul>
+<h4 id="表锁"><a href="#表锁" class="headerlink" title="表锁"></a>表锁</h4><ul>
+<li>表共享读锁(read lock)</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 加锁<br>LOCK TABLES table_a read;<br><br># 解锁, 客户端连接断开会自动解锁<br>UNLOCK TABLES <br></code></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>表独占写锁(write lock)</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 加锁<br>LOCK TABLES table_a write;<br>UNLOCK TABLES;<br></code></pre></td></tr></table></figure>
+
+<h4 id="元数据锁-meta-data-lock-MDL"><a href="#元数据锁-meta-data-lock-MDL" class="headerlink" title="元数据锁(meta data lock, MDL)"></a>元数据锁(meta data lock, MDL)</h4><p>MDL加锁过程是系统自动控制, 无需显示使用. 在访问一张表的时候会自动加上. MDL锁主要作用是维护表元数据的数据一致性. 在表上有活动的事务时, 不可以对元数据进行写入操作. 为了避免DML和DDL冲突， 保证读写的正确性。</p>
+<p>维护表结构的数据一致性.</p>
+<p>即: 在某张表存在活动的事务时, 不能修改该表的表结构. </p>
+<p>在MySQL5.5中引入了MDL，当<code>对一张表进行增删改査的时候，加MDL读锁(共享)</code>;<code>当对表结构进行变更操作的时候，加MDL写锁(排他)</code>。</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617122305409.png" srcset="/img/loading.gif" lazyload alt="image-20250617122305409"></p>
+<p>查看元数据锁:<br><code>select object_type,object_schema,object_name,lock_type,lock_duration from performance_schema.metadata_locks ;</code></p>
+<h4 id="意向锁"><a href="#意向锁" class="headerlink" title="意向锁"></a><em>意向锁</em></h4><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617123712366.png" srcset="/img/loading.gif" lazyload alt="image-20250617123712366"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617123725167.png" srcset="/img/loading.gif" lazyload alt="image-20250617123725167"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617123825506.png" srcset="/img/loading.gif" lazyload alt="image-20250617123825506"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">select object_type,object_schema,object_name,lock_type,lock_duration from performance_schema.data_locks;<br></code></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h3 id="5-4-行级锁"><a href="#5-4-行级锁" class="headerlink" title="5.4 行级锁"></a>5.4 行级锁</h3><ul>
+<li>介绍</li>
+</ul>
+<p>行级锁， 每次操作锁住对应的行数据。锁定粒度最小， 发生冲突的概率最低， 并发度最高。 应用到InnoDB中。 </p>
+<p>InnoDB是基于索引组织数据的。 行锁是通过对索引上的索引项加锁来实现的，而不是对记录加的锁。</p>
+<ul>
+<li><p>行级锁分类</p>
+<ul>
+<li><p>行锁（Record Lock）：锁定单个行记录的锁。防止其他事务对此进行update和delete。RC和RR都支持</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617125636147.png" srcset="/img/loading.gif" lazyload alt="image-20250617125636147"></p>
+</li>
+<li><p>间隙锁（Gap Lock）：锁定某个记录间隙（不含该记录）。确保索引记录间隙不变。防止其他事务在此间隙进行insert，产生幻读。在RR隔离级别下支持。</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617125903353.png" srcset="/img/loading.gif" lazyload alt="image-20250617125903353"></p>
+</li>
+<li><p>临键锁（Next-Key Lock）：行锁和间隙锁的组合，同时锁住数据，并锁住前面的间隙。在RR下支持。</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617130111563.png" srcset="/img/loading.gif" lazyload alt="image-20250617130111563"></p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617130833855.png" srcset="/img/loading.gif" lazyload alt="image-20250617130833855"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617131006103.png" srcset="/img/loading.gif" lazyload alt="image-20250617131006103"></p>
+<p>加了共享锁后，其他事务不能在<code>该查询的区间</code>之内进行insert，update、delete操作。</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617131159523.png" srcset="/img/loading.gif" lazyload alt="image-20250617131159523"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617132124232.png" srcset="/img/loading.gif" lazyload alt="image-20250617132124232"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs mysql">select * from a;<br># +----+-------+------+<br># | id | name  | age  |<br># +----+-------+------+<br># |  1 | tom   |  111 |<br># |  5 | zs    |   38 |<br># | 10 | jully |   30 |<br># +----+-------+------+<br># 3 rows in set (0.00 sec)<br><br># 事务A<br>update a set name = &quot;TT&quot; where id = 2; # id=2数据不存在，自动升级为间隙锁，锁住1&lt;id&lt;5的间隙，防止插入操作<br>#Query OK, 0 rows affected (0.00 sec)<br>#Rows matched: 0  Changed: 0  Warnings: 0<br><br># 事务B<br>insert into a (id,name,age) value(2,&quot;jully&quot;,30); # 插入id=2的数据失败，因为有间隙锁<br></code></pre></td></tr></table></figure>
+
+
+
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617143317069.png" srcset="/img/loading.gif" lazyload alt="image-20250617143317069"></p>
+<hr>
+<h2 id="6-InnoDB引擎"><a href="#6-InnoDB引擎" class="headerlink" title="6. InnoDB引擎"></a>6. InnoDB引擎</h2><h3 id="6-1-逻辑存储结构"><a href="#6-1-逻辑存储结构" class="headerlink" title="6.1 逻辑存储结构"></a>6.1 逻辑存储结构</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617144043230.png" srcset="/img/loading.gif" lazyload alt="image-20250617144043230"></p>
+<h3 id="6-2-架构"><a href="#6-2-架构" class="headerlink" title="6.2 架构"></a>6.2 架构</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617144211470.png" srcset="/img/loading.gif" lazyload alt="image-20250617144211470"></p>
+<ul>
+<li><p>内存结构</p>
+</li>
+<li><p>磁盘结构</p>
+</li>
+<li><p>后台线程</p>
+</li>
+</ul>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617153715900.png" srcset="/img/loading.gif" lazyload alt="image-20250617153715900"></p>
+<h3 id="6-3-事务原理"><a href="#6-3-事务原理" class="headerlink" title="6.3 事务原理"></a>6.3 事务原理</h3><p>事务是一组操作的集合， 它是一个不可分割的工作单位，事务会把所有的操作作为一个整体一起向系统提交或撤销操作请求。 这些操作要么同时成功，要么同时失败。</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617154032248.png" srcset="/img/loading.gif" lazyload alt="image-20250617154032248"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617154138620.png" srcset="/img/loading.gif" lazyload alt="image-20250617154138620"></p>
+<h4 id="redo-log"><a href="#redo-log" class="headerlink" title="redo log"></a>redo log</h4><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wtzbk/p/14410608.html">MYSQL查询和插入数据的流程是怎样的 - 大魔王先生 - 博客园</a></p>
+<p>物理数据页大小是<code>16KB</code>，刷盘比较耗时，可能就修改了数据页里的几 <code>Byte</code> 数据，有必要把完整的数据页刷盘吗？</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617154632250.png" srcset="/img/loading.gif" lazyload alt="image-20250617154632250"></p>
+<p><strong>保证事务的持久性</strong>：如果buffer pool缓冲池中的脏页【脏数据】还没有进行刷盘的时候，此时数据库发生crash，重启服务后，我们可以通过redo log日志找到需要重放到磁盘文件的那些数据记录。</p>
+<p><strong>提高事务提交的速度</strong>： buffer pool缓冲池中的数据直接刷新到磁盘，是一个随机IO，效率较差，而把buffer pool中的数据记录到redo log，是一个顺序IO，可以提高事务提交的速度</p>
+<h4 id="undo-log"><a href="#undo-log" class="headerlink" title="undo log"></a>undo log</h4><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617154843496.png" srcset="/img/loading.gif" lazyload alt="image-20250617154843496"></p>
+<h3 id="6-4-MVCC"><a href="#6-4-MVCC" class="headerlink" title="6.4  MVCC"></a>6.4  MVCC</h3><h4 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1) 基本概念"></a>1) 基本概念</h4><ul>
+<li><strong>当前读</strong></li>
+</ul>
+<p>读取的是记录的最新版本。读取时还要保证其他的并发事务不能修改当前记录。会对读取的记录进行加锁。对于我们日常的操作，比如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mysql">select ... lock in share mode; # 共享锁 - 当前读<br>select ... for update,delete,insert; # 排他锁 - 当前读<br></code></pre></td></tr></table></figure>
+
+<p>以上都是当前读。</p>
+<ul>
+<li><strong>快照读</strong></li>
+</ul>
+<p>简单的select语句（不加锁）就是快照读。非阻塞读。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs mysql">Read Committed: 每次select，都生成一个快照读<br>Repeatable Read：开启事务后，第一个select语句才是快照读的地方<br>Serializable: 快照读会升级为当前读<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>MVCC</strong></li>
+</ul>
+<p>全称Multi-Version Concurrency Control：多版本并发控制</p>
+<p>指维护一个数据的多个版本，使得读写操作没有冲突，快照读为MySQL实现MVCC提供了一个非阻塞读的功能。</p>
+<p>MVCC具体的实现，还需要依赖于数据库记录的<strong>二&#x2F;三个隐式字段, undo log日志, readview</strong></p>
+<h4 id="1-记录当中的隐藏字段"><a href="#1-记录当中的隐藏字段" class="headerlink" title="1) 记录当中的隐藏字段"></a>1) 记录当中的隐藏字段</h4><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617160630937.png" srcset="/img/loading.gif" lazyload alt="image-20250617160630937"></p>
+<p><strong>表中有主键时不会生成DB_ROW_ID</strong></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"># 查询表信息<br><span class="hljs-keyword">show</span> columns <span class="hljs-keyword">from</span> <span class="hljs-keyword">user</span>;<br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> INFORMATION_SCHEMA.COLUMNS <span class="hljs-keyword">where</span> TABLE_NAME <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;user&#x27;</span> <span class="hljs-keyword">and</span> TABLE_SCHEMA<span class="hljs-operator">=</span><span class="hljs-string">&#x27;test&#x27;</span>;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 使用 ibd2sdi工具可以解析 InnoDB 的表空间文件（.ibd 文件），查看表的元数据信息，其中就包含了这些隐藏字段</span><br><span class="hljs-comment"># 磁盘文件夹下</span><br>ibd2sdi table_a.ibd <span class="hljs-comment"># 查看表的详细信息</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="3-undo-log日志"><a href="#3-undo-log日志" class="headerlink" title="3)  undo log日志"></a>3)  undo log日志</h4><p>回滚日志, 在insert, update, delete的时候产生的便于数据回滚的日志.</p>
+<p>当insert的时候, 产生的undo log日志只在回滚时需要, 在事务提交后, 可被立即删除.</p>
+<p>而update, delete的时候, 产生的undo log日志不仅在回滚时需要, 在快照读时也需要, 不会立即删除.</p>
+<table>
+<thead>
+<tr>
+<th align="left">操作类型</th>
+<th align="left">Undo Log 类型</th>
+<th align="left">事务提交后是否立即删除</th>
+<th align="left">主要原因</th>
+<th align="left">最终清理方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>INSERT</strong></td>
+<td align="left">Insert Undo Log</td>
+<td align="left"><strong>可以</strong></td>
+<td align="left">新插入的数据只对当前事务可见，其他事务不需要访问其旧版本。</td>
+<td align="left">事务提交后可直接删除，无需 Purge 线程干预。</td>
+</tr>
+<tr>
+<td align="left"><strong>UPDATE&#x2F;DELETE</strong></td>
+<td align="left">Update Undo Log</td>
+<td align="left"><strong>不可以</strong></td>
+<td align="left">需为其他事务提供 <strong>MVCC（多版本并发控制）</strong> 读视图，保证可重复读和读已提交的隔离级别。</td>
+<td align="left">由后台 <strong>Purge 线程</strong>在确定无人使用时异步清理。</td>
+</tr>
+</tbody></table>
+<h4 id="4-undo-log版本链"><a href="#4-undo-log版本链" class="headerlink" title="4) undo log版本链"></a>4) undo log版本链</h4><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617163719871.png" srcset="/img/loading.gif" lazyload alt="image-20250617163719871"></p>
+<h4 id="5-read-view"><a href="#5-read-view" class="headerlink" title="5) read view"></a>5) read view</h4><p>Read View是快照读SQL执行时MVCC提取数据的依据, 记录并维护系统当前活跃的事务(未提交的事务) id;</p>
+<p>Read View包含四个核心字段:</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617164011525.png" srcset="/img/loading.gif" lazyload alt="image-20250617164011525"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617164733877.png" srcset="/img/loading.gif" lazyload alt="image-20250617164733877"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250701202807399.png" srcset="/img/loading.gif" lazyload alt="image-20250701202807399"></p>
+<p>trx_id: 当前记录最后一次修改者的id;（待定）某个事务id</p>
+<p>RC隔离级别下:</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617165323852.png" srcset="/img/loading.gif" lazyload alt="image-20250617165323852"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617165928686.png" srcset="/img/loading.gif" lazyload alt="image-20250617165928686"></p>
+<p>RR隔离级别下：</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617170155606.png" srcset="/img/loading.gif" lazyload alt="image-20250617170155606"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617170246297.png" srcset="/img/loading.gif" lazyload alt="image-20250617170246297"></p>
+<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617170519095.png" srcset="/img/loading.gif" lazyload alt="image-20250617170519095"></p>
+<hr>
+<h2 id="7-MySQL管理"><a href="#7-MySQL管理" class="headerlink" title="7. MySQL管理"></a>7. MySQL管理</h2><h3 id="7-1-系统数据库"><a href="#7-1-系统数据库" class="headerlink" title="7.1 系统数据库"></a>7.1 系统数据库</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617170835128.png" srcset="/img/loading.gif" lazyload alt="image-20250617170835128"></p>
+<h3 id="7-2-常用工具"><a href="#7-2-常用工具" class="headerlink" title="7.2 常用工具"></a>7.2 常用工具</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617170847244.png" srcset="/img/loading.gif" lazyload alt="image-20250617170847244"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617171230938.png" srcset="/img/loading.gif" lazyload alt="image-20250617171230938"></p>
+<p>mysqlbinlog</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617171238824.png" srcset="/img/loading.gif" lazyload alt="image-20250617171238824"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617171717496.png" srcset="/img/loading.gif" lazyload alt="image-20250617171717496"></p>
+<p>mysqldump</p>
+<p>数据库备份</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617171813544.png" srcset="/img/loading.gif" lazyload alt="image-20250617171813544"></p>
+<p>数据库导入</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617171925196.png" srcset="/img/loading.gif" lazyload alt="image-20250617171925196"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617172101313.png" srcset="/img/loading.gif" lazyload alt="image-20250617172101313"></p>
+<h2 id="进阶篇总结"><a href="#进阶篇总结" class="headerlink" title="进阶篇总结"></a>进阶篇总结</h2><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617172242794.png" srcset="/img/loading.gif" lazyload alt="image-20250617172242794"></p>
+<h1 id="运维"><a href="#运维" class="headerlink" title="运维"></a>运维</h1><h2 id="1-日志"><a href="#1-日志" class="headerlink" title="1. 日志"></a>1. 日志</h2><h3 id="1-1-错误日志"><a href="#1-1-错误日志" class="headerlink" title="1.1 错误日志"></a>1.1 错误日志</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617172648001.png" srcset="/img/loading.gif" lazyload alt="image-20250617172648001"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 错误日志默认存放在/var/log/mysqld.log<br>SHOW VARIABLES LIKE &quot;%log_error%&quot;;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-2-二进制日志"><a href="#1-2-二进制日志" class="headerlink" title="1.2 二进制日志"></a>1.2 二进制日志</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617173214448.png" srcset="/img/loading.gif" lazyload alt="image-20250617173214448"></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"># 查看二进制日志状态<br><span class="hljs-keyword">SHOW</span> VARIABLES <span class="hljs-keyword">LIKE</span> &quot;%log_bin&quot;;<br><br># 在配置文件的[mysqld]中添加如下配置 ，<br>log<span class="hljs-operator">-</span>bin <span class="hljs-operator">=</span> <span class="hljs-operator">/</span>server<span class="hljs-operator">/</span>mysql_data<span class="hljs-operator">/</span>mysql<span class="hljs-operator">-</span>bin<br># 重启数据库后配置即可生效<br><span class="hljs-operator">/</span>etc<span class="hljs-operator">/</span>init.d<span class="hljs-operator">/</span>mysqld restart<br></code></pre></td></tr></table></figure>
+
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617173601681.png" srcset="/img/loading.gif" lazyload alt="image-20250617173601681"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SHOW VARIABLES LIKE &quot;%binlog_format%&quot;;<br></code></pre></td></tr></table></figure>
+
+
+
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617174231364.png" srcset="/img/loading.gif" lazyload alt="image-20250617174231364"></p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"># 查询二进制日志默认过期时间<br><span class="hljs-keyword">SHOW</span> VARIABLES <span class="hljs-keyword">LIKE</span> &quot;%binlog_expire%&quot;;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="1-3-查询日志"><a href="#1-3-查询日志" class="headerlink" title="1.3 查询日志"></a>1.3 查询日志</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617174605185.png" srcset="/img/loading.gif" lazyload alt="image-20250617174605185"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SHOW VARIABLES LIKE &quot;%general%&quot;;<br></code></pre></td></tr></table></figure>
+
+<h3 id="1-4-慢查询日志"><a href="#1-4-慢查询日志" class="headerlink" title="1.4 慢查询日志"></a>1.4 慢查询日志</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617174937244.png" srcset="/img/loading.gif" lazyload alt="image-20250617174937244"></p>
+<h2 id="2-主从复制"><a href="#2-主从复制" class="headerlink" title="2. 主从复制"></a>2. 主从复制</h2><h3 id="2-1-概述"><a href="#2-1-概述" class="headerlink" title="2.1 概述"></a>2.1 概述</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617175259826.png" srcset="/img/loading.gif" lazyload alt="image-20250617175259826"></p>
+<h3 id="2-2-原理"><a href="#2-2-原理" class="headerlink" title="2.2 原理"></a>2.2 原理</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617175432063.png" srcset="/img/loading.gif" lazyload alt="image-20250617175432063"></p>
+<h3 id="2-3-搭建"><a href="#2-3-搭建" class="headerlink" title="2.3 搭建"></a>2.3 搭建</h3><h4 id="1-服务器准备"><a href="#1-服务器准备" class="headerlink" title="1) 服务器准备"></a>1) 服务器准备</h4><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617175634810.png" srcset="/img/loading.gif" lazyload alt="image-20250617175634810"></p>
+<h4 id="2-主库配置"><a href="#2-主库配置" class="headerlink" title="2) 主库配置"></a>2) 主库配置</h4><p>1 修改配置文件<code>/etc/my.cnf</code></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment">#</span><br><span class="hljs-comment"># Remove leading # and set to the amount of RAM for the most important data</span><br><span class="hljs-comment"># cache in MySQL. Start at 70% of total RAM for dedicated server, else 10%.</span><br><span class="hljs-comment"># innodb_buffer_pool_size = 128M</span><br><span class="hljs-comment">#</span><br><span class="hljs-comment"># Remove leading # to turn on a very important data integrity option: logging</span><br><span class="hljs-comment"># changes to the binary log between backups.</span><br><span class="hljs-comment"># log_bin</span><br><span class="hljs-comment">#</span><br><span class="hljs-comment"># Remove leading # to set options mainly useful for reporting servers.</span><br><span class="hljs-comment"># The server defaults are faster for transactions and fast SELECTs.</span><br><span class="hljs-comment"># Adjust sizes as needed, experiment to find the optimal values.</span><br><span class="hljs-comment"># join_buffer_size = 128M</span><br><span class="hljs-comment"># sort_buffer_size = 2M</span><br><span class="hljs-comment"># read_rnd_buffer_size = 2M</span><br><br>host-cache-size=0<br>skip-name-resolve<br>datadir=/var/lib/mysql<br>socket=/var/run/mysqld/mysqld.sock<br>secure-file-priv=/var/lib/mysql-files<br>user=mysql<br><br>pid-file=/var/run/mysqld/mysqld.pid<br>[client]<br>socket=/var/run/mysqld/mysqld.sock<br><br>!includedir /etc/mysql/conf.d/<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-comment"># [mysqld] 定义mysqld区块</span><br><span class="hljs-section">[mysqld]</span><br><span class="hljs-comment"># mysql 服务id，保证在整个集群环境中唯一，取值范围： 1~2^32 -1, 默认唯一</span><br><span class="hljs-attr">server-id</span>=<span class="hljs-number">1</span><br><br><span class="hljs-comment"># 是否只读， 读写：0， 只读：1；</span><br><span class="hljs-attr">read-only</span>=<span class="hljs-number">0</span><br><br><span class="hljs-comment"># 忽略的数据库，即不需要同步的数据库</span><br><span class="hljs-comment"># binlog-ignore-db=mysql</span><br><span class="hljs-comment"># 指定同步的数据库</span><br><span class="hljs-comment"># binlog-do-db=db01</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs sh">docker network create mysql_net<br>docker pull mysql:latest<br><br><span class="hljs-comment"># 主库</span><br>docker run -p 3307:3306 --network mysql_net --name mysql_master \<br>-v /temp_mnt/mysql_master/log:/var/log/mysql \<br>-v /temp_mnt/mysql_master/data:/var/lib/mysql \<br>-v /temp_mnt/mysql_master/conf:/etc/mysql/conf.d \<br>-e MYSQL_ROOT_PASSWORD=root \<br>-d mysql:latest<br><br><span class="hljs-comment"># 从库</span><br>docker run -p 3308:3306 --network mysql_net --name mysql_slave \<br>-v /temp_mnt/mysql_slave/log:/var/log/mysql \<br>-v /temp_mnt/mysql_slave/data:/var/lib/mysql \<br>-v /temp_mnt/mysql_slave/conf:/etc/mysql/conf.d \<br>-e MYSQL_ROOT_PASSWORD=root \<br>-d mysql:latest<br><br><span class="hljs-comment"># 从库2</span><br>docker run -p 3309:3306 --network mysql_net --name mysql_slave2 \<br>-v /temp_mnt/mysql_slave2/log:/var/log/mysql \<br>-v /temp_mnt/mysql_slave2/data:/var/lib/mysql \<br>-v /temp_mnt/mysql_slave2/conf:/etc/mysql/conf.d \<br>-e MYSQL_ROOT_PASSWORD=root \<br>-d mysql:latest<br></code></pre></td></tr></table></figure>
+
+<p>2 重启mysql</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">systemctl restart mysqld<br></code></pre></td></tr></table></figure>
+
+<p>确保server id已经修改</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SHOW VARIABLES LIKE &#x27;server_id&#x27;; <br># 确保read_only 不是OFF<br>show global variables like &quot;%read_only%&quot;;<br></code></pre></td></tr></table></figure>
+
+
+
+<p>3 登录master, 创建远程连接的账号, 并授予主从复制权限</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 创建用户backup, 并设置密码， 该用户可在任意主机连接该mysql服务<br>CREATE USER &#x27;backup&#x27;@&#x27;%&#x27; IDENTIFIED BY &#x27;backup&#x27;;<br># 为backup用户分配主从复制权限<br>GRANT REPLICATION SLAVE ON *.* TO &#x27;backup&#x27;@&#x27;%&#x27;;<br></code></pre></td></tr></table></figure>
+
+<p>4 通过指令, 查看二进制日志坐标</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs mysql">show binary log status; # 不同版本此命令有区别<br><br># mysql&gt; show binary log status;<br># +---------------+----------+--------------+------------------+-------------------+<br># | File          | Position | Binlog_Do_DB | Binlog_Ignore_DB | Executed_Gtid_Set |<br># +---------------+----------+--------------+------------------+-------------------+<br># | binlog.000003 |      686 |              |                  |                   |<br># +---------------+----------+--------------+------------------+-------------------+<br># 1 row in set (0.00 sec)<br></code></pre></td></tr></table></figure>
+
+<p>字段含义说明</p>
+<p><code>file</code>: 从哪个日志文件开始推送日志文件</p>
+<p><code>position</code>: 从哪个位置开始推送日志</p>
+<p><code>Binlog_Do_DB</code> : 指定需要同步的数据库</p>
+<h4 id="3-从库配置"><a href="#3-从库配置" class="headerlink" title="3) 从库配置"></a>3) 从库配置</h4><p>1 修改配置文件<code>/etc/my.cnf</code></p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-comment"># [mysqld] 定义区块</span><br><span class="hljs-comment"># mysql 服务id，保证在整个集群环境中唯一，取值范围： 1~2^32 -1, 默认唯一</span><br><span class="hljs-section">[mysqld]</span><br><span class="hljs-attr">server-id</span>=<span class="hljs-number">2</span><br><span class="hljs-comment"># 是否只读， 读写：0， 只读：1； 普通用户只读</span><br><span class="hljs-attr">read-only</span>=<span class="hljs-number">1</span> <br><br><span class="hljs-comment"># 超级管理员只读</span><br><span class="hljs-attr">super-read-only</span>=<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
+
+<p>2 重启slave</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">systemctl restart mysqld<br></code></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 确保server id已修改,并与主库不同<br>SHOW VARIABLES LIKE &#x27;server_id&#x27;; <br># 确保read_only 不是OFF<br>show global variables like &quot;%read_only%&quot;;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<p>3 登录slave 设置主库配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 8.0.23 版本<br>CHANGE REPLICATION SOURCE TO<br>    SOURCE_HOST=&#x27;mysql_master&#x27;,<br>    SOURCE_USER=&#x27;backup&#x27;,<br>    SOURCE_PASSWORD=&#x27;backup&#x27;,<br>    SOURCE_PORT=3306,<br>    SOURCE_LOG_FILE=&#x27;binlog.000003&#x27;,<br>    SOURCE_LOG_POS=686, -- 主库初始状态的bin log location是 686<br>    GET_SOURCE_PUBLIC_KEY=1;  -- 关键参数<br>START REPLICA;  -- 重启复制<br><br><br># 如果是旧版本，使用如下命令<br>CHANGE MASTER TO MASTER_HOST=&#x27;mysql_master&#x27;, MASTER_USER=&#x27;backup&#x27;,MASTER_PASSWORD=&#x27;backup&#x27;,MASTER_LOG_FILE=&#x27;xxx&#x27;,MASTER_LOG_POS=&#x27;&#x27;;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs mysql">##在从库的 CHANGE REPLICATION SOURCE TO 命令中添加 GET_SOURCE_PUBLIC_KEY=1 参数，使从库主动请求主库的公钥加密密码：<br>#STOP REPLICA;  -- 停止复制<br>#RESET REPLICA ALL;  -- 清除旧配置<br>#CHANGE REPLICATION SOURCE TO<br>#    SOURCE_HOST=&#x27;mysql_master&#x27;,<br>#    SOURCE_USER=&#x27;backup&#x27;,<br>#    SOURCE_PASSWORD=&#x27;backup&#x27;,<br>#    SOURCE_PORT=3306,<br>#    SOURCE_LOG_FILE=&#x27;binlog.000003&#x27;,<br>#    SOURCE_LOG_POS=686,<br>#    GET_SOURCE_PUBLIC_KEY=1;  -- 关键参数<br>#START REPLICA;  -- 重启复制<br></code></pre></td></tr></table></figure>
+
+<p>!!! 注意: 主库如果挂掉, 重启主库后需要重新查询二进制日志坐标并配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 主库中执行<br>show binary log status; # 不同版本此命令有区别<br></code></pre></td></tr></table></figure>
+
+
+
+<p>4 开启同步</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mysql">START REPLICA; # 8.0.22 之后<br>START SLAVE; # 8.0.22 之前<br></code></pre></td></tr></table></figure>
+
+<p>5 查看主从同步状态</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SHOW REPLICA STATUS\G;<br># Replica_IO_Running: Connecting 表示连接中<br># Replica_IO_Running: Yes 表示同步成功<br><br>SHOW SLAVE; # 8.0.22 之前<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs mysql"># 重新配置需要重新写参数<br>#在从库的 CHANGE REPLICATION SOURCE TO 命令中添加 GET_SOURCE_PUBLIC_KEY=1 参数，使从库主动请求主库的公钥加密密码：<br>STOP REPLICA;  -- 停止复制<br>RESET REPLICA ALL;  -- 清除旧配置<br>CHANGE REPLICATION SOURCE TO<br>    SOURCE_HOST=&#x27;mysql_master&#x27;,<br>    SOURCE_USER=&#x27;backup2&#x27;,<br>    SOURCE_PASSWORD=&#x27;backup&#x27;,<br>    SOURCE_PORT=3306,<br>    SOURCE_LOG_FILE=&#x27;binlog.000005&#x27;,<br>    SOURCE_LOG_POS=3381,<br>    GET_SOURCE_PUBLIC_KEY=1;  -- 关键参数<br>START REPLICA;  -- 重启复制<br># 查看主从同步状态<br>SHOW REPLICA STATUS\G;<br></code></pre></td></tr></table></figure>
+
+
+
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617214725427.png" srcset="/img/loading.gif" lazyload alt="image-20250617214725427"></p>
+<hr>
+<h2 id="3-分库分表"><a href="#3-分库分表" class="headerlink" title="3. 分库分表"></a>3. 分库分表</h2><h3 id="3-1-介绍"><a href="#3-1-介绍" class="headerlink" title="3.1 介绍"></a>3.1 介绍</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617222533419.png" srcset="/img/loading.gif" lazyload alt="image-20250617222533419"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250617222637966.png" srcset="/img/loading.gif" lazyload alt="image-20250617222637966"></p>
+<ul>
+<li>垂直分库与分表</li>
+</ul>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618084541592.png" srcset="/img/loading.gif" lazyload alt="image-20250618084541592"></p>
+<ul>
+<li>水平分库与水平分表</li>
+</ul>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618085553887.png" srcset="/img/loading.gif" lazyload alt="image-20250618085553887"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618090840407.png" srcset="/img/loading.gif" lazyload alt="image-20250618090840407"></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/375072815">(99+ 封私信) 分库分表：中间件最全方案对比 - 知乎</a></p>
+<h3 id="3-2-Mycat概述"><a href="#3-2-Mycat概述" class="headerlink" title="3.2 Mycat概述"></a>3.2 Mycat概述</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618085859786.png" srcset="/img/loading.gif" lazyload alt="image-20250618085859786"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618085957749.png" srcset="/img/loading.gif" lazyload alt="image-20250618085957749"></p>
+<p><a target="_blank" rel="noopener" href="http://www.mycat.org.cn/">| MYCAT官方网站—中国开源分布式数据库中间件</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/MyCATApache/Mycat-Server">GitHub - MyCATApache&#x2F;Mycat-Server</a></p>
+<h3 id="3-3-Mycat入门"><a href="#3-3-Mycat入门" class="headerlink" title="3.3 Mycat入门"></a>3.3 Mycat入门</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618092313087.png" srcset="/img/loading.gif" lazyload alt="image-20250618092313087"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618094312423.png" srcset="/img/loading.gif" lazyload alt="image-20250618094312423"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618095705855.png" srcset="/img/loading.gif" lazyload alt="image-20250618095705855"> </p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618095836546.png" srcset="/img/loading.gif" lazyload alt="image-20250618095836546"></p>
+<ul>
+<li>jdk配置</li>
+</ul>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-comment"># linux 中修改/etc/profile文件，文末添加</span><br><span class="hljs-attr">JAVA_HOME</span>=/docker_img/jdk1.<span class="hljs-number">8.0</span>_202<br><span class="hljs-attr">PATH</span>=<span class="hljs-variable">$JAVA_HOME</span>/bin:<span class="hljs-variable">$PATH</span><br><br><span class="hljs-comment"># shell中运行</span><br>source /etc/profile<br></code></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile"><span class="hljs-comment"># 制作Dockerfile</span><br><span class="hljs-comment"># FROM mysql:latest  # 指定新镜像所基于的镜像，第一条指令必须为FROM指令，每创建一个镜像就需要一条FROM指令</span><br><span class="hljs-comment"># MAINTAINER FEI	# 说明新镜像的维护人信息</span><br><span class="hljs-comment"># RUN命令	 # 在所基于的镜像上执行命令，并提交到新的镜像中</span><br><span class="hljs-comment"># CMD[“要运行的程序”，“参数1”，“参数2”]	# 指令启动容器时要运行的命令或脚本，Dockerfile只能有一条CMD指令，如果要指定多条则只能最后一条执行</span><br><span class="hljs-comment"># EXPOSE 端口号	# 指定新镜像加载到Docker时要开启端口</span><br><span class="hljs-comment"># ENV 环境变量 变量值	#设置一个环境变量的值，会被后面的RUN使用</span><br><span class="hljs-comment"># ADD 源文件/目录 目标文件/目录	#将源文件复制到目标文件，源文件要与Dockerfile位于相同目录中，或者是一个URL</span><br><span class="hljs-comment"># COPY 源文件/目录 目标文件/目录	#将本地主机上得文件/目录复制到目标地点，源文件/目录要与Dockerfile在相同的目录中</span><br><span class="hljs-comment"># VOLUME[“目录”]	# 在容器中创建一个挂载点</span><br><span class="hljs-comment"># USER 用户名/UID	# 指定运行容器时的用户</span><br><span class="hljs-comment"># WORKDIR路径	# 为后续的RUN、CMD、ENTRYPOINT指定工作目录</span><br><span class="hljs-comment"># ONBUILD命令	# 指定所生成的镜像作为一个基础镜像时所要运行的命令</span><br><span class="hljs-comment"># HEALTHCHECK	# 健康检查</span><br><span class="hljs-keyword">FROM</span> mysql:latest<br><span class="hljs-keyword">ENV</span> MYSQL_ROOT_PASSWORD root<br><span class="hljs-keyword">COPY</span><span class="language-bash"> ./mycat /usr/local/mycat</span><br><span class="hljs-keyword">USER</span> root<br><span class="hljs-keyword">EXPOSE</span> <span class="hljs-number">22</span> <span class="hljs-number">3306</span> <br><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>配置<code>conf\schema.xml</code></li>
+</ul>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618100135182.png" srcset="/img/loading.gif" lazyload alt="image-20250618100135182"></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;?xml version=<span class="hljs-string">&quot;1.0&quot;</span>?&gt;</span><br><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">mycat</span>:schema <span class="hljs-keyword">SYSTEM</span> <span class="hljs-string">&quot;schema.dtd&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">mycat:schema</span> <span class="hljs-attr">xmlns:mycat</span>=<span class="hljs-string">&quot;http://io.mycat/&quot;</span>&gt;</span><br><br>	<span class="hljs-tag">&lt;<span class="hljs-name">schema</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;DB01&quot;</span> <span class="hljs-attr">checkSQLschema</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">sqlMaxLimit</span>=<span class="hljs-string">&quot;100&quot;</span> <span class="hljs-attr">randomDataNode</span>=<span class="hljs-string">&quot;dn1&quot;</span>&gt;</span><br>		<span class="hljs-comment">&lt;!-- auto sharding by id (long) --&gt;</span><br>		<span class="hljs-comment">&lt;!--splitTableNames 启用&lt;table name 属性使用逗号分割配置多个表,即多个表使用这个配置--&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;TB_ORDER&quot;</span> <span class="hljs-attr">dataNode</span>=<span class="hljs-string">&quot;dn1,dn2,dn3&quot;</span> <span class="hljs-attr">rule</span>=<span class="hljs-string">&quot;auto-sharding-long&quot;</span> <span class="hljs-attr">splitTableNames</span> =<span class="hljs-string">&quot;true&quot;</span>/&gt;</span><br>		<span class="hljs-comment">&lt;!-- &lt;table name=&quot;oc_call&quot; primaryKey=&quot;ID&quot; dataNode=&quot;dn1$0-743&quot; rule=&quot;latest-month-calldate&quot;</span><br><span class="hljs-comment">			/&gt; --&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">schema</span>&gt;</span><br>	<span class="hljs-comment">&lt;!-- &lt;dataNode name=&quot;dn1$0-743&quot; dataHost=&quot;localhost1&quot; database=&quot;db$0-743&quot;</span><br><span class="hljs-comment">		/&gt; --&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">dataNode</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;dn1&quot;</span> <span class="hljs-attr">dataHost</span>=<span class="hljs-string">&quot;dhost1&quot;</span> <span class="hljs-attr">database</span>=<span class="hljs-string">&quot;db1&quot;</span> /&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">dataNode</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;dn2&quot;</span> <span class="hljs-attr">dataHost</span>=<span class="hljs-string">&quot;dhost2&quot;</span> <span class="hljs-attr">database</span>=<span class="hljs-string">&quot;db2&quot;</span> /&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">dataNode</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;dn3&quot;</span> <span class="hljs-attr">dataHost</span>=<span class="hljs-string">&quot;dhost3&quot;</span> <span class="hljs-attr">database</span>=<span class="hljs-string">&quot;db3&quot;</span> /&gt;</span><br>	<span class="hljs-comment">&lt;!--&lt;dataNode name=&quot;dn4&quot; dataHost=&quot;sequoiadb1&quot; database=&quot;SAMPLE&quot; /&gt;</span><br><span class="hljs-comment">	 &lt;dataNode name=&quot;jdbc_dn1&quot; dataHost=&quot;jdbchost&quot; database=&quot;db1&quot; /&gt;</span><br><span class="hljs-comment">	&lt;dataNode	name=&quot;jdbc_dn2&quot; dataHost=&quot;jdbchost&quot; database=&quot;db2&quot; /&gt;</span><br><span class="hljs-comment">	&lt;dataNode name=&quot;jdbc_dn3&quot; 	dataHost=&quot;jdbchost&quot; database=&quot;db3&quot; /&gt; --&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">dataHost</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;dhost1&quot;</span> <span class="hljs-attr">maxCon</span>=<span class="hljs-string">&quot;1000&quot;</span> <span class="hljs-attr">minCon</span>=<span class="hljs-string">&quot;10&quot;</span> <span class="hljs-attr">balance</span>=<span class="hljs-string">&quot;0&quot;</span></span><br><span class="hljs-tag">			  <span class="hljs-attr">writeType</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">dbType</span>=<span class="hljs-string">&quot;mysql&quot;</span> <span class="hljs-attr">dbDriver</span>=<span class="hljs-string">&quot;jdbc&quot;</span> <span class="hljs-attr">switchType</span>=<span class="hljs-string">&quot;1&quot;</span>  <span class="hljs-attr">slaveThreshold</span>=<span class="hljs-string">&quot;100&quot;</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">heartbeat</span>&gt;</span>select user()<span class="hljs-tag">&lt;/<span class="hljs-name">heartbeat</span>&gt;</span><br>		<span class="hljs-comment">&lt;!-- can have multi write hosts --&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">writeHost</span> <span class="hljs-attr">host</span>=<span class="hljs-string">&quot;hostM1&quot;</span> <span class="hljs-attr">url</span>=<span class="hljs-string">&quot;jdbc:mysql://192.168.56.2:3316?useSSL=false<span class="hljs-symbol">&amp;amp;</span>serverTimezone=Asia/Shanghai<span class="hljs-symbol">&amp;amp;</span>characterEncoding=utf8&quot;</span> <span class="hljs-attr">user</span>=<span class="hljs-string">&quot;root&quot;</span></span><br><span class="hljs-tag">				   <span class="hljs-attr">password</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span><br>		<span class="hljs-tag">&lt;/<span class="hljs-name">writeHost</span>&gt;</span><br>		<span class="hljs-comment">&lt;!-- &lt;writeHost host=&quot;hostM2&quot; url=&quot;localhost:3316&quot; user=&quot;root&quot; password=&quot;123456&quot;/&gt; --&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">dataHost</span>&gt;</span><br>	<br>	<span class="hljs-tag">&lt;<span class="hljs-name">dataHost</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;dhost2&quot;</span> <span class="hljs-attr">maxCon</span>=<span class="hljs-string">&quot;1000&quot;</span> <span class="hljs-attr">minCon</span>=<span class="hljs-string">&quot;10&quot;</span> <span class="hljs-attr">balance</span>=<span class="hljs-string">&quot;0&quot;</span></span><br><span class="hljs-tag">			  <span class="hljs-attr">writeType</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">dbType</span>=<span class="hljs-string">&quot;mysql&quot;</span> <span class="hljs-attr">dbDriver</span>=<span class="hljs-string">&quot;jdbc&quot;</span> <span class="hljs-attr">switchType</span>=<span class="hljs-string">&quot;1&quot;</span>  <span class="hljs-attr">slaveThreshold</span>=<span class="hljs-string">&quot;100&quot;</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">heartbeat</span>&gt;</span>select user()<span class="hljs-tag">&lt;/<span class="hljs-name">heartbeat</span>&gt;</span><br>		<span class="hljs-comment">&lt;!-- can have multi write hosts --&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">writeHost</span> <span class="hljs-attr">host</span>=<span class="hljs-string">&quot;hostM1&quot;</span> <span class="hljs-attr">url</span>=<span class="hljs-string">&quot;jdbc:mysql://192.168.56.2:3326?useSSL=false<span class="hljs-symbol">&amp;amp;</span>serverTimezone=Asia/Shanghai<span class="hljs-symbol">&amp;amp;</span>characterEncoding=utf8&quot;</span> <span class="hljs-attr">user</span>=<span class="hljs-string">&quot;root&quot;</span></span><br><span class="hljs-tag">				   <span class="hljs-attr">password</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span><br>		<span class="hljs-tag">&lt;/<span class="hljs-name">writeHost</span>&gt;</span><br>		<span class="hljs-comment">&lt;!-- &lt;writeHost host=&quot;hostM2&quot; url=&quot;localhost:3316&quot; user=&quot;root&quot; password=&quot;123456&quot;/&gt; --&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">dataHost</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">dataHost</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;dhost3&quot;</span> <span class="hljs-attr">maxCon</span>=<span class="hljs-string">&quot;1000&quot;</span> <span class="hljs-attr">minCon</span>=<span class="hljs-string">&quot;10&quot;</span> <span class="hljs-attr">balance</span>=<span class="hljs-string">&quot;0&quot;</span></span><br><span class="hljs-tag">			  <span class="hljs-attr">writeType</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">dbType</span>=<span class="hljs-string">&quot;mysql&quot;</span> <span class="hljs-attr">dbDriver</span>=<span class="hljs-string">&quot;jdbc&quot;</span> <span class="hljs-attr">switchType</span>=<span class="hljs-string">&quot;1&quot;</span>  <span class="hljs-attr">slaveThreshold</span>=<span class="hljs-string">&quot;100&quot;</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">heartbeat</span>&gt;</span>select user()<span class="hljs-tag">&lt;/<span class="hljs-name">heartbeat</span>&gt;</span><br>		<span class="hljs-comment">&lt;!-- can have multi write hosts --&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">writeHost</span> <span class="hljs-attr">host</span>=<span class="hljs-string">&quot;hostM1&quot;</span> <span class="hljs-attr">url</span>=<span class="hljs-string">&quot;jdbc:mysql://192.168.56.2:3336?useSSL=false<span class="hljs-symbol">&amp;amp;</span>serverTimezone=Asia/Shanghai<span class="hljs-symbol">&amp;amp;</span>characterEncoding=utf8&quot;</span> <span class="hljs-attr">user</span>=<span class="hljs-string">&quot;root&quot;</span></span><br><span class="hljs-tag">				   <span class="hljs-attr">password</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span><br>		<span class="hljs-tag">&lt;/<span class="hljs-name">writeHost</span>&gt;</span><br>		<span class="hljs-comment">&lt;!-- &lt;writeHost host=&quot;hostM2&quot; url=&quot;localhost:3316&quot; user=&quot;root&quot; password=&quot;123456&quot;/&gt; --&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">dataHost</span>&gt;</span><br>	<span class="hljs-comment">&lt;!--</span><br><span class="hljs-comment">		&lt;dataHost name=&quot;sequoiadb1&quot; maxCon=&quot;1000&quot; minCon=&quot;1&quot; balance=&quot;0&quot; dbType=&quot;sequoiadb&quot; dbDriver=&quot;jdbc&quot;&gt;</span><br><span class="hljs-comment">		&lt;heartbeat&gt; 		&lt;/heartbeat&gt;</span><br><span class="hljs-comment">		 &lt;writeHost host=&quot;hostM1&quot; url=&quot;sequoiadb://1426587161.dbaas.sequoialab.net:11920/SAMPLE&quot; user=&quot;jifeng&quot; 	password=&quot;jifeng&quot;&gt;&lt;/writeHost&gt;</span><br><span class="hljs-comment">		 &lt;/dataHost&gt;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">	  &lt;dataHost name=&quot;oracle1&quot; maxCon=&quot;1000&quot; minCon=&quot;1&quot; balance=&quot;0&quot; writeType=&quot;0&quot; 	dbType=&quot;oracle&quot; dbDriver=&quot;jdbc&quot;&gt; &lt;heartbeat&gt;select 1 from dual&lt;/heartbeat&gt;</span><br><span class="hljs-comment">		&lt;connectionInitSql&gt;alter session set nls_date_format=&#x27;yyyy-mm-dd hh24:mi:ss&#x27;&lt;/connectionInitSql&gt;</span><br><span class="hljs-comment">		&lt;writeHost host=&quot;hostM1&quot; url=&quot;jdbc:oracle:thin:@127.0.0.1:1521:nange&quot; user=&quot;base&quot; 	password=&quot;123456&quot; &gt; &lt;/writeHost&gt; &lt;/dataHost&gt;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">		&lt;dataHost name=&quot;jdbchost&quot; maxCon=&quot;1000&quot; 	minCon=&quot;1&quot; balance=&quot;0&quot; writeType=&quot;0&quot; dbType=&quot;mongodb&quot; dbDriver=&quot;jdbc&quot;&gt;</span><br><span class="hljs-comment">		&lt;heartbeat&gt;select 	user()&lt;/heartbeat&gt;</span><br><span class="hljs-comment">		&lt;writeHost host=&quot;hostM&quot; url=&quot;mongodb://192.168.0.99/test&quot; user=&quot;admin&quot; password=&quot;123456&quot; &gt;&lt;/writeHost&gt; &lt;/dataHost&gt;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">		&lt;dataHost name=&quot;sparksql&quot; maxCon=&quot;1000&quot; minCon=&quot;1&quot; balance=&quot;0&quot; dbType=&quot;spark&quot; dbDriver=&quot;jdbc&quot;&gt;</span><br><span class="hljs-comment">		&lt;heartbeat&gt; &lt;/heartbeat&gt;</span><br><span class="hljs-comment">		 &lt;writeHost host=&quot;hostM1&quot; url=&quot;jdbc:hive2://feng01:10000&quot; user=&quot;jifeng&quot; 	password=&quot;jifeng&quot;&gt;&lt;/writeHost&gt; &lt;/dataHost&gt; --&gt;</span><br><br>	<span class="hljs-comment">&lt;!-- &lt;dataHost name=&quot;jdbchost&quot; maxCon=&quot;1000&quot; minCon=&quot;10&quot; balance=&quot;0&quot; dbType=&quot;mysql&quot;</span><br><span class="hljs-comment">		dbDriver=&quot;jdbc&quot;&gt; &lt;heartbeat&gt;select user()&lt;/heartbeat&gt; &lt;writeHost host=&quot;hostM1&quot;</span><br><span class="hljs-comment">		url=&quot;jdbc:mysql://localhost:3306&quot; user=&quot;root&quot; password=&quot;123456&quot;&gt; &lt;/writeHost&gt;</span><br><span class="hljs-comment">		&lt;/dataHost&gt; --&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">mycat:schema</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>配置<code>conf\server.xml</code><br><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618110446627.png" srcset="/img/loading.gif" lazyload alt="image-20250618110446627"></li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;?xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span>?&gt;</span><br><span class="hljs-comment">&lt;!-- - - Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); </span><br><span class="hljs-comment">	- you may not use this file except in compliance with the License. - You </span><br><span class="hljs-comment">	may obtain a copy of the License at - - http://www.apache.org/licenses/LICENSE-2.0 </span><br><span class="hljs-comment">	- - Unless required by applicable law or agreed to in writing, software - </span><br><span class="hljs-comment">	distributed under the License is distributed on an &quot;AS IS&quot; BASIS, - WITHOUT </span><br><span class="hljs-comment">	WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. - See the </span><br><span class="hljs-comment">	License for the specific language governing permissions and - limitations </span><br><span class="hljs-comment">	under the License. --&gt;</span><br><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">mycat</span>:server <span class="hljs-keyword">SYSTEM</span> <span class="hljs-string">&quot;server.dtd&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">mycat:server</span> <span class="hljs-attr">xmlns:mycat</span>=<span class="hljs-string">&quot;http://io.mycat/&quot;</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">system</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;nonePasswordLogin&quot;</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span> <span class="hljs-comment">&lt;!-- 0为需要密码登陆、1为不需要密码登陆 ,默认为0，设置为1则需要指定默认账户--&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;ignoreUnknownCommand&quot;</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><span class="hljs-comment">&lt;!-- 0遇上没有实现的报文(Unknown command:),就会报错、1为忽略该报文，返回ok报文。</span><br><span class="hljs-comment">	在某些mysql客户端存在客户端已经登录的时候还会继续发送登录报文,mycat会报错,该设置可以绕过这个错误--&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;useHandshakeV10&quot;</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;removeGraveAccent&quot;</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;useSqlStat&quot;</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span>  <span class="hljs-comment">&lt;!-- 1为开启实时统计、0为关闭 --&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;useGlobleTableCheck&quot;</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span>  <span class="hljs-comment">&lt;!-- 1为开启全加班一致性检测、0为关闭 --&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;sqlExecuteTimeout&quot;</span>&gt;</span>300<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span>  <span class="hljs-comment">&lt;!-- SQL 执行超时 单位:秒--&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;sequnceHandlerType&quot;</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br>		<span class="hljs-comment">&lt;!--&lt;property name=&quot;sequnceHandlerPattern&quot;&gt;(?:(\s*next\s+value\s+for\s*MYCATSEQ_(\w+))(,|\)|\s)*)+&lt;/property&gt;</span><br><span class="hljs-comment">		INSERT INTO `travelrecord` (`id`,user_id) VALUES (&#x27;next value for MYCATSEQ_GLOBAL&#x27;,&quot;xxx&quot;);</span><br><span class="hljs-comment">		--&gt;</span><br>		<span class="hljs-comment">&lt;!--必须带有MYCATSEQ_或者 mycatseq_进入序列匹配流程 注意MYCATSEQ_有空格的情况--&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;sequnceHandlerPattern&quot;</span>&gt;</span>(?:(\s*next\s+value\s+for\s*MYCATSEQ_(\w+))(,|\)|\s)*)+<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;subqueryRelationshipCheck&quot;</span>&gt;</span>false<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span> <span class="hljs-comment">&lt;!-- 子查询中存在关联查询的情况下,检查关联字段中是否有分片字段 .默认 false --&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;sequenceHanlderClass&quot;</span>&gt;</span>io.mycat.route.sequence.handler.HttpIncrSequenceHandler<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br>      <span class="hljs-comment">&lt;!--  &lt;property name=&quot;useCompression&quot;&gt;1&lt;/property&gt;--&gt;</span> <span class="hljs-comment">&lt;!--1为开启mysql压缩协议--&gt;</span><br>        <span class="hljs-comment">&lt;!--  &lt;property name=&quot;fakeMySQLVersion&quot;&gt;5.6.20&lt;/property&gt;--&gt;</span> <span class="hljs-comment">&lt;!--设置模拟的MySQL版本号--&gt;</span><br>	<span class="hljs-comment">&lt;!-- &lt;property name=&quot;processorBufferChunk&quot;&gt;40960&lt;/property&gt; --&gt;</span><br>	<span class="hljs-comment">&lt;!-- </span><br><span class="hljs-comment">	&lt;property name=&quot;processors&quot;&gt;1&lt;/property&gt; </span><br><span class="hljs-comment">	&lt;property name=&quot;processorExecutor&quot;&gt;32&lt;/property&gt; </span><br><span class="hljs-comment">	 --&gt;</span><br>        <span class="hljs-comment">&lt;!--默认为type 0: DirectByteBufferPool | type 1 ByteBufferArena | type 2 NettyBufferPool --&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;processorBufferPoolType&quot;</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br>		<span class="hljs-comment">&lt;!--默认是65535 64K 用于sql解析时最大文本长度 --&gt;</span><br>		<span class="hljs-comment">&lt;!--&lt;property name=&quot;maxStringLiteralLength&quot;&gt;65535&lt;/property&gt;--&gt;</span><br>		<span class="hljs-comment">&lt;!--&lt;property name=&quot;sequnceHandlerType&quot;&gt;0&lt;/property&gt;--&gt;</span><br>		<span class="hljs-comment">&lt;!--&lt;property name=&quot;backSocketNoDelay&quot;&gt;1&lt;/property&gt;--&gt;</span><br>		<span class="hljs-comment">&lt;!--&lt;property name=&quot;frontSocketNoDelay&quot;&gt;1&lt;/property&gt;--&gt;</span><br>		<span class="hljs-comment">&lt;!--&lt;property name=&quot;processorExecutor&quot;&gt;16&lt;/property&gt;--&gt;</span><br>		<span class="hljs-comment">&lt;!--</span><br><span class="hljs-comment">			&lt;property name=&quot;serverPort&quot;&gt;8066&lt;/property&gt; &lt;property name=&quot;managerPort&quot;&gt;9066&lt;/property&gt; </span><br><span class="hljs-comment">			&lt;property name=&quot;idleTimeout&quot;&gt;300000&lt;/property&gt; &lt;property name=&quot;bindIp&quot;&gt;0.0.0.0&lt;/property&gt;</span><br><span class="hljs-comment">			&lt;property name=&quot;dataNodeIdleCheckPeriod&quot;&gt;300000&lt;/property&gt; 5 * 60 * 1000L; //连接空闲检查</span><br><span class="hljs-comment">			&lt;property name=&quot;frontWriteQueueSize&quot;&gt;4096&lt;/property&gt; &lt;property name=&quot;processors&quot;&gt;32&lt;/property&gt; --&gt;</span><br>		<span class="hljs-comment">&lt;!--分布式事务开关，0为不过滤分布式事务，1为过滤分布式事务（如果分布式事务内只涉及全局表，则不过滤），2为不过滤分布式事务,但是记录分布式事务日志--&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;handleDistributedTransactions&quot;</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br>		<br>			<span class="hljs-comment">&lt;!--</span><br><span class="hljs-comment">			off heap for merge/order/group/limit      1开启   0关闭</span><br><span class="hljs-comment">		--&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;useOffHeapForMerge&quot;</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br><br>		<span class="hljs-comment">&lt;!--</span><br><span class="hljs-comment">			单位为m</span><br><span class="hljs-comment">		--&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;memoryPageSize&quot;</span>&gt;</span>64k<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br><br>		<span class="hljs-comment">&lt;!--</span><br><span class="hljs-comment">			单位为k</span><br><span class="hljs-comment">		--&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;spillsFileBufferSize&quot;</span>&gt;</span>1k<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br><br>		<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;useStreamOutput&quot;</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br><br>		<span class="hljs-comment">&lt;!--</span><br><span class="hljs-comment">			单位为m</span><br><span class="hljs-comment">		--&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;systemReserveMemorySize&quot;</span>&gt;</span>384m<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br><br><br>		<span class="hljs-comment">&lt;!--是否采用zookeeper协调切换  --&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;useZKSwitch&quot;</span>&gt;</span>false<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br><br>		<span class="hljs-comment">&lt;!-- XA Recovery Log日志路径 --&gt;</span><br>		<span class="hljs-comment">&lt;!--&lt;property name=&quot;XARecoveryLogBaseDir&quot;&gt;./&lt;/property&gt;--&gt;</span><br><br>		<span class="hljs-comment">&lt;!-- XA Recovery Log日志名称 --&gt;</span><br>		<span class="hljs-comment">&lt;!--&lt;property name=&quot;XARecoveryLogBaseName&quot;&gt;tmlog&lt;/property&gt;--&gt;</span><br>		<span class="hljs-comment">&lt;!--如果为 true的话 严格遵守隔离级别,不会在仅仅只有select语句的时候在事务中切换连接--&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;strictTxIsolation&quot;</span>&gt;</span>false<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br>		<br>		<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;useZKSwitch&quot;</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br>		<span class="hljs-comment">&lt;!--如果为0的话,涉及多个DataNode的catlet任务不会跨线程执行--&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;parallExecute&quot;</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">system</span>&gt;</span><br>	<br>	<span class="hljs-comment">&lt;!-- 全局SQL防火墙设置 --&gt;</span><br>	<span class="hljs-comment">&lt;!--白名单可以使用通配符%或着*--&gt;</span><br>	<span class="hljs-comment">&lt;!--例如&lt;host host=&quot;127.0.0.*&quot; user=&quot;root&quot;/&gt;--&gt;</span><br>	<span class="hljs-comment">&lt;!--例如&lt;host host=&quot;127.0.*&quot; user=&quot;root&quot;/&gt;--&gt;</span><br>	<span class="hljs-comment">&lt;!--例如&lt;host host=&quot;127.*&quot; user=&quot;root&quot;/&gt;--&gt;</span><br>	<span class="hljs-comment">&lt;!--例如&lt;host host=&quot;1*7.*&quot; user=&quot;root&quot;/&gt;--&gt;</span><br>	<span class="hljs-comment">&lt;!--这些配置情况下对于127.0.0.1都能以root账户登录--&gt;</span><br>	<span class="hljs-comment">&lt;!--</span><br><span class="hljs-comment">	&lt;firewall&gt;</span><br><span class="hljs-comment">	   &lt;whitehost&gt;</span><br><span class="hljs-comment">	      &lt;host host=&quot;1*7.0.0.*&quot; user=&quot;root&quot;/&gt;</span><br><span class="hljs-comment">	   &lt;/whitehost&gt;</span><br><span class="hljs-comment">       &lt;blacklist check=&quot;false&quot;&gt;</span><br><span class="hljs-comment">       &lt;/blacklist&gt;</span><br><span class="hljs-comment">	&lt;/firewall&gt;</span><br><span class="hljs-comment">	--&gt;</span><br><br>	<span class="hljs-tag">&lt;<span class="hljs-name">user</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;root&quot;</span> <span class="hljs-attr">defaultAccount</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;password&quot;</span>&gt;</span>mycat<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;schemas&quot;</span>&gt;</span>TESTDB<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;defaultSchema&quot;</span>&gt;</span>DB01<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br>		<span class="hljs-comment">&lt;!--No MyCAT Database selected 错误前会尝试使用该schema作为schema，不设置则为null,报错 --&gt;</span><br>		<br>		<span class="hljs-comment">&lt;!-- 表级 DML 权限设置 --&gt;</span><br>		<span class="hljs-comment">&lt;!-- 		</span><br><span class="hljs-comment">		&lt;privileges check=&quot;false&quot;&gt;</span><br><span class="hljs-comment">			&lt;schema name=&quot;TESTDB&quot; dml=&quot;0110&quot; &gt;</span><br><span class="hljs-comment">				&lt;table name=&quot;tb01&quot; dml=&quot;0000&quot;&gt;&lt;/table&gt;</span><br><span class="hljs-comment">				&lt;table name=&quot;tb02&quot; dml=&quot;1111&quot;&gt;&lt;/table&gt;</span><br><span class="hljs-comment">			&lt;/schema&gt;</span><br><span class="hljs-comment">		&lt;/privileges&gt;		</span><br><span class="hljs-comment">		 --&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">user</span>&gt;</span><br><br>	<span class="hljs-tag">&lt;<span class="hljs-name">user</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;user&quot;</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;password&quot;</span>&gt;</span>user<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;schemas&quot;</span>&gt;</span>DB01<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;readOnly&quot;</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;defaultSchema&quot;</span>&gt;</span>TESTDB<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">user</span>&gt;</span><br><br><span class="hljs-tag">&lt;/<span class="hljs-name">mycat:server</span>&gt;</span><br><br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># dhost1 3316</span><br>docker run -p 3316:3306 --network mysql_net --name dhost1 \<br>--restart=always \<br>-v /docker_img/dhost1/log:/var/log/mysql \<br>-v /docker_img/dhost1/data:/var/lib/mysql \<br>-v /docker_img/dhost1/conf:/etc/mysql/conf.d \<br>-e MYSQL_ROOT_PASSWORD=root \<br>-d mysql:latest<br><br><span class="hljs-comment"># dhost2 3326</span><br>docker run -p 3326:3306 --network mysql_net --name dhost2 \<br>--restart=always \<br>-v /docker_img/dhost2/log:/var/log/mysql \<br>-v /docker_img/dhost2/data:/var/lib/mysql \<br>-v /docker_img/dhost2/conf:/etc/mysql/conf.d \<br>-e MYSQL_ROOT_PASSWORD=root \<br>-d mysql:latest<br><br><span class="hljs-comment"># dhost3 3336</span><br>docker run -p 3336:3306 --network mysql_net --name dhost3 \<br>--restart=always \<br>-v /docker_img/dhost3/log:/var/log/mysql \<br>-v /docker_img/dhost3/data:/var/lib/mysql \<br>-v /docker_img/dhost3/conf:/etc/mysql/conf.d \<br>-e MYSQL_ROOT_PASSWORD=root \<br>-d mysql:latest<br><br><br>docker update dhost1 dhost2 dhost3 --restart=always <span class="hljs-comment"># 默认no</span><br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<ul>
+<li>Mycat 启动<img src="/img/2025-06-04-Wed-T-MySQL/image-20250618110948869.png" srcset="/img/loading.gif" lazyload alt="image-20250618110948869"></li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs sh"><br><span class="hljs-comment"># 启动</span><br>bin/mycat start<br><span class="hljs-comment"># 停止</span><br>bin/mycat stop<br><span class="hljs-comment"># 查看日志</span><br><span class="hljs-comment"># cd /local/user/mycat</span><br><span class="hljs-built_in">tail</span> -f logs/wrapper.log<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>登录mycat</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">mysql -h 192.168.56.2 -P 8066 -uroot -p mycat<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>mycat中创建数据表</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs mysql">USE DB01;<br>show tables;<br>create table TB_ORDER(<br>id int not null auto increment primary key,<br>name varchar(255));<br>USE DB01;<br>show tables;<br>create table TB_ORDER2(<br>id int not null auto increment primary key,<br>name varchar(255));<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-4-Mycat配置"><a href="#3-4-Mycat配置" class="headerlink" title="3.4 Mycat配置"></a>3.4 Mycat配置</h3><h4 id="schema-xml"><a href="#schema-xml" class="headerlink" title="schema.xml"></a>schema.xml</h4><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618123025217.png" srcset="/img/loading.gif" lazyload alt="image-20250618123025217"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618123209029.png" srcset="/img/loading.gif" lazyload alt="image-20250618123209029"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618123304098.png" srcset="/img/loading.gif" lazyload alt="image-20250618123304098"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618123434340.png" srcset="/img/loading.gif" lazyload alt="image-20250618123434340"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618123500930.png" srcset="/img/loading.gif" lazyload alt="image-20250618123500930"></p>
+<h4 id="rule-xml"><a href="#rule-xml" class="headerlink" title="rule.xml"></a>rule.xml</h4><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618123925752.png" srcset="/img/loading.gif" lazyload alt="image-20250618123925752"></p>
+<h4 id="server-xml"><a href="#server-xml" class="headerlink" title="server.xml"></a>server.xml</h4><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618124036528.png" srcset="/img/loading.gif" lazyload alt="image-20250618124036528"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618124209196.png" srcset="/img/loading.gif" lazyload alt="image-20250618124209196"></p>
+<ul>
+<li>IUSD 增改查删权限</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sh">0000 <span class="hljs-comment"># 增改查删权限都没有</span><br>1000 <span class="hljs-comment"># 增</span><br>0100 <span class="hljs-comment"># 改</span><br>0010 <span class="hljs-comment"># 查</span><br>0001 <span class="hljs-comment"># 删</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-5-Mycat分片"><a href="#3-5-Mycat分片" class="headerlink" title="3.5 Mycat分片"></a>3.5 Mycat分片</h3><h4 id="垂直拆分-垂直分库"><a href="#垂直拆分-垂直分库" class="headerlink" title="垂直拆分 - 垂直分库"></a>垂直拆分 - 垂直分库</h4><ul>
+<li>垂直分库</li>
+</ul>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618125632755.png" srcset="/img/loading.gif" lazyload alt="image-20250618125632755"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618125719767.png" srcset="/img/loading.gif" lazyload alt="image-20250618125719767"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618125827089.png" srcset="/img/loading.gif" lazyload alt="image-20250618125827089"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618131001564.png" srcset="/img/loading.gif" lazyload alt="image-20250618131001564"></p>
+<p>对于联表查询, 如果这些表在同一个数据库分片中, 可以执行成功, 否则执行失败. 失败需要重新配置全局表</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618140010296.png" srcset="/img/loading.gif" lazyload alt="image-20250618140010296"> </p>
+<h4 id="水平拆分-水平分表"><a href="#水平拆分-水平分表" class="headerlink" title="水平拆分 - 水平分表"></a>水平拆分 - 水平分表</h4><p>同入门案例</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618140227356.png" srcset="/img/loading.gif" lazyload alt="image-20250618140227356"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618140232809.png" srcset="/img/loading.gif" lazyload alt="image-20250618140232809"></p>
+<h4 id="分片规则"><a href="#分片规则" class="headerlink" title="分片规则"></a>分片规则</h4><ul>
+<li>范围分片</li>
+</ul>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618142021880.png" srcset="/img/loading.gif" lazyload alt="image-20250618142021880"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618142007143.png" srcset="/img/loading.gif" lazyload alt="image-20250618142007143"></p>
+<ul>
+<li>取模分片</li>
+</ul>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618142055988.png" srcset="/img/loading.gif" lazyload alt="image-20250618142055988"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618142109513.png" srcset="/img/loading.gif" lazyload alt="image-20250618142109513"></p>
+<ul>
+<li><code>哈希分片</code></li>
+</ul>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618142234205.png" srcset="/img/loading.gif" lazyload alt="image-20250618142234205"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618142308135.png" srcset="/img/loading.gif" lazyload alt="image-20250618142308135"></p>
+<ul>
+<li>枚举分片</li>
+</ul>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618142413868.png" srcset="/img/loading.gif" lazyload alt="image-20250618142413868"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618142424660.png" srcset="/img/loading.gif" lazyload alt="image-20250618142424660"></p>
+<ul>
+<li>应用指定分片算法</li>
+</ul>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618142942540.png" srcset="/img/loading.gif" lazyload alt="image-20250618142942540"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618142952272.png" srcset="/img/loading.gif" lazyload alt="image-20250618142952272"></p>
+<ul>
+<li>固定分片hash算法</li>
+</ul>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618143236233.png" srcset="/img/loading.gif" lazyload alt="image-20250618143236233"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618143338025.png" srcset="/img/loading.gif" lazyload alt="image-20250618143338025"></p>
+<ul>
+<li>字符串hash解析</li>
+</ul>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618144120322.png" srcset="/img/loading.gif" lazyload alt="image-20250618144120322"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618144200916.png" srcset="/img/loading.gif" lazyload alt="image-20250618144200916"></p>
+<ul>
+<li>按日期分片</li>
+</ul>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618144335351.png" srcset="/img/loading.gif" lazyload alt="image-20250618144335351"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618144431483.png" srcset="/img/loading.gif" lazyload alt="image-20250618144431483"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618144519800.png" srcset="/img/loading.gif" lazyload alt="image-20250618144519800"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618144544228.png" srcset="/img/loading.gif" lazyload alt="image-20250618144544228"></p>
+<h3 id="3-6-Mycat管理及监控"><a href="#3-6-Mycat管理及监控" class="headerlink" title="3.6 Mycat管理及监控"></a>3.6 Mycat管理及监控</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618144934623.png" srcset="/img/loading.gif" lazyload alt="image-20250618144934623"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618145041361.png" srcset="/img/loading.gif" lazyload alt="image-20250618145041361"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618145128027.png" srcset="/img/loading.gif" lazyload alt="image-20250618145128027"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618145154082.png" srcset="/img/loading.gif" lazyload alt="image-20250618145154082"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618145240779.png" srcset="/img/loading.gif" lazyload alt="image-20250618145240779"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618145345122.png" srcset="/img/loading.gif" lazyload alt="image-20250618145345122"></p>
+<h2 id="4-读写分离"><a href="#4-读写分离" class="headerlink" title="4. 读写分离"></a>4. 读写分离</h2><h3 id="4-1-介绍"><a href="#4-1-介绍" class="headerlink" title="4.1 介绍"></a>4.1 介绍</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618145552694.png" srcset="/img/loading.gif" lazyload alt="image-20250618145552694"></p>
+<h3 id="4-2-一主一从"><a href="#4-2-一主一从" class="headerlink" title="4.2 一主一从"></a>4.2 一主一从</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618145700599.png" srcset="/img/loading.gif" lazyload alt="image-20250618145700599"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618145850364.png" srcset="/img/loading.gif" lazyload alt="image-20250618145850364"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618145958655.png" srcset="/img/loading.gif" lazyload alt="image-20250618145958655"></p>
+<h3 id="4-3-双主双从"><a href="#4-3-双主双从" class="headerlink" title="4.3 双主双从"></a>4.3 双主双从</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618150324232.png" srcset="/img/loading.gif" lazyload alt="image-20250618150324232"></p>
+<p>案例:</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618150401066.png" srcset="/img/loading.gif" lazyload alt="image-20250618150401066"></p>
+<p>M1,M2</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618150534882.png" srcset="/img/loading.gif" lazyload alt="image-20250618150534882"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618150656111.png" srcset="/img/loading.gif" lazyload alt="image-20250618150656111"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618150833846.png" srcset="/img/loading.gif" lazyload alt="image-20250618150833846"></p>
+<p>S1, S2</p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618150714861.png" srcset="/img/loading.gif" lazyload alt="image-20250618150714861"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618150745735.png" srcset="/img/loading.gif" lazyload alt="image-20250618150745735"></p>
+<h3 id="4-4-双主双从读写分离"><a href="#4-4-双主双从读写分离" class="headerlink" title="4.4 双主双从读写分离"></a>4.4 双主双从读写分离</h3><p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618150948235.png" srcset="/img/loading.gif" lazyload alt="image-20250618150948235"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618151144421.png" srcset="/img/loading.gif" lazyload alt="image-20250618151144421"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618152154070.png" srcset="/img/loading.gif" lazyload alt="image-20250618152154070"></p>
+<p><img src="/img/2025-06-04-Wed-T-MySQL/image-20250618152409595.png" srcset="/img/loading.gif" lazyload alt="image-20250618152409595"></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Tech/" class="category-chain-item">Tech</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Tech/" class="print-no-link">#Tech</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>2025-06-04-Wed-T-MySQL</div>
+      <div>http://example.com/2025/06/04/2025-06-04-Wed-T-MySQL/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>Fei</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>June 4, 2025</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/07/13/2025-07-13-Sun-T-AI-LangChain4j/" title="2025-07-13-Sun-T-AI-LangChain4j">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">2025-07-13-Sun-T-AI-LangChain4j</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/05/29/2025-05-29-Thu-T-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="2025-05-29-Thu-T-设计模式">
+                        <span class="hidden-mobile">2025-05-29-Thu-T-设计模式</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'fei-cn-xie/fei-cn-xie.github.io');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

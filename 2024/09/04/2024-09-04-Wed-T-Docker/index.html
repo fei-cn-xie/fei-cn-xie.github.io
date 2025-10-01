@@ -16,16 +16,16 @@
   <meta name="author" content="Fei">
   <meta name="keywords" content="">
   
-    <meta name="description" content="https:&#x2F;&#x2F;liaoxuefeng.com&#x2F;blogs&#x2F;all&#x2F;2022-05-24-docker">
+    <meta name="description" content="https:&#x2F;&#x2F;liaoxuefeng.com&#x2F;blogs&#x2F;all&#x2F;2022-05-24-docker 尚硅谷Docker实战教程（docker教程天花板）_哔哩哔哩_bilibili 一 基础篇1. Docker简介2. Docker安装3. Docker常用命令4. Docker镜像5. 本地镜像发布到公有云6. 本地镜像发布到私有库7. Docker容器数据卷8. Docker常规安装简介二">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2024-09-04-Wed-T-Docker">
 <meta property="og:url" content="http://example.com/2024/09/04/2024-09-04-Wed-T-Docker/index.html">
 <meta property="og:site_name" content="Fei">
-<meta property="og:description" content="https:&#x2F;&#x2F;liaoxuefeng.com&#x2F;blogs&#x2F;all&#x2F;2022-05-24-docker">
+<meta property="og:description" content="https:&#x2F;&#x2F;liaoxuefeng.com&#x2F;blogs&#x2F;all&#x2F;2022-05-24-docker 尚硅谷Docker实战教程（docker教程天花板）_哔哩哔哩_bilibili 一 基础篇1. Docker简介2. Docker安装3. Docker常用命令4. Docker镜像5. 本地镜像发布到公有云6. 本地镜像发布到私有库7. Docker容器数据卷8. Docker常规安装简介二">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/img/auto_index_img.jpg">
 <meta property="article:published_time" content="2024-09-04T07:46:19.000Z">
-<meta property="article:modified_time" content="2025-04-16T09:00:27.681Z">
+<meta property="article:modified_time" content="2025-09-10T13:27:18.968Z">
 <meta property="article:author" content="Fei">
 <meta property="article:tag" content="Tech">
 <meta name="twitter:card" content="summary_large_image">
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          51 words
+          4.4k words
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          1 mins
+          37 mins
         
       </span>
     
@@ -278,7 +278,139 @@
               <div class="markdown-body">
                 
                 <p><a target="_blank" rel="noopener" href="https://liaoxuefeng.com/blogs/all/2022-05-24-docker">https://liaoxuefeng.com/blogs/all/2022-05-24-docker</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1gr4y1U7CY?spm_id_from=333.788.videopod.episodes&vd_source=3e149ab79eab845696a34aa43635df76">尚硅谷Docker实战教程（docker教程天花板）_哔哩哔哩_bilibili</a></p>
+<h1 id="一-基础篇"><a href="#一-基础篇" class="headerlink" title="一 基础篇"></a>一 基础篇</h1><h2 id="1-Docker简介"><a href="#1-Docker简介" class="headerlink" title="1. Docker简介"></a>1. Docker简介</h2><h2 id="2-Docker安装"><a href="#2-Docker安装" class="headerlink" title="2. Docker安装"></a>2. Docker安装</h2><h2 id="3-Docker常用命令"><a href="#3-Docker常用命令" class="headerlink" title="3. Docker常用命令"></a>3. Docker常用命令</h2><h2 id="4-Docker镜像"><a href="#4-Docker镜像" class="headerlink" title="4. Docker镜像"></a>4. Docker镜像</h2><h2 id="5-本地镜像发布到公有云"><a href="#5-本地镜像发布到公有云" class="headerlink" title="5. 本地镜像发布到公有云"></a>5. 本地镜像发布到公有云</h2><h2 id="6-本地镜像发布到私有库"><a href="#6-本地镜像发布到私有库" class="headerlink" title="6. 本地镜像发布到私有库"></a>6. 本地镜像发布到私有库</h2><h2 id="7-Docker容器数据卷"><a href="#7-Docker容器数据卷" class="headerlink" title="7. Docker容器数据卷"></a>7. Docker容器数据卷</h2><h2 id="8-Docker常规安装简介"><a href="#8-Docker常规安装简介" class="headerlink" title="8. Docker常规安装简介"></a>8. Docker常规安装简介</h2><h1 id="二-高级篇"><a href="#二-高级篇" class="headerlink" title="二 高级篇"></a>二 高级篇</h1><h2 id="1-Docker复杂安装详解"><a href="#1-Docker复杂安装详解" class="headerlink" title="1. Docker复杂安装详解"></a>1. Docker复杂安装详解</h2><h2 id="2-Dockerfile详解"><a href="#2-Dockerfile详解" class="headerlink" title="2. Dockerfile详解"></a>2. Dockerfile详解</h2><p>Dockerfile是用来构建Docker镜像的文本文件，是由一条条构建镜像所需的指令和参数构成的脚本。</p>
+<table>
+<thead>
+<tr>
+<th align="left">Dockerfile 指令</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">FROM</td>
+<td align="left">指定基础镜像，用于后续的指令构建。</td>
+</tr>
+<tr>
+<td align="left">MAINTAINER</td>
+<td align="left">指定Dockerfile的作者&#x2F;维护者。（已弃用，推荐使用LABEL指令）</td>
+</tr>
+<tr>
+<td align="left">LABEL</td>
+<td align="left">添加镜像的元数据，使用键值对的形式。</td>
+</tr>
+<tr>
+<td align="left">RUN</td>
+<td align="left">在构建过程中在镜像中执行命令。</td>
+</tr>
+<tr>
+<td align="left">CMD</td>
+<td align="left">指定容器创建时的默认命令。（可以被覆盖）</td>
+</tr>
+<tr>
+<td align="left">ENTRYPOINT</td>
+<td align="left">设置容器创建时的主要命令。（不可被覆盖）</td>
+</tr>
+<tr>
+<td align="left">EXPOSE</td>
+<td align="left">声明容器运行时监听的特定网络端口。</td>
+</tr>
+<tr>
+<td align="left">ENV</td>
+<td align="left">在容器内部设置环境变量。</td>
+</tr>
+<tr>
+<td align="left">ADD</td>
+<td align="left">将文件、目录或远程URL复制到镜像中。</td>
+</tr>
+<tr>
+<td align="left">COPY</td>
+<td align="left">将文件或目录复制到镜像中。</td>
+</tr>
+<tr>
+<td align="left">VOLUME</td>
+<td align="left">为容器创建挂载点或声明卷。</td>
+</tr>
+<tr>
+<td align="left">WORKDIR</td>
+<td align="left">设置后续指令的工作目录。</td>
+</tr>
+<tr>
+<td align="left">USER</td>
+<td align="left">指定后续指令的用户上下文。</td>
+</tr>
+<tr>
+<td align="left">ARG</td>
+<td align="left">定义在构建过程中传递给构建器的变量，可使用 “docker build” 命令设置。</td>
+</tr>
+<tr>
+<td align="left">ONBUILD</td>
+<td align="left">当该镜像被用作另一个构建过程的基础时，添加触发器。</td>
+</tr>
+<tr>
+<td align="left">STOPSIGNAL</td>
+<td align="left">设置发送给容器以退出的系统调用信号。</td>
+</tr>
+<tr>
+<td align="left">HEALTHCHECK</td>
+<td align="left">定义周期性检查容器健康状态的命令。</td>
+</tr>
+<tr>
+<td align="left">SHELL</td>
+<td align="left">覆盖Docker中默认的shell，用于RUN、CMD和ENTRYPOINT指令。</td>
+</tr>
+</tbody></table>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile"><span class="hljs-comment"># 基础镜像阶段：使用官方 Python 轻量版本作为构建和运行基础</span><br><span class="hljs-keyword">FROM</span> python:<span class="hljs-number">3.11</span>-slim AS builder<br><br><span class="hljs-comment"># 设置元数据标签（帮助管理镜像信息）</span><br><span class="hljs-keyword">LABEL</span><span class="language-bash"> maintainer=<span class="hljs-string">&quot;your-email@example.com&quot;</span> \</span><br><span class="language-bash">      version=<span class="hljs-string">&quot;1.0&quot;</span> \</span><br><span class="language-bash">      description=<span class="hljs-string">&quot;示例 Dockerfile&quot;</span></span><br><br><span class="hljs-comment"># 设置环境变量（构建阶段和运行时均可用）</span><br><span class="hljs-keyword">ENV</span> PYTHONUNBUFFERED=<span class="hljs-number">1</span> \<br>    PYTHONDONTWRITEBYTECODE=<span class="hljs-number">1</span> \<br>    PIP_NO_CACHE_DIR=on<br><br><span class="hljs-comment"># 设置工作目录（后续指令将在此目录下执行）</span><br><span class="hljs-keyword">WORKDIR</span><span class="language-bash"> /app</span><br><br><span class="hljs-comment"># 复制依赖文件清单（优先复制以利用 Docker 缓存层）</span><br><span class="hljs-keyword">COPY</span><span class="language-bash"> requirements.txt .</span><br><br><span class="hljs-comment"># 安装系统依赖和 Python 依赖（合并 RUN 指令减少层数）</span><br><span class="hljs-keyword">RUN</span><span class="language-bash"> apt-get update &amp;&amp; \</span><br><span class="language-bash">    apt-get install -y --no-install-recommends gcc libpq-dev &amp;&amp; \</span><br><span class="language-bash">    pip install --user -r requirements.txt &amp;&amp; \</span><br><span class="language-bash">    apt-get remove -y gcc &amp;&amp; \</span><br><span class="language-bash">    apt-get autoremove -y &amp;&amp; \</span><br><span class="language-bash">    <span class="hljs-built_in">rm</span> -rf /var/lib/apt/lists/*</span><br><br><span class="hljs-comment"># ==================== 生产阶段 ====================</span><br><span class="hljs-keyword">FROM</span> python:<span class="hljs-number">3.11</span>-slim AS production<br><br><span class="hljs-comment"># 创建非特权用户（增强安全性）</span><br><span class="hljs-keyword">RUN</span><span class="language-bash"> groupadd -r appgroup &amp;&amp; useradd -r -g appgroup appuser</span><br><br><span class="hljs-comment"># 设置工作目录</span><br><span class="hljs-keyword">WORKDIR</span><span class="language-bash"> /app</span><br><br><span class="hljs-comment"># 从构建阶段复制已安装的依赖</span><br><span class="hljs-keyword">COPY</span><span class="language-bash"> --from=builder /root/.local /root/.local</span><br><br><span class="hljs-comment"># 设置环境变量（确保依赖可被找到）</span><br><span class="hljs-keyword">ENV</span> PATH=<span class="hljs-string">&quot;/root/.local/bin:$&#123;PATH&#125;&quot;</span><br><br><span class="hljs-comment"># 复制应用代码</span><br><span class="hljs-keyword">COPY</span><span class="language-bash"> . .</span><br><br><span class="hljs-comment"># 设置文件权限（确保应用用户有权限）</span><br><span class="hljs-keyword">RUN</span><span class="language-bash"> <span class="hljs-built_in">chown</span> -R appuser:appuser /app</span><br><br><span class="hljs-comment"># 切换用户（从 root 切换到非特权用户）</span><br><span class="hljs-keyword">USER</span> appuser<br><br><span class="hljs-comment"># 声明容器运行时暴露的端口（仅为文档说明作用）</span><br><span class="hljs-keyword">EXPOSE</span> <span class="hljs-number">8000</span><br><br><span class="hljs-comment"># 健康检查（定期检测应用是否健康）</span><br><span class="hljs-keyword">HEALTHCHECK</span><span class="language-bash"> --interval=30s --<span class="hljs-built_in">timeout</span>=3s --retries=3 \</span><br><span class="language-bash">    CMD curl -f http://localhost:8000/health || <span class="hljs-built_in">exit</span> 1</span><br><br><span class="hljs-comment"># 容器启动命令（使用 exec 格式）</span><br><span class="hljs-keyword">CMD</span><span class="language-bash"> [<span class="hljs-string">&quot;gunicorn&quot;</span>, <span class="hljs-string">&quot;--bind&quot;</span>, <span class="hljs-string">&quot;0.0.0.0:8000&quot;</span>, <span class="hljs-string">&quot;app.wsgi:application&quot;</span>]</span><br><br><span class="hljs-comment"># 可以搭配 CMD 命令使用：一般是变参才会使用 CMD ，这里的 CMD 等于是在给 ENTRYPOINT 传参，以下示例会提到。</span><br><br>示例：<br><span class="hljs-keyword">ENTRYPOINT</span><span class="language-bash"> [<span class="hljs-string">&quot;nginx&quot;</span>, <span class="hljs-string">&quot;-c&quot;</span>] <span class="hljs-comment"># 定参</span></span><br><span class="hljs-keyword">CMD</span><span class="language-bash"> [<span class="hljs-string">&quot;/etc/nginx/nginx.conf&quot;</span>] <span class="hljs-comment"># 变参 </span></span><br></code></pre></td></tr></table></figure>
 
+
+
+<h2 id="3-Docker微服务实战"><a href="#3-Docker微服务实战" class="headerlink" title="3. Docker微服务实战"></a>3. Docker微服务实战</h2><h2 id="4-Docker网络"><a href="#4-Docker网络" class="headerlink" title="4. Docker网络"></a>4. Docker网络</h2><h2 id="5-Docker-Compose容器编排"><a href="#5-Docker-Compose容器编排" class="headerlink" title="5. Docker Compose容器编排"></a>5. Docker Compose容器编排</h2><p>Docker Compose 是一个用于定义和运行多容器 Docker 应用程序的工具。它通过一个单独的 <code>docker-compose.yml</code>文件来配置应用的所有服务，使得容器编排变得简单高效。</p>
+<p>下面我用一个表格汇总 Docker Compose 的核心概念，帮你快速建立整体认知：</p>
+<table>
+<thead>
+<tr>
+<th align="left">核心概念</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>服务 (Service)</strong></td>
+<td align="left">一个应用容器，实际上可以包括若干运行相同镜像的容器实例（如一个 Web 服务、一个数据库服务）。</td>
+</tr>
+<tr>
+<td align="left"><strong>项目 (Project)</strong></td>
+<td align="left">由一组关联的应用容器组成的一个完整业务单元，在 <code>docker-compose.yml</code>文件中定义。</td>
+</tr>
+<tr>
+<td align="left"><strong>网络 (Network)</strong></td>
+<td align="left">允许你定义自定义网络，服务可以通过网络相互通信，确保容器间的隔离与连通性。</td>
+</tr>
+<tr>
+<td align="left"><strong>卷 (Volume)</strong></td>
+<td align="left">提供数据持久化或共享的能力，即使容器被删除，数据也会保留。</td>
+</tr>
+</tbody></table>
+<h3 id="5-1-安装-Docker-Compose"><a href="#5-1-安装-Docker-Compose" class="headerlink" title="5.1 安装 Docker Compose"></a>5.1 安装 Docker Compose</h3><p>Docker Compose 可以通过多种方式安装。如果你使用的是 <strong>Docker Desktop for Mac&#x2F;Windows</strong>，它已经内置了 Docker Compose。在 Linux 系统上，可以通过包管理器安装：</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs less"># <span class="hljs-selector-tag">Ubuntu</span><br><span class="hljs-selector-tag">sudo</span> <span class="hljs-selector-tag">apt-get</span> <span class="hljs-selector-tag">update</span><br><span class="hljs-selector-tag">sudo</span> <span class="hljs-selector-tag">apt-get</span> <span class="hljs-selector-tag">install</span> <span class="hljs-selector-tag">docker-compose-plugin</span> <span class="hljs-selector-tag">-y</span><span class="hljs-selector-attr">[1]</span>(<span class="hljs-variable">@ref</span>)<br><br># <span class="hljs-selector-tag">CentOS</span><br><span class="hljs-selector-tag">sudo</span> <span class="hljs-selector-tag">yum</span> <span class="hljs-selector-tag">install</span> <span class="hljs-selector-tag">docker-compose-plugin</span> <span class="hljs-selector-tag">-y</span><span class="hljs-selector-attr">[1]</span>(<span class="hljs-variable">@ref</span>)<br><br># 验证安装<br><span class="hljs-selector-tag">docker</span> <span class="hljs-selector-tag">compose</span> <span class="hljs-selector-tag">version</span><span class="hljs-selector-attr">[1]</span>(<span class="hljs-variable">@ref</span>)<br></code></pre></td></tr></table></figure>
+
+<h3 id="5-2-实战案例"><a href="#5-2-实战案例" class="headerlink" title="5.2 实战案例"></a>5.2 实战案例</h3><h4 id="1-项目结构"><a href="#1-项目结构" class="headerlink" title="1. 项目结构"></a>1. 项目结构</h4><p>创建一个项目目录，其文件结构如下：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs stylus">flask-redis-counter/<br>├── app<span class="hljs-selector-class">.py</span><br>├── requirements<span class="hljs-selector-class">.txt</span><br>├── Dockerfile<br>└── docker-compose.yml<br></code></pre></td></tr></table></figure>
+
+<h4 id="2-编写应用代码-app-py"><a href="#2-编写应用代码-app-py" class="headerlink" title="2. 编写应用代码 (app.py)"></a>2. 编写应用代码 (<code>app.py</code>)</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-keyword">from</span> flask import Flask<br>import redis<br>import os<br><br>app = Flask(__name__)<br>redis_host = os.environ.<span class="hljs-built_in">get</span>(<span class="hljs-string">&#x27;REDIS_HOST&#x27;</span>, <span class="hljs-string">&#x27;redis&#x27;</span>)<br>redis_port = 6379<br>cache = redis.Redis(<span class="hljs-attribute">host</span>=redis_host, <span class="hljs-attribute">port</span>=redis_port)<br><br>@app.route(<span class="hljs-string">&#x27;/&#x27;</span>)<br>def hello():<br>    count = cache.incr(<span class="hljs-string">&#x27;hits&#x27;</span>)<br>    return f<span class="hljs-string">&#x27;Hello World! This page has been viewed &#123;count&#125; times.\n&#x27;</span><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    app.<span class="hljs-built_in">run</span>(<span class="hljs-attribute">host</span>=<span class="hljs-string">&quot;0.0.0.0&quot;</span>, <span class="hljs-attribute">debug</span>=<span class="hljs-literal">True</span>)<br></code></pre></td></tr></table></figure>
+
+<h4 id="3-创建依赖文件-requirements-txt"><a href="#3-创建依赖文件-requirements-txt" class="headerlink" title="3. 创建依赖文件 (requirements.txt)"></a>3. 创建依赖文件 (<code>requirements.txt</code>)</h4><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">flask</span><br><span class="hljs-attribute">redis</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="4-编写-Dockerfile"><a href="#4-编写-Dockerfile" class="headerlink" title="4. 编写 Dockerfile"></a>4. 编写 Dockerfile</h4><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile"><span class="hljs-keyword">FROM</span> python:<span class="hljs-number">3.9</span>-slim<br><span class="hljs-keyword">WORKDIR</span><span class="language-bash"> /app</span><br><span class="hljs-keyword">COPY</span><span class="language-bash"> requirements.txt .</span><br><span class="hljs-keyword">RUN</span><span class="language-bash"> pip install --no-cache-dir -r requirements.txt</span><br><span class="hljs-keyword">COPY</span><span class="language-bash"> . .</span><br><span class="hljs-keyword">EXPOSE</span> <span class="hljs-number">5000</span><br><span class="hljs-keyword">CMD</span><span class="language-bash"> [<span class="hljs-string">&quot;python&quot;</span>, <span class="hljs-string">&quot;app.py&quot;</span>]</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="5-编写-docker-compose-yml"><a href="#5-编写-docker-compose-yml" class="headerlink" title="5. 编写 docker-compose.yml"></a>5. 编写 <code>docker-compose.yml</code></h4><p>这是最核心的配置文件，它定义了两个服务：<code>web</code>(Flask应用) 和 <code>redis</code>。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">version:</span> <span class="hljs-string">&#x27;3.8&#x27;</span>  <span class="hljs-comment"># 指定 Compose 文件格式版本</span><br><br><span class="hljs-attr">services:</span><br>  <span class="hljs-attr">web:</span><br>    <span class="hljs-attr">build:</span> <span class="hljs-string">.</span>  <span class="hljs-comment"># 使用当前目录下的 Dockerfile 构建镜像</span><br>    <span class="hljs-attr">ports:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;5000:5000&quot;</span>  <span class="hljs-comment"># 将容器的5000端口映射到主机的5000端口</span><br>    <span class="hljs-attr">environment:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">REDIS_HOST=redis</span>  <span class="hljs-comment"># 设置环境变量，告诉Flask应用Redis的主机名</span><br>    <span class="hljs-attr">depends_on:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">redis</span>  <span class="hljs-comment"># 表明此服务依赖于 redis 服务，会在其后启动</span><br>    <span class="hljs-attr">restart:</span> <span class="hljs-string">unless-stopped</span>  <span class="hljs-comment"># 定义容器退出时的重启策略</span><br><br>  <span class="hljs-attr">redis:</span><br>    <span class="hljs-attr">image:</span> <span class="hljs-string">&quot;redis:alpine&quot;</span>  <span class="hljs-comment"># 直接使用官方的 Redis Alpine 镜像</span><br>    <span class="hljs-attr">restart:</span> <span class="hljs-string">unless-stopped</span><br>    <span class="hljs-comment"># 默认情况下，Redis 会在其内部使用6379端口，无需映射到主机即可被 web 服务访问</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="6-构建并运行"><a href="#6-构建并运行" class="headerlink" title="6. 构建并运行"></a>6. 构建并运行</h4><p>在包含 <code>docker-compose.yml</code>文件的目录中，执行以下命令：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-comment"># 启动所有服务（前台运行，便于查看日志）</span><br><span class="hljs-attribute">docker</span> compose up<br><br><span class="hljs-comment"># 或，启动所有服务并进入后台运行</span><br>docker compose up -d<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="6-Docker轻量级可视化工具Portainer"><a href="#6-Docker轻量级可视化工具Portainer" class="headerlink" title="6. Docker轻量级可视化工具Portainer"></a>6. Docker轻量级可视化工具Portainer</h2><h2 id="7-Docker容器监控"><a href="#7-Docker容器监控" class="headerlink" title="7. Docker容器监控"></a>7. Docker容器监控</h2><h1 id=""><a href="#" class="headerlink" title=""></a></h1>
                 
               </div>
             
