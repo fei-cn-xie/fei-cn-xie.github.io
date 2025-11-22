@@ -23,13 +23,13 @@
 <meta property="og:site_name" content="Fei">
 <meta property="og:description" content="1. 核心功能1.1 MQ介绍RocketMQ基本组件 Topic： 消息归类的基本单元 Queue： 消息队列 Producer Consumer ConsumerGroup： NameServer：可以理解为注册中心，负责更新和发现Broker Broker集群：Broker 可以有一个或多个，每一个Brocker就是一个Kafka实例（RacketMQ实例)  1.2 RocketMQ环境搭">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/img/2025-07-21-Mon-T-RocketMQ/image-20250721095247330.png">
+<meta property="og:image" content="http://example.com/img/auto_index_img.jpg">
 <meta property="article:published_time" content="2025-07-21T01:26:59.000Z">
-<meta property="article:modified_time" content="2025-10-01T07:17:33.761Z">
+<meta property="article:modified_time" content="2025-11-22T10:56:53.819Z">
 <meta property="article:author" content="Fei">
 <meta property="article:tag" content="Tech">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/2025-07-21-Mon-T-RocketMQ/image-20250721095247330.png">
+<meta name="twitter:image" content="http://example.com/img/auto_index_img.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -298,7 +298,7 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><br></code></pre></td></tr></table></figure>
 
 <h2 id="1-3-RocketMQ高可用集群搭建"><a href="#1-3-RocketMQ高可用集群搭建" class="headerlink" title="1.3 RocketMQ高可用集群搭建"></a>1.3 RocketMQ高可用集群搭建</h2><h3 id="1-3-1-集群各个角色介绍"><a href="#1-3-1-集群各个角色介绍" class="headerlink" title="1.3.1 集群各个角色介绍"></a>1.3.1 集群各个角色介绍</h3><h3 id="1-3-2-双主双从搭建"><a href="#1-3-2-双主双从搭建" class="headerlink" title="1.3.2  双主双从搭建"></a>1.3.2  双主双从搭建</h3><h2 id="1-4-消息发送样例"><a href="#1-4-消息发送样例" class="headerlink" title="1.4 消息发送样例"></a>1.4 消息发送样例</h2><h3 id="1-4-1-同步消息"><a href="#1-4-1-同步消息" class="headerlink" title="1.4.1 同步消息"></a>1.4.1 同步消息</h3><p>同步消息，发送过后会有一个返回值，也就是mq服务器接收到消息后返回的一个确认，这种方式非常安全，但是性能上并没有这么高，而且在mq集群中，也是要等到所有的从机都复制了消息以后才会返回，所以针对重要的消息可以选择这种方式</p>
-<p><img src="/img/2025-07-21-Mon-T-RocketMQ/image-20250721095247330.png" srcset="/img/loading.gif" lazyload alt="image-20250721095247330"></p>
+<p><img src="https://fei-blog.oss-cn-beijing.aliyuncs.com/image-20250721095247330.png" srcset="/img/loading.gif" lazyload></p>
 <h3 id="1-4-2-异步消息"><a href="#1-4-2-异步消息" class="headerlink" title="1.4.2 异步消息"></a>1.4.2 异步消息</h3><p>异步消息通常用在对响应时间敏感的业务场景，即发送端不能容忍长时间地等待Broker的响应。发送完以后会有一个异步消息通知</p>
 <h3 id="1-4-3-单向消息"><a href="#1-4-3-单向消息" class="headerlink" title="1.4.3 单向消息"></a>1.4.3 单向消息</h3><p>这种方式主要用在不关心发送结果的场景，这种方式吞吐量很大，但是存在消息丢失的风险，例如日志信息的发送</p>
 <h3 id="1-4-4-延迟消息"><a href="#1-4-4-延迟消息" class="headerlink" title="1.4.4 延迟消息"></a>1.4.4 延迟消息</h3><p>消息放入mq后，过一段时间，才会被监听到，然后消费</p>
