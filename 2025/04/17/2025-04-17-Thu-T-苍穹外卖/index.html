@@ -1,53 +1,334 @@
-<!DOCTYPE html><html class="appearance-auto" lang="en"><head><meta charset="UTF-8"><title>2025-04-17-Thu-T-苍穹外卖</title><meta name="description" content="非淡泊无以明志，非宁静无以致远"><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google Analytics --><!-- End Google Analytics -->
-<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.ico"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><link rel="stylesheet" href="/style/common/jquery.fancybox.min.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="[TOC]
-1. 项目概述和环境搭建1.1 软件开发整体介绍1.1.1 软件开发流程
-需求分析
-需求规格说明书(PRD)
-产品原型(静态网页)
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
 
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-设计
-UI设计
-数据库设计
-接口设计
-
-
-编码
-编写代码
-单元测试
-
-
-测试
-测试用例
-测试报告
-
-
-上线运维
-软件环境安装、配置
+<link rel="stylesheet" href="/css/main.css">
 
 
 
-1.1.2 角色分工
-1.1.3 软件环境
-开发环境： 开发人员在开发阶段使用的环境，一般对外部用户无法访问
-测试环境： 专门给测试人员使用的环境，用于测试项目，一般对外部用户无法访问
-生产环境： 即线上环境，正式提供对外服务的环境
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-1.2 苍穹外卖项目介绍1.2.1 项目介绍
-定位： 专门为餐饮企业定制的一款软件产品
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.26.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
 
-结构
+    <meta name="description" content="[TOC] 1. 项目概述和环境搭建1.1 软件开发整体介绍1.1.1 软件开发流程 需求分析 需求规格说明书(PRD) 产品原型(静态网页)   设计 UI设计 数据库设计 接口设计   编码 编写代码 单元测试   测试 测试用例 测试报告   上线运维 软件环境安装、配置    1.1.2 角色分工 1.1.3 软件环境 开发环境： 开发人员在开发阶段使用的环境，一般对外部用户无法访问 测试">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="2025-04-17-Thu-T-苍穹外卖">
+<meta property="og:url" content="http://example.com/2025/04/17/2025-04-17-Thu-T-%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96/index.html">
+<meta property="og:site_name" content="Fei">
+<meta property="og:description" content="[TOC] 1. 项目概述和环境搭建1.1 软件开发整体介绍1.1.1 软件开发流程 需求分析 需求规格说明书(PRD) 产品原型(静态网页)   设计 UI设计 数据库设计 接口设计   编码 编写代码 单元测试   测试 测试用例 测试报告   上线运维 软件环境安装、配置    1.1.2 角色分工 1.1.3 软件环境 开发环境： 开发人员在开发阶段使用的环境，一般对外部用户无法访问 测试">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250417062925973.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250417063857805.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250417064731844.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250417065055428.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250417065248458.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250417074100762.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250417082117178.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250417085302546.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250417093602321.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250417093732775.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250417095004869.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250417095115199.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250417095305780.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250417100939109.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250417101955131.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250418075622524.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250418080012255.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250418080919687.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250418081440301.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250418081507389.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250418111740434.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250418114933600.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250418115015141.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250418115254130.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250418115420833.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250418155005119.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250418155028177.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250418165750223.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250418170607301.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250418170632370.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250418180746922.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250419141454394.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250419142007682.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250419171135384.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250419171226915.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250419171322011.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250419171431018.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250419171549141.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250419171633021.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250419172142910.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250419202023157.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250419205514632.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250419205950261.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250419210142058.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250420141912258.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250420213735682.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250421092613843.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250421161905184.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250421162310397.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250421180532839.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250422154306066.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250422154406390.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250422154600222.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250509131359790.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250509132042548.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250512123445510.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250512123726670.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250512124004383.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250512162912945.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250513112956091.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250513113004545.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250513115246188.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250516165208220.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250516165331905.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250516165605019.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250521104426240.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250521125926492.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250521130149271.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250522124936094.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250522140857577.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250522150444531.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250522151034220.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250522151248058.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250522151859746.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250522161907003.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250522192905099.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250523093742092.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250523100844381.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250523113403565.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250523113423575.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250523113449148.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250523134733071.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250523135655921.png">
+<meta property="article:published_time" content="2025-04-16T22:20:49.000Z">
+<meta property="article:modified_time" content="2025-11-23T00:59:51.282Z">
+<meta property="article:author" content="Fei">
+<meta property="article:tag" content="Tech">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250417062925973.png">
 
-管理端：商家使用
-用户端：点餐用户使用
+
+<link rel="canonical" href="http://example.com/2025/04/17/2025-04-17-Thu-T-%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96/">
 
 
-功能架构： 体现项目中业务功能模块
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2025/04/17/2025-04-17-Thu-T-%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96/","path":"2025/04/17/2025-04-17-Thu-T-苍穹外卖/","title":"2025-04-17-Thu-T-苍穹外卖"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>2025-04-17-Thu-T-苍穹外卖 | Fei</title>
+  
 
 
 
-1.2.2.."><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Fei" type="application/atom+xml">
-</head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">Fei's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">2025-04-17-Thu-T-苍穹外卖</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%BF%B0%E5%92%8C%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-text">1. 项目概述和环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%95%B4%E4%BD%93%E4%BB%8B%E7%BB%8D"><span class="toc-text">1.1 软件开发整体介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-1-%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B"><span class="toc-text">1.1.1 软件开发流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-2-%E8%A7%92%E8%89%B2%E5%88%86%E5%B7%A5"><span class="toc-text">1.1.2 角色分工</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-3-%E8%BD%AF%E4%BB%B6%E7%8E%AF%E5%A2%83"><span class="toc-text">1.1.3 软件环境</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D"><span class="toc-text">1.2 苍穹外卖项目介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-1-%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D"><span class="toc-text">1.2.1 项目介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-2-%E4%BA%A7%E5%93%81%E5%8E%9F%E5%9E%8B"><span class="toc-text">1.2.2 产品原型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-3-%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B"><span class="toc-text">1.2.3 技术选型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-text">1.3 开发环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-1-%E5%89%8D%E7%AB%AF%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-text">1.3.1 前端环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-2-%E5%90%8E%E7%AB%AF%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-text">1.3.2 后端环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-3-%E5%AE%8C%E5%96%84%E7%99%BB%E5%BD%95%E5%8A%9F%E8%83%BD"><span class="toc-text">1.3.3 完善登录功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-%E5%AF%BC%E5%85%A5%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3"><span class="toc-text">1.4 导入接口文档</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-1-%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B"><span class="toc-text">1.4.1 前后端分离开发流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-2-%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="toc-text">1.4.2 操作步骤</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-Swagger"><span class="toc-text">1.5 Swagger</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-1-%E4%BB%8B%E7%BB%8D"><span class="toc-text">1.5.1 介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-2-%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-text">1.5.2 使用方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-3-Swagger%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3"><span class="toc-text">1.5.3 Swagger常用注解</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E5%91%98%E5%B7%A5%E7%AE%A1%E7%90%86%E5%92%8C%E5%88%86%E7%B1%BB%E7%AE%A1%E7%90%86"><span class="toc-text">2. 员工管理和分类管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E6%96%B0%E5%A2%9E%E5%91%98%E5%B7%A5"><span class="toc-text">2.1 新增员工</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="toc-text">2.1.1 需求分析和设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="toc-text">2.1.2 代码开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-3-%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95"><span class="toc-text">2.1.3 功能测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-4-%E4%BB%A3%E7%A0%81%E5%AE%8C%E5%96%84"><span class="toc-text">2.1.4 代码完善</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E5%91%98%E5%B7%A5%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2"><span class="toc-text">2.2 员工分页查询</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="toc-text">2.2.1 需求分析和设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="toc-text">2.2.2 代码开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-3-%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95"><span class="toc-text">2.2.3 功能测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-4-%E4%BB%A3%E7%A0%81%E5%AE%8C%E5%96%84"><span class="toc-text">2.2.4 代码完善</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-%E5%90%AF%E7%94%A8%E7%A6%81%E7%94%A8%E5%91%98%E5%B7%A5%E8%B4%A6%E5%8F%B7"><span class="toc-text">2.3 启用禁用员工账号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="toc-text">2.3.1 需求分析和设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-2-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="toc-text">2.3.2 代码开发</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-%E7%BC%96%E8%BE%91%E5%91%98%E5%B7%A5"><span class="toc-text">2.4 编辑员工</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="toc-text">2.4.1 需求分析和设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-2-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="toc-text">2.4.2 代码开发</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-%E5%AF%BC%E5%85%A5%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9D%97%E5%8A%9F%E8%83%BD%E4%BB%A3%E7%A0%81"><span class="toc-text">2.5 导入分类模块功能代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="toc-text">2.5.1 需求分析和设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-2-%E4%BB%A3%E7%A0%81%E5%AF%BC%E5%85%A5"><span class="toc-text">2.5.2 代码导入</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E8%8F%9C%E5%93%81%E7%AE%A1%E7%90%86"><span class="toc-text">3. 菜品管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E5%85%AC%E5%85%B1%E5%AD%97%E6%AE%B5%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85"><span class="toc-text">3.1 公共字段自动填充</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-1-%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90"><span class="toc-text">3.1.1 问题分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-2-%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF"><span class="toc-text">3.1.2 实现思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-3-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="toc-text">3.1.3 代码开发</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E6%96%B0%E5%A2%9E%E8%8F%9C%E5%93%81"><span class="toc-text">3.2 新增菜品</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="toc-text">3.2.1 需求分析和设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-2-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="toc-text">3.2.2 代码开发</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-%E8%8F%9C%E5%93%81%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2"><span class="toc-text">3.3 菜品分页查询</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="toc-text">3.3.1 需求分析和设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-2-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="toc-text">3.3.2 代码开发</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-%E5%88%A0%E9%99%A4%E8%8F%9C%E5%93%81"><span class="toc-text">3.4 删除菜品</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="toc-text">3.4.1 需求分析和设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-2-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="toc-text">3.4.2 代码开发</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-%E4%BF%AE%E6%94%B9%E8%8F%9C%E5%93%81"><span class="toc-text">3.5 修改菜品</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E5%BA%97%E9%93%BA%E8%90%A5%E4%B8%9A%E7%8A%B6%E6%80%81%E8%AE%BE%E7%BD%AE"><span class="toc-text">4. 店铺营业状态设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Redis%E5%85%A5%E9%97%A8"><span class="toc-text">4.1 Redis入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-1-Redis%E7%AE%80%E4%BB%8B"><span class="toc-text">4.1.1 Redis简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-2-Redis%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85"><span class="toc-text">4.1.2 Redis下载与安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-3-Redis%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8%E4%B8%8E%E5%81%9C%E6%AD%A2"><span class="toc-text">4.1.3 Redis服务启动与停止</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-Redis%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">4.2 Redis数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-Redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">4.3 Redis常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-%E5%9C%A8Java%E4%B8%AD%E6%93%8D%E4%BD%9CRedis"><span class="toc-text">4.4 在Java中操作Redis</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-1-Redis%E7%9A%84java%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-text">4.4.1 Redis的java客户端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-2-Spring-Data-Redis%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-text">4.4.2 Spring Data Redis使用方式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-%E5%BA%97%E9%93%BA%E8%90%A5%E4%B8%9A%E7%8A%B6%E6%80%81%E8%AE%BE%E7%BD%AE"><span class="toc-text">4.5 店铺营业状态设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="toc-text">4.5.1 需求分析和设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-2-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="toc-text">4.5.2 代码开发</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-%E5%BE%AE%E4%BF%A1%E7%99%BB%E9%99%86%E3%80%81%E5%95%86%E5%93%81%E6%B5%8F%E8%A7%88"><span class="toc-text">5. 微信登陆、商品浏览</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-HttpClient"><span class="toc-text">5.1 HttpClient</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-1-%E4%BB%8B%E7%BB%8D"><span class="toc-text">5.1.1 介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-2-%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B"><span class="toc-text">5.1.2 入门案例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91"><span class="toc-text">5.2 微信小程序开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-1-%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">5.2.1 准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-2-%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B"><span class="toc-text">5.2.2 入门案例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-%E5%BE%AE%E4%BF%A1%E7%99%BB%E9%99%86"><span class="toc-text">5.3 微信登陆</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="toc-text">5.3.1 需求分析和设计</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-%E5%AF%BC%E5%85%A5%E5%95%86%E5%93%81%E6%B5%8F%E8%A7%88%E5%8A%9F%E8%83%BD%E4%BB%A3%E7%A0%81"><span class="toc-text">5.4 导入商品浏览功能代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="toc-text">5.4.1 需求分析和设计</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-%E7%BC%93%E5%AD%98%E8%8F%9C%E5%93%81%E3%80%81%E8%B4%AD%E7%89%A9%E8%BD%A6"><span class="toc-text">6. 缓存菜品、购物车</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-%E7%BC%93%E5%AD%98%E8%8F%9C%E5%93%81"><span class="toc-text">6.1 缓存菜品</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-%E7%BC%93%E5%AD%98%E5%A5%97%E9%A4%90"><span class="toc-text">6.2 缓存套餐</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-1-Spring-Cache"><span class="toc-text">6.2.1 Spring Cache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-2-%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF"><span class="toc-text">6.2.2 实现思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-3-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="toc-text">6.2.3 代码开发</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-%E6%B7%BB%E5%8A%A0%E8%B4%AD%E7%89%A9%E8%BD%A6"><span class="toc-text">6.3 添加购物车</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="toc-text">6.3.1 需求分析和设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-2-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="toc-text">6.3.2 代码开发</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-%E6%B8%85%E7%A9%BA%E8%B4%AD%E7%89%A9%E8%BD%A6"><span class="toc-text">6.4 清空购物车</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-%E7%94%A8%E6%88%B7%E4%B8%8B%E5%8D%95%E3%80%81%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98"><span class="toc-text">7. 用户下单、订单支付</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-%E7%94%A8%E6%88%B7%E4%B8%8B%E5%8D%95"><span class="toc-text">7.1 用户下单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98"><span class="toc-text">7.2 订单支付</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-1-%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E4%BB%8B%E7%BB%8D"><span class="toc-text">7.2.1 微信支付介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-2-%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">7.2.2 微信支付准备工作</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-%E8%AE%A2%E5%8D%95%E7%8A%B6%E6%80%81%E5%AE%9A%E6%97%B6%E5%A4%84%E7%90%86%E3%80%81%E6%9D%A5%E5%8D%95%E6%8F%90%E9%86%92%E5%92%8C%E5%AE%A2%E6%88%B7%E5%82%AC%E5%8D%95"><span class="toc-text">8. 订单状态定时处理、来单提醒和客户催单</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1-Spring-Task"><span class="toc-text">8.1 Spring Task</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-1-%E4%BB%8B%E7%BB%8D"><span class="toc-text">8.1.1 介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-2-cron%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">8.1.2 cron表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-3-%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B"><span class="toc-text">8.1.3 入门案例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2-%E8%AE%A2%E5%8D%95%E7%8A%B6%E6%80%81%E5%AE%9A%E6%97%B6%E5%A4%84%E7%90%86"><span class="toc-text">8.2 订单状态定时处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-3-WebSocket"><span class="toc-text">8.3 WebSocket</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-4-%E6%9D%A5%E5%8D%95%E6%8F%90%E9%86%92"><span class="toc-text">8.4 来单提醒</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-5-%E5%AE%A2%E6%88%B7%E5%82%AC%E5%8D%95"><span class="toc-text">8.5 客户催单</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1-%E5%9B%BE%E5%BD%A2%E6%8A%A5%E8%A1%A8"><span class="toc-text">9.数据统计-图形报表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#9-1-Apache-Echarts"><span class="toc-text">9.1 Apache Echarts</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-1-%E4%BB%8B%E7%BB%8D"><span class="toc-text">9.1.1 介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-2-%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B"><span class="toc-text">9.1.2 入门案例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-2-%E8%90%A5%E4%B8%9A%E9%A2%9D%E7%BB%9F%E8%AE%A1"><span class="toc-text">9.2 营业额统计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="toc-text">9.2.1 需求分析和设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-2-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="toc-text">9.2.2 代码开发</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-3-%E7%94%A8%E6%88%B7%E7%BB%9F%E8%AE%A1"><span class="toc-text">9.3 用户统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-4-%E8%AE%A2%E5%8D%95%E7%BB%9F%E8%AE%A1"><span class="toc-text">9.4 订单统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-5-%E9%94%80%E9%87%8F%E6%8E%92%E5%90%8DTOP10"><span class="toc-text">9.5 销量排名TOP10</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10-%E5%AF%BC%E5%87%BAExcel%E6%8A%A5%E8%A1%A8"><span class="toc-text">10 导出Excel报表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#10-1-Apache-POI"><span class="toc-text">10.1 Apache POI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-2-%E5%AF%BC%E5%85%A5%E8%BF%90%E8%90%A5%E6%95%B0%E6%8D%AE"><span class="toc-text">10.2 导入运营数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#10-2-1-%E5%88%86%E6%9E%90%E8%AE%BE%E8%AE%A1"><span class="toc-text">10.2.1 分析设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-2-2-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="toc-text">10.2.2 代码开发</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#11-%E5%89%8D%E7%AB%AF%E9%83%A8%E5%88%86"><span class="toc-text">11. 前端部分</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#11-1-vue%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE"><span class="toc-text">11.1 vue基础回顾</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-1-1-%E5%9F%BA%E4%BA%8E%E8%84%9A%E6%89%8B%E6%9E%B6%E5%88%9B%E5%BB%BA%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B"><span class="toc-text">11.1.1 基于脚手架创建前端工程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-1-2-vue%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-text">11.1.2 vue基本使用方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#vue%E7%BB%84%E4%BB%B6"><span class="toc-text">vue组件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E6%8F%92%E5%80%BC"><span class="toc-text">文本插值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E7%BB%91%E5%AE%9A"><span class="toc-text">属性绑定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A"><span class="toc-text">事件绑定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A"><span class="toc-text">双向绑定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93"><span class="toc-text">条件渲染</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#axios-%EF%BC%88%E5%BC%82%E6%AD%A5%EF%BC%89"><span class="toc-text">axios （异步）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-2-Vue-Router"><span class="toc-text">11.2 Vue-Router</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-2-1-Vue-Router-%E4%BB%8B%E7%BB%8D"><span class="toc-text">11.2.1 Vue-Router 介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-2-2-%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE"><span class="toc-text">11.2.2 路由配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-2-3-%E5%B5%8C%E5%A5%97%E8%B7%AF%E7%94%B1"><span class="toc-text">11.2.3 嵌套路由</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-3-%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86vuex"><span class="toc-text">11.3 状态管理vuex</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-3-1-vuex%E4%BB%8B%E7%BB%8D"><span class="toc-text">11.3.1 vuex介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="toc-text">核心概念</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-3-2-%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-text">11.3.2 使用方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E5%85%B1%E4%BA%AB%E6%95%B0%E6%8D%AE-store-index-js"><span class="toc-text">定义共享数据.&#x2F;store&#x2F;index.js</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8mutations%E4%B8%AD%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%EF%BC%8C%E4%BF%AE%E6%94%B9%E5%85%B1%E4%BA%AB%E6%95%B0%E6%8D%AE"><span class="toc-text">在mutations中定义函数，修改共享数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8actions%E4%B8%AD%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%EF%BC%8C%E7%94%A8%E4%BA%8E%E8%B0%83%E7%94%A8mutation"><span class="toc-text">在actions中定义函数，用于调用mutation</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-4-TypeScript"><span class="toc-text">11.4 TypeScript</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-4-1-TypeScript%E4%BB%8B%E7%BB%8D"><span class="toc-text">11.4.1 TypeScript介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-4-2-TypeScript%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%9E%8B"><span class="toc-text">11.4.2 TypeScript常用类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E6%A0%87%E6%B3%A8%E7%9A%84%E4%BD%8D%E7%BD%AE"><span class="toc-text">类型标注的位置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E3%80%81%E6%95%B0%E5%80%BC%E3%80%81boolean"><span class="toc-text">字符串、数值、boolean</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E9%9D%A2%E9%87%8F%E7%B1%BB%E5%9E%8B"><span class="toc-text">字面量类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#interface%E7%B1%BB%E5%9E%8B%EF%BC%88%E7%B1%BB%E4%BC%BC%E4%BA%8E%E7%BB%93%E6%9E%84%E4%BD%93"><span class="toc-text">interface类型（类似于结构体)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#class%E7%B1%BB"><span class="toc-text">class类</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-5-%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE"><span class="toc-text">11.5 前端项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-5-1-%E5%89%8D%E7%AB%AF%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-text">11.5.1 前端环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B"><span class="toc-text">技术选型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%86%9F%E6%82%89%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84"><span class="toc-text">熟悉前端代码结构</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-5-2-%E5%91%98%E5%B7%A5%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2"><span class="toc-text">11.5.2 员工分页查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-5-3-%E5%90%AF%E7%94%A8-%E7%A6%81%E7%94%A8%E5%91%98%E5%B7%A5%E8%B4%A6%E5%8F%B7"><span class="toc-text">11.5.3 启用&#x2F;禁用员工账号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-5-4-%E6%96%B0%E5%A2%9E%E5%91%98%E5%B7%A5"><span class="toc-text">11.5.4 新增员工</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-5-5-%E4%BF%AE%E6%94%B9%E5%91%98%E5%B7%A5"><span class="toc-text">11.5.5 修改员工</span></a></li></ol></li></ol></li></ol></div><div class="column is-9"><header class="my-4"><a href="/tags/Tech"><i class="tag post-item-tag">Tech</i></a></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">2025-04-17-Thu-T-苍穹外卖</h1><time class="has-text-grey" datetime="2025-04-16T22:20:49.000Z">2025-04-17</time><article class="mt-2 post-content"><p>[TOC]</p>
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Fei" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Fei</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Wellcome to Fei's blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%BF%B0%E5%92%8C%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="nav-number">1.</span> <span class="nav-text">1. 项目概述和环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%95%B4%E4%BD%93%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 软件开发整体介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1.1 软件开发流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-%E8%A7%92%E8%89%B2%E5%88%86%E5%B7%A5"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.1.2 角色分工</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-3-%E8%BD%AF%E4%BB%B6%E7%8E%AF%E5%A2%83"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.1.3 软件环境</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 苍穹外卖项目介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-1-%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.2.1 项目介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-2-%E4%BA%A7%E5%93%81%E5%8E%9F%E5%9E%8B"><span class="nav-number">1.2.2.</span> <span class="nav-text">1.2.2 产品原型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-3-%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B"><span class="nav-number">1.2.3.</span> <span class="nav-text">1.2.3 技术选型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 开发环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-1-%E5%89%8D%E7%AB%AF%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="nav-number">1.3.1.</span> <span class="nav-text">1.3.1 前端环境搭建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-2-%E5%90%8E%E7%AB%AF%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="nav-number">1.3.2.</span> <span class="nav-text">1.3.2 后端环境搭建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-3-%E5%AE%8C%E5%96%84%E7%99%BB%E5%BD%95%E5%8A%9F%E8%83%BD"><span class="nav-number">1.3.3.</span> <span class="nav-text">1.3.3 完善登录功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E5%AF%BC%E5%85%A5%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 导入接口文档</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-1-%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.4.1 前后端分离开发流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-2-%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.4.2.</span> <span class="nav-text">1.4.2 操作步骤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-Swagger"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 Swagger</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-1-%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.5.1.</span> <span class="nav-text">1.5.1 介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-2-%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="nav-number">1.5.2.</span> <span class="nav-text">1.5.2 使用方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-3-Swagger%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3"><span class="nav-number">1.5.3.</span> <span class="nav-text">1.5.3 Swagger常用注解</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E5%91%98%E5%B7%A5%E7%AE%A1%E7%90%86%E5%92%8C%E5%88%86%E7%B1%BB%E7%AE%A1%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">2. 员工管理和分类管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E6%96%B0%E5%A2%9E%E5%91%98%E5%B7%A5"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 新增员工</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1.1 需求分析和设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.1.2 代码开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95"><span class="nav-number">2.1.3.</span> <span class="nav-text">2.1.3 功能测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-4-%E4%BB%A3%E7%A0%81%E5%AE%8C%E5%96%84"><span class="nav-number">2.1.4.</span> <span class="nav-text">2.1.4 代码完善</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E5%91%98%E5%B7%A5%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 员工分页查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="nav-number">2.2.1.</span> <span class="nav-text">2.2.1 需求分析和设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="nav-number">2.2.2.</span> <span class="nav-text">2.2.2 代码开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-3-%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95"><span class="nav-number">2.2.3.</span> <span class="nav-text">2.2.3 功能测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-4-%E4%BB%A3%E7%A0%81%E5%AE%8C%E5%96%84"><span class="nav-number">2.2.4.</span> <span class="nav-text">2.2.4 代码完善</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E5%90%AF%E7%94%A8%E7%A6%81%E7%94%A8%E5%91%98%E5%B7%A5%E8%B4%A6%E5%8F%B7"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 启用禁用员工账号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="nav-number">2.4.</span> <span class="nav-text">2.3.1 需求分析和设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-2-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="nav-number">2.4.1.</span> <span class="nav-text">2.3.2 代码开发</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-%E7%BC%96%E8%BE%91%E5%91%98%E5%B7%A5"><span class="nav-number">2.5.</span> <span class="nav-text">2.4 编辑员工</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="nav-number">2.5.1.</span> <span class="nav-text">2.4.1 需求分析和设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-2-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="nav-number">2.5.2.</span> <span class="nav-text">2.4.2 代码开发</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-%E5%AF%BC%E5%85%A5%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9D%97%E5%8A%9F%E8%83%BD%E4%BB%A3%E7%A0%81"><span class="nav-number">2.6.</span> <span class="nav-text">2.5 导入分类模块功能代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="nav-number">2.6.1.</span> <span class="nav-text">2.5.1 需求分析和设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-2-%E4%BB%A3%E7%A0%81%E5%AF%BC%E5%85%A5"><span class="nav-number">2.6.2.</span> <span class="nav-text">2.5.2 代码导入</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E8%8F%9C%E5%93%81%E7%AE%A1%E7%90%86"><span class="nav-number">3.</span> <span class="nav-text">3. 菜品管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%85%AC%E5%85%B1%E5%AD%97%E6%AE%B5%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 公共字段自动填充</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-1-%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90"><span class="nav-number">3.1.1.</span> <span class="nav-text">3.1.1 问题分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-2-%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF"><span class="nav-number">3.1.2.</span> <span class="nav-text">3.1.2 实现思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-3-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="nav-number">3.1.3.</span> <span class="nav-text">3.1.3 代码开发</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E6%96%B0%E5%A2%9E%E8%8F%9C%E5%93%81"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 新增菜品</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="nav-number">3.2.1.</span> <span class="nav-text">3.2.1 需求分析和设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-2-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="nav-number">3.2.2.</span> <span class="nav-text">3.2.2 代码开发</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E8%8F%9C%E5%93%81%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 菜品分页查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="nav-number">3.3.1.</span> <span class="nav-text">3.3.1 需求分析和设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-2-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="nav-number">3.3.2.</span> <span class="nav-text">3.3.2 代码开发</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E5%88%A0%E9%99%A4%E8%8F%9C%E5%93%81"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 删除菜品</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="nav-number">3.4.1.</span> <span class="nav-text">3.4.1 需求分析和设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-2-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="nav-number">3.4.2.</span> <span class="nav-text">3.4.2 代码开发</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-%E4%BF%AE%E6%94%B9%E8%8F%9C%E5%93%81"><span class="nav-number">3.5.</span> <span class="nav-text">3.5 修改菜品</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E5%BA%97%E9%93%BA%E8%90%A5%E4%B8%9A%E7%8A%B6%E6%80%81%E8%AE%BE%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">4. 店铺营业状态设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-Redis%E5%85%A5%E9%97%A8"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 Redis入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-1-Redis%E7%AE%80%E4%BB%8B"><span class="nav-number">4.1.1.</span> <span class="nav-text">4.1.1 Redis简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-2-Redis%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85"><span class="nav-number">4.1.2.</span> <span class="nav-text">4.1.2 Redis下载与安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-3-Redis%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8%E4%B8%8E%E5%81%9C%E6%AD%A2"><span class="nav-number">4.1.3.</span> <span class="nav-text">4.1.3 Redis服务启动与停止</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-Redis%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 Redis数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-Redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">4.3.</span> <span class="nav-text">4.3 Redis常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-%E5%9C%A8Java%E4%B8%AD%E6%93%8D%E4%BD%9CRedis"><span class="nav-number">4.4.</span> <span class="nav-text">4.4 在Java中操作Redis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-1-Redis%E7%9A%84java%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="nav-number">4.4.1.</span> <span class="nav-text">4.4.1 Redis的java客户端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-2-Spring-Data-Redis%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="nav-number">4.4.2.</span> <span class="nav-text">4.4.2 Spring Data Redis使用方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-5-%E5%BA%97%E9%93%BA%E8%90%A5%E4%B8%9A%E7%8A%B6%E6%80%81%E8%AE%BE%E7%BD%AE"><span class="nav-number">4.5.</span> <span class="nav-text">4.5 店铺营业状态设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="nav-number">4.5.1.</span> <span class="nav-text">4.5.1 需求分析和设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-2-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="nav-number">4.5.2.</span> <span class="nav-text">4.5.2 代码开发</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E5%BE%AE%E4%BF%A1%E7%99%BB%E9%99%86%E3%80%81%E5%95%86%E5%93%81%E6%B5%8F%E8%A7%88"><span class="nav-number">5.</span> <span class="nav-text">5. 微信登陆、商品浏览</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-HttpClient"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 HttpClient</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-1-%E4%BB%8B%E7%BB%8D"><span class="nav-number">5.1.1.</span> <span class="nav-text">5.1.1 介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-2-%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B"><span class="nav-number">5.1.2.</span> <span class="nav-text">5.1.2 入门案例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 微信小程序开发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-1-%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">5.2.1.</span> <span class="nav-text">5.2.1 准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-2-%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B"><span class="nav-number">5.2.2.</span> <span class="nav-text">5.2.2 入门案例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3-%E5%BE%AE%E4%BF%A1%E7%99%BB%E9%99%86"><span class="nav-number">5.3.</span> <span class="nav-text">5.3 微信登陆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="nav-number">5.3.1.</span> <span class="nav-text">5.3.1 需求分析和设计</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4-%E5%AF%BC%E5%85%A5%E5%95%86%E5%93%81%E6%B5%8F%E8%A7%88%E5%8A%9F%E8%83%BD%E4%BB%A3%E7%A0%81"><span class="nav-number">5.4.</span> <span class="nav-text">5.4 导入商品浏览功能代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="nav-number">5.4.1.</span> <span class="nav-text">5.4.1 需求分析和设计</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-%E7%BC%93%E5%AD%98%E8%8F%9C%E5%93%81%E3%80%81%E8%B4%AD%E7%89%A9%E8%BD%A6"><span class="nav-number">6.</span> <span class="nav-text">6. 缓存菜品、购物车</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-%E7%BC%93%E5%AD%98%E8%8F%9C%E5%93%81"><span class="nav-number">6.1.</span> <span class="nav-text">6.1 缓存菜品</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-%E7%BC%93%E5%AD%98%E5%A5%97%E9%A4%90"><span class="nav-number">6.2.</span> <span class="nav-text">6.2 缓存套餐</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-1-Spring-Cache"><span class="nav-number">6.2.1.</span> <span class="nav-text">6.2.1 Spring Cache</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-2-%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF"><span class="nav-number">6.2.2.</span> <span class="nav-text">6.2.2 实现思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-3-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="nav-number">6.2.3.</span> <span class="nav-text">6.2.3 代码开发</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-%E6%B7%BB%E5%8A%A0%E8%B4%AD%E7%89%A9%E8%BD%A6"><span class="nav-number">6.3.</span> <span class="nav-text">6.3 添加购物车</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="nav-number">6.3.1.</span> <span class="nav-text">6.3.1 需求分析和设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-2-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="nav-number">6.3.2.</span> <span class="nav-text">6.3.2 代码开发</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-%E6%B8%85%E7%A9%BA%E8%B4%AD%E7%89%A9%E8%BD%A6"><span class="nav-number">6.4.</span> <span class="nav-text">6.4 清空购物车</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-%E7%94%A8%E6%88%B7%E4%B8%8B%E5%8D%95%E3%80%81%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98"><span class="nav-number">7.</span> <span class="nav-text">7. 用户下单、订单支付</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#7-1-%E7%94%A8%E6%88%B7%E4%B8%8B%E5%8D%95"><span class="nav-number">7.1.</span> <span class="nav-text">7.1 用户下单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-2-%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98"><span class="nav-number">7.2.</span> <span class="nav-text">7.2 订单支付</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-1-%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E4%BB%8B%E7%BB%8D"><span class="nav-number">7.2.1.</span> <span class="nav-text">7.2.1 微信支付介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-2-%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">7.2.2.</span> <span class="nav-text">7.2.2 微信支付准备工作</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-%E8%AE%A2%E5%8D%95%E7%8A%B6%E6%80%81%E5%AE%9A%E6%97%B6%E5%A4%84%E7%90%86%E3%80%81%E6%9D%A5%E5%8D%95%E6%8F%90%E9%86%92%E5%92%8C%E5%AE%A2%E6%88%B7%E5%82%AC%E5%8D%95"><span class="nav-number">8.</span> <span class="nav-text">8. 订单状态定时处理、来单提醒和客户催单</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#8-1-Spring-Task"><span class="nav-number">8.1.</span> <span class="nav-text">8.1 Spring Task</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-1-%E4%BB%8B%E7%BB%8D"><span class="nav-number">8.1.1.</span> <span class="nav-text">8.1.1 介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-2-cron%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">8.1.2.</span> <span class="nav-text">8.1.2 cron表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-3-%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B"><span class="nav-number">8.1.3.</span> <span class="nav-text">8.1.3 入门案例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-2-%E8%AE%A2%E5%8D%95%E7%8A%B6%E6%80%81%E5%AE%9A%E6%97%B6%E5%A4%84%E7%90%86"><span class="nav-number">8.2.</span> <span class="nav-text">8.2 订单状态定时处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-3-WebSocket"><span class="nav-number">8.3.</span> <span class="nav-text">8.3 WebSocket</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-4-%E6%9D%A5%E5%8D%95%E6%8F%90%E9%86%92"><span class="nav-number">8.4.</span> <span class="nav-text">8.4 来单提醒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-5-%E5%AE%A2%E6%88%B7%E5%82%AC%E5%8D%95"><span class="nav-number">8.5.</span> <span class="nav-text">8.5 客户催单</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9-%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1-%E5%9B%BE%E5%BD%A2%E6%8A%A5%E8%A1%A8"><span class="nav-number">9.</span> <span class="nav-text">9.数据统计-图形报表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#9-1-Apache-Echarts"><span class="nav-number">9.1.</span> <span class="nav-text">9.1 Apache Echarts</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-1-%E4%BB%8B%E7%BB%8D"><span class="nav-number">9.1.1.</span> <span class="nav-text">9.1.1 介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-2-%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B"><span class="nav-number">9.1.2.</span> <span class="nav-text">9.1.2 入门案例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-2-%E8%90%A5%E4%B8%9A%E9%A2%9D%E7%BB%9F%E8%AE%A1"><span class="nav-number">9.2.</span> <span class="nav-text">9.2 营业额统计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1"><span class="nav-number">9.2.1.</span> <span class="nav-text">9.2.1 需求分析和设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-2-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="nav-number">9.2.2.</span> <span class="nav-text">9.2.2 代码开发</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-3-%E7%94%A8%E6%88%B7%E7%BB%9F%E8%AE%A1"><span class="nav-number">9.3.</span> <span class="nav-text">9.3 用户统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-4-%E8%AE%A2%E5%8D%95%E7%BB%9F%E8%AE%A1"><span class="nav-number">9.4.</span> <span class="nav-text">9.4 订单统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-5-%E9%94%80%E9%87%8F%E6%8E%92%E5%90%8DTOP10"><span class="nav-number">9.5.</span> <span class="nav-text">9.5 销量排名TOP10</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#10-%E5%AF%BC%E5%87%BAExcel%E6%8A%A5%E8%A1%A8"><span class="nav-number">10.</span> <span class="nav-text">10 导出Excel报表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#10-1-Apache-POI"><span class="nav-number">10.1.</span> <span class="nav-text">10.1 Apache POI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-2-%E5%AF%BC%E5%85%A5%E8%BF%90%E8%90%A5%E6%95%B0%E6%8D%AE"><span class="nav-number">10.2.</span> <span class="nav-text">10.2 导入运营数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-2-1-%E5%88%86%E6%9E%90%E8%AE%BE%E8%AE%A1"><span class="nav-number">10.2.1.</span> <span class="nav-text">10.2.1 分析设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-2-2-%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91"><span class="nav-number">10.2.2.</span> <span class="nav-text">10.2.2 代码开发</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#11-%E5%89%8D%E7%AB%AF%E9%83%A8%E5%88%86"><span class="nav-number">11.</span> <span class="nav-text">11. 前端部分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#11-1-vue%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE"><span class="nav-number">11.1.</span> <span class="nav-text">11.1 vue基础回顾</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#11-1-1-%E5%9F%BA%E4%BA%8E%E8%84%9A%E6%89%8B%E6%9E%B6%E5%88%9B%E5%BB%BA%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B"><span class="nav-number">11.1.1.</span> <span class="nav-text">11.1.1 基于脚手架创建前端工程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-1-2-vue%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="nav-number">11.1.2.</span> <span class="nav-text">11.1.2 vue基本使用方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#vue%E7%BB%84%E4%BB%B6"><span class="nav-number">11.1.2.1.</span> <span class="nav-text">vue组件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E6%8F%92%E5%80%BC"><span class="nav-number">11.1.2.2.</span> <span class="nav-text">文本插值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%E7%BB%91%E5%AE%9A"><span class="nav-number">11.1.2.3.</span> <span class="nav-text">属性绑定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A"><span class="nav-number">11.1.2.4.</span> <span class="nav-text">事件绑定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A"><span class="nav-number">11.1.2.5.</span> <span class="nav-text">双向绑定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93"><span class="nav-number">11.1.2.6.</span> <span class="nav-text">条件渲染</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#axios-%EF%BC%88%E5%BC%82%E6%AD%A5%EF%BC%89"><span class="nav-number">11.1.2.7.</span> <span class="nav-text">axios （异步）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-2-Vue-Router"><span class="nav-number">11.2.</span> <span class="nav-text">11.2 Vue-Router</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#11-2-1-Vue-Router-%E4%BB%8B%E7%BB%8D"><span class="nav-number">11.2.1.</span> <span class="nav-text">11.2.1 Vue-Router 介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-2-2-%E8%B7%AF%E7%94%B1%E9%85%8D%E7%BD%AE"><span class="nav-number">11.2.2.</span> <span class="nav-text">11.2.2 路由配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-2-3-%E5%B5%8C%E5%A5%97%E8%B7%AF%E7%94%B1"><span class="nav-number">11.2.3.</span> <span class="nav-text">11.2.3 嵌套路由</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-3-%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86vuex"><span class="nav-number">11.3.</span> <span class="nav-text">11.3 状态管理vuex</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#11-3-1-vuex%E4%BB%8B%E7%BB%8D"><span class="nav-number">11.3.1.</span> <span class="nav-text">11.3.1 vuex介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="nav-number">11.3.1.1.</span> <span class="nav-text">核心概念</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-3-2-%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="nav-number">11.3.2.</span> <span class="nav-text">11.3.2 使用方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E5%85%B1%E4%BA%AB%E6%95%B0%E6%8D%AE-store-index-js"><span class="nav-number">11.3.2.1.</span> <span class="nav-text">定义共享数据.&#x2F;store&#x2F;index.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8mutations%E4%B8%AD%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%EF%BC%8C%E4%BF%AE%E6%94%B9%E5%85%B1%E4%BA%AB%E6%95%B0%E6%8D%AE"><span class="nav-number">11.3.2.2.</span> <span class="nav-text">在mutations中定义函数，修改共享数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8actions%E4%B8%AD%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%EF%BC%8C%E7%94%A8%E4%BA%8E%E8%B0%83%E7%94%A8mutation"><span class="nav-number">11.3.2.3.</span> <span class="nav-text">在actions中定义函数，用于调用mutation</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-4-TypeScript"><span class="nav-number">11.4.</span> <span class="nav-text">11.4 TypeScript</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#11-4-1-TypeScript%E4%BB%8B%E7%BB%8D"><span class="nav-number">11.4.1.</span> <span class="nav-text">11.4.1 TypeScript介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-4-2-TypeScript%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%9E%8B"><span class="nav-number">11.4.2.</span> <span class="nav-text">11.4.2 TypeScript常用类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E6%A0%87%E6%B3%A8%E7%9A%84%E4%BD%8D%E7%BD%AE"><span class="nav-number">11.4.2.1.</span> <span class="nav-text">类型标注的位置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E3%80%81%E6%95%B0%E5%80%BC%E3%80%81boolean"><span class="nav-number">11.4.2.2.</span> <span class="nav-text">字符串、数值、boolean</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%97%E9%9D%A2%E9%87%8F%E7%B1%BB%E5%9E%8B"><span class="nav-number">11.4.2.3.</span> <span class="nav-text">字面量类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#interface%E7%B1%BB%E5%9E%8B%EF%BC%88%E7%B1%BB%E4%BC%BC%E4%BA%8E%E7%BB%93%E6%9E%84%E4%BD%93"><span class="nav-number">11.4.2.4.</span> <span class="nav-text">interface类型（类似于结构体)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#class%E7%B1%BB"><span class="nav-number">11.4.2.5.</span> <span class="nav-text">class类</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-5-%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE"><span class="nav-number">11.5.</span> <span class="nav-text">11.5 前端项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#11-5-1-%E5%89%8D%E7%AB%AF%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="nav-number">11.5.1.</span> <span class="nav-text">11.5.1 前端环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B"><span class="nav-number">11.5.1.0.1.</span> <span class="nav-text">技术选型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%86%9F%E6%82%89%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84"><span class="nav-number">11.5.1.0.2.</span> <span class="nav-text">熟悉前端代码结构</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-5-2-%E5%91%98%E5%B7%A5%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2"><span class="nav-number">11.5.2.</span> <span class="nav-text">11.5.2 员工分页查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-5-3-%E5%90%AF%E7%94%A8-%E7%A6%81%E7%94%A8%E5%91%98%E5%B7%A5%E8%B4%A6%E5%8F%B7"><span class="nav-number">11.5.3.</span> <span class="nav-text">11.5.3 启用&#x2F;禁用员工账号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-5-4-%E6%96%B0%E5%A2%9E%E5%91%98%E5%B7%A5"><span class="nav-number">11.5.4.</span> <span class="nav-text">11.5.4 新增员工</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-5-5-%E4%BF%AE%E6%94%B9%E5%91%98%E5%B7%A5"><span class="nav-number">11.5.5.</span> <span class="nav-text">11.5.5 修改员工</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Fei"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Fei</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">46</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/04/17/2025-04-17-Thu-T-%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Fei">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="2025-04-17-Thu-T-苍穹外卖 | Fei">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2025-04-17-Thu-T-苍穹外卖
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-04-17 06:20:49" itemprop="dateCreated datePublished" datetime="2025-04-17T06:20:49+08:00">2025-04-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-11-23 08:59:51" itemprop="dateModified" datetime="2025-11-23T08:59:51+08:00">2025-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Tech/" itemprop="url" rel="index"><span itemprop="name">Tech</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>[TOC]</p>
 <h1 id="1-项目概述和环境搭建"><a href="#1-项目概述和环境搭建" class="headerlink" title="1. 项目概述和环境搭建"></a>1. 项目概述和环境搭建</h1><h2 id="1-1-软件开发整体介绍"><a href="#1-1-软件开发整体介绍" class="headerlink" title="1.1 软件开发整体介绍"></a>1.1 软件开发整体介绍</h2><h3 id="1-1-1-软件开发流程"><a href="#1-1-1-软件开发流程" class="headerlink" title="1.1.1 软件开发流程"></a>1.1.1 软件开发流程</h3><ul>
 <li>需求分析<ul>
 <li>需求规格说明书(PRD)</li>
@@ -1335,4 +1616,132 @@ UI设计
 </ul>
 <h5 id="熟悉前端代码结构"><a href="#熟悉前端代码结构" class="headerlink" title="熟悉前端代码结构"></a>熟悉前端代码结构</h5><p><img src="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250523134733071.png"></p>
 <p><img src="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250523135655921.png"></p>
-<h3 id="11-5-2-员工分页查询"><a href="#11-5-2-员工分页查询" class="headerlink" title="11.5.2 员工分页查询"></a>11.5.2 员工分页查询</h3><h3 id="11-5-3-启用-禁用员工账号"><a href="#11-5-3-启用-禁用员工账号" class="headerlink" title="11.5.3 启用&#x2F;禁用员工账号"></a>11.5.3 启用&#x2F;禁用员工账号</h3><h3 id="11-5-4-新增员工"><a href="#11-5-4-新增员工" class="headerlink" title="11.5.4 新增员工"></a>11.5.4 新增员工</h3><h3 id="11-5-5-修改员工"><a href="#11-5-5-修改员工" class="headerlink" title="11.5.5 修改员工"></a>11.5.5 修改员工</h3></article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><a class="button is-default" href="/2025/05/27/2025-05-27-Tue-T-JVM/" title="2025-05-27-Tue-T-JVM"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">Previous: 2025-05-27-Tue-T-JVM</span></a><a class="button is-default" href="/2025/04/16/2025-04-16-Wed-T-Java%E9%A1%B9%E7%9B%AE-%E5%95%86%E5%9F%8E/" title="2025-04-16-Wed-T-Java项目-商城"><span class="has-text-weight-semibold">Next: 2025-04-16-Wed-T-Java项目-商城</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section><article class="mt-6 comment-container"><script async repo="Haojen/Claudia-theme-blog" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><a title="twitter" target="_blank" rel="noopener nofollow" href="//twitter.com//"><i class="iconfont icon-twitter"></i></a><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/haojen"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com//"><i class="iconfont icon-ins"></i></a><!-- RSS--><!-- 知乎--><!-- 领英--><!-- 脸书--><a title="facebook" target="_blank" rel="noopener nofollow" href="//www.facebook.com//"><i class="iconfont icon-tian7_facebook"></i></a></section><p><span>Copyright ©</span><span> Fei 2025</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"><a title="Hexo theme author" target="_blank" rel="noopener" href="//github.com/haojen">Theme by Haojen&nbsp;</a></p><div style="margin-top: 2px"><a class="github-button" title="github-button" target="_blank" rel="noopener" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true"></a></div></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/jquery-3.6.1.min.js"></script><script src="/js/jquery-fancybox.min.js"></script><script src="/js/img_zoom.js"></script><script src="/js/post.js"></script></body></html>
+<h3 id="11-5-2-员工分页查询"><a href="#11-5-2-员工分页查询" class="headerlink" title="11.5.2 员工分页查询"></a>11.5.2 员工分页查询</h3><h3 id="11-5-3-启用-禁用员工账号"><a href="#11-5-3-启用-禁用员工账号" class="headerlink" title="11.5.3 启用&#x2F;禁用员工账号"></a>11.5.3 启用&#x2F;禁用员工账号</h3><h3 id="11-5-4-新增员工"><a href="#11-5-4-新增员工" class="headerlink" title="11.5.4 新增员工"></a>11.5.4 新增员工</h3><h3 id="11-5-5-修改员工"><a href="#11-5-5-修改员工" class="headerlink" title="11.5.5 修改员工"></a>11.5.5 修改员工</h3>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/logo.svg" alt="Fei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="Fei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="/images/bitcoin.png" alt="Fei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Fei
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2025/04/17/2025-04-17-Thu-T-%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96/" title="2025-04-17-Thu-T-苍穹外卖">http://example.com/2025/04/17/2025-04-17-Thu-T-苍穹外卖/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://www.zhihu.com/people/username">
+            <span class="icon">
+              <i class="fab fa-zhihu"></i>
+            </span>
+
+            <span class="label">Zhihu</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Tech/" rel="tag"># Tech</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/04/16/2025-04-16-Wed-T-Java%E9%A1%B9%E7%9B%AE-%E5%95%86%E5%9F%8E/" rel="prev" title="2025-04-16-Wed-T-Java项目-商城">
+                  <i class="fa fa-angle-left"></i> 2025-04-16-Wed-T-Java项目-商城
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/05/27/2025-05-27-Tue-T-JVM/" rel="next" title="2025-05-27-Tue-T-JVM">
+                  2025-05-27-Tue-T-JVM <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Fei</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

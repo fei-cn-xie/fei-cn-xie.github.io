@@ -1,6 +1,252 @@
-<!DOCTYPE html><html class="appearance-auto" lang="en"><head><meta charset="UTF-8"><title>2025-02-25-Tue-T-Prometheus+Grafana</title><meta name="description" content="非淡泊无以明志，非宁静无以致远"><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google Analytics --><!-- End Google Analytics -->
-<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.ico"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><link rel="stylesheet" href="/style/common/jquery.fancybox.min.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="1. Promethues 简介Prometheus 是由前 Google 工程师从 2012 年开始在 Soundcloud 以开源软件的形式进行研发的系统监控和告警工具包，自此以后，许多公司和组织都采用了 Prometheus 作为监控告警工具。Prometheus 的开发者和用户社区非常活跃，它现在是一个独立的开源项目，可以独立于任何公司进行维护。为了证明这一点，Prometheus 于 2016 年 5 月加入 CNCF 基金会，成为继 Kubernetes 之后的第二个 CNCF 托管项目。Prometheus 是由前 Google 工程师从 2012 年开始在 Soundcloud 以开源软件的形式进行研发的系统监控和告警工具包，自此以后，许多公司和组织都采用了 Prometheus 作为监控告.."><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Fei" type="application/atom+xml">
-</head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">Fei's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">2025-02-25-Tue-T-Prometheus+Grafana</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Promethues-%E7%AE%80%E4%BB%8B"><span class="toc-text">1. Promethues 简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Promethues%E7%89%B9%E7%82%B9"><span class="toc-text">1.1 Promethues特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-Prometheus%E6%9E%B6%E6%9E%84"><span class="toc-text">1.2 Prometheus架构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-1-%E9%87%87%E9%9B%86%E5%B1%82"><span class="toc-text">1.2.1 采集层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-2-%E5%AD%98%E5%82%A8%E8%AE%A1%E7%AE%97%E5%B1%82"><span class="toc-text">1.2.2 存储计算层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-3-%E5%BA%94%E7%94%A8%E5%B1%95%E7%A4%BA%E5%B1%82"><span class="toc-text">1.2.3 应用展示层</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="toc-text">2. 安装与配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E5%AE%89%E8%A3%85"><span class="toc-text">2.1 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-pushgateway%E9%85%8D%E7%BD%AE"><span class="toc-text">2.2 pushgateway配置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-PromQL"><span class="toc-text">3. PromQL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="toc-text">3.1 基本用法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-1-%E6%9F%A5%E8%AF%A2%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97"><span class="toc-text">3.1.1 查询时间序列</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E8%8C%83%E5%9B%B4%E6%9F%A5%E8%AF%A2"><span class="toc-text">3.2 范围查询[]</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-%E6%97%B6%E9%97%B4%E4%BD%8D%E7%A7%BB%E6%93%8D%E4%BD%9Coffset"><span class="toc-text">3.3 时间位移操作offset</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-%E4%BD%BF%E7%94%A8%E8%81%9A%E5%90%88%E6%93%8D%E4%BD%9Csum"><span class="toc-text">3.4 使用聚合操作sum</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-%E6%A0%87%E9%87%8F%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">3.5 标量和字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-6-%E5%90%88%E6%B3%95%E7%9A%84PromQL%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">3.6 合法的PromQL表达式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Grafana"><span class="toc-text">4. Grafana</span></a></li></ol></div><div class="column is-9"><header class="my-4"><a href="/tags/Tech"><i class="tag post-item-tag">Tech</i></a></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">2025-02-25-Tue-T-Prometheus+Grafana</h1><time class="has-text-grey" datetime="2025-02-25T07:47:53.000Z">2025-02-25</time><article class="mt-2 post-content"><h1 id="1-Promethues-简介"><a href="#1-Promethues-简介" class="headerlink" title="1. Promethues 简介"></a>1. Promethues 简介</h1><p>Prometheus 是由前 Google 工程师从 2012 年开始在 Soundcloud 以开源软件的形式进行研发的系统监控和告警工具包，自此以后，许多公司和组织都采用了 Prometheus 作为监控告警工具。Prometheus 的开发者和用户社区非常活跃，它现在是一个独立的开源项目，可以独立于任何公司进行维护。为了证明这一点，Prometheus 于 2016 年 5 月加入 CNCF 基金会，成为继 Kubernetes 之后的第二个 CNCF 托管项目。Prometheus 是由前 Google 工程师从 2012 年开始在 Soundcloud 以开源软件的形式进行研发的系统监控和告警工具包，自此以后，许多公司和组织都采用了 Prometheus 作为监控告警工具。Prometheus 的开发者和用户社区非常活跃，它现在是一个独立的开源项目，可以独立于任何公司进行维护。为了证明这一点，Prometheus 于 2016 年 5 月加入 CNCF 基金会，成为继 Kubernetes 之后的第二个 CNCF 托管项目。</p>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.26.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="1. Promethues 简介Prometheus 是由前 Google 工程师从 2012 年开始在 Soundcloud 以开源软件的形式进行研发的系统监控和告警工具包，自此以后，许多公司和组织都采用了 Prometheus 作为监控告警工具。Prometheus 的开发者和用户社区非常活跃，它现在是一个独立的开源项目，可以独立于任何公司进行维护。为了证明这一点，Prometheus 于 2">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="2025-02-25-Tue-T-Prometheus+Grafana">
+<meta property="og:url" content="http://example.com/2025/02/25/2025-02-25-Tue-T-Prometheus+Grafana/index.html">
+<meta property="og:site_name" content="Fei">
+<meta property="og:description" content="1. Promethues 简介Prometheus 是由前 Google 工程师从 2012 年开始在 Soundcloud 以开源软件的形式进行研发的系统监控和告警工具包，自此以后，许多公司和组织都采用了 Prometheus 作为监控告警工具。Prometheus 的开发者和用户社区非常活跃，它现在是一个独立的开源项目，可以独立于任何公司进行维护。为了证明这一点，Prometheus 于 2">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image.png">
+<meta property="article:published_time" content="2025-02-25T07:47:53.000Z">
+<meta property="article:modified_time" content="2025-11-23T00:59:40.429Z">
+<meta property="article:author" content="Fei">
+<meta property="article:tag" content="Tech">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image.png">
+
+
+<link rel="canonical" href="http://example.com/2025/02/25/2025-02-25-Tue-T-Prometheus+Grafana/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2025/02/25/2025-02-25-Tue-T-Prometheus+Grafana/","path":"2025/02/25/2025-02-25-Tue-T-Prometheus+Grafana/","title":"2025-02-25-Tue-T-Prometheus+Grafana"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>2025-02-25-Tue-T-Prometheus+Grafana | Fei</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Fei" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Fei</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Wellcome to Fei's blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Promethues-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">1. Promethues 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Promethues%E7%89%B9%E7%82%B9"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 Promethues特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Prometheus%E6%9E%B6%E6%9E%84"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 Prometheus架构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-1-%E9%87%87%E9%9B%86%E5%B1%82"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.2.1 采集层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-2-%E5%AD%98%E5%82%A8%E8%AE%A1%E7%AE%97%E5%B1%82"><span class="nav-number">1.2.2.</span> <span class="nav-text">1.2.2 存储计算层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-3-%E5%BA%94%E7%94%A8%E5%B1%95%E7%A4%BA%E5%B1%82"><span class="nav-number">1.2.3.</span> <span class="nav-text">1.2.3 应用展示层</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">2. 安装与配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E5%AE%89%E8%A3%85"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-pushgateway%E9%85%8D%E7%BD%AE"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 pushgateway配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-PromQL"><span class="nav-number">3.</span> <span class="nav-text">3. PromQL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 基本用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-1-%E6%9F%A5%E8%AF%A2%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97"><span class="nav-number">3.1.1.</span> <span class="nav-text">3.1.1 查询时间序列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E8%8C%83%E5%9B%B4%E6%9F%A5%E8%AF%A2"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 范围查询[]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E6%97%B6%E9%97%B4%E4%BD%8D%E7%A7%BB%E6%93%8D%E4%BD%9Coffset"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 时间位移操作offset</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E4%BD%BF%E7%94%A8%E8%81%9A%E5%90%88%E6%93%8D%E4%BD%9Csum"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 使用聚合操作sum</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-%E6%A0%87%E9%87%8F%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">3.5.</span> <span class="nav-text">3.5 标量和字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-6-%E5%90%88%E6%B3%95%E7%9A%84PromQL%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">3.6.</span> <span class="nav-text">3.6 合法的PromQL表达式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Grafana"><span class="nav-number">4.</span> <span class="nav-text">4. Grafana</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Fei"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Fei</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">46</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/02/25/2025-02-25-Tue-T-Prometheus+Grafana/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Fei">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="2025-02-25-Tue-T-Prometheus+Grafana | Fei">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2025-02-25-Tue-T-Prometheus+Grafana
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-02-25 15:47:53" itemprop="dateCreated datePublished" datetime="2025-02-25T15:47:53+08:00">2025-02-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-11-23 08:59:40" itemprop="dateModified" datetime="2025-11-23T08:59:40+08:00">2025-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Tech/" itemprop="url" rel="index"><span itemprop="name">Tech</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="1-Promethues-简介"><a href="#1-Promethues-简介" class="headerlink" title="1. Promethues 简介"></a>1. Promethues 简介</h1><p>Prometheus 是由前 Google 工程师从 2012 年开始在 Soundcloud 以开源软件的形式进行研发的系统监控和告警工具包，自此以后，许多公司和组织都采用了 Prometheus 作为监控告警工具。Prometheus 的开发者和用户社区非常活跃，它现在是一个独立的开源项目，可以独立于任何公司进行维护。为了证明这一点，Prometheus 于 2016 年 5 月加入 CNCF 基金会，成为继 Kubernetes 之后的第二个 CNCF 托管项目。Prometheus 是由前 Google 工程师从 2012 年开始在 Soundcloud 以开源软件的形式进行研发的系统监控和告警工具包，自此以后，许多公司和组织都采用了 Prometheus 作为监控告警工具。Prometheus 的开发者和用户社区非常活跃，它现在是一个独立的开源项目，可以独立于任何公司进行维护。为了证明这一点，Prometheus 于 2016 年 5 月加入 CNCF 基金会，成为继 Kubernetes 之后的第二个 CNCF 托管项目。</p>
 <h2 id="1-1-Promethues特点"><a href="#1-1-Promethues特点" class="headerlink" title="1.1 Promethues特点"></a>1.1 Promethues特点</h2><ol>
 <li>易于管理</li>
 </ol>
@@ -123,4 +369,132 @@
 
 <p>除了使用<code>&#123;lable=value&#125;</code>的形式外，还可以使用内置的<code>_name_</code>标签来指定监控指标名称:<br><code>&#123;_name_=~&quot;prometheus_http_requests_total&quot;&#125;</code></p>
 <h1 id="4-Grafana"><a href="#4-Grafana" class="headerlink" title="4. Grafana"></a>4. Grafana</h1><p><a target="_blank" rel="noopener" href="https://grafana.com/">Grafana</a>是一款采用go语言编写的开源应用， 主要用于大规模指标数据的可视化展现。 是网络架构和应用分析中最流行的<code>时序数据展示</code>工具，目前已经支持绝大部分常用的时序数据库。  </p>
-</article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><a class="button is-default" href="/2025/03/06/2025-03-06-Thu-T-Prompt%E5%B7%A5%E7%A8%8B/" title="2025-03-06-Thu-T-Prompt工程"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">Previous: 2025-03-06-Thu-T-Prompt工程</span></a><a class="button is-default" href="/2025/01/24/2025-01-24-Fri-T-%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" title="2025-01-24-Fri-T-如何做一个开源项目"><span class="has-text-weight-semibold">Next: 2025-01-24-Fri-T-如何做一个开源项目</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section><article class="mt-6 comment-container"><script async repo="Haojen/Claudia-theme-blog" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><a title="twitter" target="_blank" rel="noopener nofollow" href="//twitter.com//"><i class="iconfont icon-twitter"></i></a><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/haojen"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com//"><i class="iconfont icon-ins"></i></a><!-- RSS--><!-- 知乎--><!-- 领英--><!-- 脸书--><a title="facebook" target="_blank" rel="noopener nofollow" href="//www.facebook.com//"><i class="iconfont icon-tian7_facebook"></i></a></section><p><span>Copyright ©</span><span> Fei 2025</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"><a title="Hexo theme author" target="_blank" rel="noopener" href="//github.com/haojen">Theme by Haojen&nbsp;</a></p><div style="margin-top: 2px"><a class="github-button" title="github-button" target="_blank" rel="noopener" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true"></a></div></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/jquery-3.6.1.min.js"></script><script src="/js/jquery-fancybox.min.js"></script><script src="/js/img_zoom.js"></script><script src="/js/post.js"></script></body></html>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/logo.svg" alt="Fei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="Fei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="/images/bitcoin.png" alt="Fei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Fei
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2025/02/25/2025-02-25-Tue-T-Prometheus+Grafana/" title="2025-02-25-Tue-T-Prometheus+Grafana">http://example.com/2025/02/25/2025-02-25-Tue-T-Prometheus+Grafana/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://www.zhihu.com/people/username">
+            <span class="icon">
+              <i class="fab fa-zhihu"></i>
+            </span>
+
+            <span class="label">Zhihu</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Tech/" rel="tag"># Tech</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/01/24/2025-01-24-Fri-T-%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" rel="prev" title="2025-01-24-Fri-T-如何做一个开源项目">
+                  <i class="fa fa-angle-left"></i> 2025-01-24-Fri-T-如何做一个开源项目
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/03/06/2025-03-06-Thu-T-Prompt%E5%B7%A5%E7%A8%8B/" rel="next" title="2025-03-06-Thu-T-Prompt工程">
+                  2025-03-06-Thu-T-Prompt工程 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Fei</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

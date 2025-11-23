@@ -1,78 +1,42 @@
-<!DOCTYPE html><html class="appearance-auto" lang="en"><head><meta charset="UTF-8"><title>Fei's blog</title><meta name="description" content="非淡泊无以明志，非宁静无以致远"><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google Analytics --><!-- End Google Analytics -->
-<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.ico"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/widget-post-list.css"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Fei" type="application/atom+xml">
-</head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">Fei's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><span>Archives · 2024</span></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3></header><main><article class="post-container is-flex is-justify-content-center section container is-max-widescreen pt-4 px-2"><div class="columns is-variable is-1-tablet is-3-desktop-only is-2-widescreen is-full-width"><section class="column"><article class="post-item-card"><header class="is-relative is-flex"><div class="post-cover-backdrop is-hidden"><img src="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image.png" alt="loading.."></div><a class="post-cover-link has-text-centered skeleton" href="/2024/11/26/2024-11-26-Tue-T-SSM/"><img class="post-cover-img js-img-fadeIn" src="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image.png" alt="loading.." data-backdrop="true"></a></header><section class="content post-card-content p-4 pb-5"><header><a href="/tags/Tech"><i class="tag post-item-tag">Tech</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2024/11/26/2024-11-26-Tue-T-SSM/">2024-11-26-Tue-T-SSM</a></h2><time class="has-text-grey" datetime="2024-11-26T08:04:28.000Z">2024-11-26</time><p class="is-flex-grow-2 mt-2">SSMSSM三者的关系
-1 Spring IoC容器父子工程  
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot;         xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;         xsi:schemaLocation=&amp;quot;h..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2024/11/26/2024-11-26-Tue-T-SSM/">Read more</a></section></article><article class="post-item-card"><header class="is-relative is-flex"><div class="post-cover-backdrop is-hidden"><img src="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image.png" alt="loading.."></div><a class="post-cover-link has-text-centered skeleton" href="/2024/11/21/2024-11-21-Thu-T-SpringMVC/"><img class="post-cover-img js-img-fadeIn" src="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image.png" alt="loading.." data-backdrop="true"></a></header><section class="content post-card-content p-4 pb-5"><header><a href="/tags/Tech"><i class="tag post-item-tag">Tech</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2024/11/21/2024-11-21-Thu-T-SpringMVC/">2024-11-21-Thu-T-SpringMVC</a></h2><time class="has-text-grey" datetime="2024-11-21T11:52:12.000Z">2024-11-21</time><p class="is-flex-grow-2 mt-2">SpringMVC
-Demo代码
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
 
-1 SpringMVC 简介MVC是一种软件架构思想, 将软件按照模型、视图、控制器来划分M: Model : 模型层, 指工程中的Java Bean, 作用是处理数据Java Bean分为两类:
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-实体类Bean: 专门存储业务数据的, 比如User, Student
-业务处理Bean: 指Service或者Dao, 专门用于处理业务逻辑和数据访问
-
-V: View :视图层, 指工程中html或sp等页面, 作用是与用户进行交互, 展示数据C: Controller : 控制层, 指工程中的servlet, 作用是接受请求和响应浏览器  
-SpringMVC是一个Spring的子项目, SpringMVC有如下特点: 
-
-Spring系列原生产品, 与IOC容器等基础..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2024/11/21/2024-11-21-Thu-T-SpringMVC/">Read more</a></section></article><article class="post-item-card"><header class="is-relative is-flex"><div class="post-cover-backdrop is-hidden"><img src="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20251123091800267.png" alt="loading.."></div><a class="post-cover-link has-text-centered skeleton" href="/2024/11/21/2024-11-21-Thu-T-Spring6/"><img class="post-cover-img js-img-fadeIn" src="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20251123091800267.png" alt="loading.." data-backdrop="true"></a></header><section class="content post-card-content p-4 pb-5"><header><a href="/tags/Tech"><i class="tag post-item-tag">Tech</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2024/11/21/2024-11-21-Thu-T-Spring6/">2024-11-21-Thu-T-Spring6</a></h2><time class="has-text-grey" datetime="2024-11-21T11:44:21.000Z">2024-11-21</time><p class="is-flex-grow-2 mt-2">Spring
-Demo代码
-
-1 概述Spring是一款主流的Java EE轻量级开源框架  
-
-广义的Spring泛指以Spring Framework为核心的Spring技术栈, 如: Spring Framework, Spring MVC, SpringBoot, SpringCloud, SpringData, Spring Security, 其中Spring Framework是其他子项目的基础. 
-
-狭义的Spring特指Spring Framework, 通常称为Spring框架. Spring框架是一个分层的、面向切面的java应用程序的一站式轻量级解决方案, 它是Spring技术栈的核心和基础, 是为了解决企业级应用开发的复杂性而创建的.Spring有两个核心模块, IoC和AOP.I..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2024/11/21/2024-11-21-Thu-T-Spring6/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><header><a href="/tags/Tech"><i class="tag post-item-tag">Tech</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2024/11/06/2024-11-06-Wed-T-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">2024-11-06-Wed-T-数据结构与算法</a></h2><time class="has-text-grey" datetime="2024-11-05T17:31:07.000Z">2024-11-06</time><p class="is-flex-grow-2 mt-2">1. 简单1.1 两数之和给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。
-你可以假设每种输入只会对应一个答案，并且你不能使用两次相同的元素。
-你可以按任意顺序返回答案。
-123456789101112131415161718192021222324示例 1：输入：nums = [2,7,11,15], target = 9输出：[0,1]解释：因为 nums[0] + nums[1] == 9 ，返回 [0, 1] 。示例 2：输入：nums = [3,2,4], target = 6输出：[1,2]示例 3：输入：nums = [3,3], target = 6输出：[0,1] 提示：2 &amp;lt;= nu..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2024/11/06/2024-11-06-Wed-T-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><header><a href="/tags/Tech"><i class="tag post-item-tag">Tech</i></a><a href="/tags/Go"><i class="tag post-item-tag">Go</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2024/09/12/2024-09-12-Thu-T-Go%E8%AF%AD%E8%A8%80/">2024-09-12-Thu-T-Go语言</a></h2><time class="has-text-grey" datetime="2024-09-12T08:35:32.000Z">2024-09-12</time><p class="is-flex-grow-2 mt-2"></p><a class="button is-default mt-2 has-text-weight-semibold" href="/2024/09/12/2024-09-12-Thu-T-Go%E8%AF%AD%E8%A8%80/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><header><a href="/tags/Tech"><i class="tag post-item-tag">Tech</i></a><a href="/tags/%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86"><i class="tag post-item-tag">文件处理</i></a><a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1"><i class="tag post-item-tag">微服务</i></a><a href="/tags/SpringBoot"><i class="tag post-item-tag">SpringBoot</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2024/09/12/2024-09-12-Thu-T-%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86%E5%BE%AE%E6%9C%8D%E5%8A%A1/">2024-09-12-Thu-T-文件处理微服务</a></h2><time class="has-text-grey" datetime="2024-09-12T06:58:30.000Z">2024-09-12</time><p class="is-flex-grow-2 mt-2">今天哥们又接到一个文件处理的开发需求，要实现一个文件上传、下载的通用服务。为了快速满足这一需求，我使用了SpringBoot + 华为云OBS快速写了一个小小的程序。
-项目结构如下:
-12345678910111213141516171819202122232425262728src└── main    ├── java    │   └── com    │       └── xmbc    │           └── file    │               ├── XmbcFileApplication.java # 启动类    │               ├── config    │               │   ├── HuaweiObsConfig.java # 华为..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2024/09/12/2024-09-12-Thu-T-%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86%E5%BE%AE%E6%9C%8D%E5%8A%A1/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><header><a href="/tags/Tech"><i class="tag post-item-tag">Tech</i></a><a href="/tags/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95"><i class="tag post-item-tag">职业发展</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2024/09/06/2024-09-06-Fri-T-%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/">2024-09-06-Fri-T-技术学习路线</a></h2><time class="has-text-grey" datetime="2024-09-06T07:49:05.000Z">2024-09-06</time><p class="is-flex-grow-2 mt-2">1. 目的说到目的，我现在学习技术的目的已经不再单纯的是因为着迷于技术本身，而是为了生活，过去两年的职业生活，让我逐渐意识到经济基础才能决定上层建筑。我的想法很丰富，想去遨游世界，想当老板，想成为一个技术大佬，想做个歌手… 而这些都好遥远啊，现在的我只能作为一个小小的打杂人员游离于这个社会之中，没有稳定的社交圈，没有自己的稳定居所，只有一份不上不下的工作维持这糟糕的生活。但是我不想这样下去，我想去成都找一份工作，能支撑我有一间自己的稳定居所，有自己的社交圈，不用现在每天提心吊胆，担心裁员，被孤独和焦虑折磨。 所以，所以这一次我重新安排自己的技术学习路线就是为了自己未来有一份稳定可观的工作，最好是在成都，这是我的目标，现在就这么确定好了。我会努力的！加油！
-2. 技术学习路线参考课程：1.尚硅谷课程
-按照自研..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2024/09/06/2024-09-06-Fri-T-%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/">Read more</a></section></article><article class="post-item-card"><section class="content post-card-content p-4 pb-5"><header><a href="/tags/Tech"><i class="tag post-item-tag">Tech</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2024/09/04/2024-09-04-Wed-T-Docker/">2024-09-04-Wed-T-Docker</a></h2><time class="has-text-grey" datetime="2024-09-04T07:46:19.000Z">2024-09-04</time><p class="is-flex-grow-2 mt-2">https://liaoxuefeng.com/blogs/all/2022-05-24-docker
-尚硅谷Docker实战教程（docker教程天花板）_哔哩哔哩_bilibili
-一 基础篇1. Docker简介2. Docker安装3. Docker常用命令4. Docker镜像5. 本地镜像发布到公有云6. 本地镜像发布到私有库7. Docker容器数据卷
-
-
-操作类型
-核心命令
-关键参数&amp;#x2F;说明
+<link rel="stylesheet" href="/css/main.css">
 
 
 
-创建数据卷
-docker volume create [卷名]
-创建命名的数据卷，便于管理
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.26.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta property="og:type" content="blog">
+<meta property="og:title" content="Fei">
+<meta property="og:url" content="http://example.com/archives/2024/index.html">
+<meta property="og:site_name" content="Fei">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Fei">
+<meta name="twitter:card" content="summary">
 
 
-挂载数据卷
-docker run -v [卷名]:[容器路径] ...
-将数据卷挂载到容器内指定路径
+<link rel="canonical" href="http://example.com/archives/2024/">
 
 
-查看数据卷
-docker volume ls, docker volume inspec..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2024/09/04/2024-09-04-Wed-T-Docker/">Read more</a></section></article><article class="post-item-card"><header class="is-relative is-flex"><div class="post-cover-backdrop is-hidden"><img src="/2024-09-04-Wed-T-Docker/image.png" alt="loading.."></div><a class="post-cover-link has-text-centered skeleton" href="/2024/09/04/2024-09-04-Wed-T-Podman/"><img class="post-cover-img js-img-fadeIn" src="/2024-09-04-Wed-T-Docker/image.png" alt="loading.." data-backdrop="true"></a></header><section class="content post-card-content p-4 pb-5"><header><a href="/tags/Tech"><i class="tag post-item-tag">Tech</i></a><a href="/tags/Podman"><i class="tag post-item-tag">Podman</i></a><a href="/tags/Docker"><i class="tag post-item-tag">Docker</i></a><a href="/tags/Container"><i class="tag post-item-tag">Container</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2024/09/04/2024-09-04-Wed-T-Podman/">2024-09-04-Wed-T-Podman</a></h2><time class="has-text-grey" datetime="2024-09-04T06:06:50.000Z">2024-09-04</time><p class="is-flex-grow-2 mt-2">Introduction虽然“容器是Linux”，但Podman也可以在Mac和Windows上运行，它提供了一个原生的Podman CLI，并嵌入了一个客户Linux系统来启动您的容器。此访客被称为Podman机器，并使用Podman机器命令进行管理。Mac和Windows上的Podman还监听Docker API客户端，支持直接使用基于Docker的工具和从您选择的语言进行编程访问。
-容器仓库配置镜像仓库打开配置文件 /var/home/core/.config/containers/registries.conf
-12345678910111213141516171819202122232425unqualified-search-registries = [&amp;quot;docker.io&amp;quot;..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2024/09/04/2024-09-04-Wed-T-Podman/">Read more</a></section></article><article class="post-item-card"><header class="is-relative is-flex"><div class="post-cover-backdrop is-hidden"><img src="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E4%B8%89%E7%A7%8D%E6%A8%A1%E5%BC%8F.svg" alt="loading.."></div><a class="post-cover-link has-text-centered skeleton" href="/2024/08/15/2024-08-15-Thu-T-Linux/"><img class="post-cover-img js-img-fadeIn" src="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E4%B8%89%E7%A7%8D%E6%A8%A1%E5%BC%8F.svg" alt="loading.." data-backdrop="true"></a></header><section class="content post-card-content p-4 pb-5"><header><a href="/tags/Tech"><i class="tag post-item-tag">Tech</i></a><a href="/tags/Linux"><i class="tag post-item-tag">Linux</i></a></header><h2 class="mt-4 mb-0 is-family-serif"><a href="/2024/08/15/2024-08-15-Thu-T-Linux/">2024-08-15-Thu-T-Linux</a></h2><time class="has-text-grey" datetime="2024-08-15T06:04:56.000Z">2024-08-15</time><p class="is-flex-grow-2 mt-2">一、基础篇1.1 Linux入门linux 官网: www.kernel.org
-网站扫描: https://sitereport.netcraft.com
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/2024/index.html","title":""}</script>
 
-Linux和Unix关系
-Uninx
-BSD
-FreeBSD
-
-
-Sun Solaris
-IBM AIX
-AT&amp;amp;T System V
-Minix
-GUN&amp;#x2F;Linux内核
-Ubuntu
-RedHat
-centOS
-RedhatOS
-
-
-SUSE
-Fedora
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>归档 | Fei</title>
+  
 
 
 
@@ -81,20 +45,394 @@ Fedora
 
 
 
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
 
-1.2 vm和Linux安装使用相应工具安装linux虚拟机, 本文使用multipass安装虚拟机安装multipass brew install multipass
-虚拟机网络连接模式介绍
+  
 
-桥接模式: 虚拟机会获得一个与主机网络相同网段的IP地址，与主机、..</p><a class="button is-default mt-2 has-text-weight-semibold" href="/2024/08/15/2024-08-15-Thu-T-Linux/">Read more</a></section></article><section class="paginator is-flex is-justify-content-flex-end is-flex-wrap-wrap mt-5"><span class="page-number current">1</span><a class="page-number" href="/archives/2024/page/2/">2</a><a class="extend next" rel="next" href="/archives/2024/page/2/"><i class="iconfont icon-next has-text-grey"></i></a></section></section><aside class="column is-hidden-mobile is-4-tablet is-3-widescreen"><div style="position: sticky; top: 50px;"><main class="aside-card-container archives-widget is-in-archive-page"><h3>Archives</h3><section><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/09/">September 2025</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/08/">August 2025</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/07/">July 2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/06/">June 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/05/">May 2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/04/">April 2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/02/">February 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">January 2025</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">September 2024</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">August 2024</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">October 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">September 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a><span class="archive-list-count">1</span></li></ul></section></main></div></aside></div></article><script>$claudia.fadeInImage(null, $claudia.blurBackdropImg)
 
-window.addEventListener('resize', $claudia.throttle(function () {
-    var images = document.querySelectorAll('.js-img-fadeIn')
 
-    images.forEach($claudia.blurBackdropImg)
-}, 150))</script></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><a title="twitter" target="_blank" rel="noopener nofollow" href="//twitter.com//"><i class="iconfont icon-twitter"></i></a><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/haojen"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com//"><i class="iconfont icon-ins"></i></a><!-- RSS--><!-- 知乎--><!-- 领英--><!-- 脸书--><a title="facebook" target="_blank" rel="noopener nofollow" href="//www.facebook.com//"><i class="iconfont icon-tian7_facebook"></i></a></section><p><span>Copyright ©</span><span> Fei 2025</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"><a title="Hexo theme author" target="_blank" rel="noopener" href="//github.com/haojen">Theme by Haojen&nbsp;</a></p><div style="margin-top: 2px"><a class="github-button" title="github-button" target="_blank" rel="noopener" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true"></a></div></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script>$claudia.fadeInImage(null, $claudia.blurBackdropImg)
 
-window.addEventListener('resize', $claudia.throttle(function () {
-    var images = document.querySelectorAll('.js-img-fadeIn')
 
-    images.forEach($claudia.blurBackdropImg)
-}, 150))</script></body></html>
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Fei" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Fei</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Wellcome to Fei's blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Fei"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Fei</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">46</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner archive posts-collapse">
+
+
+  
+  
+  
+  <div class="post-block">
+    <div class="post-content">
+      <div class="collection-title">
+        
+        <span class="collection-header">还行! 目前共计 46 篇日志。 继续努力。</span>
+      </div>
+
+      
+    <div class="collection-year">
+      <span class="collection-header">2024<span class="collection-year-count">19</span></span>
+    </div>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2024-11-26T16:04:28+08:00"
+              content="2024-11-26">
+          11-26
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2024/11/26/2024-11-26-Tue-T-SSM/" itemprop="url">
+            <span itemprop="name">2024-11-26-Tue-T-SSM</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2024-11-21T19:52:12+08:00"
+              content="2024-11-21">
+          11-21
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2024/11/21/2024-11-21-Thu-T-SpringMVC/" itemprop="url">
+            <span itemprop="name">2024-11-21-Thu-T-SpringMVC</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2024-11-21T19:44:21+08:00"
+              content="2024-11-21">
+          11-21
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2024/11/21/2024-11-21-Thu-T-Spring6/" itemprop="url">
+            <span itemprop="name">2024-11-21-Thu-T-Spring6</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2024-11-06T01:31:07+08:00"
+              content="2024-11-06">
+          11-06
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2024/11/06/2024-11-06-Wed-T-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url">
+            <span itemprop="name">2024-11-06-Wed-T-数据结构与算法</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2024-09-12T16:35:32+08:00"
+              content="2024-09-12">
+          09-12
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2024/09/12/2024-09-12-Thu-T-Go%E8%AF%AD%E8%A8%80/" itemprop="url">
+            <span itemprop="name">2024-09-12-Thu-T-Go语言</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2024-09-12T14:58:30+08:00"
+              content="2024-09-12">
+          09-12
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2024/09/12/2024-09-12-Thu-T-%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86%E5%BE%AE%E6%9C%8D%E5%8A%A1/" itemprop="url">
+            <span itemprop="name">2024-09-12-Thu-T-文件处理微服务</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2024-09-06T15:49:05+08:00"
+              content="2024-09-06">
+          09-06
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2024/09/06/2024-09-06-Fri-T-%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/" itemprop="url">
+            <span itemprop="name">2024-09-06-Fri-T-技术学习路线</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2024-09-04T15:46:19+08:00"
+              content="2024-09-04">
+          09-04
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2024/09/04/2024-09-04-Wed-T-Docker/" itemprop="url">
+            <span itemprop="name">2024-09-04-Wed-T-Docker</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2024-09-04T14:06:50+08:00"
+              content="2024-09-04">
+          09-04
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2024/09/04/2024-09-04-Wed-T-Podman/" itemprop="url">
+            <span itemprop="name">2024-09-04-Wed-T-Podman</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2024-08-15T14:04:56+08:00"
+              content="2024-08-15">
+          08-15
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2024/08/15/2024-08-15-Thu-T-Linux/" itemprop="url">
+            <span itemprop="name">2024-08-15-Thu-T-Linux</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+
+    </div>
+  </div>
+  
+  
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/archives/2024/page/2/">2</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/archives/2024/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Fei</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

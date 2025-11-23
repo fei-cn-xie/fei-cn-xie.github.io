@@ -1,15 +1,290 @@
-<!DOCTYPE html><html class="appearance-auto" lang="en"><head><meta charset="UTF-8"><title>2024-08-13-Hexo的瓶瓶罐罐</title><meta name="description" content="非淡泊无以明志，非宁静无以致远"><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google Analytics --><!-- End Google Analytics -->
-<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.ico"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><link rel="stylesheet" href="/style/common/jquery.fancybox.min.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
 
-Hexo
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-1. 基础介绍1.1 目录介绍12345678910├── _config.fluid.yml├── _config.yml├── db.json├── node_modules├── packag$$e-lock.json├── package.json├── public├── scaffolds├── source└── themes
+<link rel="stylesheet" href="/css/main.css">
 
-_config.fluid.yml: 这是一个配置文件，用于配置Hexo的插件、主题等。  
-_config.yml: 这是一个配置文件，用于配置Hexo的插件、主题等。  
-db.json: 这是一个数据库文件，用于存储Hexo的博客数据。   
-package.json: 这是一个配置文件，存储应用程序的信息。 EJS, Stylus 和 Mark.."><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Fei" type="application/atom+xml">
-</head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">Fei's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">2024-08-13-Hexo的瓶瓶罐罐</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3><h3 class="is-inline-block"><a href="/about">About</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E5%9F%BA%E7%A1%80%E4%BB%8B%E7%BB%8D"><span class="toc-text">1. 基础介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E7%9B%AE%E5%BD%95%E4%BB%8B%E7%BB%8D"><span class="toc-text">1.1 目录介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">1.2 配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text">1.3 资源文件夹</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-1-%E5%85%A8%E5%B1%80%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text">1.3.1 全局资源文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-2-%E6%96%87%E7%AB%A0%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text">1.3.2 文章资源文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-3-%E4%BD%BF%E7%94%A8-Markdown-%E5%B5%8C%E5%85%A5%E5%9B%BE%E7%89%87"><span class="toc-text">1.3.3 使用 Markdown 嵌入图片</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text">1.4 数据文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-Front-matter"><span class="toc-text">1.5 Front-matter</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD"><span class="toc-text">2. 常用功能</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E5%86%99%E4%BD%9C"><span class="toc-text">2.1 写作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1-%E5%B8%83%E5%B1%80%EF%BC%88Layout%EF%BC%89"><span class="toc-text">2.1.1 布局（Layout）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-%E8%8D%89%E7%A8%BF"><span class="toc-text">2.1.2 草稿</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-3-Scaffold"><span class="toc-text">2.1.3 Scaffold</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E4%B8%8EVscode%E7%9A%84%E9%9B%86%E6%88%90"><span class="toc-text">2.2 与Vscode的集成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%91%BD%E4%BB%A4"><span class="toc-text">2.3 自定义命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-1-Hexo-%E7%9A%84%E6%8F%92%E4%BB%B6%E6%9C%BA%E5%88%B6"><span class="toc-text">2.3.1 Hexo 的插件机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-2-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%AE%9A%E4%B9%89%E5%91%BD%E4%BB%A4-hexo-nnn"><span class="toc-text">2.3.2 创建一个自定义命令 hexo nnn</span></a></li></ol></li></ol></li></ol></div><div class="column is-9"><header class="my-4"><a href="/tags/Tech"><i class="tag post-item-tag">Tech</i></a></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">2024-08-13-Hexo的瓶瓶罐罐</h1><time class="has-text-grey" datetime="2024-08-13T01:25:56.000Z">2024-08-13</time><article class="mt-2 post-content"><p><img src="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image.png"></p>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.26.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Hexo  1. 基础介绍1.1 目录介绍12345678910├── _config.fluid.yml├── _config.yml├── db.json├── node_modules├── packag$$e-lock.json├── package.json├── public├── scaffolds├── source└── themes  _config.fluid.yml:">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="2024-08-13-Hexo的瓶瓶罐罐">
+<meta property="og:url" content="http://example.com/2024/08/13/2024-08-13-Wed-T-Hexo%E7%9A%84%E7%93%B6%E7%93%B6%E7%BD%90%E7%BD%90/index.html">
+<meta property="og:site_name" content="Fei">
+<meta property="og:description" content="Hexo  1. 基础介绍1.1 目录介绍12345678910├── _config.fluid.yml├── _config.yml├── db.json├── node_modules├── packag$$e-lock.json├── package.json├── public├── scaffolds├── source└── themes  _config.fluid.yml:">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image.png">
+<meta property="article:published_time" content="2024-08-13T01:25:56.000Z">
+<meta property="article:modified_time" content="2025-11-23T00:58:37.300Z">
+<meta property="article:author" content="Fei">
+<meta property="article:tag" content="Tech">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image.png">
+
+
+<link rel="canonical" href="http://example.com/2024/08/13/2024-08-13-Wed-T-Hexo%E7%9A%84%E7%93%B6%E7%93%B6%E7%BD%90%E7%BD%90/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2024/08/13/2024-08-13-Wed-T-Hexo%E7%9A%84%E7%93%B6%E7%93%B6%E7%BD%90%E7%BD%90/","path":"2024/08/13/2024-08-13-Wed-T-Hexo的瓶瓶罐罐/","title":"2024-08-13-Hexo的瓶瓶罐罐"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>2024-08-13-Hexo的瓶瓶罐罐 | Fei</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Fei" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Fei</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Wellcome to Fei's blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E5%9F%BA%E7%A1%80%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">1. 基础介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E7%9B%AE%E5%BD%95%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 目录介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 资源文件夹</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-1-%E5%85%A8%E5%B1%80%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">1.3.1.</span> <span class="nav-text">1.3.1 全局资源文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-2-%E6%96%87%E7%AB%A0%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">1.3.2.</span> <span class="nav-text">1.3.2 文章资源文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-3-%E4%BD%BF%E7%94%A8-Markdown-%E5%B5%8C%E5%85%A5%E5%9B%BE%E7%89%87"><span class="nav-number">1.3.3.</span> <span class="nav-text">1.3.3 使用 Markdown 嵌入图片</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 数据文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-Front-matter"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 Front-matter</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD"><span class="nav-number">2.</span> <span class="nav-text">2. 常用功能</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E5%86%99%E4%BD%9C"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 写作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-%E5%B8%83%E5%B1%80%EF%BC%88Layout%EF%BC%89"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1.1 布局（Layout）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-%E8%8D%89%E7%A8%BF"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.1.2 草稿</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-Scaffold"><span class="nav-number">2.1.3.</span> <span class="nav-text">2.1.3 Scaffold</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E4%B8%8EVscode%E7%9A%84%E9%9B%86%E6%88%90"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 与Vscode的集成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%91%BD%E4%BB%A4"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 自定义命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-1-Hexo-%E7%9A%84%E6%8F%92%E4%BB%B6%E6%9C%BA%E5%88%B6"><span class="nav-number">2.3.1.</span> <span class="nav-text">2.3.1 Hexo 的插件机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-2-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E5%AE%9A%E4%B9%89%E5%91%BD%E4%BB%A4-hexo-nnn"><span class="nav-number">2.3.2.</span> <span class="nav-text">2.3.2 创建一个自定义命令 hexo nnn</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Fei"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Fei</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">46</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2024/08/13/2024-08-13-Wed-T-%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/" rel="bookmark">
+        <time class="popular-posts-time">2024-08-13</time>
+        <br>
+      2024-08-13-Wed-T-快捷键大全
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2024/08/13/2024-08-13-Wed-T-NodeJS%E9%85%8D%E7%BD%AE/" rel="bookmark">
+        <time class="popular-posts-time">2024-08-13</time>
+        <br>
+      2024-08-13-Wed-T-NodeJS配置
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2023/09/19/2023-09-19-E-%E6%96%87%E7%AB%A0%E7%AE%A1%E7%90%86/" rel="bookmark">
+        <time class="popular-posts-time">2023-09-19</time>
+        <br>
+      2023-09-19-E-文章管理
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2024/09/04/2024-09-04-Wed-T-Podman/" rel="bookmark">
+        <time class="popular-posts-time">2024-09-04</time>
+        <br>
+      2024-09-04-Wed-T-Podman
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/13/2024-08-13-Wed-T-Hexo%E7%9A%84%E7%93%B6%E7%93%B6%E7%BD%90%E7%BD%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Fei">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="2024-08-13-Hexo的瓶瓶罐罐 | Fei">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2024-08-13-Hexo的瓶瓶罐罐
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-08-13 09:25:56" itemprop="dateCreated datePublished" datetime="2024-08-13T09:25:56+08:00">2024-08-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-11-23 08:58:37" itemprop="dateModified" datetime="2025-11-23T08:58:37+08:00">2025-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Tech/" itemprop="url" rel="index"><span itemprop="name">Tech</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><img src="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image.png"></p>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs">Hexo</a></p>
 </blockquote>
@@ -97,4 +372,132 @@ package.json: 这是一个配置文件，存储应用程序的信息。 EJS, Sty
 </blockquote>
 </li>
 </ol>
-</article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><a class="button is-default" href="/2024/08/13/2024-08-13-Wed-T-%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/" title="2024-08-13-Wed-T-快捷键大全"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">Previous: 2024-08-13-Wed-T-快捷键大全</span></a><a class="button is-default" href="/2024/08/11/2024-08-11-Sun-T-Nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/" title="2024-08-11-Sun-T-Nginx反向代理配置"><span class="has-text-weight-semibold">Next: 2024-08-11-Sun-T-Nginx反向代理配置</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section><article class="mt-6 comment-container"><script async repo="Haojen/Claudia-theme-blog" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><a title="twitter" target="_blank" rel="noopener nofollow" href="//twitter.com//"><i class="iconfont icon-twitter"></i></a><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/haojen"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com//"><i class="iconfont icon-ins"></i></a><!-- RSS--><!-- 知乎--><!-- 领英--><!-- 脸书--><a title="facebook" target="_blank" rel="noopener nofollow" href="//www.facebook.com//"><i class="iconfont icon-tian7_facebook"></i></a></section><p><span>Copyright ©</span><span> Fei 2025</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"><a title="Hexo theme author" target="_blank" rel="noopener" href="//github.com/haojen">Theme by Haojen&nbsp;</a></p><div style="margin-top: 2px"><a class="github-button" title="github-button" target="_blank" rel="noopener" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true"></a></div></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/jquery-3.6.1.min.js"></script><script src="/js/jquery-fancybox.min.js"></script><script src="/js/img_zoom.js"></script><script src="/js/post.js"></script></body></html>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/logo.svg" alt="Fei 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="Fei 支付宝">
+        <span>支付宝</span>
+      </div>
+      <div>
+        <img src="/images/bitcoin.png" alt="Fei 比特币">
+        <span>比特币</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Fei
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2024/08/13/2024-08-13-Wed-T-Hexo%E7%9A%84%E7%93%B6%E7%93%B6%E7%BD%90%E7%BD%90/" title="2024-08-13-Hexo的瓶瓶罐罐">http://example.com/2024/08/13/2024-08-13-Wed-T-Hexo的瓶瓶罐罐/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://www.zhihu.com/people/username">
+            <span class="icon">
+              <i class="fab fa-zhihu"></i>
+            </span>
+
+            <span class="label">Zhihu</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Tech/" rel="tag"># Tech</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/08/11/2024-08-11-Sun-T-Nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/" rel="prev" title="2024-08-11-Sun-T-Nginx反向代理配置">
+                  <i class="fa fa-angle-left"></i> 2024-08-11-Sun-T-Nginx反向代理配置
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/08/13/2024-08-13-Wed-T-%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/" rel="next" title="2024-08-13-Wed-T-快捷键大全">
+                  2024-08-13-Wed-T-快捷键大全 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Fei</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
