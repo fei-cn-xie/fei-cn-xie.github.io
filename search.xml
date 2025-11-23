@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>2023-09-19-E-文章管理</title>
+    <url>/2023/09/19/2023-09-19-E-%E6%96%87%E7%AB%A0%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[文章管理
+2023年9月19日生效
+
+时间-文章类型-文章名称
+文章类型：
+
+日记随想：D : Thoughts
+
+总结反思：S : Summary
+
+技术文章：T : Tech
+
+读书笔记：R : Reading
+
+效率管理：E : Efficiency
+
+
+日记： 记录一天经历的事件或所思所想
+技术文章：整理所学到的技术知识, 以及技术相关的工作学习收获
+读书笔记：整理每次阅读完一本书的知识点或者读后感。对于论述性书籍进行总结归纳，对于文学类书籍写读后感
+效率提升：记录能提升知识输入输出的方式。比如本文档可归为此分类。因为本文档用于阐述我所写文章的分类方式。
+
+
+总结反思：S
+技术文章：T
+读书笔记：R
+效率管理：E
+
+index_img: /img/; summary: 
+
+index_img 用于设置博客文章在列表页面中的封面图片。你可以在文章的 Front-matter 中使用这个字段来指定图片的路径。
+---title: My Blog Postdate: 2024-08-11tags: [Hexo, Blogging]index_img: /img/my-image.jpg---
+在这个例子中，/img/my-image.jpg 是图片的路径，表示你的Hexo站点根目录下的 source/img/my-image.jpg
+summary用于在文章列表页面显示自定义的摘要文本。如果没有指定summary，Hexo通常会自动截取文章内容的前几行作为摘要。你可以在Front-matter中手动设置
+---title: My Blog Postdate: 2024-08-11tags: [Hexo, Blogging]index_img: /img/my-image.jpgsummary: This is a brief summary of the blog post that will appear on the index page.---
+
+多级分类
+]]></content>
+      <categories>
+        <category>Efficiency</category>
+      </categories>
+      <tags>
+        <tag>知识管理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2023-09-18-R-金字塔原理</title>
     <url>/2023/09/18/2023-09-19-R-%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86/</url>
     <content><![CDATA[前言简介金字塔原理是美国作家芭芭拉·明托在1966年所著，她是著名咨询公司麦肯锡聘用的第一位女性咨询顾问。金字塔原理是她在1966年被派往英国，担任负责麦肯锡欧洲员工写作能力的职位后总结得出的。金字塔原理介绍了一种能清晰表达思路的有效方法。掌握了金字塔原理，就能在各行各业的各种事务中，重点突出，逻辑清晰地实现与相关人员的高效沟通。
@@ -83,51 +131,31 @@
       </tags>
   </entry>
   <entry>
-    <title>2023-09-19-E-文章管理</title>
-    <url>/2023/09/19/2023-09-19-E-%E6%96%87%E7%AB%A0%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[文章管理
-2023年9月19日生效
+    <title>2023-10-15-R-如何阅读一本书</title>
+    <url>/2023/10/15/2023-10-15-R-%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6/</url>
+    <content><![CDATA[从五月份开始直至昨天，断断续续读完了这本书，但这个过程还是过于走马观花。因为是走马观花，所以大部分的内容根本没有深入理解，更谈不让将之运用于实践了。不过我知道这是一本好书，一本对于我的个人发展是一本好书，它能指导我的阅读。而阅读本本身可以让我获取更多的思想以及思考方式，所以重读这本书是很有必要的。而在这里，我也需要通过写读书笔记的方式来辅助我对这本书对我有利的内容尽可能多地进行吸纳。
+我会按照这本书的结构来进行读书笔记的书写，除了对于文中重要内容的复述，也会加入我个人新的思考。
+第一篇 阅读的层次第1章 阅读的活力与艺术本书的目的是为了那些以增进自己理解力为目标而阅读的人提供指导
 
-时间-文章类型-文章名称
-文章类型：
+主动地阅读
 
-日记随想：D : Thoughts
+​	阅读越主动，收获也就越多
+​	作者与读者的关系就如同发球手和捕球手的关系一样。作者“发出”某个思想，读者需要主动地去“捕	获”这个思想。
+​	首先，阅读需要主动。其次，阅读需要有技巧。
 
-总结反思：S : Summary
+阅读的目标：为获得资讯而读，以及为求得理解而读
+只有一种方式是真正地在阅读。没有任何外力的帮助，你就是要读这本书。你什么都没有，制凭借着内心的力量，玩味着眼前的字句，慢慢地提升自己，从只有模糊的概念到更清楚的理解为止。这样的一种提升，是在阅读时的一种脑力活动，也是更高的阅读技巧。这种阅读是让一本书向你既有的理解力做挑战。
 
-技术文章：T : Tech
-
-读书笔记：R : Reading
-
-效率管理：E : Efficiency
-
-
-日记： 记录一天经历的事件或所思所想
-技术文章：整理所学到的技术知识, 以及技术相关的工作学习收获
-读书笔记：整理每次阅读完一本书的知识点或者读后感。对于论述性书籍进行总结归纳，对于文学类书籍写读后感
-效率提升：记录能提升知识输入输出的方式。比如本文档可归为此分类。因为本文档用于阐述我所写文章的分类方式。
+阅读就是学习：指导型的学习，以及自我发现型的学习之间的差异。
+医生努力为病人做许多事情，但最终的结论是这个病人必须自己好起来，变得健康起来。农夫为他的植物或动物做了许多事，结果是这些动植物必须自己长大，变得更好。同样的，老师可能用尽了方法来教学生，学生却必须自己能学习才行。当他学习到了，知识就会在他脑中生根发芽。
 
 
-总结反思：S
-技术文章：T
-读书笔记：R
-效率管理：E
-
-index_img: /img/; summary: 
-
-index_img 用于设置博客文章在列表页面中的封面图片。你可以在文章的 Front-matter 中使用这个字段来指定图片的路径。
----title: My Blog Postdate: 2024-08-11tags: [Hexo, Blogging]index_img: /img/my-image.jpg---
-在这个例子中，/img/my-image.jpg 是图片的路径，表示你的Hexo站点根目录下的 source/img/my-image.jpg
-summary用于在文章列表页面显示自定义的摘要文本。如果没有指定summary，Hexo通常会自动截取文章内容的前几行作为摘要。你可以在Front-matter中手动设置
----title: My Blog Postdate: 2024-08-11tags: [Hexo, Blogging]index_img: /img/my-image.jpgsummary: This is a brief summary of the blog post that will appear on the index page.---
-
-多级分类
-]]></content>
+第2章 阅读的层次]]></content>
       <categories>
-        <category>Efficiency</category>
+        <category>Reading</category>
       </categories>
       <tags>
-        <tag>知识管理</tag>
+        <tag>reading</tag>
       </tags>
   </entry>
   <entry>
@@ -188,34 +216,6 @@ micromamba是mamba的一个精简版，micromamba的base环境是空的，不包
       </tags>
   </entry>
   <entry>
-    <title>2023-10-15-R-如何阅读一本书</title>
-    <url>/2023/10/15/2023-10-15-R-%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6/</url>
-    <content><![CDATA[从五月份开始直至昨天，断断续续读完了这本书，但这个过程还是过于走马观花。因为是走马观花，所以大部分的内容根本没有深入理解，更谈不让将之运用于实践了。不过我知道这是一本好书，一本对于我的个人发展是一本好书，它能指导我的阅读。而阅读本本身可以让我获取更多的思想以及思考方式，所以重读这本书是很有必要的。而在这里，我也需要通过写读书笔记的方式来辅助我对这本书对我有利的内容尽可能多地进行吸纳。
-我会按照这本书的结构来进行读书笔记的书写，除了对于文中重要内容的复述，也会加入我个人新的思考。
-第一篇 阅读的层次第1章 阅读的活力与艺术本书的目的是为了那些以增进自己理解力为目标而阅读的人提供指导
-
-主动地阅读
-
-​	阅读越主动，收获也就越多
-​	作者与读者的关系就如同发球手和捕球手的关系一样。作者“发出”某个思想，读者需要主动地去“捕	获”这个思想。
-​	首先，阅读需要主动。其次，阅读需要有技巧。
-
-阅读的目标：为获得资讯而读，以及为求得理解而读
-只有一种方式是真正地在阅读。没有任何外力的帮助，你就是要读这本书。你什么都没有，制凭借着内心的力量，玩味着眼前的字句，慢慢地提升自己，从只有模糊的概念到更清楚的理解为止。这样的一种提升，是在阅读时的一种脑力活动，也是更高的阅读技巧。这种阅读是让一本书向你既有的理解力做挑战。
-
-阅读就是学习：指导型的学习，以及自我发现型的学习之间的差异。
-医生努力为病人做许多事情，但最终的结论是这个病人必须自己好起来，变得健康起来。农夫为他的植物或动物做了许多事，结果是这些动植物必须自己长大，变得更好。同样的，老师可能用尽了方法来教学生，学生却必须自己能学习才行。当他学习到了，知识就会在他脑中生根发芽。
-
-
-第2章 阅读的层次]]></content>
-      <categories>
-        <category>Reading</category>
-      </categories>
-      <tags>
-        <tag>reading</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2024-08-11-Sun-T-Nginx反向代理配置</title>
     <url>/2024/08/11/2024-08-11-Sun-T-Nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[]]></content>
@@ -225,73 +225,6 @@ micromamba是mamba的一个精简版，micromamba的base环境是空的，不包
       <tags>
         <tag>Tech</tag>
         <tag>Nginx</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2024-08-13-Tue-R-Creative_Guitar</title>
-    <url>/2024/08/13/2024-08-13-Tue-R-Creative_Guitar/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Reading</category>
-      </categories>
-      <tags>
-        <tag>Reading</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2024-08-13-Tue-T-Rancher操作指北</title>
-    <url>/2024/08/13/2024-08-13-Tue-T-Rancher%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8C%97/</url>
-    <content><![CDATA[
-Rancher 是一个 Kubernetes 管理工具，让你能在任何地方和任何提供商上部署和运行集群。  
-
-Rancher 可以创建来自 Kubernetes 托管服务提供商的集群，创建节点并安装 Kubernetes，或者导入在任何地方运行的现有 Kubernetes 集群。  
-Rancher 基于 Kubernetes 添加了新的功能，包括统一所有集群的身份验证和 RBAC，让系统管理员从一个位置控制全部集群的访问。此外，Rancher 可以为集群和资源提供更精细的监控和告警，将日志发送到外部提供商，并通过应用商店（Application Catalog）直接集成 Helm。如果你拥有外部 CI&#x2F;CD 系统，你可以将其与 Rancher 对接。没有的话，你也可以使用 Rancher 提供的 Fleet 自动部署和升级工作负载。  
-Rancher 是一个 全栈式 的 Kubernetes 容器管理平台，为你提供在任何地方都能成功运行 Kubernetes 的工具。
-1. 概述Rancher 为 DevOps 工程师提供简单直接的用户界面，以管理其应用负载。用户不需要对 Kubernetes 有非常深入的了解，即可使用 Rancher。Rancher 应用商店包含一套实用的 DevOps 开发工具。Rancher 获得了多种云原生生态系统产品的认证，包括安全工具、监控系统、容器镜像仓库、存储和网络驱动等。
-下图讲述了 Rancher 在 IT 管理团队和 DevOps 开发团队之间扮演的角色。DevOps 团队把他们的应用部署在他们选择的公有云或私有云上。IT 管理员负责查看并管理用户、集群、云服务的权限。
-1.1 Rancher 架构1.1.1 Rancher Server 和 Components大多数 Rancher 2.x 软件均运行在 Rancher Server 上。Rancher Server 包括用于管理整个 Rancher 部署的所有软件组件。
-下图展示了 Rancher 2.x 的上层架构。下图中，Rancher Server 管理两个下游 Kubernetes 集群，其中一个由 RKE 创建，另一个由 Amazon EKS 创建。
-为了达到最佳性能和安全性，我们建议你为 Rancher Management Server 创建一个专用的 Kubernetes 集群。不建议在此集群上运行用户工作负载。部署 Rancher 后，你可以创建或导入集群来运行你的工作负载。
-下图介绍了用户如何通过 Rancher 的认证代理管理 Rancher 启动的 Kubernetes 集群和托管的 Kubernetes 集群：
-通过 Rancher 的认证代理管理 Kubernetes 集群
-
-1.1.2 与下游集群通信下图显示了 Cluster Controller、Cluster Agent 和 Node Agent 让 Rancher 控制下游集群的。
-
-与下游集群通信
-
-
-认证代理在此图中，名为 Bob 的用户希望查看在名为User Cluster 1的下游集群上运行的所有 Pod。在 Rancher 中，他可以运行kubectl命令来查看 Pod。Bob 通过Rancher的认证代理进行身份验证。
-
-认证代理将所有 Kubernetes API 调用转发到下游集群。它集成了本地身份验证、Active Directory 和 GitHub 等身份验证方式。在每个 Kubernetes API 调用请求时，认证代理会验证请求方的身份，并在转发给 Kubernetes master 节点之前，设置正确的 Kubernetes 消息头。
-Rancher 使用 ServiceAccount 与 Kubernetes 集群通信，该 ServiceAccount 为在 Pod 中运行的进程提供身份。
-默认情况下，Rancher 生成一个 kubeconfig 文件，文件包含凭证信息，用于为 Rancher Server 连接下游集群的 Kubernetes API Server 的代理。kubeconfig 文件 (kube_config_rancher-cluster.yml) 包含对集群的完全访问权限。
-]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>Tech</tag>
-        <tag>Rancher</tag>
-        <tag>Kubernetes</tag>
-        <tag>DevOps</tag>
-        <tag>Cloud</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2024-08-13-Wed-T-Git操作大全</title>
-    <url>/2024/08/13/2024-08-13-Wed-T-Git%E6%93%8D%E4%BD%9C%E5%A4%A7%E5%85%A8/</url>
-    <content><![CDATA[1. 基本操作gitignore忽略文件如果有文件需要忽略，可以在根目录下创建一个.gitignore文件，在里面写上需要忽略的文件名，比如：
-.idea/node_modules/public/temp.txt
-如果某些文件已被 Git 跟踪，即使你将它们添加到 .gitignore 文件中，Git 仍然会继续跟踪它们。你需要使用以下命令停止跟踪这些文件
-git rm --cached &lt;file&gt; # 停止跟踪文件git rm -r --cached &lt;folder_name&gt; # 停止跟踪文件夹git rm -r --cached . # 停止跟踪所有文件
-
-]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>Tech</tag>
-        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -1621,7 +1554,7 @@ StampedLock的悲观读锁和写锁都不支持条件变量（Condition），
 使用StampedLock一定不要调用中断操作，即不要调用interrupt()方法。
 
 4.13 总结听课 + 实践 
-&#x7a;&#x7a;&#121;&#121;&#98;&#115;&#x40;&#x31;&#x32;&#54;&#46;&#x63;&#x6f;&#x6d;
+&#x7a;&#x7a;&#x79;&#x79;&#x62;&#115;&#x40;&#49;&#x32;&#x36;&#x2e;&#x63;&#x6f;&#x6d;
 
 CompletableFuture
 
@@ -1701,6 +1634,73 @@ ThreadLocal
       <tags>
         <tag>Tech</tag>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2024-08-13-Tue-T-Rancher操作指北</title>
+    <url>/2024/08/13/2024-08-13-Tue-T-Rancher%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8C%97/</url>
+    <content><![CDATA[
+Rancher 是一个 Kubernetes 管理工具，让你能在任何地方和任何提供商上部署和运行集群。  
+
+Rancher 可以创建来自 Kubernetes 托管服务提供商的集群，创建节点并安装 Kubernetes，或者导入在任何地方运行的现有 Kubernetes 集群。  
+Rancher 基于 Kubernetes 添加了新的功能，包括统一所有集群的身份验证和 RBAC，让系统管理员从一个位置控制全部集群的访问。此外，Rancher 可以为集群和资源提供更精细的监控和告警，将日志发送到外部提供商，并通过应用商店（Application Catalog）直接集成 Helm。如果你拥有外部 CI&#x2F;CD 系统，你可以将其与 Rancher 对接。没有的话，你也可以使用 Rancher 提供的 Fleet 自动部署和升级工作负载。  
+Rancher 是一个 全栈式 的 Kubernetes 容器管理平台，为你提供在任何地方都能成功运行 Kubernetes 的工具。
+1. 概述Rancher 为 DevOps 工程师提供简单直接的用户界面，以管理其应用负载。用户不需要对 Kubernetes 有非常深入的了解，即可使用 Rancher。Rancher 应用商店包含一套实用的 DevOps 开发工具。Rancher 获得了多种云原生生态系统产品的认证，包括安全工具、监控系统、容器镜像仓库、存储和网络驱动等。
+下图讲述了 Rancher 在 IT 管理团队和 DevOps 开发团队之间扮演的角色。DevOps 团队把他们的应用部署在他们选择的公有云或私有云上。IT 管理员负责查看并管理用户、集群、云服务的权限。
+1.1 Rancher 架构1.1.1 Rancher Server 和 Components大多数 Rancher 2.x 软件均运行在 Rancher Server 上。Rancher Server 包括用于管理整个 Rancher 部署的所有软件组件。
+下图展示了 Rancher 2.x 的上层架构。下图中，Rancher Server 管理两个下游 Kubernetes 集群，其中一个由 RKE 创建，另一个由 Amazon EKS 创建。
+为了达到最佳性能和安全性，我们建议你为 Rancher Management Server 创建一个专用的 Kubernetes 集群。不建议在此集群上运行用户工作负载。部署 Rancher 后，你可以创建或导入集群来运行你的工作负载。
+下图介绍了用户如何通过 Rancher 的认证代理管理 Rancher 启动的 Kubernetes 集群和托管的 Kubernetes 集群：
+通过 Rancher 的认证代理管理 Kubernetes 集群
+
+1.1.2 与下游集群通信下图显示了 Cluster Controller、Cluster Agent 和 Node Agent 让 Rancher 控制下游集群的。
+
+与下游集群通信
+
+
+认证代理在此图中，名为 Bob 的用户希望查看在名为User Cluster 1的下游集群上运行的所有 Pod。在 Rancher 中，他可以运行kubectl命令来查看 Pod。Bob 通过Rancher的认证代理进行身份验证。
+
+认证代理将所有 Kubernetes API 调用转发到下游集群。它集成了本地身份验证、Active Directory 和 GitHub 等身份验证方式。在每个 Kubernetes API 调用请求时，认证代理会验证请求方的身份，并在转发给 Kubernetes master 节点之前，设置正确的 Kubernetes 消息头。
+Rancher 使用 ServiceAccount 与 Kubernetes 集群通信，该 ServiceAccount 为在 Pod 中运行的进程提供身份。
+默认情况下，Rancher 生成一个 kubeconfig 文件，文件包含凭证信息，用于为 Rancher Server 连接下游集群的 Kubernetes API Server 的代理。kubeconfig 文件 (kube_config_rancher-cluster.yml) 包含对集群的完全访问权限。
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>Tech</tag>
+        <tag>Rancher</tag>
+        <tag>Kubernetes</tag>
+        <tag>DevOps</tag>
+        <tag>Cloud</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2024-08-13-Tue-R-Creative_Guitar</title>
+    <url>/2024/08/13/2024-08-13-Tue-R-Creative_Guitar/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Reading</category>
+      </categories>
+      <tags>
+        <tag>Reading</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2024-08-13-Wed-T-Git操作大全</title>
+    <url>/2024/08/13/2024-08-13-Wed-T-Git%E6%93%8D%E4%BD%9C%E5%A4%A7%E5%85%A8/</url>
+    <content><![CDATA[1. 基本操作gitignore忽略文件如果有文件需要忽略，可以在根目录下创建一个.gitignore文件，在里面写上需要忽略的文件名，比如：
+.idea/node_modules/public/temp.txt
+如果某些文件已被 Git 跟踪，即使你将它们添加到 .gitignore 文件中，Git 仍然会继续跟踪它们。你需要使用以下命令停止跟踪这些文件
+git rm --cached &lt;file&gt; # 停止跟踪文件git rm -r --cached &lt;folder_name&gt; # 停止跟踪文件夹git rm -r --cached . # 停止跟踪所有文件
+
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>Tech</tag>
+        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -2167,18 +2167,6 @@ version: &#x27;3.8&#x27;  # 指定 Compose 文件格式版本services:  web:    
       </categories>
       <tags>
         <tag>Tech</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2024-09-12-Thu-T-Go语言</title>
-    <url>/2024/09/12/2024-09-12-Thu-T-Go%E8%AF%AD%E8%A8%80/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>Tech</tag>
-        <tag>Go</tag>
       </tags>
   </entry>
   <entry>
@@ -2854,6 +2842,18 @@ Redis – 必学
       </tags>
   </entry>
   <entry>
+    <title>2024-09-12-Thu-T-Go语言</title>
+    <url>/2024/09/12/2024-09-12-Thu-T-Go%E8%AF%AD%E8%A8%80/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>Tech</tag>
+        <tag>Go</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2024-09-12-Thu-T-文件处理微服务</title>
     <url>/2024/09/12/2024-09-12-Thu-T-%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86%E5%BE%AE%E6%9C%8D%E5%8A%A1/</url>
     <content><![CDATA[今天哥们又接到一个文件处理的开发需求，要实现一个文件上传、下载的通用服务。为了快速满足这一需求，我使用了SpringBoot + 华为云OBS快速写了一个小小的程序。
@@ -2917,274 +2917,6 @@ class Solution &#123;    public ListNode addTwoNumbers(ListNode l1, ListNode l2)
 //滑动窗口class Solution &#123;    public int lengthOfLongestSubstring(String s) &#123;        int n = s.length();        if(n&lt;=1)&#123;            return n;        &#125;        int l = 0, r = 1;        HashSet&lt;Character&gt; set = new HashSet&lt;&gt;();        set.add(s.charAt(l));        int res = 0;        while(r&lt;n)&#123;            while(r&lt;n &amp;&amp; !set.contains(s.charAt(r)))&#123;                set.add(s.charAt(r));                r++;            &#125;            res = Math.max(res, r-l);            set.remove(s.charAt(l)); //             l++;        &#125;        return res;    &#125;&#125;
 
 1.4 寻找两个正序数组的中位数2. 一般3. 困难]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>Tech</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2024-11-21-Thu-T-SpringMVC</title>
-    <url>/2024/11/21/2024-11-21-Thu-T-SpringMVC/</url>
-    <content><![CDATA[SpringMVC
-Demo代码
-
-1 SpringMVC 简介MVC是一种软件架构思想, 将软件按照模型、视图、控制器来划分M: Model : 模型层, 指工程中的Java Bean, 作用是处理数据Java Bean分为两类:
-
-实体类Bean: 专门存储业务数据的, 比如User, Student
-业务处理Bean: 指Service或者Dao, 专门用于处理业务逻辑和数据访问
-
-V: View :视图层, 指工程中html或sp等页面, 作用是与用户进行交互, 展示数据C: Controller : 控制层, 指工程中的servlet, 作用是接受请求和响应浏览器  
-SpringMVC是一个Spring的子项目, SpringMVC有如下特点: 
-
-Spring系列原生产品, 与IOC容器等基础设施无缝对接  
-基于原生的Servlet, 通过功能强大的前端控制器DispatcherServlet, 对请求和响应进行统一处理  
-表述层各细分领域需要解决的问题全方面覆盖, 提供全面解决方案
-代码清晰简洁、组件化程度高、可插拔式组件即插即用、性能卓越..
-
-2. HelloWorld2.1准备工作
-添加模块
-
-打包方式war
-
-引入依赖
-&lt;!--SpringMVC--&gt;&lt;dependency&gt;    &lt;groupId&gt;org.springframework&lt;/groupId&gt;    &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;    &lt;version&gt;6.1.13&lt;/version&gt;&lt;/dependency&gt;&lt;!--日志--&gt;&lt;dependency&gt;    &lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;    &lt;artifactId&gt;logback-classic&lt;/artifactId&gt;    &lt;version&gt;1.4.12&lt;/version&gt;&lt;/dependency&gt;&lt;!--ServletAPI Tomcat中会自带此包--&gt;&lt;dependency&gt;    &lt;groupId&gt;javax.servlet&lt;/groupId&gt;    &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;    &lt;version&gt;3.1.0&lt;/version&gt;    &lt;scope&gt;provided&lt;/scope&gt;    &lt;!--依赖由运行环境（例如容器或框架）提供的库，比如 servlet-api（在 Servlet 容器中运行时由容器提供）。--&gt;&lt;/dependency&gt;&lt;!--Spring5和Thymeleaf整合包--&gt;&lt;dependency&gt;    &lt;groupId&gt;org.thymeleaf&lt;/groupId&gt;    &lt;artifactId&gt;thymeleaf-spring6&lt;/artifactId&gt;    &lt;version&gt;3.1.2.RELEASE&lt;/version&gt;&lt;/dependency&gt;
-
-在main目录下创建webapp目录 
-
-载project structure中的module中添加web.xml(注意路径应该在webapp目录下)
-
-
-2.2 配置web.xml注册SpringMVC的前端控制器DispatcherServlet, 
-
-默认配置方式此配置作用下, SpringMVC的配置文件默认位于WEB-INF下, 默认名为&lt;servlet-name&gt;-servlet.xml, 例如, 以下配置对应的SpringMVC的配置文件位于WEB-INF下, 文件名为springMVC-servlet.xml
-
-&lt;!--配置SpringMVC的前端控制器, 对浏览器发出的请求进行统一的处理--&gt;&lt;servlet&gt;    &lt;servlet-name&gt;SpringMVC&lt;/servlet-name&gt;    &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;&lt;/servlet&gt;&lt;servlet-mapping&gt;    &lt;servlet-name&gt;SpringMVC&lt;/servlet-name&gt;    &lt;url-pattern&gt;/&lt;/url-pattern&gt;    &lt;!--&quot;/&quot;包括除了.jsp之外的所有请求(.jsp本质是一个servlet, 需要由特定的servlet处理器处理--&gt;&lt;/servlet-mapping&gt;
-
-
-扩展配置方式(常用)可通过init-param标签设置SpringMVC配置文件的位置和名称,  通过load-on-startup标签设置SpringMVC前端控制器DispatcherServlet
-
-&lt;!-- 前端控制器 --&gt;&lt;servlet&gt;    &lt;servlet-name&gt;SpringMVC&lt;/servlet-name&gt;    &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;    &lt;!--        选择spring容器管理文件   管理mvc--&gt;    &lt;init-param&gt;        &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;        &lt;param-value&gt;classpath:springMVC.xml&lt;/param-value&gt;    &lt;/init-param&gt;    &lt;!--        加载方式 程序运行时--&gt;    &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;&lt;/servlet&gt;&lt;servlet-mapping&gt;    &lt;servlet-name&gt;SpringMVC&lt;/servlet-name&gt;    &lt;!--        访问请求   / 接受所有请求  不包括.jps请求拒接   /* 接受所有请求 包括.jsp--&gt;    &lt;url-pattern&gt;/&lt;/url-pattern&gt;&lt;/servlet-mapping&gt;
-
-2.3 创建请求控制器由于前端控制器对浏览器发出的请求进行了统一的处理, 但是具体的请求有不同的处理过程, 因此需要创建处理具体请求的类, 即请求控制器请求控制器中每一个处理请求的方法都成为控制器方法.因为SpringMVC的控制器由一个POJO(普通的java类plain old java object)担任, 因此需要通过@Controller注解将其标识为一个控制层组件, 交给Spring ioc容器进行管理. 此时SpringMVC才能识别出控制器的存在.  
-@Controllerpublic void HelloWorld()&#123;        @RequestMapping(value = &quot;/&quot;)    public String index()&#123;        //返回视图名称        return &quot;index&quot;;    &#125;&#125;
-
-2.4 创建springMVC.xml&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;       xmlns:context=&quot;http://www.springframework.org/schema/context&quot;       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans       http://www.springframework.org/schema/beans/spring-beans.xsd       http://www.springframework.org/schema/context       http://www.springframework.org/schema/context/spring-context.xsd&quot;&gt;    &lt;!-- 上下文包  组件 扫描--&gt;    &lt;context:component-scan base-package=&quot;com.learning.mvc.controller&quot;/&gt;    &lt;!--    视图解析器--&gt;    &lt;bean id=&quot;springResourceTemplateResolver&quot; class=&quot;org.thymeleaf.spring6.templateresolver.SpringResourceTemplateResolver&quot;&gt;        &lt;property name=&quot;prefix&quot; value=&quot;/WEB-INF/templates/&quot;/&gt;        &lt;property name=&quot;suffix&quot; value=&quot;.html&quot;/&gt;        &lt;property name=&quot;templateMode&quot; value=&quot;HTML&quot;/&gt;        &lt;property name=&quot;characterEncoding&quot; value=&quot;UTF-8&quot;/&gt;    &lt;/bean&gt;    &lt;bean id=&quot;templateEngine&quot; class=&quot;org.thymeleaf.spring6.SpringTemplateEngine&quot;&gt;        &lt;property name=&quot;templateResolver&quot; ref=&quot;springResourceTemplateResolver&quot;/&gt;    &lt;/bean&gt;    &lt;bean id=&quot;viewResolver&quot; class=&quot;org.thymeleaf.spring6.view.ThymeleafViewResolver&quot;&gt;        &lt;property name=&quot;order&quot; value=&quot;1&quot;/&gt;        &lt;property name=&quot;characterEncoding&quot; value=&quot;UTF-8&quot;/&gt;        &lt;property name=&quot;templateEngine&quot; ref=&quot;templateEngine&quot;/&gt;    &lt;/bean&gt;&lt;/beans&gt;
-
-2.5 配置tomcat tomcat10
- 
-3. 核心内容3.1 @RequestMapping注解@RequestMapping的作用就是将请求和处理请求的控制器关联起来, 建立映射关系  
-//// Source code recreated from a .class file by IntelliJ IDEA// (powered by FernFlower decompiler)//package org.springframework.web.bind.annotation;import java.lang.annotation.Documented;import java.lang.annotation.ElementType;import java.lang.annotation.Retention;import java.lang.annotation.RetentionPolicy;import java.lang.annotation.Target;import org.springframework.aot.hint.annotation.Reflective;import org.springframework.core.annotation.AliasFor;@Target(&#123;ElementType.TYPE, ElementType.METHOD&#125;)@Retention(RetentionPolicy.RUNTIME)@Documented@Mapping@Reflective(&#123;ControllerMappingReflectiveProcessor.class&#125;)public @interface RequestMapping &#123;    String name() default &quot;&quot;;    @AliasFor(&quot;path&quot;)    String[] value() default &#123;&#125;;    @AliasFor(&quot;value&quot;)    String[] path() default &#123;&#125;;    RequestMethod[] method() default &#123;&#125;;    String[] params() default &#123;&#125;;    String[] headers() default &#123;&#125;;    String[] consumes() default &#123;&#125;;    String[] produces() default &#123;&#125;;&#125;
-
-3.1.1 @RequestMapping注解的位置
-标识一个类: 设置请求路径的主路径
-标识一个方法: 设置请求路径的子路径
-
-3.1.2 @RequestMapping注解的value属性
-value属性通过请求地址匹配请求映射  
-
-value属性是一个字符串数组, 标识其可以进行多个路径匹配
-
-value属性必须设置, 不能缺少
-
-
-3.1.3 @RequestMapping注解的method属性@RequestMapping注解的method属性通过请求的请求方式(get、post等)匹配请求路径@RequestMapping的method属性是一个RequestMethod类型的数组  
-对于处理指定请求方式的控制器方法, SpringMVC提供了@Request Mapping的派生注解:  
-
-@GetMapping
-@PostMapping
-@PutMapping
-@DeleteMapping
-
-3.1.4 @RequestMapping的params属性@RequestMapping的params参数是一个字符串数组, 可以通过四种表达式设置请求和请求映射的匹配关系
-
-param: 必须携带参数param
-!param: 只要不携带参数param即可
-param=value: 必须要参数param等于value
-param!=value: 只要参数param不等于value即可
-
-# 例子params = &#123;username&#125; # 必须携带usernameparams = &#123;!username&#125; # 只要不携带username即可params = &#123;username=zhangsan&#125; # 必须username = zhangsanparams = &#123;username!=zhangsan&#125; # 只要username不等于zhangsan即可
-
-3.1.5 SpringMVC支持ant风格的路径
-?: 表示任意的单个字符
-*: 标识任意的0个或多个字符
-**: 表示任意的一层或多层目录
-注意: 使用**时, 只能使用/**/xxx的方式
-
-3.1.6 SpringMVC支持路径中的占位符(重点)
-原始方式: /deleteUser?id=1 (面向操作)
-Restful方式: /deleteUser/1 (面向资源, 更易理解)
-
-@RequestMapping(&quot;/test/&#123;id&#125;/&#123;username&#125;&quot;)public User getUser(@PathVariable(&quot;id&quot;) String id, @PathVariable String username)&#123;    return new User(id, username);&#125;
-
-3.2 SpringMVC获取请求参数3.2.1 @RequestParam//一般不使用此方式@RequestMapping(&quot;/test&quot;)public User getUser(HttpServletRequest request)&#123;    String name = request.getParameter(&quot;username&quot;);    String password = request.getParameter(&quot;id&quot;);    return new User(name,password);&#125;
-
-
-//SpringMVC方式// 1. 默认情况    //保证形参名与请求参数中的名字一样, 比如此案例中应该为 /testParam?username=zs&amp;password=123    //对于多个相同的参数名, 可以使用数组接收    @RequestMapping(value = &quot;/testParam&quot;)    public String testParam(String username, String password)&#123;        return &quot;success&quot;;    &#125;//2. 使用@RequestParam注解    @RequestMapping(value = &quot;/testParam&quot;)    public String testParam(@RequestParam(&quot;username&quot;) String username, @RequestParam(&quot;password&quot;) String password)&#123;        return &quot;success&quot;;    &#125;
-
-3.2.2 @RequestHeader@RequestHeader是将请求头信息和控制器方法的形参创建映射关系@RequestHeader注解一共有三个属性: value, required, defaultValue, 用法与@RequestParam一样  
-3.2.3 @CookieValue@CookieValue是将cookie数据和控制器方法的形参创建映射关系三个属性与@RequestParam一样  
-3.2.4 通过POJO获取请求参数在控制器方法的形参位置设置一个实体的类型的形参, 浏览器请求的参数与该实体内属性一致, 则参数会自动赋值  
-3.3 域对象共享数据域对象	作用范围	生命周期	应用场景
-
-ServletContext:	全局范围	Web 应用启动到销毁	应用配置、全局统计信息
-HttpSession:	会话范围	用户访问到会话超时或销毁	登录信息、购物车
-ServletRequest:	请求范围	单个 HTTP 请求处理期间	请求数据、转发共享数据
-PageContext: 单个 JSP 页面	从 JSP 页面开始执行到处理完成	当前 JSP 页面内部	存储 JSP 页面的临时变量
-
-3.3.1 使用servletAPI向Request域对象共享数据@RequestMapping(&quot;/test&quot;)public String test(HttpServletRequest request)&#123;    request.setAttribute(&quot;testScope&quot;, &quot;Hello&quot;);    return &quot;success&quot;;&#125;
-3.3.2 使用ModelAndView向request域对象添加数据@RequestMapping(&quot;/testModleAndView&quot;)public ModelAndView testModelAndView()&#123;    /**     * ModelAndView包含model和view功能     * model主要用于向请求域中共享数据     * view主要用于设置视图, 实现页面跳转     */    ModelAndView modelAndView = new ModelAndView();    //向请求域中共享数据    modelAndView.addObject(&quot;msg111&quot;, &quot;testModelAndView + &quot; + modelAndView);    //设置视图, 实现页面跳转    modelAndView.setViewName(&quot;success&quot;);    return modelAndView;&#125;
-
-3.3.3 使用Model向request域对象共享数据@RequestMapping(&quot;/testModle&quot;)public String testModel(Model model)&#123;    model.setAttribute(&quot;testScope&quot;, &quot;hello&quot;);    return &quot;success&quot;&#125;
-
-3.3.4 使用Map向request域对象共享数据@RequestMapping(&quot;/testMap&quot;)public String testMap(Map&lt;String, Object&gt; map)&#123;    map.put(&quot;testScope&quot;, &quot;hello&quot;);    return &quot;success&quot;&#125;
-
-3.3.5 使用ModelMap向request域对象共享数据@RequestMapping(&quot;/testModleMap&quot;)public String testModelMap(ModelMap model)&#123;    model.setAttribute(&quot;testScope&quot;, &quot;hello&quot;);    return &quot;success&quot;&#125;
-
-3.3.6 向Session域共享数据@RequestMapping(&quot;/testSession&quot;)public String testSession(HttpSession session)&#123;    session.setAttribute(&quot;testSession&quot;, &quot;hello, session&quot;);    return &quot;success&quot;;&#125;
-
-3.3.6 向application域中共享数据@RequestMapping(&quot;/testApp&quot;)public String testApp(HttpSession session)&#123;    ServletContext application = session.getServletContext();    application.setAttribute(&quot;testApp&quot;, &quot;hellp application domain&quot;);    return &quot;success&quot;;&#125;
-
-3.4 SpringMVC的视图SpringMVC的视图是View接口, 视图的作用是渲染数据, 将模型Model中的数据展示给用户SpringMVC视图的种类有很多, 默认有转发视图InternalResourceView和重定向视图RedirectView当工程引入jstl的依赖, 转发视图会自动转化为JstlView  
-3.4.1 ThymeleafView若使用的视图为Thymeleaf, 在SpringMVC的配置文件中配置了Thymeleaf的视图解析器, 由此视图解析器解析之后所得到的是ThymeleafView
-3.4.2 InternalResourceViewSpringMVC中默认的转发视图是InternalResourceView当控制器方法中所设置的视图名称以“forward:&#x2F;“为前缀时, 会创建InternalResourceView视图, 此时视图名称不会被SpringMVC配置文件中的所配置的视图解析器解析. 而是通过转发的方式跳转  
-3.4.3 RedirectView
-3.4.4 视图控制器view-controller当控制器中的方法, 仅仅用来实现页面跳转, 即只需要设置视图名称时, 可以将处理器方法使用view-controller标签进行表示    
-&lt;mvc:view-controller path=&quot;/&quot; view-name=&quot;index&quot;&gt;&lt;/mvc:view-controller&gt;     &lt;!--配置了view- controller后注解驱动会失效, 需要重新开启--&gt; &lt;mvc:annotation-driven/&gt;
-
-
-4. RESTfulREST: Representational State Transfer 表现层资源状态转移  
-
-资源处于服务器上一切可以访问的数据都可称为资源  
-
-资源的表述资源的表述是一段对于资源在某个特定时刻的状态的描述. 可以理解为数据的格式  
-
-状态转移状态转移是系统从一个状态变化到另一个状态的过程。状态（State）是系统在某一时刻的特定条件或配置，而转移（Transition）是由某种事件或条件触发的状态变化。例如: 用户已登陆, 用户未登录
-
-
-3.1 RESTful的实现HTTP协议中, 有四个表示对资源的操作动词: 
-
-GET:获取资源
-POST: 新建资源
-PUT: 更新资源
-DELETE: 删除资源
-
-RESTful风格提倡URL地址使用统一的风格设计, 从前到后各个单词使用斜杠分开, 不使用问号键值对的方式携带请求参数, 而是将要发送给服务器的数据作为url的一部分, 保证风格一致性  
-
-3.2 通过过滤器处理delete和put请求&lt;!--配置过滤器HiddenHttpMethodFilter--&gt;&lt;filter&gt;    &lt;filter-name&gt;HiddenHttpMethodFilter&lt;/filter-name&gt;    &lt;filter-class&gt;org.springframework.web.filter.HiddenHttpMethodFilter&lt;/filter-class&gt;&lt;/filter&gt;&lt;filter-mapping&gt;    &lt;filter-name&gt;HiddenHttpMethodFilter&lt;/filter-name&gt;    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;&lt;/filter-mapping&gt;
-
-
-
-
-5. SpringMVC执行流程5.1 SpringMVC常用组件
-DispatcherServlet: 前端控制器, 框架提供,不需要工程师开发. 整个流程控制的中心, 统一处理请求和响应. 由它调用其他组件处理用户的请求  
-HandlerMapping: 处理器映射器, 框架提供, 不需要工程师开发. 根据请求的url,method等信息查找Handler, 即控制器方法  
-Handler: 处理器,即控制器Controller, 需要工程师开发. 在DispatcherServlet的控制下, Handler对具体的用户请求进行处理  
-HandlerAdapter: 处理器适配器, 由框架提供, 不需要工程师开发. 通过HandlerAdapter对控制器方法(处理器)进行执行  
-ViewResolver: 视图解析器, 由框架提供, 不需要工程师开发. 进行视图解析, 得到对应的视图  
-View: 视图, 不需要工程师开发, 由框架或视图技术提供. 将模型数据通过页面展示给用户
-
-5.2 DispatcherServlet初始化过程DispatcherServlet本质上是一个Servlet, 所以遵循Servlet的生命周期,  
-Servlet生命周期  
-
-Servlet 初始化后调用 init () 方法。
-Servlet 调用 service() 方法来处理客户端的请求。
-Servlet 销毁前调用 destroy() 方法。
-最后，Servlet 是由 JVM 的垃圾回收器进行垃圾回收的。
-
-protected void initStrategies(ApplicationContext context) &#123;    this.initMultipartResolver(context);    this.initLocaleResolver(context);    this.initThemeResolver(context);    this.initHandlerMappings(context);    this.initHandlerAdapters(context);    this.initHandlerExceptionResolvers(context);    this.initRequestToViewNameTranslator(context);    this.initViewResolvers(context);    this.initFlashMapManager(context);&#125;
-
-5.3 SpringMVC执行流程
-用户向服务器发起请求, 请求被SpringMVC前端控制器DispatcherServlet捕获  
-DispatcherServlet对URL进行解析, 得到请求资源定位符URI, 判断请求URI对应的映射:
-不存在URI对应映射
-再判断是否配置了mvc:default-servlet-handler
-如果没配置, 控制台报映射查找不到, 客户端显示404错误  
-有配置, 则访问目标资源(一般是静态资源, html, js, css). 找不到式客户端会显示404
-
-
-
-
-存在URI对应映射
-根据URI, 调用HandlerMapping得到该Handler配置的所有有关对象, 包括控制器和拦截器, 最后以HandlerExecutionChain执行链对象的形式返回  
-DispatcherServlet根据的到的Handler, 选择一个合适的HandlerAdapter
-如果成功或得HandlerAdapter, 开始执行拦截器的preHandler方法
-提取Request中的模型数据, 填充Handler入参, 开始执行Handler(Controller)方法, 处理请求. 在填充Handler的入参过程中, 根据个人配置, Spring将完成一些额外的工作:  
-HttpMessageConvert: 将请求信息(json, xml等)转化为一个对象, 或者将对象转化为对应的响应信息  
-数据转换: 比如String转化为Integer
-数据格式化: 比如String转化为数字或者日期
-数据验证: 验证数据有效性(长度, 格式等)
-
-
-Handler执行完成后, 向DispatcherServlet返回一个ModleAndView对象
-此时将开始执行拦截器postHandler()方法
-根据ModelAndView(如果有异常, 执行Handler ExceptionResolver进行异常处理), 选择一个合适的ViewResovler(普通、forward、redirect)进行视图解析, 根据model和view来渲染视图
-将渲染结果返回给客户端
-
-
-
-
-
-6. 注解配置SpringMVC使用配置类和注解代替web.xml和SpringMVC配置文件功能  
-6.1 创建初始化类, 代替web.xml在Servlet3.0中, 容器会在类路径中查找实现javax.servlet.ServletContainerInitializer接口的类, 如果找到的话就用它来配置Servlet容器Spring提供了这个接口的实现, 名为SpringServletContainerInitializer. 这个类还会查找实现WebApplicationInitializer的类, 并将配置的任务交给他们完成, Spring3.2引入了一个WebApplicationInitializer的实现类, AbstractAnnotationConfigDispatcherServletInitializer.当我们继承了AbstractAnnotationConfigDispatcherServletInitializer并且将其部署到了Servlet3的容器中时, 容器会自动发现它, 并用它来配置Servlet上下文.  
-package com.learning.mvc.anno.config;import jakarta.servlet.Filter;import org.springframework.web.filter.CharacterEncodingFilter;import org.springframework.web.filter.HiddenHttpMethodFilter;import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;/** * Author fei * Version 1.0 * Description Web工程的初始化类 * 用来代替web.xml * DATA 2024/11/22  19:04 */public class WebXML extends AbstractAnnotationConfigDispatcherServletInitializer &#123;    /**     * 指定Spring配置类     *     * @return     */    @Override    protected Class&lt;?&gt;[] getRootConfigClasses() &#123;        return new Class[]&#123;SpringConfig.class&#125;;    &#125;    /**     * 指定SpringMVC配置类     *     * @return     */    @Override    protected Class&lt;?&gt;[] getServletConfigClasses() &#123;        return new Class[]&#123;WebConfig.class&#125;;    &#125;    /**     * 指定DispatcherServlet的url- patter     * 指定SpringMVC的映射规则，即url-pattern     *     * @return     */    @Override    protected String[] getServletMappings() &#123;        return new String[]&#123;&quot;/&quot;&#125;;    &#125;    /**     * 注册过滤器     * @return     */    @Override    protected Filter[] getServletFilters() &#123;        CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();        characterEncodingFilter.setEncoding(&quot;UTF-8&quot;);        characterEncodingFilter.setForceEncoding(true);        HiddenHttpMethodFilter hiddenHttpMethodFilter = new HiddenHttpMethodFilter();        return new Filter[]&#123;characterEncodingFilter, hiddenHttpMethodFilter&#125;;    &#125;&#125;
-
-6.2 创建SpringMVC配置, 代替SpringMVC.xmlpackage com.learning.mvc.anno.config;import com.learning.mvc.anno.controller.TestController;import com.learning.mvc.anno.interceptor.TestInterceptor;import org.springframework.beans.factory.annotation.Qualifier;import org.springframework.context.annotation.Bean;import org.springframework.context.annotation.ComponentScan;import org.springframework.context.annotation.Configuration;import org.springframework.http.MediaType;import org.springframework.http.converter.StringHttpMessageConverter;import org.springframework.web.multipart.MultipartResolver;import org.springframework.web.multipart.support.StandardServletMultipartResolver;import org.springframework.web.servlet.HandlerExceptionResolver;import org.springframework.web.servlet.config.annotation.*;import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;import org.thymeleaf.spring6.SpringTemplateEngine;import org.thymeleaf.spring6.templateresolver.SpringResourceTemplateResolver;import org.thymeleaf.spring6.view.ThymeleafViewResolver;import java.nio.charset.StandardCharsets;import java.util.ArrayList;import java.util.List;import java.util.Properties;/** * Author fei * Version 1.0 * Description 代替SpringMVC配置文件 * 1. 扫描组件 * 2. 视图解析器、3. view-controller, 4. default- servlet-handler: WebMvcConfigurer * 5. mvc注解驱动  6. 文件上传解析器。7. 异常处理。8. 拦截器 * DATA 2024/11/22  18:52 */@Configuration@ComponentScan(&quot;com.learning.mvc.anno&quot;)@EnableWebMvc //5. 开启MVC注解驱动public class WebConfig implements WebMvcConfigurer &#123;    /**     *  配置default- servlet-handler:     * @param configurer     */    @Override    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) &#123;        configurer.enable();    &#125;    /**     * 8 添加拦截器     * @param registry     */    @Override    public void addInterceptors(InterceptorRegistry registry) &#123;        registry.addInterceptor(new TestInterceptor()).addPathPatterns(&quot;/**&quot;); //拦截所有        WebMvcConfigurer.super.addInterceptors(registry);    &#125;    /**     * 3. view-controller,     * @param registry     */    @Override    public void addViewControllers(ViewControllerRegistry registry) &#123;        registry.addViewController(&quot;/&quot;).setViewName(&quot;forward:/index.html&quot;);    &#125;    /**     * 6. 文件上传解析器     * @return     */    @Bean    public MultipartResolver multipartResolver() &#123;        return new StandardServletMultipartResolver();    &#125;    /**     * 。7. 异常处理。     * @param resolvers     */    @Override    public void configureHandlerExceptionResolvers(List&lt;HandlerExceptionResolver&gt; resolvers) &#123;        SimpleMappingExceptionResolver exceptionResolver = new SimpleMappingExceptionResolver();        Properties properties = new Properties();        properties.setProperty(&quot;java.lang.ArithmeticException&quot;, &quot;error&quot;);        exceptionResolver.setExceptionMappings(properties);        exceptionResolver.setExceptionAttribute(&quot;exception&quot;); // 方便从请求域中获取异常信息        resolvers.add(exceptionResolver);    &#125;    /**     * 配置 thymeleaf视图解析器     * @param templateEngine     * @return     */    @Bean    public ThymeleafViewResolver thymeleafViewResolver(@Qualifier(&quot;springTemplateEngine&quot;) SpringTemplateEngine templateEngine) &#123;        ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();        viewResolver.setOrder(1);        viewResolver.setCharacterEncoding(&quot;UTF-8&quot;);        viewResolver.setTemplateEngine(templateEngine);        return viewResolver;    &#125;    @Bean(&quot;springTemplateEngine&quot;)    public SpringTemplateEngine templateEngine(@Qualifier(&quot;templateResolver&quot;) SpringResourceTemplateResolver templateResolver) &#123;        SpringTemplateEngine templateEngine = new SpringTemplateEngine();        templateEngine.addTemplateResolver(templateResolver);        return templateEngine;    &#125;    @Bean(&quot;templateResolver&quot;)    public SpringResourceTemplateResolver springResourceTemplateResolver() &#123;        SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();        //视图前缀        templateResolver.setPrefix(&quot;classpath:/WEB-INF/templates/&quot;);        //视图后缀        templateResolver.setSuffix(&quot;.html&quot;);        templateResolver.setTemplateMode(&quot;HTML5&quot;);        templateResolver.setCharacterEncoding(&quot;UTF-8&quot;);        return templateResolver;    &#125;
-
-
-7. 扩展功能7.1 HttpMessageConverterHttpMessageConverter, 报文信息转换器, 将请求报文转化为Java对象, 或将java对象转化为响应报文HttpMessageConverter提供了两个注解和两个类型:注解:  
-
-@RequestBody: 在控制器中设置一个形参, 并使用此注解标识控制器
-@ResponseBody: 标识控制器方法, 可以将该控制器的返回值作为响应体返回给浏览器类型:  
-RequestEntity:  放入控制器方法的形参中, 当有请求匹配到此控制器中, 则请求体信息会自动注入该形参中  
-ResponseEntity: 用于控制器返回值类型, 就是响应到浏览器的响应报文
-
-@ResponseBody处理json对象需要引入注解才可以让java对象自动转化为json对象  
-&lt;!--引入json依赖--&gt;&lt;dependency&gt;    &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;    &lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;    &lt;version&gt;2.16.0&lt;/version&gt;&lt;/dependency&gt;
-
-@RestController &#x3D; @Controller + @ResponseBody@RestController加载控制器的类上, 相当于为类添加了@Controller, 同时为类中每个控制器添加了@ResponseBody
-7.2 文件上传和下载@Controllerpublic class FileController &#123;    @RequestMapping(&quot;/testDown&quot;)    public ResponseEntity&lt;byte[]&gt; testDown(HttpSession session) throws IOException &#123;        ServletContext servletContext = session.getServletContext();        String realPath = servletContext.getRealPath(&quot;/static/img/a.png&quot;);        FileInputStream fileInputStream = new FileInputStream(realPath);        byte[] bytes = new byte[fileInputStream.available()];        fileInputStream.read(bytes);        MultiValueMap&lt;String, String&gt; httpHeaders = new HttpHeaders();        httpHeaders.add(&quot;Content-Disposition&quot;, &quot;attachment; filename=a.png&quot;);        HttpStatus httpStatus = HttpStatus.OK;        ResponseEntity&lt;byte[]&gt; responseEntity = new ResponseEntity&lt;&gt;(bytes, httpHeaders, httpStatus);        fileInputStream.close();        return responseEntity;    &#125;&#125;
-
-文件上传需要先引入相关依赖:  
-&lt;!--文件上传需要的依赖--&gt;&lt;dependency&gt;    &lt;groupId&gt;commons-fileupload&lt;/groupId&gt;    &lt;artifactId&gt;commons-fileupload&lt;/artifactId&gt;    &lt;version&gt;1.3.3&lt;/version&gt;&lt;/dependency&gt;
-
-配置bean  
-&lt;!--配置文件上传解析器--&gt;&lt;bean id=&quot;multipartResolver&quot; class=&quot;org.springframework.web.multipart.support.StandardServletMultipartResolver&quot;&gt;&lt;/bean&gt;
-
-配置解析器 
-&lt;!-- 前端控制器 --&gt;    &lt;servlet&gt;        &lt;servlet-name&gt;SpringMVC&lt;/servlet-name&gt;        &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;        &lt;!--        选择spring容器管理文件   管理mvc--&gt;        &lt;init-param&gt;            &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;            &lt;param-value&gt;classpath:springMVC.xml&lt;/param-value&gt;        &lt;/init-param&gt;        &lt;!--        加载方式 程序运行时--&gt;        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;        &lt;multipart-config&gt;            &lt;!--         上传文件最大为多少   --&gt;            &lt;max-file-size&gt;10485760&lt;/max-file-size&gt;            &lt;!--         最大的请求大小   --&gt;            &lt;max-request-size&gt;10485760&lt;/max-request-size&gt;            &lt;!--         多大以上的文件可以上传   --&gt;            &lt;file-size-threshold&gt;0&lt;/file-size-threshold&gt;        &lt;/multipart-config&gt;    &lt;/servlet&gt;
-
-表单  
-&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;Title&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;form th:action=&quot;@&#123;/testUp&#125;&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;  图片上传: &lt;input type=&quot;file&quot; name=&quot;photo&quot;&gt;  &lt;input type=&quot;submit&quot; value=&quot;上传&quot;&gt;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;
-
-控制器  
-@RequestMapping(value = &quot;/testUp&quot;, method = RequestMethod.POST)public String testUp(@RequestParam(&quot;photo&quot;) MultipartFile photo, HttpSession session) throws IOException &#123;    System.out.println(photo.getOriginalFilename());    System.out.println(photo.getName());    ServletContext servletContext = session.getServletContext();    String realPath = servletContext.getRealPath(&quot;photo&quot;);    File file = new File(realPath);    if (!file.exists()) &#123;        file.mkdirs();    &#125;    String finalPath = realPath + File.separator + photo.getOriginalFilename();    photo.transferTo(new File(finalPath));    return &quot;testUP 成功&quot;;&#125;
-
-
-7.3 拦截器
-编写拦截器方法
-@Componentpublic class FirstInterceptor  implements HandlerInterceptor &#123;    @Override    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception &#123;        System.out.println(&quot;FirstInterceptor preHandle&quot;);        return false    ;    &#125;    @Override    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception &#123;        System.out.println(&quot;FirstInterceptor postHandle&quot;);        HandlerInterceptor.super.postHandle(request, response, handler, modelAndView);    &#125;    @Override    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception &#123;        System.out.println(&quot;FirstInterceptor afterCompletion&quot;);        HandlerInterceptor.super.afterCompletion(request, response, handler, ex);    &#125;&#125;
-
-
-编写控制器  
-@Controllerpublic class HandlerController &#123;    @RequestMapping(&quot;/testInterceptor&quot;)    public String testInterceptor() &#123;        return &quot;interceptor&quot;;    &#125;&#125;
-
-
-配置SpringMVC
-&lt;!--配置拦截器--&gt;&lt;mvc:interceptors&gt;    &lt;!--&lt;bean class=&quot;com.learning.mvc.rest.interceptor.FirstInterceptor&quot;&gt;&lt;/bean&gt;--&gt;    &lt;mvc:interceptor&gt;        &lt;mvc:mapping path=&quot;/testInterceptor&quot;/&gt;        &lt;ref bean=&quot;firstInterceptor&quot;/&gt;    &lt;/mvc:interceptor&gt;&lt;/mvc:interceptors&gt;
-
-有多个拦截器时
-7.4 异常处理器SpringMVC提供了一个处理控制器方法执行过程中所出现的异常的接口: HandlerExceptionResolverHandlerExceptionResolver的实现类有:  
-
-DefaultHandlerExceptionResolver  SpringMVC默认使用的异常处理器  
-SimpleHandlerExceptionResolver:  留给开发人员自定义处理异常
-
-基于配置的异常处理  
-&lt;!--配置异常处理--&gt;&lt;bean class=&quot;org.springframework.web.servlet.handler.SimpleMappingExceptionResolver&quot;&gt;    &lt;property name=&quot;exceptionMappings&quot;&gt;        &lt;props &gt;            &lt;prop key=&quot;java.lang.ArithmeticException&quot;&gt;error&lt;/prop&gt;            &lt;!-- 将会自动跳转到error的页面 --&gt;        &lt;/props&gt;    &lt;/property&gt;&lt;/bean&gt;
-基于注解的异常处理  
-@ControllerAdvicepublic class ExceptionCatchController2 &#123;        //如果出现相应的异常, 那么就会调用这个controller    @ExceptionHandler(value = &#123;ArithmeticException.class, NullPointerException.class&#125;)    public String testExceptionHandler(Exception e) &#123;        return &quot;error&quot;;    &#125;&#125;
-]]></content>
       <categories>
         <category>Tech</category>
       </categories>
@@ -3999,19 +3731,266 @@ collection标签: collection标签用于定义集合
       </tags>
   </entry>
   <entry>
-    <title>2025-01-24-Fri-T-如何做一个开源项目</title>
-    <url>/2025/01/24/2025-01-24-Fri-T-%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</url>
-    <content><![CDATA[ 
-创建和维护一个开源项目是一个非常有意义的工作，它可以帮助你与全球开发者合作，同时建立个人或团队的影响力。以下是详细步骤，帮你从零开始创建一个成功的开源项目。
-1. 确定项目目标解决实际问题：选择一个对你或他人有用的问题作为项目的核心目标。定义项目范围：明确项目的功能范围，避免过于宽泛。简单开始：从一个小而实用的功能入手，后续逐步扩展。
-2. 选择开源许可证许可证的作用：它告诉用户和贡献者项目的使用规则。常见开源许可证：MIT：最宽松，允许几乎任何用途。GPL：要求衍生项目也必须开源。Apache 2.0：允许商业用途，同时保护作者的专利。添加许可证： 创建一个 LICENSE 文件，并粘贴许可证文本。例如，MIT 许可证可以从 MIT License 模板 获取。
-MIT特点：非常宽松，允许商业使用、修改、分发。用户只需保留版权声明和许可证文本。适用场景：任何开源项目，尤其是工具类、库类项目。示例：许多现代项目（如 React）使用 MIT 许可证。
-GPL（GNU General Public License）特点：用户可以自由使用和修改代码，但必须将修改后的代码也开源并使用相同许可证。不适合希望代码被广泛商业化的项目。适用场景：想保护代码开源精神的项目。变体：GPLv2：更严格。GPLv3：增加对 SaaS 模型的限制。
-Apache 2.0特点：类似 MIT，但额外提供专利授权保护。如果你的代码包含创新算法，Apache 2.0 可以更好地保护你免受专利纠纷。适用场景：对知识产权较为敏感的大型项目。
+    <title>2024-11-21-Thu-T-SpringMVC</title>
+    <url>/2024/11/21/2024-11-21-Thu-T-SpringMVC/</url>
+    <content><![CDATA[SpringMVC
+Demo代码
 
-3. 创建 README 文件README 是项目的门面，确保清晰简洁，包含以下内容：
-项目介绍：一句话总结项目的目的。功能简介：项目能做什么。安装指南：如何运行项目。使用示例：展示项目的核心功能。贡献指南：告诉开发者如何参与项目。许可证声明：注明项目使用的许可证。
-4. 上传项目代码]]></content>
+1 SpringMVC 简介MVC是一种软件架构思想, 将软件按照模型、视图、控制器来划分M: Model : 模型层, 指工程中的Java Bean, 作用是处理数据Java Bean分为两类:
+
+实体类Bean: 专门存储业务数据的, 比如User, Student
+业务处理Bean: 指Service或者Dao, 专门用于处理业务逻辑和数据访问
+
+V: View :视图层, 指工程中html或sp等页面, 作用是与用户进行交互, 展示数据C: Controller : 控制层, 指工程中的servlet, 作用是接受请求和响应浏览器  
+SpringMVC是一个Spring的子项目, SpringMVC有如下特点: 
+
+Spring系列原生产品, 与IOC容器等基础设施无缝对接  
+基于原生的Servlet, 通过功能强大的前端控制器DispatcherServlet, 对请求和响应进行统一处理  
+表述层各细分领域需要解决的问题全方面覆盖, 提供全面解决方案
+代码清晰简洁、组件化程度高、可插拔式组件即插即用、性能卓越..
+
+2. HelloWorld2.1准备工作
+添加模块
+
+打包方式war
+
+引入依赖
+&lt;!--SpringMVC--&gt;&lt;dependency&gt;    &lt;groupId&gt;org.springframework&lt;/groupId&gt;    &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;    &lt;version&gt;6.1.13&lt;/version&gt;&lt;/dependency&gt;&lt;!--日志--&gt;&lt;dependency&gt;    &lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;    &lt;artifactId&gt;logback-classic&lt;/artifactId&gt;    &lt;version&gt;1.4.12&lt;/version&gt;&lt;/dependency&gt;&lt;!--ServletAPI Tomcat中会自带此包--&gt;&lt;dependency&gt;    &lt;groupId&gt;javax.servlet&lt;/groupId&gt;    &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;    &lt;version&gt;3.1.0&lt;/version&gt;    &lt;scope&gt;provided&lt;/scope&gt;    &lt;!--依赖由运行环境（例如容器或框架）提供的库，比如 servlet-api（在 Servlet 容器中运行时由容器提供）。--&gt;&lt;/dependency&gt;&lt;!--Spring5和Thymeleaf整合包--&gt;&lt;dependency&gt;    &lt;groupId&gt;org.thymeleaf&lt;/groupId&gt;    &lt;artifactId&gt;thymeleaf-spring6&lt;/artifactId&gt;    &lt;version&gt;3.1.2.RELEASE&lt;/version&gt;&lt;/dependency&gt;
+
+在main目录下创建webapp目录 
+
+载project structure中的module中添加web.xml(注意路径应该在webapp目录下)
+
+
+2.2 配置web.xml注册SpringMVC的前端控制器DispatcherServlet, 
+
+默认配置方式此配置作用下, SpringMVC的配置文件默认位于WEB-INF下, 默认名为&lt;servlet-name&gt;-servlet.xml, 例如, 以下配置对应的SpringMVC的配置文件位于WEB-INF下, 文件名为springMVC-servlet.xml
+
+&lt;!--配置SpringMVC的前端控制器, 对浏览器发出的请求进行统一的处理--&gt;&lt;servlet&gt;    &lt;servlet-name&gt;SpringMVC&lt;/servlet-name&gt;    &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;&lt;/servlet&gt;&lt;servlet-mapping&gt;    &lt;servlet-name&gt;SpringMVC&lt;/servlet-name&gt;    &lt;url-pattern&gt;/&lt;/url-pattern&gt;    &lt;!--&quot;/&quot;包括除了.jsp之外的所有请求(.jsp本质是一个servlet, 需要由特定的servlet处理器处理--&gt;&lt;/servlet-mapping&gt;
+
+
+扩展配置方式(常用)可通过init-param标签设置SpringMVC配置文件的位置和名称,  通过load-on-startup标签设置SpringMVC前端控制器DispatcherServlet
+
+&lt;!-- 前端控制器 --&gt;&lt;servlet&gt;    &lt;servlet-name&gt;SpringMVC&lt;/servlet-name&gt;    &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;    &lt;!--        选择spring容器管理文件   管理mvc--&gt;    &lt;init-param&gt;        &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;        &lt;param-value&gt;classpath:springMVC.xml&lt;/param-value&gt;    &lt;/init-param&gt;    &lt;!--        加载方式 程序运行时--&gt;    &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;&lt;/servlet&gt;&lt;servlet-mapping&gt;    &lt;servlet-name&gt;SpringMVC&lt;/servlet-name&gt;    &lt;!--        访问请求   / 接受所有请求  不包括.jps请求拒接   /* 接受所有请求 包括.jsp--&gt;    &lt;url-pattern&gt;/&lt;/url-pattern&gt;&lt;/servlet-mapping&gt;
+
+2.3 创建请求控制器由于前端控制器对浏览器发出的请求进行了统一的处理, 但是具体的请求有不同的处理过程, 因此需要创建处理具体请求的类, 即请求控制器请求控制器中每一个处理请求的方法都成为控制器方法.因为SpringMVC的控制器由一个POJO(普通的java类plain old java object)担任, 因此需要通过@Controller注解将其标识为一个控制层组件, 交给Spring ioc容器进行管理. 此时SpringMVC才能识别出控制器的存在.  
+@Controllerpublic void HelloWorld()&#123;        @RequestMapping(value = &quot;/&quot;)    public String index()&#123;        //返回视图名称        return &quot;index&quot;;    &#125;&#125;
+
+2.4 创建springMVC.xml&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;       xmlns:context=&quot;http://www.springframework.org/schema/context&quot;       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans       http://www.springframework.org/schema/beans/spring-beans.xsd       http://www.springframework.org/schema/context       http://www.springframework.org/schema/context/spring-context.xsd&quot;&gt;    &lt;!-- 上下文包  组件 扫描--&gt;    &lt;context:component-scan base-package=&quot;com.learning.mvc.controller&quot;/&gt;    &lt;!--    视图解析器--&gt;    &lt;bean id=&quot;springResourceTemplateResolver&quot; class=&quot;org.thymeleaf.spring6.templateresolver.SpringResourceTemplateResolver&quot;&gt;        &lt;property name=&quot;prefix&quot; value=&quot;/WEB-INF/templates/&quot;/&gt;        &lt;property name=&quot;suffix&quot; value=&quot;.html&quot;/&gt;        &lt;property name=&quot;templateMode&quot; value=&quot;HTML&quot;/&gt;        &lt;property name=&quot;characterEncoding&quot; value=&quot;UTF-8&quot;/&gt;    &lt;/bean&gt;    &lt;bean id=&quot;templateEngine&quot; class=&quot;org.thymeleaf.spring6.SpringTemplateEngine&quot;&gt;        &lt;property name=&quot;templateResolver&quot; ref=&quot;springResourceTemplateResolver&quot;/&gt;    &lt;/bean&gt;    &lt;bean id=&quot;viewResolver&quot; class=&quot;org.thymeleaf.spring6.view.ThymeleafViewResolver&quot;&gt;        &lt;property name=&quot;order&quot; value=&quot;1&quot;/&gt;        &lt;property name=&quot;characterEncoding&quot; value=&quot;UTF-8&quot;/&gt;        &lt;property name=&quot;templateEngine&quot; ref=&quot;templateEngine&quot;/&gt;    &lt;/bean&gt;&lt;/beans&gt;
+
+2.5 配置tomcat tomcat10
+ 
+3. 核心内容3.1 @RequestMapping注解@RequestMapping的作用就是将请求和处理请求的控制器关联起来, 建立映射关系  
+//// Source code recreated from a .class file by IntelliJ IDEA// (powered by FernFlower decompiler)//package org.springframework.web.bind.annotation;import java.lang.annotation.Documented;import java.lang.annotation.ElementType;import java.lang.annotation.Retention;import java.lang.annotation.RetentionPolicy;import java.lang.annotation.Target;import org.springframework.aot.hint.annotation.Reflective;import org.springframework.core.annotation.AliasFor;@Target(&#123;ElementType.TYPE, ElementType.METHOD&#125;)@Retention(RetentionPolicy.RUNTIME)@Documented@Mapping@Reflective(&#123;ControllerMappingReflectiveProcessor.class&#125;)public @interface RequestMapping &#123;    String name() default &quot;&quot;;    @AliasFor(&quot;path&quot;)    String[] value() default &#123;&#125;;    @AliasFor(&quot;value&quot;)    String[] path() default &#123;&#125;;    RequestMethod[] method() default &#123;&#125;;    String[] params() default &#123;&#125;;    String[] headers() default &#123;&#125;;    String[] consumes() default &#123;&#125;;    String[] produces() default &#123;&#125;;&#125;
+
+3.1.1 @RequestMapping注解的位置
+标识一个类: 设置请求路径的主路径
+标识一个方法: 设置请求路径的子路径
+
+3.1.2 @RequestMapping注解的value属性
+value属性通过请求地址匹配请求映射  
+
+value属性是一个字符串数组, 标识其可以进行多个路径匹配
+
+value属性必须设置, 不能缺少
+
+
+3.1.3 @RequestMapping注解的method属性@RequestMapping注解的method属性通过请求的请求方式(get、post等)匹配请求路径@RequestMapping的method属性是一个RequestMethod类型的数组  
+对于处理指定请求方式的控制器方法, SpringMVC提供了@Request Mapping的派生注解:  
+
+@GetMapping
+@PostMapping
+@PutMapping
+@DeleteMapping
+
+3.1.4 @RequestMapping的params属性@RequestMapping的params参数是一个字符串数组, 可以通过四种表达式设置请求和请求映射的匹配关系
+
+param: 必须携带参数param
+!param: 只要不携带参数param即可
+param=value: 必须要参数param等于value
+param!=value: 只要参数param不等于value即可
+
+# 例子params = &#123;username&#125; # 必须携带usernameparams = &#123;!username&#125; # 只要不携带username即可params = &#123;username=zhangsan&#125; # 必须username = zhangsanparams = &#123;username!=zhangsan&#125; # 只要username不等于zhangsan即可
+
+3.1.5 SpringMVC支持ant风格的路径
+?: 表示任意的单个字符
+*: 标识任意的0个或多个字符
+**: 表示任意的一层或多层目录
+注意: 使用**时, 只能使用/**/xxx的方式
+
+3.1.6 SpringMVC支持路径中的占位符(重点)
+原始方式: /deleteUser?id=1 (面向操作)
+Restful方式: /deleteUser/1 (面向资源, 更易理解)
+
+@RequestMapping(&quot;/test/&#123;id&#125;/&#123;username&#125;&quot;)public User getUser(@PathVariable(&quot;id&quot;) String id, @PathVariable String username)&#123;    return new User(id, username);&#125;
+
+3.2 SpringMVC获取请求参数3.2.1 @RequestParam//一般不使用此方式@RequestMapping(&quot;/test&quot;)public User getUser(HttpServletRequest request)&#123;    String name = request.getParameter(&quot;username&quot;);    String password = request.getParameter(&quot;id&quot;);    return new User(name,password);&#125;
+
+
+//SpringMVC方式// 1. 默认情况    //保证形参名与请求参数中的名字一样, 比如此案例中应该为 /testParam?username=zs&amp;password=123    //对于多个相同的参数名, 可以使用数组接收    @RequestMapping(value = &quot;/testParam&quot;)    public String testParam(String username, String password)&#123;        return &quot;success&quot;;    &#125;//2. 使用@RequestParam注解    @RequestMapping(value = &quot;/testParam&quot;)    public String testParam(@RequestParam(&quot;username&quot;) String username, @RequestParam(&quot;password&quot;) String password)&#123;        return &quot;success&quot;;    &#125;
+
+3.2.2 @RequestHeader@RequestHeader是将请求头信息和控制器方法的形参创建映射关系@RequestHeader注解一共有三个属性: value, required, defaultValue, 用法与@RequestParam一样  
+3.2.3 @CookieValue@CookieValue是将cookie数据和控制器方法的形参创建映射关系三个属性与@RequestParam一样  
+3.2.4 通过POJO获取请求参数在控制器方法的形参位置设置一个实体的类型的形参, 浏览器请求的参数与该实体内属性一致, 则参数会自动赋值  
+3.3 域对象共享数据域对象	作用范围	生命周期	应用场景
+
+ServletContext:	全局范围	Web 应用启动到销毁	应用配置、全局统计信息
+HttpSession:	会话范围	用户访问到会话超时或销毁	登录信息、购物车
+ServletRequest:	请求范围	单个 HTTP 请求处理期间	请求数据、转发共享数据
+PageContext: 单个 JSP 页面	从 JSP 页面开始执行到处理完成	当前 JSP 页面内部	存储 JSP 页面的临时变量
+
+3.3.1 使用servletAPI向Request域对象共享数据@RequestMapping(&quot;/test&quot;)public String test(HttpServletRequest request)&#123;    request.setAttribute(&quot;testScope&quot;, &quot;Hello&quot;);    return &quot;success&quot;;&#125;
+3.3.2 使用ModelAndView向request域对象添加数据@RequestMapping(&quot;/testModleAndView&quot;)public ModelAndView testModelAndView()&#123;    /**     * ModelAndView包含model和view功能     * model主要用于向请求域中共享数据     * view主要用于设置视图, 实现页面跳转     */    ModelAndView modelAndView = new ModelAndView();    //向请求域中共享数据    modelAndView.addObject(&quot;msg111&quot;, &quot;testModelAndView + &quot; + modelAndView);    //设置视图, 实现页面跳转    modelAndView.setViewName(&quot;success&quot;);    return modelAndView;&#125;
+
+3.3.3 使用Model向request域对象共享数据@RequestMapping(&quot;/testModle&quot;)public String testModel(Model model)&#123;    model.setAttribute(&quot;testScope&quot;, &quot;hello&quot;);    return &quot;success&quot;&#125;
+
+3.3.4 使用Map向request域对象共享数据@RequestMapping(&quot;/testMap&quot;)public String testMap(Map&lt;String, Object&gt; map)&#123;    map.put(&quot;testScope&quot;, &quot;hello&quot;);    return &quot;success&quot;&#125;
+
+3.3.5 使用ModelMap向request域对象共享数据@RequestMapping(&quot;/testModleMap&quot;)public String testModelMap(ModelMap model)&#123;    model.setAttribute(&quot;testScope&quot;, &quot;hello&quot;);    return &quot;success&quot;&#125;
+
+3.3.6 向Session域共享数据@RequestMapping(&quot;/testSession&quot;)public String testSession(HttpSession session)&#123;    session.setAttribute(&quot;testSession&quot;, &quot;hello, session&quot;);    return &quot;success&quot;;&#125;
+
+3.3.6 向application域中共享数据@RequestMapping(&quot;/testApp&quot;)public String testApp(HttpSession session)&#123;    ServletContext application = session.getServletContext();    application.setAttribute(&quot;testApp&quot;, &quot;hellp application domain&quot;);    return &quot;success&quot;;&#125;
+
+3.4 SpringMVC的视图SpringMVC的视图是View接口, 视图的作用是渲染数据, 将模型Model中的数据展示给用户SpringMVC视图的种类有很多, 默认有转发视图InternalResourceView和重定向视图RedirectView当工程引入jstl的依赖, 转发视图会自动转化为JstlView  
+3.4.1 ThymeleafView若使用的视图为Thymeleaf, 在SpringMVC的配置文件中配置了Thymeleaf的视图解析器, 由此视图解析器解析之后所得到的是ThymeleafView
+3.4.2 InternalResourceViewSpringMVC中默认的转发视图是InternalResourceView当控制器方法中所设置的视图名称以“forward:&#x2F;“为前缀时, 会创建InternalResourceView视图, 此时视图名称不会被SpringMVC配置文件中的所配置的视图解析器解析. 而是通过转发的方式跳转  
+3.4.3 RedirectView
+3.4.4 视图控制器view-controller当控制器中的方法, 仅仅用来实现页面跳转, 即只需要设置视图名称时, 可以将处理器方法使用view-controller标签进行表示    
+&lt;mvc:view-controller path=&quot;/&quot; view-name=&quot;index&quot;&gt;&lt;/mvc:view-controller&gt;     &lt;!--配置了view- controller后注解驱动会失效, 需要重新开启--&gt; &lt;mvc:annotation-driven/&gt;
+
+
+4. RESTfulREST: Representational State Transfer 表现层资源状态转移  
+
+资源处于服务器上一切可以访问的数据都可称为资源  
+
+资源的表述资源的表述是一段对于资源在某个特定时刻的状态的描述. 可以理解为数据的格式  
+
+状态转移状态转移是系统从一个状态变化到另一个状态的过程。状态（State）是系统在某一时刻的特定条件或配置，而转移（Transition）是由某种事件或条件触发的状态变化。例如: 用户已登陆, 用户未登录
+
+
+3.1 RESTful的实现HTTP协议中, 有四个表示对资源的操作动词: 
+
+GET:获取资源
+POST: 新建资源
+PUT: 更新资源
+DELETE: 删除资源
+
+RESTful风格提倡URL地址使用统一的风格设计, 从前到后各个单词使用斜杠分开, 不使用问号键值对的方式携带请求参数, 而是将要发送给服务器的数据作为url的一部分, 保证风格一致性  
+
+3.2 通过过滤器处理delete和put请求&lt;!--配置过滤器HiddenHttpMethodFilter--&gt;&lt;filter&gt;    &lt;filter-name&gt;HiddenHttpMethodFilter&lt;/filter-name&gt;    &lt;filter-class&gt;org.springframework.web.filter.HiddenHttpMethodFilter&lt;/filter-class&gt;&lt;/filter&gt;&lt;filter-mapping&gt;    &lt;filter-name&gt;HiddenHttpMethodFilter&lt;/filter-name&gt;    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;&lt;/filter-mapping&gt;
+
+
+
+
+5. SpringMVC执行流程5.1 SpringMVC常用组件
+DispatcherServlet: 前端控制器, 框架提供,不需要工程师开发. 整个流程控制的中心, 统一处理请求和响应. 由它调用其他组件处理用户的请求  
+HandlerMapping: 处理器映射器, 框架提供, 不需要工程师开发. 根据请求的url,method等信息查找Handler, 即控制器方法  
+Handler: 处理器,即控制器Controller, 需要工程师开发. 在DispatcherServlet的控制下, Handler对具体的用户请求进行处理  
+HandlerAdapter: 处理器适配器, 由框架提供, 不需要工程师开发. 通过HandlerAdapter对控制器方法(处理器)进行执行  
+ViewResolver: 视图解析器, 由框架提供, 不需要工程师开发. 进行视图解析, 得到对应的视图  
+View: 视图, 不需要工程师开发, 由框架或视图技术提供. 将模型数据通过页面展示给用户
+
+5.2 DispatcherServlet初始化过程DispatcherServlet本质上是一个Servlet, 所以遵循Servlet的生命周期,  
+Servlet生命周期  
+
+Servlet 初始化后调用 init () 方法。
+Servlet 调用 service() 方法来处理客户端的请求。
+Servlet 销毁前调用 destroy() 方法。
+最后，Servlet 是由 JVM 的垃圾回收器进行垃圾回收的。
+
+protected void initStrategies(ApplicationContext context) &#123;    this.initMultipartResolver(context);    this.initLocaleResolver(context);    this.initThemeResolver(context);    this.initHandlerMappings(context);    this.initHandlerAdapters(context);    this.initHandlerExceptionResolvers(context);    this.initRequestToViewNameTranslator(context);    this.initViewResolvers(context);    this.initFlashMapManager(context);&#125;
+
+5.3 SpringMVC执行流程
+用户向服务器发起请求, 请求被SpringMVC前端控制器DispatcherServlet捕获  
+DispatcherServlet对URL进行解析, 得到请求资源定位符URI, 判断请求URI对应的映射:
+不存在URI对应映射
+再判断是否配置了mvc:default-servlet-handler
+如果没配置, 控制台报映射查找不到, 客户端显示404错误  
+有配置, 则访问目标资源(一般是静态资源, html, js, css). 找不到式客户端会显示404
+
+
+
+
+存在URI对应映射
+根据URI, 调用HandlerMapping得到该Handler配置的所有有关对象, 包括控制器和拦截器, 最后以HandlerExecutionChain执行链对象的形式返回  
+DispatcherServlet根据的到的Handler, 选择一个合适的HandlerAdapter
+如果成功或得HandlerAdapter, 开始执行拦截器的preHandler方法
+提取Request中的模型数据, 填充Handler入参, 开始执行Handler(Controller)方法, 处理请求. 在填充Handler的入参过程中, 根据个人配置, Spring将完成一些额外的工作:  
+HttpMessageConvert: 将请求信息(json, xml等)转化为一个对象, 或者将对象转化为对应的响应信息  
+数据转换: 比如String转化为Integer
+数据格式化: 比如String转化为数字或者日期
+数据验证: 验证数据有效性(长度, 格式等)
+
+
+Handler执行完成后, 向DispatcherServlet返回一个ModleAndView对象
+此时将开始执行拦截器postHandler()方法
+根据ModelAndView(如果有异常, 执行Handler ExceptionResolver进行异常处理), 选择一个合适的ViewResovler(普通、forward、redirect)进行视图解析, 根据model和view来渲染视图
+将渲染结果返回给客户端
+
+
+
+
+
+6. 注解配置SpringMVC使用配置类和注解代替web.xml和SpringMVC配置文件功能  
+6.1 创建初始化类, 代替web.xml在Servlet3.0中, 容器会在类路径中查找实现javax.servlet.ServletContainerInitializer接口的类, 如果找到的话就用它来配置Servlet容器Spring提供了这个接口的实现, 名为SpringServletContainerInitializer. 这个类还会查找实现WebApplicationInitializer的类, 并将配置的任务交给他们完成, Spring3.2引入了一个WebApplicationInitializer的实现类, AbstractAnnotationConfigDispatcherServletInitializer.当我们继承了AbstractAnnotationConfigDispatcherServletInitializer并且将其部署到了Servlet3的容器中时, 容器会自动发现它, 并用它来配置Servlet上下文.  
+package com.learning.mvc.anno.config;import jakarta.servlet.Filter;import org.springframework.web.filter.CharacterEncodingFilter;import org.springframework.web.filter.HiddenHttpMethodFilter;import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;/** * Author fei * Version 1.0 * Description Web工程的初始化类 * 用来代替web.xml * DATA 2024/11/22  19:04 */public class WebXML extends AbstractAnnotationConfigDispatcherServletInitializer &#123;    /**     * 指定Spring配置类     *     * @return     */    @Override    protected Class&lt;?&gt;[] getRootConfigClasses() &#123;        return new Class[]&#123;SpringConfig.class&#125;;    &#125;    /**     * 指定SpringMVC配置类     *     * @return     */    @Override    protected Class&lt;?&gt;[] getServletConfigClasses() &#123;        return new Class[]&#123;WebConfig.class&#125;;    &#125;    /**     * 指定DispatcherServlet的url- patter     * 指定SpringMVC的映射规则，即url-pattern     *     * @return     */    @Override    protected String[] getServletMappings() &#123;        return new String[]&#123;&quot;/&quot;&#125;;    &#125;    /**     * 注册过滤器     * @return     */    @Override    protected Filter[] getServletFilters() &#123;        CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();        characterEncodingFilter.setEncoding(&quot;UTF-8&quot;);        characterEncodingFilter.setForceEncoding(true);        HiddenHttpMethodFilter hiddenHttpMethodFilter = new HiddenHttpMethodFilter();        return new Filter[]&#123;characterEncodingFilter, hiddenHttpMethodFilter&#125;;    &#125;&#125;
+
+6.2 创建SpringMVC配置, 代替SpringMVC.xmlpackage com.learning.mvc.anno.config;import com.learning.mvc.anno.controller.TestController;import com.learning.mvc.anno.interceptor.TestInterceptor;import org.springframework.beans.factory.annotation.Qualifier;import org.springframework.context.annotation.Bean;import org.springframework.context.annotation.ComponentScan;import org.springframework.context.annotation.Configuration;import org.springframework.http.MediaType;import org.springframework.http.converter.StringHttpMessageConverter;import org.springframework.web.multipart.MultipartResolver;import org.springframework.web.multipart.support.StandardServletMultipartResolver;import org.springframework.web.servlet.HandlerExceptionResolver;import org.springframework.web.servlet.config.annotation.*;import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;import org.thymeleaf.spring6.SpringTemplateEngine;import org.thymeleaf.spring6.templateresolver.SpringResourceTemplateResolver;import org.thymeleaf.spring6.view.ThymeleafViewResolver;import java.nio.charset.StandardCharsets;import java.util.ArrayList;import java.util.List;import java.util.Properties;/** * Author fei * Version 1.0 * Description 代替SpringMVC配置文件 * 1. 扫描组件 * 2. 视图解析器、3. view-controller, 4. default- servlet-handler: WebMvcConfigurer * 5. mvc注解驱动  6. 文件上传解析器。7. 异常处理。8. 拦截器 * DATA 2024/11/22  18:52 */@Configuration@ComponentScan(&quot;com.learning.mvc.anno&quot;)@EnableWebMvc //5. 开启MVC注解驱动public class WebConfig implements WebMvcConfigurer &#123;    /**     *  配置default- servlet-handler:     * @param configurer     */    @Override    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) &#123;        configurer.enable();    &#125;    /**     * 8 添加拦截器     * @param registry     */    @Override    public void addInterceptors(InterceptorRegistry registry) &#123;        registry.addInterceptor(new TestInterceptor()).addPathPatterns(&quot;/**&quot;); //拦截所有        WebMvcConfigurer.super.addInterceptors(registry);    &#125;    /**     * 3. view-controller,     * @param registry     */    @Override    public void addViewControllers(ViewControllerRegistry registry) &#123;        registry.addViewController(&quot;/&quot;).setViewName(&quot;forward:/index.html&quot;);    &#125;    /**     * 6. 文件上传解析器     * @return     */    @Bean    public MultipartResolver multipartResolver() &#123;        return new StandardServletMultipartResolver();    &#125;    /**     * 。7. 异常处理。     * @param resolvers     */    @Override    public void configureHandlerExceptionResolvers(List&lt;HandlerExceptionResolver&gt; resolvers) &#123;        SimpleMappingExceptionResolver exceptionResolver = new SimpleMappingExceptionResolver();        Properties properties = new Properties();        properties.setProperty(&quot;java.lang.ArithmeticException&quot;, &quot;error&quot;);        exceptionResolver.setExceptionMappings(properties);        exceptionResolver.setExceptionAttribute(&quot;exception&quot;); // 方便从请求域中获取异常信息        resolvers.add(exceptionResolver);    &#125;    /**     * 配置 thymeleaf视图解析器     * @param templateEngine     * @return     */    @Bean    public ThymeleafViewResolver thymeleafViewResolver(@Qualifier(&quot;springTemplateEngine&quot;) SpringTemplateEngine templateEngine) &#123;        ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();        viewResolver.setOrder(1);        viewResolver.setCharacterEncoding(&quot;UTF-8&quot;);        viewResolver.setTemplateEngine(templateEngine);        return viewResolver;    &#125;    @Bean(&quot;springTemplateEngine&quot;)    public SpringTemplateEngine templateEngine(@Qualifier(&quot;templateResolver&quot;) SpringResourceTemplateResolver templateResolver) &#123;        SpringTemplateEngine templateEngine = new SpringTemplateEngine();        templateEngine.addTemplateResolver(templateResolver);        return templateEngine;    &#125;    @Bean(&quot;templateResolver&quot;)    public SpringResourceTemplateResolver springResourceTemplateResolver() &#123;        SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();        //视图前缀        templateResolver.setPrefix(&quot;classpath:/WEB-INF/templates/&quot;);        //视图后缀        templateResolver.setSuffix(&quot;.html&quot;);        templateResolver.setTemplateMode(&quot;HTML5&quot;);        templateResolver.setCharacterEncoding(&quot;UTF-8&quot;);        return templateResolver;    &#125;
+
+
+7. 扩展功能7.1 HttpMessageConverterHttpMessageConverter, 报文信息转换器, 将请求报文转化为Java对象, 或将java对象转化为响应报文HttpMessageConverter提供了两个注解和两个类型:注解:  
+
+@RequestBody: 在控制器中设置一个形参, 并使用此注解标识控制器
+@ResponseBody: 标识控制器方法, 可以将该控制器的返回值作为响应体返回给浏览器类型:  
+RequestEntity:  放入控制器方法的形参中, 当有请求匹配到此控制器中, 则请求体信息会自动注入该形参中  
+ResponseEntity: 用于控制器返回值类型, 就是响应到浏览器的响应报文
+
+@ResponseBody处理json对象需要引入注解才可以让java对象自动转化为json对象  
+&lt;!--引入json依赖--&gt;&lt;dependency&gt;    &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;    &lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;    &lt;version&gt;2.16.0&lt;/version&gt;&lt;/dependency&gt;
+
+@RestController &#x3D; @Controller + @ResponseBody@RestController加载控制器的类上, 相当于为类添加了@Controller, 同时为类中每个控制器添加了@ResponseBody
+7.2 文件上传和下载@Controllerpublic class FileController &#123;    @RequestMapping(&quot;/testDown&quot;)    public ResponseEntity&lt;byte[]&gt; testDown(HttpSession session) throws IOException &#123;        ServletContext servletContext = session.getServletContext();        String realPath = servletContext.getRealPath(&quot;/static/img/a.png&quot;);        FileInputStream fileInputStream = new FileInputStream(realPath);        byte[] bytes = new byte[fileInputStream.available()];        fileInputStream.read(bytes);        MultiValueMap&lt;String, String&gt; httpHeaders = new HttpHeaders();        httpHeaders.add(&quot;Content-Disposition&quot;, &quot;attachment; filename=a.png&quot;);        HttpStatus httpStatus = HttpStatus.OK;        ResponseEntity&lt;byte[]&gt; responseEntity = new ResponseEntity&lt;&gt;(bytes, httpHeaders, httpStatus);        fileInputStream.close();        return responseEntity;    &#125;&#125;
+
+文件上传需要先引入相关依赖:  
+&lt;!--文件上传需要的依赖--&gt;&lt;dependency&gt;    &lt;groupId&gt;commons-fileupload&lt;/groupId&gt;    &lt;artifactId&gt;commons-fileupload&lt;/artifactId&gt;    &lt;version&gt;1.3.3&lt;/version&gt;&lt;/dependency&gt;
+
+配置bean  
+&lt;!--配置文件上传解析器--&gt;&lt;bean id=&quot;multipartResolver&quot; class=&quot;org.springframework.web.multipart.support.StandardServletMultipartResolver&quot;&gt;&lt;/bean&gt;
+
+配置解析器 
+&lt;!-- 前端控制器 --&gt;    &lt;servlet&gt;        &lt;servlet-name&gt;SpringMVC&lt;/servlet-name&gt;        &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;        &lt;!--        选择spring容器管理文件   管理mvc--&gt;        &lt;init-param&gt;            &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;            &lt;param-value&gt;classpath:springMVC.xml&lt;/param-value&gt;        &lt;/init-param&gt;        &lt;!--        加载方式 程序运行时--&gt;        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;        &lt;multipart-config&gt;            &lt;!--         上传文件最大为多少   --&gt;            &lt;max-file-size&gt;10485760&lt;/max-file-size&gt;            &lt;!--         最大的请求大小   --&gt;            &lt;max-request-size&gt;10485760&lt;/max-request-size&gt;            &lt;!--         多大以上的文件可以上传   --&gt;            &lt;file-size-threshold&gt;0&lt;/file-size-threshold&gt;        &lt;/multipart-config&gt;    &lt;/servlet&gt;
+
+表单  
+&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;Title&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;form th:action=&quot;@&#123;/testUp&#125;&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;  图片上传: &lt;input type=&quot;file&quot; name=&quot;photo&quot;&gt;  &lt;input type=&quot;submit&quot; value=&quot;上传&quot;&gt;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;
+
+控制器  
+@RequestMapping(value = &quot;/testUp&quot;, method = RequestMethod.POST)public String testUp(@RequestParam(&quot;photo&quot;) MultipartFile photo, HttpSession session) throws IOException &#123;    System.out.println(photo.getOriginalFilename());    System.out.println(photo.getName());    ServletContext servletContext = session.getServletContext();    String realPath = servletContext.getRealPath(&quot;photo&quot;);    File file = new File(realPath);    if (!file.exists()) &#123;        file.mkdirs();    &#125;    String finalPath = realPath + File.separator + photo.getOriginalFilename();    photo.transferTo(new File(finalPath));    return &quot;testUP 成功&quot;;&#125;
+
+
+7.3 拦截器
+编写拦截器方法
+@Componentpublic class FirstInterceptor  implements HandlerInterceptor &#123;    @Override    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception &#123;        System.out.println(&quot;FirstInterceptor preHandle&quot;);        return false    ;    &#125;    @Override    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception &#123;        System.out.println(&quot;FirstInterceptor postHandle&quot;);        HandlerInterceptor.super.postHandle(request, response, handler, modelAndView);    &#125;    @Override    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception &#123;        System.out.println(&quot;FirstInterceptor afterCompletion&quot;);        HandlerInterceptor.super.afterCompletion(request, response, handler, ex);    &#125;&#125;
+
+
+编写控制器  
+@Controllerpublic class HandlerController &#123;    @RequestMapping(&quot;/testInterceptor&quot;)    public String testInterceptor() &#123;        return &quot;interceptor&quot;;    &#125;&#125;
+
+
+配置SpringMVC
+&lt;!--配置拦截器--&gt;&lt;mvc:interceptors&gt;    &lt;!--&lt;bean class=&quot;com.learning.mvc.rest.interceptor.FirstInterceptor&quot;&gt;&lt;/bean&gt;--&gt;    &lt;mvc:interceptor&gt;        &lt;mvc:mapping path=&quot;/testInterceptor&quot;/&gt;        &lt;ref bean=&quot;firstInterceptor&quot;/&gt;    &lt;/mvc:interceptor&gt;&lt;/mvc:interceptors&gt;
+
+有多个拦截器时
+7.4 异常处理器SpringMVC提供了一个处理控制器方法执行过程中所出现的异常的接口: HandlerExceptionResolverHandlerExceptionResolver的实现类有:  
+
+DefaultHandlerExceptionResolver  SpringMVC默认使用的异常处理器  
+SimpleHandlerExceptionResolver:  留给开发人员自定义处理异常
+
+基于配置的异常处理  
+&lt;!--配置异常处理--&gt;&lt;bean class=&quot;org.springframework.web.servlet.handler.SimpleMappingExceptionResolver&quot;&gt;    &lt;property name=&quot;exceptionMappings&quot;&gt;        &lt;props &gt;            &lt;prop key=&quot;java.lang.ArithmeticException&quot;&gt;error&lt;/prop&gt;            &lt;!-- 将会自动跳转到error的页面 --&gt;        &lt;/props&gt;    &lt;/property&gt;&lt;/bean&gt;
+基于注解的异常处理  
+@ControllerAdvicepublic class ExceptionCatchController2 &#123;        //如果出现相应的异常, 那么就会调用这个controller    @ExceptionHandler(value = &#123;ArithmeticException.class, NullPointerException.class&#125;)    public String testExceptionHandler(Exception e) &#123;        return &quot;error&quot;;    &#125;&#125;
+]]></content>
       <categories>
         <category>Tech</category>
       </categories>
@@ -4116,6 +4095,27 @@ ERD 示例 - 在线商店
         <tag>数据架构</tag>
         <tag>数据库设计</tag>
         <tag>ERD</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2025-01-24-Fri-T-如何做一个开源项目</title>
+    <url>/2025/01/24/2025-01-24-Fri-T-%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</url>
+    <content><![CDATA[ 
+创建和维护一个开源项目是一个非常有意义的工作，它可以帮助你与全球开发者合作，同时建立个人或团队的影响力。以下是详细步骤，帮你从零开始创建一个成功的开源项目。
+1. 确定项目目标解决实际问题：选择一个对你或他人有用的问题作为项目的核心目标。定义项目范围：明确项目的功能范围，避免过于宽泛。简单开始：从一个小而实用的功能入手，后续逐步扩展。
+2. 选择开源许可证许可证的作用：它告诉用户和贡献者项目的使用规则。常见开源许可证：MIT：最宽松，允许几乎任何用途。GPL：要求衍生项目也必须开源。Apache 2.0：允许商业用途，同时保护作者的专利。添加许可证： 创建一个 LICENSE 文件，并粘贴许可证文本。例如，MIT 许可证可以从 MIT License 模板 获取。
+MIT特点：非常宽松，允许商业使用、修改、分发。用户只需保留版权声明和许可证文本。适用场景：任何开源项目，尤其是工具类、库类项目。示例：许多现代项目（如 React）使用 MIT 许可证。
+GPL（GNU General Public License）特点：用户可以自由使用和修改代码，但必须将修改后的代码也开源并使用相同许可证。不适合希望代码被广泛商业化的项目。适用场景：想保护代码开源精神的项目。变体：GPLv2：更严格。GPLv3：增加对 SaaS 模型的限制。
+Apache 2.0特点：类似 MIT，但额外提供专利授权保护。如果你的代码包含创新算法，Apache 2.0 可以更好地保护你免受专利纠纷。适用场景：对知识产权较为敏感的大型项目。
+
+3. 创建 README 文件README 是项目的门面，确保清晰简洁，包含以下内容：
+项目介绍：一句话总结项目的目的。功能简介：项目能做什么。安装指南：如何运行项目。使用示例：展示项目的核心功能。贡献指南：告诉开发者如何参与项目。许可证声明：注明项目使用的许可证。
+4. 上传项目代码]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>Tech</tag>
       </tags>
   </entry>
   <entry>
@@ -4483,498 +4483,6 @@ Prompt的典型构成角色: 给AI定义一个最匹配该任务的角色，比�
       </tags>
   </entry>
   <entry>
-    <title>2025-05-27-Tue-T-JVM</title>
-    <url>/2025/05/27/2025-05-27-Tue-T-JVM/</url>
-    <content><![CDATA[[TOC]
-
-
-内存与垃圾回收篇 🛠
-
-字节码与类的加载篇 ✈
-
-性能监控与调优篇 🚀
-
-大厂面试篇
-
-
-１ JVM与Java体系结构
-JVM根本不关心在其内部的程序是由什么语言编写的, 它只关心字节码文件
-JVM特点:
-
-自动内存管理
-自动垃圾回收功能
-
-1.1 JVM 结构简图终于搞懂了Java8的内存结构，再也不纠结方法区和常量池了！-腾讯云开发者社区-腾讯云
-
-
-1.2 Java代码执行流程
-1.3 JVM的架构模型Java编译器输入的指令流基本上是一种基于栈的指令集架构,另外一种指令集架构则是基于寄存器的指令集架构
-
-基于栈的指令集：适合跨平台、安全性高的场景（如 JVM），但效率较低。
-基于寄存器的指令集：适合高性能本地执行（如 CPU 指令），但依赖硬件。
-JVM 的权衡：通过栈架构实现跨平台，再通过 JIT 编译优化为寄存器指令，兼顾灵活性和性能。
-
-最终结论：Java 选择栈架构是为了跨平台和安全性，而现代 JVM 通过运行时优化（JIT）弥补了性能差距。
-执行反编译
-PS D:\Users\fei\gitrepo\gulimall\java-foundation\target\classes\com\JVM\chapter01&gt; javap -v .\StackStruTest.classClassfile /D:/Users/fei/gitrepo/gulimall/java-foundation/target/classes/com/JVM/chapter01/StackStruTest.class  Last modified 2025年5月27日; size 442 bytes  SHA-256 checksum 675d068f509639e5a688e3ca50cbc237c8459f36e78347be553c9e8f98f736ac  Compiled from &quot;StackStruTest.java&quot;public class com.JVM.chapter01.StackStruTest  minor version: 0  major version: 61  flags: (0x0021) ACC_PUBLIC, ACC_SUPER  this_class: #7                          // com/JVM/chapter01/StackStruTest  super_class: #2                         // java/lang/Object  interfaces: 0, fields: 0, methods: 2, attributes: 1Constant pool:   #1 = Methodref          #2.#3          // java/lang/Object.&quot;&lt;init&gt;&quot;:()V   #2 = Class              #4             // java/lang/Object   #3 = NameAndType        #5:#6          // &quot;&lt;init&gt;&quot;:()V   #4 = Utf8               java/lang/Object   #5 = Utf8               &lt;init&gt;   #6 = Utf8               ()V   #7 = Class              #8             // com/JVM/chapter01/StackStruTest   #8 = Utf8               com/JVM/chapter01/StackStruTest   #9 = Utf8               Code  #10 = Utf8               LineNumberTable  #11 = Utf8               LocalVariableTable  #12 = Utf8               this  #13 = Utf8               Lcom/JVM/chapter01/StackStruTest;  #14 = Utf8               main  #15 = Utf8               ([Ljava/lang/String;)V  #16 = Utf8               args  #17 = Utf8               [Ljava/lang/String;  #18 = Utf8               i  #19 = Utf8               I  #20 = Utf8               SourceFile  #21 = Utf8               StackStruTest.java&#123;  public com.JVM.chapter01.StackStruTest();    descriptor: ()V    flags: (0x0001) ACC_PUBLIC    Code:      stack=1, locals=1, args_size=1         0: aload_0         1: invokespecial #1                  // Method java/lang/Object.&quot;&lt;init&gt;&quot;:()V         4: return      LineNumberTable:        line 3: 0      LocalVariableTable:        Start  Length  Slot  Name   Signature            0       5     0  this   Lcom/JVM/chapter01/StackStruTest;  public static void main(java.lang.String[]);    descriptor: ([Ljava/lang/String;)V    flags: (0x0009) ACC_PUBLIC, ACC_STATIC    Code:      stack=1, locals=2, args_size=1         0: iconst_5         1: istore_1         2: return      LineNumberTable:        line 5: 0        line 7: 2      LocalVariableTable:        Start  Length  Slot  Name   Signature            0       3     0  args   [Ljava/lang/String;            2       1     1     i   I&#125;SourceFile: &quot;StackStruTest.java&quot;
-
-
-
-由于跨平台的特性, Java的指令都是根据栈来设计的
-栈型指令系统: 跨平台性, 指令集小, 指令多; 执行性能比寄存器差
-1.4 JVM的生命周期
-虚拟机的启动
-虚拟机的执行
-虚拟机的退出
-
-
-JDK 24 Documentation - Home
-一、内存结构1. 程序计数器Program Counter Register 程序计数器(寄存器)
-作用: 记住下一条JVM指令的执行地址
-特点:
-
-线程私有的: 时间片结束, 依然可以获取本线程的程序计数器. 每个线程有自己的程序计数器
-不会存在内存溢出: JVM规范中规定了不允许程序计数器出现内存溢出
-
-2. 虚拟机栈2.1 定义栈: 线程运行时需要的内存空间
-栈帧: 每个栈由多个栈帧组成, 栈帧是每个方法运行需要的内存空间
-每个线程只能有一个活动栈帧, 对应着当前正在执行的方法
-问题辨析: 
-
-垃圾回收是否涉及栈内存?  不涉及, 栈内存中只有与方法调用相关的栈帧内存,栈帧内存在每次方法调用结束后会自动释放.  垃圾回收用于管理堆内存
-栈内存分配越大越好吗?  (Xss用于指定栈内存大小) 栈内存越大, 总内存不变, 所运行的线程就会变少
-方法内的局部变量是否线程安全? 逃逸分析
-如果局部变量没有逃离该方法, 则是线程安全的
-
-
-
-2.2 栈内存溢出
-栈帧过多导致栈内存溢出: 栈帧的内存超过了线程所分配的栈内存 (例如 错误的递归调用)
-栈帧过大导致栈内存溢出:
-
-2.3 线程运行诊断案例1: CPU占用过多
-# 1. 用top定位哪个进程对cpu的占用过高top # 2. 用ps定位哪个线程对cpu的占用过高ps H -eo pid,tid,%cpu | grep 进程id   # ps用于查询进程线程信息# 3. jstack： 根据线程id查看有问题的线程jstack 进程id# 4. 根据提示信息找到对应的代码行数
-
-
-
-案例2: 程序运行很长时间没有结果
-# 根据jstack提示信息找到死锁对应的代码行数jstack 进程id
-
-3. 本地方法栈
-本地方式是只操作系统的原生方法, Java代码通过调用这些方法与cpu和内存打交道
-在Java代码中, 使用native关键字标识本地方法
-本地方法栈: 用于运行本地方法的栈
-4. 堆线程共享区域
-4.1 定义Heap(堆)通过new关键字, 创建对象都会使用堆内存
-特点:
-
-线程共享, 堆中对象都需要考虑线程安全的问题
-有垃圾回收机制
-
-4.2 堆内存溢出案例
-public class HeapTest &#123;    public static void main(String[] args) &#123;        ArrayList list = new ArrayList();        int i = 0;        a = &quot;hello&quot;        try &#123;            while (true) &#123;                list.add(a);                 a = a + a                i++;            &#125;        &#125;catch (Throwable e) &#123;            System.out.println(i);            e.printStackTrace();        &#125;    &#125;&#125;
-
-自定已堆空间： -Xmx8m: 修改堆空间为8M
-4.3 堆内存诊断1）jps工具查看当前系统中有哪些Java工程，以及对应的进程id
-jps [options] [hostid]-q 不输出类名、Jar名和传入main方法的参数-m 输出传入main方法的参数-l 输出main类或Jar的全限名-v 输出传入JVM的参数
-
-
-
-2）jmap工具查看堆内存占用情况
-jmap -heap pid 或 jhsdb jmap --heap --pid 41416 jmap [option] pidjmap [option] executable corejmap [option] [server-id@]remote-hostname-or-ip
-
-很常用的情况是：用jmap把进程内存使用情况dump到文件中，再用jhat分析查看。jmap进行dump命令格式如下：
-jmap -dump:format=b,file=dumpFileName 进程id# 例子root@ubuntu:/# jmap -dump:format=b,file=/tmp/dump.dat 21711     Dumping heap to /tmp/dump.dat ...Heap dump file created
-
-
-
-3）jconsole工具图形界面的，多功能的监测工具，可以连续监测
-4）jvisualvm5) jstackjstack主要用来查看某个Java进程内的线程堆栈信息。语法格式如下：
-jstack [option] pidjstack [option] executable corejstack [option] [server-id@]remote-hostname-or-ip-l long listings，会打印出额外的锁信息，在发生死锁时可以用jstack -l pid来观察锁持有情况-m mixed mode，不仅会输出Java堆栈信息，还会输出C/C++堆栈信息（比如Native方法）
-
-
-
-案例1： 诊断工具使用
-public class HeapDemo2 &#123;    public static void main(String[] args) throws InterruptedException &#123;        System.out.println(&quot;1. 堆内存测试&quot;);        Thread.sleep(30000);        byte[] arr = new byte[1024 * 1024 * 10]; // 10MB        System.out.println(&quot;2. 10MB创建成功&quot;);        Thread.sleep(30000);        arr = null;        System.gc();        System.out.println(&quot;3. 垃圾回收&quot;);        Thread.sleep(30000);    &#125;&#125;
-
-案例2： 垃圾回收后，内存占用依然很高
-jps --&gt; jmap --&gt; jvisualvm
-5. 方法区
-
-5.1 定义存储类的
-逻辑上是堆的组成部分
-方法区（Method Area） 是 Java 虚拟机（JVM） 运行时数据区的一部分，用于存储 类信息、常量、静态变量、即时编译器编译后的代码 等数据。它是所有线程共享的内存区域，在 JVM 启动时创建，逻辑上属于 堆（Heap）的一部分，但具体实现可能不同
-5.2 组成
-5.3 方法区内存溢出
-Java1.8以前会导致永久代内存溢出
-1.8之后会导致元空间内存溢出
-
-演示元空间内存溢出
-/** * 演示元空间内存溢出 * -XX:MaxMetaspaceSize=8m */public class MetaSpaceOutOfMemory extends ClassLoader&#123;    public static void main(String[] args) &#123;        int j = 0;        try &#123;            MetaSpaceOutOfMemory m = new MetaSpaceOutOfMemory();            for (int i = 0; i &lt; 10000; i++,j++) &#123;                //ClassWriter是用于生成 类的二进制字节码                ClassWriter classWriter = new ClassWriter(0);                // 版本号， public，类名，包名，父类，实现的接口                classWriter.visit(Opcodes.V1_8,Opcodes.ACC_PUBLIC,&quot;Class&quot; + i,null,&quot;java/lang/Object&quot;,null);                //返回二进制字节码                byte[] byteArray = classWriter.toByteArray();                //执行类的加载                m.defineClass(&quot;Class&quot; + i, byteArray, 0, byteArray.length);            &#125;        &#125;finally &#123;            System.out.println(j);        &#125;    &#125;&#125;
-
-场景：
-
-spring
-mybatis
-
-5.4 运行时常量池
-Java程序需要运行， 就需要先转化为二进制的字节码文件， 而字节码由类的基本信息、类的常量池、类的方法定义三部分以及虚拟机指令组成。
-案例：使用javap -c 类名.class反编译字节码文件
-//原始代码public class Pool &#123;    public static void main(String[] args) &#123;        System.out.println(&quot;Hello World&quot;);    &#125;&#125;// javap -v Pool.class反编译后的代码// 1. 类的基本信息Classfile /D:/Users/fei/gitrepo/gulimall/java-foundation/target/classes/com/JVM/chapter01/Pool.class  Last modified 2025年5月31日; size 551 bytes  SHA-256 checksum 685b230badb0ecfbb0269e956bbb39aa205913c435f86d19c86a7f40d34224a3  Compiled from &quot;Pool.java&quot;public class com.JVM.chapter01.Pool  minor version: 0  major version: 61  flags: (0x0021) ACC_PUBLIC, ACC_SUPER  this_class: #21                         // com/JVM/chapter01/Pool  super_class: #2                         // java/lang/Object  interfaces: 0, fields: 0, methods: 2, attributes: 1      //2. 常量池Constant pool:   #1 = Methodref          #2.#3          // java/lang/Object.&quot;&lt;init&gt;&quot;:()V   #2 = Class              #4             // java/lang/Object   #3 = NameAndType        #5:#6          // &quot;&lt;init&gt;&quot;:()V   #4 = Utf8               java/lang/Object   #5 = Utf8               &lt;init&gt;   #6 = Utf8               ()V   #7 = Fieldref           #8.#9          // java/lang/System.out:Ljava/io/PrintStream;   #8 = Class              #10            // java/lang/System   #9 = NameAndType        #11:#12        // out:Ljava/io/PrintStream;  #10 = Utf8               java/lang/System  #11 = Utf8               out  #12 = Utf8               Ljava/io/PrintStream;  #13 = String             #14            // Hello World  #14 = Utf8               Hello World  #15 = Methodref          #16.#17        // java/io/PrintStream.println:(Ljava/lang/String;)V  #16 = Class              #18            // java/io/PrintStream  #17 = NameAndType        #19:#20        // println:(Ljava/lang/String;)V  #18 = Utf8               java/io/PrintStream  #19 = Utf8               println  #20 = Utf8               (Ljava/lang/String;)V  #21 = Class              #22            // com/JVM/chapter01/Pool  #22 = Utf8               com/JVM/chapter01/Pool  #23 = Utf8               Code  #24 = Utf8               LineNumberTable  #25 = Utf8               LocalVariableTable  #26 = Utf8               this  #27 = Utf8               Lcom/JVM/chapter01/Pool;  #28 = Utf8               main  #29 = Utf8               ([Ljava/lang/String;)V  #30 = Utf8               args  #31 = Utf8               [Ljava/lang/String;  #32 = Utf8               SourceFile  #33 = Utf8               Pool.java                            // 3. 类的方法定义&#123;  public com.JVM.chapter01.Pool(); // 构造方法    descriptor: ()V    flags: (0x0001) ACC_PUBLIC    Code:      stack=2, locals=1, args_size=1         0: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;         3: ldc           #13                 // String Hello World         5: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V         8: return      LineNumberTable:        line 5: 0        line 6: 8      LocalVariableTable:        Start  Length  Slot  Name   Signature            0       9     0  args   [Ljava/lang/String;&#125;SourceFile: &quot;Pool.java&quot;
-
-
-常量池就是一张表，虚拟机指令根据这些常量表找到要执行的类名，方法名，参数类型、字面量(值)等信息
-
-运行时常量池，常量池是*.class文件中的，当该类被加载，它的常量池信息就会被放入到运行时常量池，并把里面的符号地址变为真正的内存地址
-
-
-public class StringTable &#123;    /**     * 常量池中的信息都会被加载到运行时常量池， 这时候 a, b , ab都是常量池中的符号，还没有转化为Java字符串对象     * 0： ldc #7  会把a转化为 &quot;a&quot; 字符串对象， 然后在StringTable中找，是否有相同的字符串。 StringTable在数据结构上时Hash表，无法扩容     * astore_1 没有找到，将 &quot;a&quot; 存储到StringTable     */    public static void main(String[] args) &#123;        String s1 = &quot;a&quot;;        String s2 = &quot;b&quot;;        String s3 = &quot;ab&quot;;        String s4 = s1 + s2; // new String(&quot;ab&quot;); // s4在堆中，因为 s1, s2为变量，编译时不能确定s4的值.         String s5 = &quot;a&quot; + &quot;b&quot;; // javac 在编译期间的优化， a， b为常量， 编译时能确定s5就是ab        String s6 = s4.intern(); // s4在StringTable中没有&quot;ab&quot;时会自动放入串池，反之则否        System.out.println(s3 == s4); // false        System.out.println(s3 == s5); // true        System.out.println(s3 == s6); // true    &#125;&#125;
-
-
-5.5 StringTable
-常量池中的字符串仅仅是符号，第一次用到时才变为对象。
-
-利用串池（stringTable）的机制， 避免重复创建相同的字符串
-
-字符串的拼接原理时StringBuilder（1.8）
-
-字符串拼接原理时编译期优化
-
-可以使用intern方法，主动将串池中还没有的字符串对象放入串池。s4.intren()
-
-
---XX:UseGCOverheadLimit阻止应用长时间无响应（大于98%的时间花在了垃圾回收 and 小于2%堆空间被恢复） 
-5.6 StringTable 垃圾回收
-演示StringTable垃圾回收
-
-//-Xmx10m  堆内存10m//-XX:+PrintStringTableStatistics  打印串池中统计信息//-XX:+PrintGCDetails -verbose:gc 打印垃圾回收细节public class StringTableGC &#123;    public static void main(String[] args) &#123;        int i = 0;        try &#123;            for(int j = 0; j &lt; 100000; j++) &#123;                String.valueOf(j).intern();                i++;            &#125;        &#125;catch (Throwable e) &#123;            e.printStackTrace();        &#125;finally &#123;            System.out.println(i);        &#125;    &#125;&#125;
-
-5.7 StringTable 性能调优实际就是调整StringTable中哈希表的桶的个数
-// -XX:StringTableSize=20000// java17 自动扩容为2的阶乘
-
-在进行大量字符串操作时，可以将字符串放入StringTable，减少堆内存的使用。因为StringTable中不会存在相同的字符串。
-6. 直接内存6.1 定义直接内存是操作系统内存。
-
-常见于NIO操作，用于数据缓存区
-
-
-Java NIO（New Input&#x2F;Output 或 Non-blocking I&#x2F;O）是从Java 1.4版本开始引入的一种新的I&#x2F;O系统，它解决了传统的I&#x2F;O系统中同步阻塞的问题，提供了更高效的I&#x2F;O处理方法。Java NIO不仅可以提高性能，还可以提供更好的可伸缩性。
-在Java NIO中，数据总是从通道读入缓冲区，或者从缓冲区写入通道。Selector会不断地轮询注册在其上的通道，当发现某个通道有I&#x2F;O事件时，就能够快速定位到可以进行I&#x2F;O操作的通道，进行数据处理。
-
-
-Java进行分配和回收成本比较高，但读写性能高
-不受JVM内存回收管理
-
-
-使用Java缓冲区（堆内存中）new byte[1024*1024]
-
-
-
-分配直接内存：ByteBuffer.allocateDirect(1024*1024)
-
-
-6.2 直接内存释放
-通过Unsafe对象进行管理（Unsafe对象只能通过反射创建）。主动调用freeMemory方法
-
-ByteBuffer的实现类内部，使用了Cleaner（虚引用）来监测ByteBuffer对象，一但ByteBuffer对象被垃圾回收，那么就会由ReferenceHandler线程通过Cleaner的clean方法调用freeMemory来释放直接内存
-
-
-参数介绍
--XX:+DisableExplicitGC 禁用显示调用垃圾回收System.gc();
-
-使用此参数后，则分配直接内存后无法显示直接释放
-ByteBuffer buffer = ByteBuffer.allocateDirect(1024*1024);// 10MB// 以下操作无效buffer = null;System.gc();//可以使用Unsafe对象对直接内存进行释放
-
-
-
-二、垃圾回收1. 如何判断对象可以回收1.1 引用计数法定义一个count来记录某个对象被引用了多少次
-可能出现循环引用的问题
-1.2 可达性分析法JVM采用的本方法。
-
-确定根对象：一定不能被垃圾回收的对象叫根对象
-
-是否是基本类对象
-是否是加锁对象（synchronized）
-是否在活动栈帧中被引用
-
-
-JVM种的垃圾回收器采用可达性分析来探索所有存活的对象
-
-扫描堆中的对象，看是否能够沿着GC Root对象为起点的引用链找到该对象，找不到，表示可以回收
-
-
-1.3 四种引用强引用byte[] b = new byte[1024]; //强引用
-
-软引用
-//1. 直接用法SoftReference&lt;byte[]&gt; ref = new SoftReference&lt;&gt;(new byte[1024]); // 软引用（java.lang.ref.SoftReference） //2. 使用引用队列释放软引用ReferenceQueue&lt;byte[]&gt; queue = new ReferenceQueue&lt;&gt;();SoftReference&lt;byte[]&gt; ref = new SoftReference&lt;&gt;(new byte[1024],queue); // byte[]回收时，ref被加入queuequeue.poll(); 
-
-弱引用 Full GC清理
-WeakReference&lt;byte[]&gt; ref = new WeakReference&lt;&gt;(new byte[1024]); // 弱引用// 也可使用RefrenceQueue来对弱引用本身进行释放// Suppose that the garbage collector determines at a certain point in time that an object is weakly reachable.
-
-
-
-虚引用： 
-终结器引用
-
-2. 垃圾回收算法2.1 标记清除 Mark Sweep
-通过标记需要清除的内存地址，进行逻辑清除
-速度快
-容易产生内存碎片
-
-2.2 标记整理 Mark Compact
-先标记需要清除的对象地址
-再将其余对象地址进行整理，让已分配内存更紧凑，减少内存碎片
-没有内存碎片
-
-2.3 复制 Copy
-将内存区划分为大小相等的两个区，FROM 区、TO区
-在FROM区进行内存分配，TO区空闲
-先对需要清理的对象地址进行标记
-将FROM尚存活的对象顺序复制到TO区
-交换FROM 和 TO指向，原来的FROM变成TO区, TO区变成FROM区
-不产生内存碎片
-空间利用率低
-
-JVM 会根据情况采用上述三种算法进行垃圾回收
-3. 分代垃圾回收
-
-对象首先分配到伊甸园
-若伊甸园空间不足, 触发minor GC, 引发stop the world. 伊甸园中存活的对象复制到幸存区To，FROM区存活次数小于某个特定值的，且存活的对象复制到TO区，FROM存活次数超过某个特定值的对象赋值到老年代，FROM和TO指向地址互换 
-若老年代空间不足, 先尝试触发minor GC, 如果空间还是不足, 触发full GC, 触发的STW时间更长. 老年代和新生代的都会进行GC, 新生代部分和minor gc一个规则进行GC. 如果full GC之后还是内存不足, 则报内存溢出异常
-
-
-3.1 相关VM参数
-
-
-含义
-参数
-
-
-
-
-堆的初始大小
--Xms
-start
-
-
-堆的最大大小
--Xmx或-XX:MaxHeapSize=size
-max
-
-
-新生代大小
--Xmn或-XX:NewSize=size -XX:MaxNewSize=size
-new
-
-
-幸存区比例(动态)
--XX:InitialSurvivorRatio=ratio或-XX:+UseAdaptiveSizePolicy
-
-
-
-幸存区比例
--XX:SurvivorRatio=ratio
-大的对象无法放入幸存区时,直接放入老年代
-
-
-晋升阈值
--XX:MaxTenuringThreshold=threshold
-
-
-
-晋升详情
--XX:+PrintTenuringDistribution
-
-
-
-GC详情
--XX:+PrintGCDetails -verbose:gc
-
-
-
-FullGC前MinorGC
-+XX:+ScanvengeBeforeFullGC
-
-
-
-
-
-
-
-
-
-大对象
-
-Eden放不下的大对象会直接放到老年代，不会触发minor GC
-4. 垃圾回收器新一代垃圾回收器ZGC的探索与实践 - 美团技术团队
-Java 中的垃圾回收 - Dev.java
-4.1 串行
-单线程
-堆内存较小、适合个人电脑
-
-4.2 吞吐量优先
-多线程
-堆内存较大、多核CPU
-回收数量大，高延迟
-
-4.3 响应时间优先
-多线程
-堆内存较大、多核CPU
-快速回收、低延迟
-
-4.4 G1 （Garbage First)
-G1回收阶段
-
-5. 垃圾回收调优5.1 调优领域
-内存
-锁竞争
-cpu占用
-io
-
-5.2 确定目标
-低延迟：G1 GC, Z1
-高吞吐量：ParallelGC
-
-5.3 最快的GC是不发生GC查看FullGC前后的内存占用，考虑以下几个问题：
-
-数据是不是太多- 例如：resultSet = statement.execute(&quot;select * from 大表&quot;)  因该进行分页查询
-数据表是不是太臃肿
-对象图： 需要哪个对象查哪个。
-对象大小：包装类型-&gt;基本类型
-
-
-是否存在内存泄露
-static Map
-对于长时间存在的对象，创建软引用或者弱引用
-不使用map，采用第三方缓存
-
-
-
-5.4 新生代调优
-新生代特点：
-
-所有new操作的内存分配非常廉价：TLAB（tread-local allocation buffer）
-死亡对象回收代价是零
-大部分对象用过即死
-Minor GC的时间远远低于Full GC
-
-
--Xmn
-
-Oracle建议新生代分配占堆内存的1&#x2F;4~1&#x2F;2
-新生代容量&#x3D; 并发量 * （请求-响应大小）
-
-
-幸存区
-
-最大能保留：当前活跃对象+需要晋升的对象
-真正需要长时间存活的对象才将它晋升到老年代
-
-
-晋升阈值配置得当
-
-长时间存活的对象尽快被提升
-
-XX:MaxTenuringThreshold=threshold
-XX:+PrintTenuringDistribution
-
-
-
-
-
-5.5 老年代调优
-没有Full GC，老年代一般不调优
-
-出现Full GC，优先考虑新生代调优
-
-如果新生代已调优，还是出现Full GC, 将老年代内存预设调大1&#x2F;4 ~ 1&#x2F;3
-
--XX: CMSInitialtingOccupancyFraction=percent
-
-
-
-5.6 案例
-案例一：Full GC 和 Minor GC频繁
-
-
-查看堆内存分配 
-查询运行中的Java：jps
-查看堆内存分配: jmap &lt;pid&gt;或jhsdb  jmap --heap --pid &lt;pid&gt;
-
-
-如果发现新生代内存小，则适当增加新生代内存大小，并提交晋升阈值
-
-
-案例二：请求高峰发生Full GC, 单次暂停时间特长
-
-
-可能新生代内存小，随着创建的对象变多，晋升阈值降低，晋升到老年代的对象增多，老年代内存满了之后触发Full GC
-
-
-案例三：老年代充裕的情况下，发生Full GC
-
-
-内存碎片过多？
-jdk版本老？方法区在老年代中
-
-三、类加载
-1. 类文件结构
-javap -c xxx.class
-
-0~3字节：表示它是否是class文件: ca fe ba be
-4~7字节: 表示jdk版本
-2. 字节码指令3. 编译器处理4. 类加载阶段
-加载
-加载和链接可能是交替进行
-
-链接
-
-验证
-准备
-解析
-
-
-初始化
-
-
-5. 类加载器
-public class GetClassLoader &#123;    public static void main(String[] args) &#123;        ClassLoader classLoader = A.class.getClassLoader();        System.out.println(classLoader);        System.out.println(Object.class.getClassLoader()); // 启动类加载器无法直接访问，将打印null    &#125;&#125;class A &#123;    public String a = &quot;a&quot;;&#125;
-
-
-
-双亲委派机制双亲(parent)委派就是指调用类加载器的loadClass方法时，查找类的规则 (tips: parent被翻译成双亲，实际翻译成上级更为恰当)
-委派本级先做类的加载，本级没有，再由上级进行类加载
-从下往上进行已加载类查找，然后再从上往下进行class查找并加载。
-自定义类加载器什么时候需要自定义类加载器
-
-想加载非classpath随意路径中的类文件
-都是通过接口来使用实现，希望解耦时，常用在框架设计
-这些类希望予以隔离，不同应用的同名类都可以加载，不冲突，常见于tomcat容器
-
-步骤：
-
-继承ClassLoader父类
-遵从双亲委派机制，重写findClass方法
-注意不是重写loadClass方法，否则不会走双亲委派机制
-
-
-读取类文件的字节码
-调用父类的defineClass方法来加载类
-使用者调用该类加载器的loadClass方法
-
-package com.JVM.classLoader;import java.io.ByteArrayOutputStream;import java.io.IOException;import java.nio.file.Files;import java.nio.file.Paths;public class GetClassLoader &#123;    public static void main(String[] args) throws ClassNotFoundException &#123;//        ClassLoader classLoader = A.class.getClassLoader();//        System.out.println(classLoader);//        System.out.println(Object.class.getClassLoader()); // 启动类加载器无法直接访问，将打印null        Loader loader = new Loader();        Class&lt;?&gt; a = loader.loadClass(&quot;com.JVM.javas.A&quot;);        System.out.println(a);        System.out.println(a.getClassLoader());    &#125;&#125;class Loader extends ClassLoader &#123;    /**     *     * @param name 类文件名     *          The &lt;a href=&quot;#binary-name&quot;&gt;binary name&lt;/a&gt; of the class     *     * @return     * @throws RuntimeException     */    @Override    protected Class&lt;?&gt; findClass(String name) throws RuntimeException &#123;        String path = &quot;D:\\Users\\fei\\gitrepo\\gulimall\\java-foundation\\src\\main\\java\\&quot; + name + &quot;.class&quot;; // 拼接全路径        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();        try &#123;            Files.copy(Paths.get(path), outputStream);            //得到字节数组            byte[] bytes = outputStream.toByteArray();            //调用父类defineClass            return defineClass(name, bytes, 0, bytes.length);        &#125; catch (IOException e) &#123;            throw new RuntimeException(e);        &#125;    &#125;&#125;
-
-
-
-6. 运行期优化6.1 即时编译 - JIT分层编译方法内联字段优化]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>Tech</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2025-04-16-Wed-T-Java项目-商城</title>
     <url>/2025/04/16/2025-04-16-Wed-T-Java%E9%A1%B9%E7%9B%AE-%E5%95%86%E5%9F%8E/</url>
     <content><![CDATA[1.分布式基础（全栈开发篇）
@@ -5144,7 +4652,7 @@ Vetur —— 语法高亮、智能感知、Emmet 等包含格式化功能， Alt
 配置用户名
 git config –global user.name “username” &#x2F;&#x2F;（名字）
 配置邮箱
-git config –global user.email “&#117;&#115;&#101;&#x72;&#x6e;&#x61;&#x6d;&#x65;&#64;&#x65;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;“ &#x2F;&#x2F;(注册账号时用的邮箱)3、配置ssh 免密登录https://gitee.com/help/articles/4181#article-header0进入git bash；使用：ssh-keygen -t rsa -C “&#120;&#x78;&#120;&#x78;&#x78;&#64;&#x78;&#120;&#x78;&#120;&#120;&#46;&#99;&#x6f;&#x6d;“命令。连续三次回车。一般用户目录下会有或者cat ~&#x2F;.ssh&#x2F;id_rsa.pub登录进入gitee，在设置里面找到SSH KEY 将.pub 文件的内容粘贴进去使用ssh -T &#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#101;&#101;&#x2e;&#x63;&#x6f;&#109; 测试是否成功即可Git+码云教程https://gitee.com/help/articles/4104
+git config –global user.email “&#117;&#x73;&#101;&#x72;&#110;&#97;&#x6d;&#101;&#x40;&#x65;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#x6d;“ &#x2F;&#x2F;(注册账号时用的邮箱)3、配置ssh 免密登录https://gitee.com/help/articles/4181#article-header0进入git bash；使用：ssh-keygen -t rsa -C “&#120;&#x78;&#120;&#120;&#120;&#64;&#120;&#120;&#x78;&#120;&#x78;&#46;&#x63;&#x6f;&#109;“命令。连续三次回车。一般用户目录下会有或者cat ~&#x2F;.ssh&#x2F;id_rsa.pub登录进入gitee，在设置里面找到SSH KEY 将.pub 文件的内容粘贴进去使用ssh -T &#x67;&#x69;&#x74;&#x40;&#103;&#x69;&#116;&#x65;&#101;&#46;&#x63;&#x6f;&#x6d; 测试是否成功即可Git+码云教程https://gitee.com/help/articles/4104
 4、逆向工程使用1、导入项目逆向工程2、下载人人开源后台管理系统脚手架工程(1) 导入工程，创建数据库(2) 修改工程shiro 依赖为SpringSecurity(3) 删除部分暂时不需要的业务3、下载人人开源后台管理系统vue 端脚手架工程(1) vscode 导入前端项目(2) 前后端联调测试基本功能
 1.3.6 创建项目微服务商品服务、仓储服务、订单服务、优惠券服务、用户服务共同：1）、web、openfeign2）、每一个服务，包名com.atguigu.gulimall.xxx(product&#x2F;order&#x2F;ware&#x2F;coupon&#x2F;member)3）、模块名：gulimall-coupon
 1）、从gitee 初始化一个项目运行nacos容器
@@ -5787,6 +5295,498 @@ package com.pattern.observer;import java.util.ArrayList;import java.util.List;pu
 
 
 4.7 中介模式4.8 迭代器模式4.9 访问者模式4.10 备忘录模式4.11 解释器模式5. 综合练习]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>Tech</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2025-05-27-Tue-T-JVM</title>
+    <url>/2025/05/27/2025-05-27-Tue-T-JVM/</url>
+    <content><![CDATA[[TOC]
+
+
+内存与垃圾回收篇 🛠
+
+字节码与类的加载篇 ✈
+
+性能监控与调优篇 🚀
+
+大厂面试篇
+
+
+１ JVM与Java体系结构
+JVM根本不关心在其内部的程序是由什么语言编写的, 它只关心字节码文件
+JVM特点:
+
+自动内存管理
+自动垃圾回收功能
+
+1.1 JVM 结构简图终于搞懂了Java8的内存结构，再也不纠结方法区和常量池了！-腾讯云开发者社区-腾讯云
+
+
+1.2 Java代码执行流程
+1.3 JVM的架构模型Java编译器输入的指令流基本上是一种基于栈的指令集架构,另外一种指令集架构则是基于寄存器的指令集架构
+
+基于栈的指令集：适合跨平台、安全性高的场景（如 JVM），但效率较低。
+基于寄存器的指令集：适合高性能本地执行（如 CPU 指令），但依赖硬件。
+JVM 的权衡：通过栈架构实现跨平台，再通过 JIT 编译优化为寄存器指令，兼顾灵活性和性能。
+
+最终结论：Java 选择栈架构是为了跨平台和安全性，而现代 JVM 通过运行时优化（JIT）弥补了性能差距。
+执行反编译
+PS D:\Users\fei\gitrepo\gulimall\java-foundation\target\classes\com\JVM\chapter01&gt; javap -v .\StackStruTest.classClassfile /D:/Users/fei/gitrepo/gulimall/java-foundation/target/classes/com/JVM/chapter01/StackStruTest.class  Last modified 2025年5月27日; size 442 bytes  SHA-256 checksum 675d068f509639e5a688e3ca50cbc237c8459f36e78347be553c9e8f98f736ac  Compiled from &quot;StackStruTest.java&quot;public class com.JVM.chapter01.StackStruTest  minor version: 0  major version: 61  flags: (0x0021) ACC_PUBLIC, ACC_SUPER  this_class: #7                          // com/JVM/chapter01/StackStruTest  super_class: #2                         // java/lang/Object  interfaces: 0, fields: 0, methods: 2, attributes: 1Constant pool:   #1 = Methodref          #2.#3          // java/lang/Object.&quot;&lt;init&gt;&quot;:()V   #2 = Class              #4             // java/lang/Object   #3 = NameAndType        #5:#6          // &quot;&lt;init&gt;&quot;:()V   #4 = Utf8               java/lang/Object   #5 = Utf8               &lt;init&gt;   #6 = Utf8               ()V   #7 = Class              #8             // com/JVM/chapter01/StackStruTest   #8 = Utf8               com/JVM/chapter01/StackStruTest   #9 = Utf8               Code  #10 = Utf8               LineNumberTable  #11 = Utf8               LocalVariableTable  #12 = Utf8               this  #13 = Utf8               Lcom/JVM/chapter01/StackStruTest;  #14 = Utf8               main  #15 = Utf8               ([Ljava/lang/String;)V  #16 = Utf8               args  #17 = Utf8               [Ljava/lang/String;  #18 = Utf8               i  #19 = Utf8               I  #20 = Utf8               SourceFile  #21 = Utf8               StackStruTest.java&#123;  public com.JVM.chapter01.StackStruTest();    descriptor: ()V    flags: (0x0001) ACC_PUBLIC    Code:      stack=1, locals=1, args_size=1         0: aload_0         1: invokespecial #1                  // Method java/lang/Object.&quot;&lt;init&gt;&quot;:()V         4: return      LineNumberTable:        line 3: 0      LocalVariableTable:        Start  Length  Slot  Name   Signature            0       5     0  this   Lcom/JVM/chapter01/StackStruTest;  public static void main(java.lang.String[]);    descriptor: ([Ljava/lang/String;)V    flags: (0x0009) ACC_PUBLIC, ACC_STATIC    Code:      stack=1, locals=2, args_size=1         0: iconst_5         1: istore_1         2: return      LineNumberTable:        line 5: 0        line 7: 2      LocalVariableTable:        Start  Length  Slot  Name   Signature            0       3     0  args   [Ljava/lang/String;            2       1     1     i   I&#125;SourceFile: &quot;StackStruTest.java&quot;
+
+
+
+由于跨平台的特性, Java的指令都是根据栈来设计的
+栈型指令系统: 跨平台性, 指令集小, 指令多; 执行性能比寄存器差
+1.4 JVM的生命周期
+虚拟机的启动
+虚拟机的执行
+虚拟机的退出
+
+
+JDK 24 Documentation - Home
+一、内存结构1. 程序计数器Program Counter Register 程序计数器(寄存器)
+作用: 记住下一条JVM指令的执行地址
+特点:
+
+线程私有的: 时间片结束, 依然可以获取本线程的程序计数器. 每个线程有自己的程序计数器
+不会存在内存溢出: JVM规范中规定了不允许程序计数器出现内存溢出
+
+2. 虚拟机栈2.1 定义栈: 线程运行时需要的内存空间
+栈帧: 每个栈由多个栈帧组成, 栈帧是每个方法运行需要的内存空间
+每个线程只能有一个活动栈帧, 对应着当前正在执行的方法
+问题辨析: 
+
+垃圾回收是否涉及栈内存?  不涉及, 栈内存中只有与方法调用相关的栈帧内存,栈帧内存在每次方法调用结束后会自动释放.  垃圾回收用于管理堆内存
+栈内存分配越大越好吗?  (Xss用于指定栈内存大小) 栈内存越大, 总内存不变, 所运行的线程就会变少
+方法内的局部变量是否线程安全? 逃逸分析
+如果局部变量没有逃离该方法, 则是线程安全的
+
+
+
+2.2 栈内存溢出
+栈帧过多导致栈内存溢出: 栈帧的内存超过了线程所分配的栈内存 (例如 错误的递归调用)
+栈帧过大导致栈内存溢出:
+
+2.3 线程运行诊断案例1: CPU占用过多
+# 1. 用top定位哪个进程对cpu的占用过高top # 2. 用ps定位哪个线程对cpu的占用过高ps H -eo pid,tid,%cpu | grep 进程id   # ps用于查询进程线程信息# 3. jstack： 根据线程id查看有问题的线程jstack 进程id# 4. 根据提示信息找到对应的代码行数
+
+
+
+案例2: 程序运行很长时间没有结果
+# 根据jstack提示信息找到死锁对应的代码行数jstack 进程id
+
+3. 本地方法栈
+本地方式是只操作系统的原生方法, Java代码通过调用这些方法与cpu和内存打交道
+在Java代码中, 使用native关键字标识本地方法
+本地方法栈: 用于运行本地方法的栈
+4. 堆线程共享区域
+4.1 定义Heap(堆)通过new关键字, 创建对象都会使用堆内存
+特点:
+
+线程共享, 堆中对象都需要考虑线程安全的问题
+有垃圾回收机制
+
+4.2 堆内存溢出案例
+public class HeapTest &#123;    public static void main(String[] args) &#123;        ArrayList list = new ArrayList();        int i = 0;        a = &quot;hello&quot;        try &#123;            while (true) &#123;                list.add(a);                 a = a + a                i++;            &#125;        &#125;catch (Throwable e) &#123;            System.out.println(i);            e.printStackTrace();        &#125;    &#125;&#125;
+
+自定已堆空间： -Xmx8m: 修改堆空间为8M
+4.3 堆内存诊断1）jps工具查看当前系统中有哪些Java工程，以及对应的进程id
+jps [options] [hostid]-q 不输出类名、Jar名和传入main方法的参数-m 输出传入main方法的参数-l 输出main类或Jar的全限名-v 输出传入JVM的参数
+
+
+
+2）jmap工具查看堆内存占用情况
+jmap -heap pid 或 jhsdb jmap --heap --pid 41416 jmap [option] pidjmap [option] executable corejmap [option] [server-id@]remote-hostname-or-ip
+
+很常用的情况是：用jmap把进程内存使用情况dump到文件中，再用jhat分析查看。jmap进行dump命令格式如下：
+jmap -dump:format=b,file=dumpFileName 进程id# 例子root@ubuntu:/# jmap -dump:format=b,file=/tmp/dump.dat 21711     Dumping heap to /tmp/dump.dat ...Heap dump file created
+
+
+
+3）jconsole工具图形界面的，多功能的监测工具，可以连续监测
+4）jvisualvm5) jstackjstack主要用来查看某个Java进程内的线程堆栈信息。语法格式如下：
+jstack [option] pidjstack [option] executable corejstack [option] [server-id@]remote-hostname-or-ip-l long listings，会打印出额外的锁信息，在发生死锁时可以用jstack -l pid来观察锁持有情况-m mixed mode，不仅会输出Java堆栈信息，还会输出C/C++堆栈信息（比如Native方法）
+
+
+
+案例1： 诊断工具使用
+public class HeapDemo2 &#123;    public static void main(String[] args) throws InterruptedException &#123;        System.out.println(&quot;1. 堆内存测试&quot;);        Thread.sleep(30000);        byte[] arr = new byte[1024 * 1024 * 10]; // 10MB        System.out.println(&quot;2. 10MB创建成功&quot;);        Thread.sleep(30000);        arr = null;        System.gc();        System.out.println(&quot;3. 垃圾回收&quot;);        Thread.sleep(30000);    &#125;&#125;
+
+案例2： 垃圾回收后，内存占用依然很高
+jps --&gt; jmap --&gt; jvisualvm
+5. 方法区
+
+5.1 定义存储类的
+逻辑上是堆的组成部分
+方法区（Method Area） 是 Java 虚拟机（JVM） 运行时数据区的一部分，用于存储 类信息、常量、静态变量、即时编译器编译后的代码 等数据。它是所有线程共享的内存区域，在 JVM 启动时创建，逻辑上属于 堆（Heap）的一部分，但具体实现可能不同
+5.2 组成
+5.3 方法区内存溢出
+Java1.8以前会导致永久代内存溢出
+1.8之后会导致元空间内存溢出
+
+演示元空间内存溢出
+/** * 演示元空间内存溢出 * -XX:MaxMetaspaceSize=8m */public class MetaSpaceOutOfMemory extends ClassLoader&#123;    public static void main(String[] args) &#123;        int j = 0;        try &#123;            MetaSpaceOutOfMemory m = new MetaSpaceOutOfMemory();            for (int i = 0; i &lt; 10000; i++,j++) &#123;                //ClassWriter是用于生成 类的二进制字节码                ClassWriter classWriter = new ClassWriter(0);                // 版本号， public，类名，包名，父类，实现的接口                classWriter.visit(Opcodes.V1_8,Opcodes.ACC_PUBLIC,&quot;Class&quot; + i,null,&quot;java/lang/Object&quot;,null);                //返回二进制字节码                byte[] byteArray = classWriter.toByteArray();                //执行类的加载                m.defineClass(&quot;Class&quot; + i, byteArray, 0, byteArray.length);            &#125;        &#125;finally &#123;            System.out.println(j);        &#125;    &#125;&#125;
+
+场景：
+
+spring
+mybatis
+
+5.4 运行时常量池
+Java程序需要运行， 就需要先转化为二进制的字节码文件， 而字节码由类的基本信息、类的常量池、类的方法定义三部分以及虚拟机指令组成。
+案例：使用javap -c 类名.class反编译字节码文件
+//原始代码public class Pool &#123;    public static void main(String[] args) &#123;        System.out.println(&quot;Hello World&quot;);    &#125;&#125;// javap -v Pool.class反编译后的代码// 1. 类的基本信息Classfile /D:/Users/fei/gitrepo/gulimall/java-foundation/target/classes/com/JVM/chapter01/Pool.class  Last modified 2025年5月31日; size 551 bytes  SHA-256 checksum 685b230badb0ecfbb0269e956bbb39aa205913c435f86d19c86a7f40d34224a3  Compiled from &quot;Pool.java&quot;public class com.JVM.chapter01.Pool  minor version: 0  major version: 61  flags: (0x0021) ACC_PUBLIC, ACC_SUPER  this_class: #21                         // com/JVM/chapter01/Pool  super_class: #2                         // java/lang/Object  interfaces: 0, fields: 0, methods: 2, attributes: 1      //2. 常量池Constant pool:   #1 = Methodref          #2.#3          // java/lang/Object.&quot;&lt;init&gt;&quot;:()V   #2 = Class              #4             // java/lang/Object   #3 = NameAndType        #5:#6          // &quot;&lt;init&gt;&quot;:()V   #4 = Utf8               java/lang/Object   #5 = Utf8               &lt;init&gt;   #6 = Utf8               ()V   #7 = Fieldref           #8.#9          // java/lang/System.out:Ljava/io/PrintStream;   #8 = Class              #10            // java/lang/System   #9 = NameAndType        #11:#12        // out:Ljava/io/PrintStream;  #10 = Utf8               java/lang/System  #11 = Utf8               out  #12 = Utf8               Ljava/io/PrintStream;  #13 = String             #14            // Hello World  #14 = Utf8               Hello World  #15 = Methodref          #16.#17        // java/io/PrintStream.println:(Ljava/lang/String;)V  #16 = Class              #18            // java/io/PrintStream  #17 = NameAndType        #19:#20        // println:(Ljava/lang/String;)V  #18 = Utf8               java/io/PrintStream  #19 = Utf8               println  #20 = Utf8               (Ljava/lang/String;)V  #21 = Class              #22            // com/JVM/chapter01/Pool  #22 = Utf8               com/JVM/chapter01/Pool  #23 = Utf8               Code  #24 = Utf8               LineNumberTable  #25 = Utf8               LocalVariableTable  #26 = Utf8               this  #27 = Utf8               Lcom/JVM/chapter01/Pool;  #28 = Utf8               main  #29 = Utf8               ([Ljava/lang/String;)V  #30 = Utf8               args  #31 = Utf8               [Ljava/lang/String;  #32 = Utf8               SourceFile  #33 = Utf8               Pool.java                            // 3. 类的方法定义&#123;  public com.JVM.chapter01.Pool(); // 构造方法    descriptor: ()V    flags: (0x0001) ACC_PUBLIC    Code:      stack=2, locals=1, args_size=1         0: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;         3: ldc           #13                 // String Hello World         5: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V         8: return      LineNumberTable:        line 5: 0        line 6: 8      LocalVariableTable:        Start  Length  Slot  Name   Signature            0       9     0  args   [Ljava/lang/String;&#125;SourceFile: &quot;Pool.java&quot;
+
+
+常量池就是一张表，虚拟机指令根据这些常量表找到要执行的类名，方法名，参数类型、字面量(值)等信息
+
+运行时常量池，常量池是*.class文件中的，当该类被加载，它的常量池信息就会被放入到运行时常量池，并把里面的符号地址变为真正的内存地址
+
+
+public class StringTable &#123;    /**     * 常量池中的信息都会被加载到运行时常量池， 这时候 a, b , ab都是常量池中的符号，还没有转化为Java字符串对象     * 0： ldc #7  会把a转化为 &quot;a&quot; 字符串对象， 然后在StringTable中找，是否有相同的字符串。 StringTable在数据结构上时Hash表，无法扩容     * astore_1 没有找到，将 &quot;a&quot; 存储到StringTable     */    public static void main(String[] args) &#123;        String s1 = &quot;a&quot;;        String s2 = &quot;b&quot;;        String s3 = &quot;ab&quot;;        String s4 = s1 + s2; // new String(&quot;ab&quot;); // s4在堆中，因为 s1, s2为变量，编译时不能确定s4的值.         String s5 = &quot;a&quot; + &quot;b&quot;; // javac 在编译期间的优化， a， b为常量， 编译时能确定s5就是ab        String s6 = s4.intern(); // s4在StringTable中没有&quot;ab&quot;时会自动放入串池，反之则否        System.out.println(s3 == s4); // false        System.out.println(s3 == s5); // true        System.out.println(s3 == s6); // true    &#125;&#125;
+
+
+5.5 StringTable
+常量池中的字符串仅仅是符号，第一次用到时才变为对象。
+
+利用串池（stringTable）的机制， 避免重复创建相同的字符串
+
+字符串的拼接原理时StringBuilder（1.8）
+
+字符串拼接原理时编译期优化
+
+可以使用intern方法，主动将串池中还没有的字符串对象放入串池。s4.intren()
+
+
+--XX:UseGCOverheadLimit阻止应用长时间无响应（大于98%的时间花在了垃圾回收 and 小于2%堆空间被恢复） 
+5.6 StringTable 垃圾回收
+演示StringTable垃圾回收
+
+//-Xmx10m  堆内存10m//-XX:+PrintStringTableStatistics  打印串池中统计信息//-XX:+PrintGCDetails -verbose:gc 打印垃圾回收细节public class StringTableGC &#123;    public static void main(String[] args) &#123;        int i = 0;        try &#123;            for(int j = 0; j &lt; 100000; j++) &#123;                String.valueOf(j).intern();                i++;            &#125;        &#125;catch (Throwable e) &#123;            e.printStackTrace();        &#125;finally &#123;            System.out.println(i);        &#125;    &#125;&#125;
+
+5.7 StringTable 性能调优实际就是调整StringTable中哈希表的桶的个数
+// -XX:StringTableSize=20000// java17 自动扩容为2的阶乘
+
+在进行大量字符串操作时，可以将字符串放入StringTable，减少堆内存的使用。因为StringTable中不会存在相同的字符串。
+6. 直接内存6.1 定义直接内存是操作系统内存。
+
+常见于NIO操作，用于数据缓存区
+
+
+Java NIO（New Input&#x2F;Output 或 Non-blocking I&#x2F;O）是从Java 1.4版本开始引入的一种新的I&#x2F;O系统，它解决了传统的I&#x2F;O系统中同步阻塞的问题，提供了更高效的I&#x2F;O处理方法。Java NIO不仅可以提高性能，还可以提供更好的可伸缩性。
+在Java NIO中，数据总是从通道读入缓冲区，或者从缓冲区写入通道。Selector会不断地轮询注册在其上的通道，当发现某个通道有I&#x2F;O事件时，就能够快速定位到可以进行I&#x2F;O操作的通道，进行数据处理。
+
+
+Java进行分配和回收成本比较高，但读写性能高
+不受JVM内存回收管理
+
+
+使用Java缓冲区（堆内存中）new byte[1024*1024]
+
+
+
+分配直接内存：ByteBuffer.allocateDirect(1024*1024)
+
+
+6.2 直接内存释放
+通过Unsafe对象进行管理（Unsafe对象只能通过反射创建）。主动调用freeMemory方法
+
+ByteBuffer的实现类内部，使用了Cleaner（虚引用）来监测ByteBuffer对象，一但ByteBuffer对象被垃圾回收，那么就会由ReferenceHandler线程通过Cleaner的clean方法调用freeMemory来释放直接内存
+
+
+参数介绍
+-XX:+DisableExplicitGC 禁用显示调用垃圾回收System.gc();
+
+使用此参数后，则分配直接内存后无法显示直接释放
+ByteBuffer buffer = ByteBuffer.allocateDirect(1024*1024);// 10MB// 以下操作无效buffer = null;System.gc();//可以使用Unsafe对象对直接内存进行释放
+
+
+
+二、垃圾回收1. 如何判断对象可以回收1.1 引用计数法定义一个count来记录某个对象被引用了多少次
+可能出现循环引用的问题
+1.2 可达性分析法JVM采用的本方法。
+
+确定根对象：一定不能被垃圾回收的对象叫根对象
+
+是否是基本类对象
+是否是加锁对象（synchronized）
+是否在活动栈帧中被引用
+
+
+JVM种的垃圾回收器采用可达性分析来探索所有存活的对象
+
+扫描堆中的对象，看是否能够沿着GC Root对象为起点的引用链找到该对象，找不到，表示可以回收
+
+
+1.3 四种引用强引用byte[] b = new byte[1024]; //强引用
+
+软引用
+//1. 直接用法SoftReference&lt;byte[]&gt; ref = new SoftReference&lt;&gt;(new byte[1024]); // 软引用（java.lang.ref.SoftReference） //2. 使用引用队列释放软引用ReferenceQueue&lt;byte[]&gt; queue = new ReferenceQueue&lt;&gt;();SoftReference&lt;byte[]&gt; ref = new SoftReference&lt;&gt;(new byte[1024],queue); // byte[]回收时，ref被加入queuequeue.poll(); 
+
+弱引用 Full GC清理
+WeakReference&lt;byte[]&gt; ref = new WeakReference&lt;&gt;(new byte[1024]); // 弱引用// 也可使用RefrenceQueue来对弱引用本身进行释放// Suppose that the garbage collector determines at a certain point in time that an object is weakly reachable.
+
+
+
+虚引用： 
+终结器引用
+
+2. 垃圾回收算法2.1 标记清除 Mark Sweep
+通过标记需要清除的内存地址，进行逻辑清除
+速度快
+容易产生内存碎片
+
+2.2 标记整理 Mark Compact
+先标记需要清除的对象地址
+再将其余对象地址进行整理，让已分配内存更紧凑，减少内存碎片
+没有内存碎片
+
+2.3 复制 Copy
+将内存区划分为大小相等的两个区，FROM 区、TO区
+在FROM区进行内存分配，TO区空闲
+先对需要清理的对象地址进行标记
+将FROM尚存活的对象顺序复制到TO区
+交换FROM 和 TO指向，原来的FROM变成TO区, TO区变成FROM区
+不产生内存碎片
+空间利用率低
+
+JVM 会根据情况采用上述三种算法进行垃圾回收
+3. 分代垃圾回收
+
+对象首先分配到伊甸园
+若伊甸园空间不足, 触发minor GC, 引发stop the world. 伊甸园中存活的对象复制到幸存区To，FROM区存活次数小于某个特定值的，且存活的对象复制到TO区，FROM存活次数超过某个特定值的对象赋值到老年代，FROM和TO指向地址互换 
+若老年代空间不足, 先尝试触发minor GC, 如果空间还是不足, 触发full GC, 触发的STW时间更长. 老年代和新生代的都会进行GC, 新生代部分和minor gc一个规则进行GC. 如果full GC之后还是内存不足, 则报内存溢出异常
+
+
+3.1 相关VM参数
+
+
+含义
+参数
+
+
+
+
+堆的初始大小
+-Xms
+start
+
+
+堆的最大大小
+-Xmx或-XX:MaxHeapSize=size
+max
+
+
+新生代大小
+-Xmn或-XX:NewSize=size -XX:MaxNewSize=size
+new
+
+
+幸存区比例(动态)
+-XX:InitialSurvivorRatio=ratio或-XX:+UseAdaptiveSizePolicy
+
+
+
+幸存区比例
+-XX:SurvivorRatio=ratio
+大的对象无法放入幸存区时,直接放入老年代
+
+
+晋升阈值
+-XX:MaxTenuringThreshold=threshold
+
+
+
+晋升详情
+-XX:+PrintTenuringDistribution
+
+
+
+GC详情
+-XX:+PrintGCDetails -verbose:gc
+
+
+
+FullGC前MinorGC
++XX:+ScanvengeBeforeFullGC
+
+
+
+
+
+
+
+
+
+大对象
+
+Eden放不下的大对象会直接放到老年代，不会触发minor GC
+4. 垃圾回收器新一代垃圾回收器ZGC的探索与实践 - 美团技术团队
+Java 中的垃圾回收 - Dev.java
+4.1 串行
+单线程
+堆内存较小、适合个人电脑
+
+4.2 吞吐量优先
+多线程
+堆内存较大、多核CPU
+回收数量大，高延迟
+
+4.3 响应时间优先
+多线程
+堆内存较大、多核CPU
+快速回收、低延迟
+
+4.4 G1 （Garbage First)
+G1回收阶段
+
+5. 垃圾回收调优5.1 调优领域
+内存
+锁竞争
+cpu占用
+io
+
+5.2 确定目标
+低延迟：G1 GC, Z1
+高吞吐量：ParallelGC
+
+5.3 最快的GC是不发生GC查看FullGC前后的内存占用，考虑以下几个问题：
+
+数据是不是太多- 例如：resultSet = statement.execute(&quot;select * from 大表&quot;)  因该进行分页查询
+数据表是不是太臃肿
+对象图： 需要哪个对象查哪个。
+对象大小：包装类型-&gt;基本类型
+
+
+是否存在内存泄露
+static Map
+对于长时间存在的对象，创建软引用或者弱引用
+不使用map，采用第三方缓存
+
+
+
+5.4 新生代调优
+新生代特点：
+
+所有new操作的内存分配非常廉价：TLAB（tread-local allocation buffer）
+死亡对象回收代价是零
+大部分对象用过即死
+Minor GC的时间远远低于Full GC
+
+
+-Xmn
+
+Oracle建议新生代分配占堆内存的1&#x2F;4~1&#x2F;2
+新生代容量&#x3D; 并发量 * （请求-响应大小）
+
+
+幸存区
+
+最大能保留：当前活跃对象+需要晋升的对象
+真正需要长时间存活的对象才将它晋升到老年代
+
+
+晋升阈值配置得当
+
+长时间存活的对象尽快被提升
+
+XX:MaxTenuringThreshold=threshold
+XX:+PrintTenuringDistribution
+
+
+
+
+
+5.5 老年代调优
+没有Full GC，老年代一般不调优
+
+出现Full GC，优先考虑新生代调优
+
+如果新生代已调优，还是出现Full GC, 将老年代内存预设调大1&#x2F;4 ~ 1&#x2F;3
+
+-XX: CMSInitialtingOccupancyFraction=percent
+
+
+
+5.6 案例
+案例一：Full GC 和 Minor GC频繁
+
+
+查看堆内存分配 
+查询运行中的Java：jps
+查看堆内存分配: jmap &lt;pid&gt;或jhsdb  jmap --heap --pid &lt;pid&gt;
+
+
+如果发现新生代内存小，则适当增加新生代内存大小，并提交晋升阈值
+
+
+案例二：请求高峰发生Full GC, 单次暂停时间特长
+
+
+可能新生代内存小，随着创建的对象变多，晋升阈值降低，晋升到老年代的对象增多，老年代内存满了之后触发Full GC
+
+
+案例三：老年代充裕的情况下，发生Full GC
+
+
+内存碎片过多？
+jdk版本老？方法区在老年代中
+
+三、类加载
+1. 类文件结构
+javap -c xxx.class
+
+0~3字节：表示它是否是class文件: ca fe ba be
+4~7字节: 表示jdk版本
+2. 字节码指令3. 编译器处理4. 类加载阶段
+加载
+加载和链接可能是交替进行
+
+链接
+
+验证
+准备
+解析
+
+
+初始化
+
+
+5. 类加载器
+public class GetClassLoader &#123;    public static void main(String[] args) &#123;        ClassLoader classLoader = A.class.getClassLoader();        System.out.println(classLoader);        System.out.println(Object.class.getClassLoader()); // 启动类加载器无法直接访问，将打印null    &#125;&#125;class A &#123;    public String a = &quot;a&quot;;&#125;
+
+
+
+双亲委派机制双亲(parent)委派就是指调用类加载器的loadClass方法时，查找类的规则 (tips: parent被翻译成双亲，实际翻译成上级更为恰当)
+委派本级先做类的加载，本级没有，再由上级进行类加载
+从下往上进行已加载类查找，然后再从上往下进行class查找并加载。
+自定义类加载器什么时候需要自定义类加载器
+
+想加载非classpath随意路径中的类文件
+都是通过接口来使用实现，希望解耦时，常用在框架设计
+这些类希望予以隔离，不同应用的同名类都可以加载，不冲突，常见于tomcat容器
+
+步骤：
+
+继承ClassLoader父类
+遵从双亲委派机制，重写findClass方法
+注意不是重写loadClass方法，否则不会走双亲委派机制
+
+
+读取类文件的字节码
+调用父类的defineClass方法来加载类
+使用者调用该类加载器的loadClass方法
+
+package com.JVM.classLoader;import java.io.ByteArrayOutputStream;import java.io.IOException;import java.nio.file.Files;import java.nio.file.Paths;public class GetClassLoader &#123;    public static void main(String[] args) throws ClassNotFoundException &#123;//        ClassLoader classLoader = A.class.getClassLoader();//        System.out.println(classLoader);//        System.out.println(Object.class.getClassLoader()); // 启动类加载器无法直接访问，将打印null        Loader loader = new Loader();        Class&lt;?&gt; a = loader.loadClass(&quot;com.JVM.javas.A&quot;);        System.out.println(a);        System.out.println(a.getClassLoader());    &#125;&#125;class Loader extends ClassLoader &#123;    /**     *     * @param name 类文件名     *          The &lt;a href=&quot;#binary-name&quot;&gt;binary name&lt;/a&gt; of the class     *     * @return     * @throws RuntimeException     */    @Override    protected Class&lt;?&gt; findClass(String name) throws RuntimeException &#123;        String path = &quot;D:\\Users\\fei\\gitrepo\\gulimall\\java-foundation\\src\\main\\java\\&quot; + name + &quot;.class&quot;; // 拼接全路径        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();        try &#123;            Files.copy(Paths.get(path), outputStream);            //得到字节数组            byte[] bytes = outputStream.toByteArray();            //调用父类defineClass            return defineClass(name, bytes, 0, bytes.length);        &#125; catch (IOException e) &#123;            throw new RuntimeException(e);        &#125;    &#125;&#125;
+
+
+
+6. 运行期优化6.1 即时编译 - JIT分层编译方法内联字段优化]]></content>
       <categories>
         <category>Tech</category>
       </categories>
@@ -7319,806 +7319,45 @@ typescript
       </tags>
   </entry>
   <entry>
-    <title>2025-08-02-Sat-T-RabbitMQ</title>
-    <url>/2025/08/02/2025-08-02-Sat-T-RabbitMQ/</url>
-    <content><![CDATA[
-基础篇
-1. 初识MQ1.1 同步调用同步调用是一种线性执行模式。当你调用一个函数后，程序会暂停在当前位置，直到这个函数执行完毕并返回结果后，才会继续执行下一行代码。这就像你在餐厅点餐后，站在柜台前一直等到厨师做好餐品拿到手后才离开.
-缺点:
-
-拓展性差: 拓展服务需要更改通知代码
-性能下降: 串行执行, 效果慢
-级联失败: 前面服务失败, 后面服务也失败
-
-使用场景: 下一步操作需要上一步操作的结果才使用同步调用, 否则可优化为异步调用
-1.2 异步调用异步调用是一种非阻塞的执行模式。发出调用后，程序不会傻等，而是立即继续执行后续代码。被调用的函数（或任务）会在后台（例如在另一个线程中）执行，当它完成时，会通过一种通知机制（如回调函数、事件或消息）来告知调用方结果已就绪 。这就好比你在餐厅点餐后，拿到一个取餐号，然后可以回座位玩手机，当餐准备好时，服务员会叫号通知你取餐 .
-对于消息队列的异步调用, 一般包含三个角色:
-
-消息发送者: 消息生产者
-消息代理: 管理, 暂存, 转发消息
-消息接收者: 消息消费者
-
-优点:
-
-解除耦合, 拓展性强
-无需等待, 性能好
-故障隔离
-缓存消息, 流量削峰填谷
-
-缺点:
-
-时效性差
-无法确认下游服务对消息的处理情况
-业务安全依赖于Broker(消息代理&#x2F;消息队列) 的可靠性
-
-
-
-
-特性维度
-同步调用
-异步调用
-
-
-
-核心机制
-调用后必须等待返回结果才继续执行
-调用后无需等待，可立即执行后续操作
-
-
-执行时序
-强时序性，顺序执行，上下文一致
-非线性，完成顺序不确定，可能先调用的后完成
-
-
-线程状态
-调用线程可能被阻塞（挂起）
-调用线程非阻塞，可自由执行其他任务
-
-
-结果获取
-直接通过函数返回值获取
-通过回调函数、事件通知、Future&#x2F;Promise等方式获取
-
-
-资源利用率
-较低，等待期间线程资源可能闲置
-较高，线程资源可被充分利用
-
-
-代码复杂度
-逻辑简单直观，易于理解和调试
-相对复杂，需要处理回调地狱、线程安全等问题
-
-
-典型应用
-简单的顺序任务、短时间操作
-高并发服务、I&#x2F;O密集型任务、GUI应用
-
-
-1.3 MQ技术选型MQ (MessageQueue)，中文是消息队列，字面来看就是存放消息的队列。也就是异步调用中的Broker。
-
-
-
-特性维度
-Kafka
-RabbitMQ
-RocketMQ
-ActiveMQ
-
-
-
-核心协议
-自定义协议
-AMQP, MQTT, STOMP
-自研协议
-JMS, AMQP, MQTT
-
-
-吞吐量
-极高 (百万级TPS)
-中等 (万级TPS)
-高 (十万级TPS)
-低 (万级TPS)
-
-
-延迟
-较高 (毫秒-秒级)
-极低 (毫秒级)
-低 (毫秒级)
-毫秒级
-
-
-可靠性
-高 (多副本机制)
-高 (ACK机制)
-极高 (金融级)
-中 (依赖配置)
-
-
-事务消息
-不支持
-插件支持
-原生支持
-支持
-
-
-顺序消息
-分区内有序
-单队列有序
-分区内严格有序
-单队列有序
-
-
-扩展性
-水平扩展极佳
-集群扩展复杂
-水平扩展良好
-垂直扩展为主
-
-
-学习成本
-高
-中 (文档详细, 社区支持全面)
-中
-低
-
-
-2. RabbitMQ2.1 介绍和安装
-基本介绍
-
-RabbitMQ是基于Erlang语言开发的开源消息通信中间件，官网地址:https://www.rabbitmg.com/
-
-核心概念
-publisher: 消息发送者
-consumer: 消息消费者
-queue: 队列, 存储消息
-exchange: 交换机, 负责消息的路由
-binding: 交换机绑定队列
-routing key: 路由条件
-
-
-
-2.2 快速入门
-不挂载
-
-docker run -d --name rabbitmq -p 5671:5671 -p 5672:5672 -p 4369:4369 -p 25672:25672 -p 15671:15671 -p 15672:15672 ----restart=always rabbitmq:management
-
-
-使用数据卷挂载
-
-docker run -e RABBITMQ_DEFAULT_USER=fei \-e RABBITMQ_DEFAULT_PASS=fei \-v mq-plugins:/plugins \--name mq \--hostname mq \-p 15672:15672 \-p 5672:5672 \--network hmall \-d \--restart=always \rabbitmq:management
-
-
-使用数据卷挂载：mq-plugins是数据卷名，那么已有的插件会复制到这个数据卷中。
-这里不存在该数据卷，会自动创建该数据卷。存放的主机目录可通过 docker inspect mq-plugins进行查看
-
-
-
-
-操作类型
-核心命令
-关键参数&#x2F;说明
-
-
-
-创建数据卷
-docker volume create [卷名]
-创建命名的数据卷，便于管理
-
-
-挂载数据卷
-docker run -v [卷名]:[容器路径] ...
-将数据卷挂载到容器内指定路径
-
-
-查看数据卷
-docker volume ls, docker volume inspect [卷名]
-列出所有卷或查看详细信息
-
-
-删除数据卷
-docker volume rm [卷名]
-删除指定的数据卷
-
-
-清理无用卷
-docker volume prune
-清理所有未被容器引用的数据卷
-
-
-
-新建队列hello.queue1和hello.queue2
-向默认的amp.fanout交换机发送一条消息
-查看消息是否到达hello.queue1和hello.queue2
-总结规律
-
-2.3 数据隔离需求:在RabbitMQ的控制台完成下列操作
-
-新建一个用户hmall
-为hmall用户创建一个virtual host
-测试不同virtualhost之间的数据隔离现象
-
-只有本用户创建的virtual host 才能被本用户访问
-3. Java客户端3.1 快速入门需求如下
-
-利用控制台创建队列simple.queue
-
-在publisher服务中，利用SpringAMQP直接向simple.queue发送消息
-
-在consumer服务中，利用SpringAMQP编写消费者，监听simple.queue队列
-
-引入依赖
-
-
-&lt;!--引入RabbitMQ : AMQP（高级消息队列协议） Advanced--&gt;&lt;dependency&gt;    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;    &lt;artifactId&gt;spring-boot-starter-amqp&lt;/artifactId&gt;&lt;/dependency&gt;
-
-
-配置
-
-# 在生产者或者消费者引入MQ服务端信息spring:  rabbitmq:    host: 192.168.56.2    port: 5672     virtual-host: &quot;/&quot; # 虚拟主机    username: guest    password: guest
-
-
-发送消息
-
-@Autowiredprivate RabbitTemplate rabbitTemplate;@Testvoid contextLoads() &#123;    rabbitTemplate.convertAndSend(&quot;hello.queue1&quot;, &quot;hello from java&quot;);&#125;
-
-
-消息接收
-
-SpringAMQP提供声明式的消息监听，我们只需要通过注解在方法上声明要监听的队列名称，将来SpringAMQP就会把消息传递给当前方法:
-@Component@Slf4jpublic class SpringRabbitMQListener &#123;    @RabbitListener(queues = &#123;&quot;hello.queue1&quot;&#125;)    public void receive(String message) &#123;        log.info(&quot;receive message: &#123;&#125;&quot;, message);    &#125;&#125;
-
-
-
-
-
-
-
-3.2 WorkQueue
-案例: 一个队列绑定多个消费者
-基本思路如下:
-
-在RabbitMQ的控制台创建一个队列，名为work.queue
-在publisher服务中定义测试方法，在1秒内产生50条消息，发送到work.queue
-在consumer服务中定义两个消息监听者，都监听work.queue队列
-消费者1每秒处理50条消息，消费者2每秒处理5条消息
-
-
-
-生产者
-
-@Testvoid testWQ()&#123;    for (int i = 0; i &lt; 50; i++) &#123;        rabbitTemplate.convertAndSend(&quot;work.queue&quot;, &quot;hello from java = &quot; + i);        try &#123;            TimeUnit.MILLISECONDS.sleep(20);        &#125; catch (InterruptedException e) &#123;            throw new RuntimeException(e);        &#125;    &#125;&#125;
-
-
-
-
-
-
-消费者
-
-@RabbitListener(queues = &#123;&quot;work.queue&quot;&#125;)public void receiveWQ1(String message) &#123;    System.out.println(&quot;消费者1 接收work.queue = &quot; + message);&#125;@RabbitListener(queues = &#123;&quot;work.queue&quot;&#125;)public void receiveWQ2(String message) throws InterruptedException &#123;    System.err.println(&quot;消费者2 接收work.queue = &quot; + message);    TimeUnit.MILLISECONDS.sleep(200);// 1s / 5 == 200 ms&#125;
-
-
-
-默认情况下，RabbitMQ的会将消息依次轮询投递给绑定在队列上的每一个消费者。但这并没有考虑到消费者是否已经处理完消息，可能出现消息堆积。因此我们需要修改application.yml，设置preFetch值为1，确保同一时刻最多投递给消费者1条消息:
-spring:  rabbitmq:    listener:      simple:        prefetch: 1 # 每次只能获取一条消息，处理完成才能获取下一个消息 # 能者多劳
-
-
-
-3.3 Fanout交换机真正生产环境都会经过exchange来发送消息，而不是直接发送到队列，常用的交换机类型有以下三种:
-
-Fanout: 广播
-Direct: 定向
-Topic: 话题
-headers
-x-local-random
-
-Fanout Exchange 会将接收到的消息广播到每一个跟其绑定的queue，所以也叫广播模式
-
-案例
-
-在RabbitMQ控制台中，声明队列fanout.queue1和fanout.queue2
-在RabbitMQ控制台中，声明交换机hmall.fanout，将两个队列与其绑定
-在consumer服务中，编写两个消费者方法，分别监听fanout.queue1和fanout.queue2
-在publisher中编写测试方法，向hmall.fanout发送消息
-
-
-
-总结: 交换机的作用
-接收publisher发送的消息
-将消息按照规则路由到与之绑定的队列
-FanoutExchange的会将消息路由到每个绑定的队列
-
-
-
-3.4 Direct交换机Direct Exchange 会将接收到的消息根据规则路由到指定的Queue，因此称为定向路由。
-
-每一个Queue都与Exchange设置一个BindingKey
-发布者发送消息时，指定消息的RoutingKey
-Exchange将消息路由到BindingKey与消息RoutingKey一致的队列
-
-
-案例
-
-在RabbitMQ控制台中，声明队列direct.queue1和direct.queue2
-在RabbitMQ控制台中，声明交换机hmall.direct，将两个队列与其绑定
-在consumer服务中，编写两个消费者方法，分别监听direct.queue1和direct.queue2
-在publisher中编写测试方法，利用不同的RoutingKey向hmall.direct发送消息
-
-
-@Testvoid testDirect()&#123;	rabbitTemplate.convertAndSend(&quot;hmall.direct&quot;, &quot;dq1&quot;, &quot;direct test&quot;); // 只有按dq1绑定的queue可以接收&#125;
-
-
-
-
-
-
-
-3.5 Topic交换机TopicExchange与DirectExchange类似，区别在于routingKey可以是多个单词的列表，并且以.分割。
-Queue与Exchange指定BindingKey时可以使用通配符
-
-# : 代指0个或多个单词
-* : 代指一个单词
-
-
-例子:
-
-china.# : 以china开头的routingkey, 比如china.sc.bz, china.sc 都可以路由到
-china.* : 以china 开头的routingkey, 只有china.sc可以接收到, china.sc.bz接收不到
-
-
-描述下Direct交换机与Topic交换机的差异?
-
-Topic交换机接收的消息RoutingKey可以是多个单词，以.分割
-Topic交换机与队列绑定时的bindingKey可以指定通配符
-# : 代表0个或多个词
-* : 代表1个词
-
-3.6 队列交换机的声明SpringAMQP提供了几个类，用来声明队列、交换机及其绑定关系:
-
-Queue:用于声明队列，可以用工厂类QueueBuilder构建
-
-Exchange:用于声明交换机，可以用工厂类ExchangeBuilder构建
-
-Binding:用于声明队列和交换机的绑定关系，可以用工厂类BindingBuilder构建
-
-配置声明方式
-
-
-package com.fei.mq.publisher.config;import org.springframework.amqp.core.Binding;import org.springframework.amqp.core.BindingBuilder;import org.springframework.amqp.core.FanoutExchange;import org.springframework.amqp.core.Queue;import org.springframework.context.annotation.Bean;import org.springframework.context.annotation.Configuration;@Configurationpublic class RabbitMQConfig &#123;    /**     * 声明FanoutExchange交换机     * @return     */    @Bean    public FanoutExchange fanoutExchange() &#123;        return new FanoutExchange(&quot;mall.fanout&quot;);    &#125;    /**     * 声明队列     * @return     */    @Bean    public Queue Queue1() &#123;        return new Queue(&quot;mall.queue1&quot;);    &#125;    /**     * 声明绑定关系     * @param Queue1 已声明的队列     * @param fanoutExchange 已声明的交换机     * @return     */    @Bean    public Binding bindingQueue(Queue Queue1, FanoutExchange fanoutExchange) &#123;        return BindingBuilder.bind(Queue1).to(fanoutExchange);    &#125;&#125;
-
-
-注解声明方式
-
-@RabbitListener(        bindings = @QueueBinding(                value = @Queue(name = &quot;inject.queue1&quot;),                exchange = @Exchange(name = &quot;inject.direct&quot;,type = ExchangeTypes.DIRECT),                key = &#123;&quot;inject.d&quot;,&quot;d.i&quot;&#125;        ))public void receiveDirect(String message) &#123;    System.out.println(&quot;消费者接收到Direct消息：&quot; + message);&#125;
-
-
-
-
-声明队列、交换机、绑定关系的Bean是什么?
-
-Queue
-
-FanoutExchange、DirectExchange、TopicExchange
-
-Binding
-
-
-
-基于@RabbitListener注解声明队列和交换机有哪些常见注解?
-
-@Queue
-@Exchange
-
-
-
-3.7 消息转换器
-需求:  测试利用SpringAMQP发送对象类型的消息
-
-声明一个队列，名为object.queue
-编写单元测试，向队列中直接发送一条消息，消息类型为Map
-在控制台查看消息，总结你能发现的问题
-
-
-Spring的对消息对象的处理是出org.springframework.amqp.support.converter.MessageConverter来处理的。而默认实现是SimpleMessageConverter，基于JDK的ObjectOutputStream完成序列化。存在下列问题:
-
-JDK的序列化有安全风险
-JDK序列化的消息太大
-JDK序列化的消息可读性差
-
-建议采用JSON序列化代替默认的JDK序列化，要做两件事情:在publisher和consumer中都要引入jackson依赖:
-&lt;dependency&gt;    &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;    &lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;&lt;/dependency&gt;
-
-@Beanpublic MessageConverter messageConverter() &#123;    return new Jackson2JsonMessageConverter();&#125;
-
-
-发送者
-
-@Testvoid testMap()&#123;	HashMap&lt;String, String&gt; map = new HashMap&lt;&gt;();	map.put(&quot;name&quot;,&quot;jack&quot;);	rabbitTemplate.convertAndSend(  &quot;hmall.topic&quot;,&quot;china&quot;, map);&#125;
-
-
-
-
-消费者
-
-@RabbitListener(queues = &quot;topic.queue1&quot;)public void receiveTopic(Map&lt;String,String &gt; message) &#123;    System.out.println(&quot;消费者 map 绑定  = &quot; + message);&#125;
-
-消息发送者和消息消费者处理消息的类型需要保持一致
-
-案例: 
-需求: 改造余额支付功能，不再同步调用交易服务的0penFeign接口，而是采用异步MQ通知交易服务
-
-
-订单服务 - 消费者
-
-@Component@RequiredArgsConstructorpublic class PayStatusListener &#123;        private final OrderService orderService;        @RabbitListener(bindings = @QueueBinding(            value = @Queue(name = &quot;mark.queue.pay.queue&quot;, durable = &quot;true&quot;),            exchange = @Exchange(name = &quot;pay.topic&quot;, type = ExchangeTypes.TOPIC),            key =  &quot;pay.success&quot;    ))    public void listen(Long orderId)&#123;        orderService.markOrderPaySuccess(orderId);    &#125;        &#125;
-
-
-支付服务 - 生产者
-
-@Testvoid testPay()&#123;	rabbitTemplate.convertAndSend(&quot;pay.topic&quot;,&quot;pay.success&quot;,910101010);&#125;
-
-
-
-
-
-
-高级篇
-4. 消息可靠性4.1 发送者的可靠性4.1.1 生产者重连有的时候由于网络波动，可能会出现客户端连接MQ失败的情况。通过配置我们可以开启连接失败后的重连机制:
-server:  port: 8056# 在生产者或者消费者引入MQ服务端信息spring:  rabbitmq:    host: 192.168.56.2    port: 5672    virtual-host: &quot;/&quot; # 虚拟主机    username: guest    password: guest    listener:      simple:        prefetch: 1 # 每次只能获取一条消息，处理完成才能获取下一个消息    connection-timeout: 1s # 设置MQ连接超时时间    template:      retry:        enabled: true # 开启超时重连机制        initial-interval: 1000ms # 失败后的初始等待时间        multiplier: 1 # 失败后下次等待时长的倍数，下次等待时长 = initial-interval * multiplier        max-attempts: 3 # 最大重试次数
-
-当网络不稳定的时候，利用重试机制可以有效提高消息发送的成功率。不过SpringAMQP提供的重试机制是阻塞式的重试，也就是说多次重试等待的过程中，当前线程是被阻塞的，会影响业务性能。
-如果对于业务性能有要求，建议禁用重试机制。如果一定要使用，请合理配置等待时长和重试次数，当然也可以考虑使用异步线程来执行发送消息的代码。
-4.1.2 生产者确认RabbitMQ有Publisher Confirm和Publisher Return两种确认机制。开启确机制认后，在MQ成功收到消息后会返回确认消息给生产者。返回的结果有以下几种情况:
-
-消息投递到了MQ，但是路由失败。此时会通过Publisher Return返回路由异常原因，然后返回ACK，告知投递成功
-临时消息投递到了MQ，并且入队成功，返回ACK，告知投递成功
-持久消息投递到了MQ，并且入队完成持久化，返回ACK，告知投递成功
-其它情况都会返回NACK，告知投递失败
-
-spring:  rabbitmq:    publisher-confirm-type: correlated # 开启publisher confirm机制，并设置confirm类型    publisher-return: true # 开启publisher return 机制
-
-
-配置说明
-这里publisher-confirm-type有三种模式:
-
-none: 关闭confirm机制
-simple: 同步阻塞等待MQ的回执消息
-correlated: MQ异步回调方式返回回执信息
-
-
-
-ReturnCallback : 每个RabbitTemplate只能配置一个ReturnCallback, 因此需要在项目启动中配置
-消息成功抵达交换机，但无法路由到任何队列（全局性路由失败）
-全局的、基础保障型的回调。类似于一个“故障报警器”，监听某种特定类型的系统问题。
-通过 rabbitTemplate.setReturnsCallback()全局设置一次，通常在配置类中完成
-
-
-
-@Beanpublic RabbitTemplate initTemplate(ConnectionFactory connectionFactory) &#123;    RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);            rabbitTemplate.setReturnsCallback((msg)-&gt;&#123;        log.info(msg.toString());    &#125;);    rabbitTemplate.setMessageConverter(messageConverter());    return rabbitTemplate;&#125;
-
-
-
-
-
-
-
-
-ConfrimCallback : 发送消息, 指定消息ID, 消息ConfirmCallback
-
-在每次调用 convertAndSend()方法时，通过 CorrelationData动态关联 
-
-ConfirmCallback用于确认消息是否成功抵达交换机（ack&#x2F;nack）。它的处理逻辑则复杂和个性化得多. 
-
-与具体业务逻辑相关的、可定制化的回调。类似于给每个寄出的快递单独设置“送达通知”。
-
-
-
-
-// 发送消息1：支付消息   | 老版本CorrelationData payData = new CorrelationData(&quot;ORDER_PAY_001&quot;);payData.getFuture().addCallback(result -&gt; &#123;    if (result.isAck()) &#123;        log.debug(&quot;支付消息发送成功&quot;);    &#125; else &#123;        // 支付消息发送失败的特殊处理逻辑，如通知支付系统        handlePayMessageFailure(result.getReason());    &#125;&#125;);rabbitTemplate.convertAndSend(&quot;exchange.pay&quot;, &quot;routing.pay&quot;, payMessage, payData);
-
-// 发送消息1：支付消息   | 新版本	@Test	void testConfirmCallback()&#123;		// 发送消息1：支付消息		CorrelationData payData = new CorrelationData(&quot;ORDER_PAY_001&quot;);		payData.getFuture().thenAccept(result-&gt;&#123;			if (result.isAck()) &#123;				System.out.println(&quot;消息发送成功 callback ack&quot;);			&#125; else &#123;				// 支付消息发送失败的特殊处理逻辑，如通知支付系统				System.out.println(&quot;消息发送失败 callback ack&quot;);			&#125;		&#125;);		rabbitTemplate.convertAndSend(&quot;pay.topic&quot;, &quot;pay.success&quot;, &quot;支付消息001&quot;, payData);	&#125;
-
-
-
-4.1.3 总结
-SpringAMQP中生产者消息确认的几种返回值情况:
-消息投递到了MQ，但是路由失败。会return路由异常原因，返回ACK
-临时消息投递到了MQ，并且入队成功，返回ACK
-持久消息投递到了MQ，并且入队完成持久化，返回ACK
-其它情况都会返回NACK，告知投递失败
-
-
-如何处理生产者的确认消息?
-生产者确认需要额外的网络和系统资源开销，尽量不要使用, 除非对消息的可靠性有较高的要求
-如果一定要使用，无需开启Publisher-Return机制，因为一般路由失败是自己业务问题
-对于nack消息可以有限次数重试，依然失败则记录异常消息
-
-
-
-4.2 MQ的可靠性在默认情况下，RabbitMO会将接收到的信息保存在内存中以降低消息收发的延迟。这样会导致两个问题:
-
-一旦MO宕机，内存中的消息会丢失
-内存空间有限，当消费者故障或处理过慢时，会导致消息积压，引发MQ阻塞
-
-4.2.1 数据持久化RabbitMQ实现数据持久化包括3个方面:
-
-交换机持久化 ( 默认持久化) : 交换机属性设置为持久化, 保证交换机持久化存在, 否则重启交换机消失
-队列持久化 (默认持久化) : 队列设置为持久化, 保证队列持久化存在, 否则重启队列消失
-消息持久化: delivery_mode: 2
-
-4.2.3 Lazy Queue从RabbitMQ的3.6.0版本开始，就增加了LazyQueue的概念，也就是惰性队列。惰性队列的特征如下:
-
-接收到消息后直接存入磁盘而非内存(内存中只保留最近的消息，默认2048条)
-消费者要消费消息时才会从磁盘中读取并加载到内存
-支持数百万条的消息存储
-在3.12版本后，所有队列都是LazyOueue模式，无法更改。
-
-要设置一个队列为惰性队列，只需要在声明队列时，指定x-queue-mode属性为lazy即可:
-// 基于Bean@Beanpublic Queue lazyQueue()&#123;    return QueueBuilder        .durable(&quot;queue.name&quot;)        .lazy()        .build();&#125;
-
-// 基于注解    @RabbitListener(bindings = @QueueBinding(            value = @Queue(name = &quot;mark.queue.pay.queue&quot;, durable = &quot;true&quot;),            exchange = @Exchange(name = &quot;pay.topic&quot;, type = ExchangeTypes.TOPIC),            arguments = @Argument(name = &quot;x-queue-mode&quot;,value = &quot;lazy&quot;),            key =  &quot;pay.success&quot;    ))    public void listen(Long orderId)&#123;        orderService.markOrderPaySuccess(orderId);    &#125;
-
-
-
-
-
-4.3 消费者的可靠性4.3.1 消费者确认机制当消费者为了确认消费者是否成功处理消息，RabbitMO提供了消费者确认机制(Consumer Acknowledgement)处理消息结束后，应该向RabbitMO发送一个回执，告知RabbitM0自己消息处理状态。回执有三种可选值:
-
-ack: 成功处理消息，RabbitMO从队列中删除该消息
-nack: 消息处理失败，RabbitMO需要再次投递消息
-reject: 消息处理失败并拒绝该消息，RabbitMQ从队列中删除该消息
-
-SpringAMOP已经实现了消息确认功能。并允许我们通过配置文件选择ACK处理方式，有三种方式:
-
-none : 不处理。即消息投递给消费者后立刻ack，消息会立刻从MQ删除。非常不安全，不建议使用
-manual : 手动模式。需要自己在业务代码中调用api，发送ack或reject，存在业务入侵，但更灵活
-auto : 自动模式。SpringAMQP利用AOP对我们的消息处理逻辑做了环绕增强，当业务正常执行时则自动返回ack当业务出现异常时，根据异常判断返回不同结果:
-如果是业务异常，会自动返回nack
-如果是消息处理或校验异常，自动返回reject
-
-
-
-spring:  rabbitmq:    host: 192.168.56.2    port: 5672    virtual-host: &quot;/&quot; # 虚拟主机    username: guest    password: guest    listener:      simple:        prefetch: 1 # 每次只能获取一条消息，处理完成才能获取下一个消息        acknowledge-mode: manual # 手动确认接受消息，不确认不成功处理
-
-
-
-
-
-4.3.2 消费失败处理当消费者出现异常后，消息会不断requeue(重新入队)到队列，再重新发送给消费者，然后再次异常，再次requeue无限循环，导致mq的消息处理飙升，带来不必要的压力。
-们可以利用Spring的retry机制，在消费者出现异常时利用本地重试，而不是无限制的requeue到mq队列:
-server:  port: 8056# 在生产者或者消费者引入MQ服务端信息spring:  rabbitmq:    host: 192.168.56.2    port: 5672    virtual-host: &quot;/&quot; # 虚拟主机    username: guest    password: guest    listener:      simple:        prefetch: 1 # 每次只能获取一条消息，处理完成才能获取下一个消息        acknowledge-mode:  auto # manual # 手动确认接受消息，不确认不成功处理        retry:          enabled: true # 开启消费者失败重试          initial-interval: 1000ms # 初始化的失败等待时长为1秒          multiplier: 1 #  失败后下次等待时长的倍数，下次等待时长 = initial-interval * multiplier          max-attempts: 3 #大重试次数          stateless: true # 无状态。 如果有事务操作，此处改为false              connection-timeout: 1s # 设置MQ连接超时时间    template:      retry:        enabled: true # 开启超时重连机制        initial-interval: 1000ms # 失败后的初始等待时间        multiplier: 1 # 失败后下次等待时长的倍数，下次等待时长 = initial-interval * multiplier        max-attempts: 3 # 最大重试次数
-
-
-什么是无状态服务？无状态服务就像是一个“金鱼脑”的厨师：你每次点餐都需要告诉他完整的订单，他做完这份餐后就会忘记你。下一次你来，即使间隔只有一秒，他也需要你重新报一遍菜单。
-
-技术本质：服务实例在处理请求时，不依赖任何之前交互产生的数据。请求本身必须包含服务所需的所有信息（如认证Token、用户ID等）。
-优势：这种设计带来了极佳的可扩展性。因为每个实例都一样，你可以通过简单地增加实例数量来应对高流量，负载均衡器可以将请求发送到任意一个可用的实例上。同时，故障恢复也很快，一个实例宕机，新的实例可以立刻顶替上来。
-典型场景：RESTful API 是无状态设计的典范。每个HTTP请求都携带认证头和所有必要参数。微服务架构中的大部分业务逻辑服务（如用户查询、订单计算）也通常被设计为无状态的，以便独立部署和伸缩。
-
-什么是有状态服务？有状态服务则像是一位“记忆力超群”的私人管家。你第一次告诉他你的喜好后，之后每次服务，他都记得你的习惯，无需你重复。
-
-技术本质：服务实例在内存或本地存储中保存了客户端的会话状态。后续请求的处理依赖于这些保存的信息。
-挑战：这导致扩展性复杂。如果你有多个实例，用户第一次请求被实例A处理，其状态保存在A上；用户的第二次请求如果被负载均衡器发给了实例B，B由于没有该用户的状态，就会认为用户未登录或会话无效，从而导致错误。因此，必须使用“粘性会话”等技术确保同一用户的请求总是发往同一个实例。
-典型场景：传统单机应用、关系型数据库（如MySQL主从复制）、以及需要维持长期连接的场景（如WebSocket通信）通常是有状态的。
-
-总之, 无状态服务就是无记忆服务, 有状态服务就是有记忆服务
-
-在开启重试模式后，重试次数耗尽，如果消息依然失败，则需要有MessageRecoverer接口来处理，它包含三种不同的实现:
-
-RejectAndDontRequeueRecoverer: 重试耗尽后，直接reiect，丢弃消息。默认就是这种方式
-ImmediateRequeueMessageRecoverer: 重试耗尽后，返回nack，消息重新入队
-RepublishMessageRecoverer : 重试耗尽后，将失败消息投递到指定的交换机 error.exchange =&gt; error.queue
-
-（1）自动处理acknowledge-mode: auto
-将失败处理策略改为RepublishMessageRecoverer:
-
-首先，定义接收失败消息的交换机、队列及其绑定关系
-
-然后，定义RepublishMessageRecoverer:
-
-
-package com.fei.mq.consumer.config;import org.springframework.amqp.core.Binding;import org.springframework.amqp.core.BindingBuilder;import org.springframework.amqp.core.DirectExchange;import org.springframework.amqp.core.Queue;import org.springframework.amqp.rabbit.core.RabbitTemplate;import org.springframework.amqp.rabbit.retry.MessageRecoverer;import org.springframework.amqp.rabbit.retry.RepublishMessageRecoverer;import org.springframework.boot.autoconfigure.condition.ConditionalOnProperties;import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;import org.springframework.context.annotation.Bean;import org.springframework.context.annotation.Configuration;@Configuration@ConditionalOnProperty(prefix = &quot;spring.rabbitmq.listener.simple.retry&quot;, name = &quot;enabled&quot;, havingValue = &quot;true&quot;) // 只有在配置true方可生效public class MQErrorConfig &#123;    @Bean    public Queue errorQueue() &#123;        return new Queue(&quot;error.queue&quot;);    &#125;    @Bean    public DirectExchange errorExchange() &#123;        return new DirectExchange(&quot;error.direct&quot;);    &#125;    @Bean    public Binding errorBinding() &#123;        return BindingBuilder.bind(errorQueue()).to(errorExchange()).with(&quot;error&quot;);    &#125;    /**     * 消息恢复 重试耗尽后，将失败消息投递到指定的交换机 `error.exchange =&gt; error.queue`     * @param rabbitTemplate     * @return     */    @Bean    public MessageRecoverer messageRecoverer(RabbitTemplate rabbitTemplate) &#123;        return new RepublishMessageRecoverer(rabbitTemplate, &quot;error.direct&quot;, &quot;error&quot;);    &#125;&#125;
-
-@RabbitListener(bindings = @QueueBinding(            value = @Queue(name = &quot;mark.queue.pay.queue&quot;, durable = &quot;true&quot;),            exchange = @Exchange(name = &quot;pay.topic&quot;, type = ExchangeTypes.TOPIC),//        arguments = @Argument(name = &quot;x-queue-mode&quot;,value = &quot;lazy&quot;),            key =  &quot;pay.success&quot;    ))    public void listen(Long orderId, Channel channel, Message message) throws IOException, RuntimeException &#123;            orderService.markOrderPaySuccess(orderId);            System.out.println(&quot;消息处理中&quot;);        	throw new RuntimeException(&quot;故意的&quot;); // 发生异常时，AOP增强将消息发送给error.exchange交换机    &#125; 
-
-
-
-（2）手动处理 acknowledge-mode: manual
-@RabbitListener(bindings = @QueueBinding(        value = @Queue(name = &quot;mark.queue.pay.queue&quot;, durable = &quot;true&quot;),        exchange = @Exchange(name = &quot;pay.topic&quot;, type = ExchangeTypes.TOPIC),        key =  &quot;pay.success&quot;))public void listen(Long orderId, Channel channel, Message message) throws IOException, RuntimeException &#123;    try&#123;        orderService.markOrderPaySuccess(orderId);         channel.basicAck(message.getMessageProperties().getDeliveryTag(),false);        System.out.println(&quot;消息处理成功&quot;);    &#125;catch (IOException e) &#123;        System.out.println(&quot;异常发生，消息退回消息队列&quot;);        channel.basicReject(message.getMessageProperties().getDeliveryTag(),true);    &#125;&#125;
-
-
-
-
-
-（3）总结消费者如何保证消息一定被消费?
-
-开启消费者确认机制为auto，由spring确认消息处理成功后返回ack，异常时返回nack
-开启消费者失败重试机制，并设置MessageRecoverer，多次重试失败后将消息投递到异常交换机，交由人工处理
-
-4.3.3 业务幂等性幂等是一个数学概念，用函数表达式来描述是这样的:f(x)&#x3D;f(f(x)。在程序开发中，则是指同一个业务，执行一次或多次对业务状态的影响是一致的。
-（1）唯一消息ID方案一，是给每个消息都设置一个唯一id，利用id区分是否是重复消息:
-
-每一条消息都生成一个唯一的id，与消息一起投递给消费者
-消费者接收到消息后处理自己的业务，业务处理成功后将消息ID保存到数据库
-如果下次又收到相同消息，去数据库（Redis) 查询判断是否存在，存在则为重复消息放弃处理
-
-@Beanpublic MessageConverter messageConverter() &#123;    Jackson2JsonMessageConverter converter = new Jackson2JsonMessageConverter();    converter.setCreateMessageIds(true); // UUID | 多节点时，应当使用全局ID    return converter;&#125;
-
-（2）业务状态判断方案二，是结合业务逻辑，基于业务本身做判断。以我们的业务为例: 我们要在支付后修改订单状态为已支付，应该在修改订单状态前先查询订单状态，判断状态是否是未支付。只有未支付订单才需要修改，其它状态不做处理。
-（3）总结如何保证支付服务与交易服务之间的订单状态一致性?
-
-消息通知：首先，支付服务会在用户支付成功以后利用MQ消息通知交易服务完成订单状态同步。
-避免消息丢失：其次，为了保证MQ消息的可靠性，我们采用了生产者确认机制、消费者确认、消费者失败重试等策略，确保消息投递和处理的可靠性。同时也开启了MQ的持久化，避免因服务宕机导致消息丢失
-幂等判断：最后，我们还在交易服务更新订单状态时做了业务幂等判断，避免因消息重复消费导致订单状态异常
-
-如果交易服务消息处理失败，有没有什么兜底方案?
-
-定时任务：我们可以在交易服务设置定时任务，定期查询订单支付状态。这样即便MO通知失败，还可以利用定时任务作为兜底方案，确保订单支付状态的最终一致性。
-
-4.4 延迟消息延迟消息: 生产者发送消息时指定一个时间，消费者不会立刻收到消息，而是在指定时间之后才收到消息。
-延迟任务: 设置在一定时间之后才执行的任务
-4.4.1 死信交换机当一个队列中的消息满足下列情况之一时，就会成为死信(dead letter)
-
-消费失败：消费者使用basic.reject或 basic.nack声明消费失败，并且消息的requeue参数设置为false
-消息过期：消息是一个过期消息(达到了队列或消息本身设置的过期时间)，超时无人消费要投递的队列
-消息积压：消息堆积满了，最早的消息可能成为死信
-
-如果队列通过x-dead-letter-exchange属性指定了一个交换机，那么该队列中的死信就会投递到这个交换机中。这个交换机称为死信交换机(Dead LetterExchange，简称DLX)。
-
-关键点：
-
-两个交换机、两个队列，一个消费者
-第一个交换机是普通交换机
-死信队列为普通队列，只是设置了x-dead-letter-exchange, 以及消息的过期时间
-第二个交换机是一个普通交换机
-
-分析可知，实际上可以使用一个交换机，两个不同的bindingkey即可。
-
-
-组件配置
-
-package com.fei.mq.consumer.config;import org.springframework.amqp.core.*;import org.springframework.context.annotation.Bean;import org.springframework.context.annotation.Configuration;@Configurationpublic class DelayMQConfig &#123;    private static final String DEAD_LETTER_EXCHANGE = &quot;order-event-exchange&quot;;    private static final String DEAD_LETTER_QUEUE = &quot;order.delay.queue&quot;;      private static final int DEAD_TTL = 10000; // 过期时间，毫秒    private static final String RELEASE_QUEUE = &quot;order.release.queue&quot;;  // 死信队列    private static final String DEAD_LETTER_CREATE = &quot;order.create.order&quot;; // 普通路由， 从生产者发送到交换机，交换机通过此路由，路由到死信队列（无消费者队列）    private static final String DEAD_LETTER_RELEASE = &quot;order.release.order&quot;; // 死信路由 == 2 次路由： 第一次从死信队列路由到交换机， 第二次又从交换机路由到普通队列    /**     * 普通路由， 通过此路由，将消息发送到交换机，由交换机路由到死信队列（无消费者队列）     * @return     */    @Bean    public Binding createBinding()&#123;        return BindingBuilder.bind(deadLetterQueue()).to(deadLetterExchange()).with(DEAD_LETTER_CREATE);    &#125;    /**     * 交换机，延迟消息中唯一的交换机，两个用处：     *  第一： 将生产者的消息路由到死信队列     *  第二： 将死信队列的消息路由到普通队列     * @return     */    @Bean    public TopicExchange deadLetterExchange() &#123;        return new TopicExchange(DEAD_LETTER_EXCHANGE);    &#125;    /**     * 死信队列。需要设置：     * 1. 死信队列名     * 2. 死信交换机名     * 3. 死信路由键     * 4. 消息过期时间     * @return     */    @Bean    public Queue deadLetterQueue() &#123;        return QueueBuilder                .durable(DEAD_LETTER_QUEUE) // 死信队列名                .deadLetterExchange(DEAD_LETTER_EXCHANGE) // 交换机名                .deadLetterRoutingKey(DEAD_LETTER_RELEASE) // 死信路由 == 2 次路由： 第一次从死信队列路由到交换机， 第二次又从交换机路由到普通队列                .ttl(DEAD_TTL)  // the time to live (milliseconds).                .build();    &#125;    /**     * 发布路由，此路由将死信交换机与普通队列（有消费者队列）绑定。路由键名需要和死信路由键保持相同。     * 此路由将死信交换机的消息路由到普通队列     * @return     */    @Bean    public Binding releaseBinding()&#123;        return BindingBuilder.bind(releaseQueue()).to(deadLetterExchange()).with(DEAD_LETTER_RELEASE);    &#125;    /**     * 普通队列（有消费者的队列）     * @return     */    @Bean    public Queue releaseQueue()&#123;        return QueueBuilder                .durable(RELEASE_QUEUE)                .build();    &#125;&#125;
-
-
-
-
-生产者
-
-@Testvoid testDelayMsg()&#123;	rabbitTemplate.convertAndSend(&quot;order-event-exchange&quot;,&quot;order.create.order&quot;,&quot;延迟消息 + &quot; + new Date());&#125;
-
-
-
-
-消费者
-
-@Componentpublic class DelayMessageListener &#123;    @RabbitListener(bindings = @QueueBinding(            value = @Queue(name = &quot;order.release.queue&quot;, durable = &quot;true&quot;),            exchange = @Exchange(name = &quot;order-event-exchange&quot;, type = ExchangeTypes.TOPIC),//        arguments = @Argument(name = &quot;x-queue-mode&quot;,value = &quot;lazy&quot;),            key =  &quot;order.release.order&quot;    ))    public void receive(String msg) &#123;        System.out.println(msg);        System.out.println(&quot;定时消息处理成功&quot;);    &#125;&#125;
-
-
-
-4.4.2 延迟消息插件
-Community Plugins | RabbitMQ
-
-RabbitMQ的官方也推出了一个插件，原生支持延迟消息功能。该插件的原理是设计了一种支持延迟消息功能的交换机当消息投递到交换机后可以暂存一定时间，到期后再投递到队列。
-
-GitHub - rabbitmq&#x2F;rabbitmq-delayed-message-exchange: Delayed Messaging for RabbitMQ
-
-
-安装:
-
-将安装包放入插件目录 ：docker inspect mq-plugins查看挂载目录
-执行docker exec -it mq rabbitmq-plugins enable rabbitmq_delayed_message_exchange
-
-
-
-生产者
-
-@Testvoid testDelayMsg2()&#123;	rabbitTemplate.convertAndSend(&quot;delayed.exchange&quot;, &quot;delay.key&quot;,&quot;插件路由延迟消息&quot;, new MessagePostProcessor() &#123;		@Override		public Message postProcessMessage(Message message) throws AmqpException &#123;			message.getMessageProperties().setDelayLong(10000L);// 毫秒			return message;		&#125;	&#125;);	System.out.println(&quot;消息发送成功---&quot;);&#125;
-
-
-
-
-
-
-消费者
-
-@RabbitListener(bindings = @QueueBinding(        value = @Queue(name = &quot;delayed.mq&quot;, durable = &quot;true&quot;),        exchange = @Exchange(name = &quot;delayed.exchange&quot;, type = ExchangeTypes.TOPIC, delayed = &quot;true&quot;),        key =  &quot;delay.key&quot;))public void receiveDelayByPlugin(String msg) &#123;    System.out.println(msg);    System.out.println(&quot;延迟消息处理成功&quot;);&#125;
-
-
-
-
-
-4.4.3 取消超时订单
-5. RabbitMQ集群RabbitMQ 集群通过将多个 RabbitMQ 节点（服务器）组织在一起，形成一个逻辑上的消息代理（Broker），旨在提供高可用性、容错性和可扩展性。
-🔍 集群核心概念与工作原理数据同步：元数据与消息数据如架构图所示，RabbitMQ 集群中，所有节点都保存相同的元数据（Metadata），包括交换机、队列的定义、绑定关系、用户权限等。这使得客户端可以连接至集群中任何一个节点，都能看到完整的结构。然而，队列中的消息内容本身并不会在所有节点间自动复制。消息只存储在创建该队列的节点（主节点）上。当客户端连接到一个不包含该队列数据的节点（非主节点）时，集群内部会进行消息的路由转发。
-节点类型：磁盘节点与内存节点
-磁盘节点：将元数据存储在磁盘中。集群中必须至少有一个磁盘节点，通常建议配置两个或以上，以防止单点故障导致整个集群无法修改配置。
-内存节点：将元数据存储在内存中，性能更好，但节点重启后元数据会丢失。它依赖磁盘节点来持久化元数据信息。
-
-⚙️ 集群模式详解1. 普通集群模式这是默认模式。如图左侧所示，队列的消息实体仅存在于其主节点上。其他节点仅保存元数据和指向主节点的指针。
-
-优点：提高了集群的总体消息吞吐能力，因为消息可以被分片到不同节点上。
-缺点：无法保证高可用。如果某个队列的主节点宕机，那么该队列及其消息将不可用，直到节点恢复。
-
-2. 镜像集群模式这是实现高可用性的推荐方案。如图右侧“镜像队列数据流”部分所示，它基于普通集群，通过配置镜像队列，使得队列中的消息会被同步到集群中的多个节点上。
-
-工作方式：一个队列有且仅有一个主节点，但可以配置一个或多个镜像节点。所有针对队列的操作（如消息发布）首先在主节点完成，然后同步到所有镜像节点。
-高可用：当主节点故障时，资历最老的镜像节点会自动提升为新的主节点，服务几乎不中断，从而保证了队列的可用性。
-配置策略：可以通过策略灵活定义镜像规则，例如：
-ha-mode: all：队列镜像到集群中的所有节点。
-ha-mode: exactly：指定镜像节点的确切数量。
-ha-sync-mode: automatic：配置自动同步。
-
-
-
-3. 仲裁队列这是 RabbitMQ 3.8 版本后引入的，旨在替代镜像队列的现代实现。
-
-核心机制：基于 Raft 一致性算法，实现了强一致性的数据复制，能有效避免脑裂问题。
-优势：配置更简单，默认内置高可用特性，提供了比传统镜像队列更可靠和高效的数据同步机制
-
-生产规范5.1 命名规则
-
-
-组件
-命名结构
-示例
-核心要点
-
-
-
-Exchange (交换机)
-EX.[SourceAppId].[模块名].[业务名1].[业务名2]
-EX.order.payment.status.update
-清晰体现消息来源和业务职责
-
-
-Queue (队列)
-MQ.[SourceAppId].[TargetAppId].[业务名1].[业务名2]
-MQ.order.user.notification.levelup
-明确标识消息的生产者(Source)和消费者(Target)
-
-
-Routing Key (路由键)
-RK.[SourceAppId].[业务名1].[业务名2]或 [服务名].[消息类型].[动作].[子动作]
-RK.order.payment.success或 user.notification.levelup
-采用点分层级，便于 Topic 交换机使用通配符 (*, #) 进行灵活路由
-
-
-5.2 其他
-
-
-规范领域
-核心目标
-关键规范要点
-
-
-
-消息可靠性规范
-确保消息不丢失、不被重复消费
-持久化、确认机制（ACK）、事务消息、幂等性设计
-
-
-安全规范
-防止未授权访问和数据泄露
-认证与授权、传输加密（TLS&#x2F;SSL）、网络隔离
-
-
-协议与模型规范
-保证系统兼容性和接口清晰
-协议选型（AMQP, JMS, MQTT等）、消息模型统一（点对点&#x2F;发布订阅）
-
-
-运维与监控规范
-保障系统高可用和可维护性
-集群化部署、监控告警、日志追踪、灾备方案
-
-
-性能与可用性规范
-应对高并发，保证服务连续性
-资源规划、流量控制（削峰填谷）、优雅降级
-
-
-]]></content>
+    <title>2025-07-21-Mon-T-RocketMQ</title>
+    <url>/2025/07/21/2025-07-21-Mon-T-RocketMQ/</url>
+    <content><![CDATA[1. 核心功能1.1 MQ介绍RocketMQ基本组件
+Topic： 消息归类的基本单元
+Queue： 消息队列
+Producer
+Consumer
+ConsumerGroup：
+NameServer：可以理解为注册中心，负责更新和发现Broker
+Broker集群：Broker 可以有一个或多个，每一个Brocker就是一个Kafka实例（RacketMQ实例)
+
+1.2 RocketMQ环境搭建#[Step 1] :拉取 RocketMQ 镜像docker pull apache/rocketmq:5.1.0# [Step 2] : 创建容器共享网络 rocketmqdocker network create rocketmq# [Step 3] : 部署 NameServer 前提条件# 创建目录mkdir -p /data/rocketmq/nameserver/&#123;bin,logs&#125;# 授权文件chmod 777 -R /data/rocketmq/nameserver/*# 创建容器docker run -d \--privileged=true --name rmqnamesrv \apache/rocketmq:5.1.0 sh mqnamesrv# 拷贝启动脚本docker cp rmqnamesrv:/home/rocketmq/rocketmq-5.1.0/bin/runserver.sh /data/rocketmq/nameserver/bin/# 删除容器 NameServerdocker rm -f rmqnamesrv# [Step 4] : 启动容器 NameServer# 启动容器 NameServerdocker run -d --network rocketmq \--privileged=true --restart=always \--name rmqnamesrv -p 9876:9876 \-v /data/rocketmq/nameserver/logs:/home/rocketmq/logs \-v /data/rocketmq/nameserver/bin/runserver.sh:/home/rocketmq/rocketmq-5.1.0/bin/runserver.sh \apache/rocketmq:5.1.0 sh mqnamesrv# 部分命令解释 : 1. -e &quot;MAX_HEAP_SIZE=256M&quot; 设置最大堆内存和堆内存初始大小2. -e &quot;HEAP_NEWSIZE=128M&quot;  设置新生代内存大小# [Step 5] : 查看 NameServer 启动日志# 查看启动日志docker logs -f rmqnamesrv# 成功，则进行下一步# [Step 6] : 部署 Broker + Proxymkdir -p /data/rocketmq/broker/&#123;store,logs,conf,bin&#125;chmod 777 -R /data/rocketmq/broker/*# [Step 7] : 创建broker.conf文件vim /data/rocketmq/broker/conf/broker.conf
+
+# nameServer 地址多个用;隔开 默认值null# 例：127.0.0.1:6666;127.0.0.1:8888 namesrvAddr = 192.168.56.2:9876# 集群名称brokerClusterName = DefaultCluster# 节点名称. 主节点的名称必须要和从节点名称一致brokerName = broker-a# broker id节点ID， 0 表示 master, 其他的正整数表示 slave，不能小于0 brokerId = 0# Broker服务地址	String	内部使用填内网ip，如果是需要给外部使用填公网ipbrokerIP1 = 192.168.56.2# Broker角色brokerRole = ASYNC_MASTER# 刷盘方式flushDiskType = ASYNC_FLUSH# 在每天的什么时间删除已经超过文件保留时间的 commit log，默认值04deleteWhen = 04# 以小时计算的文件保留时间 默认值72小时fileReservedTime = 72# 是否允许Broker 自动创建Topic，建议线下开启，线上关闭autoCreateTopicEnable=true# 是否允许Broker自动创建订阅组，建议线下开启，线上关闭autoCreateSubscriptionGroup=true# 禁用 tsltlsTestModeEnable = false# 下面是没有注释的版本, 记得修改&quot;namesrvAddr&quot;, &quot;brokerIP1&quot;的地址# namesrvAddr = 192.168.56.2:9876# brokerClusterName = DefaultCluster# brokerName = broker-a# brokerId = 0# brokerIP1 = 192.168.56.2# brokerRole = ASYNC_MASTER# flushDiskType = ASYNC_FLUSH# deleteWhen = 04# fileReservedTime = 72# autoCreateTopicEnable=true# autoCreateSubscriptionGroup=true# tlsTestModeEnable = false
+
+# [Step 8] : 拷贝启动脚本# 启动 Broker 容器docker run -d \--name rmqbroker --privileged=true \apache/rocketmq:5.1.0 sh mqbroker# 拷贝脚本文件docker cp rmqbroker:/home/rocketmq/rocketmq-5.1.0/bin/runbroker.sh /data/rocketmq/broker/bin# [Step 9] : 启动容器 Broker# 删除容器 Brokerdocker rm -f rmqbroker# 启动容器 Brokerdocker run -d --network rocketmq \--restart=always --name rmqbroker --privileged=true \-p 10911:10911 -p 10909:10909 \-v /data/rocketmq/broker/logs:/root/logs \-v /data/rocketmq/broker/store:/root/store \-v /data/rocketmq/broker/conf/broker.conf:/home/rocketmq/broker.conf \-v /data/rocketmq/broker/bin/runbroker.sh:/home/rocketmq/rocketmq-5.1.0/bin/runbroker.sh \-e &quot;NAMESRV_ADDR=rmqnamesrv:9876&quot; \apache/rocketmq:5.1.0 sh mqbroker --enable-proxy -c /home/rocketmq/broker.conf# 查看启动日志docker logs -f rmqbroker# [Step 10] : 部署RocketMQ控制台（rocketmq-dashboard）docker pull apacherocketmq/rocketmq-dashboard:latest# [Step 11] : 启动容器 Rocketmq-dashboarddocker run -d \--restart=always --name rmq-dashboard \-p 8080:8080 --network rocketmq \-e &quot;JAVA_OPTS=-Xmx256M -Xms256M -Xmn128M -Drocketmq.namesrv.addr=rmqnamesrv:9876 -Dcom.rocketmq.sendMessageWithVIPChannel=false&quot; \apacherocketmq/rocketmq-dashboard# 日志docker logs -f rmq-dashboard
+
+
+
+整合springboot
+
+
+1.3 RocketMQ高可用集群搭建1.3.1 集群各个角色介绍1.3.2  双主双从搭建1.4 消息发送样例1.4.1 同步消息同步消息，发送过后会有一个返回值，也就是mq服务器接收到消息后返回的一个确认，这种方式非常安全，但是性能上并没有这么高，而且在mq集群中，也是要等到所有的从机都复制了消息以后才会返回，所以针对重要的消息可以选择这种方式
+
+1.4.2 异步消息异步消息通常用在对响应时间敏感的业务场景，即发送端不能容忍长时间地等待Broker的响应。发送完以后会有一个异步消息通知
+1.4.3 单向消息这种方式主要用在不关心发送结果的场景，这种方式吞吐量很大，但是存在消息丢失的风险，例如日志信息的发送
+1.4.4 延迟消息消息放入mq后，过一段时间，才会被监听到，然后消费
+比如下订单业务，提交了一个订单就可以发送一个延时消息，30min后去检查这个订单的状态，如果还是未付款就取消订单释放库存
+1.4.5 顺序消息消息有序指的是可以按照消息的发送顺序来消费(FIFO)。RocketMQ可以严格的保证消息有序，可以分为：分区有序或者全局有序。
+可能大家会有疑问，mq不就是FIFO吗？
+rocketMq的broker的机制，导致了rocketMq会有这个问题. 因为一个broker中对应了四个queue
+顺序消费的原理解析，在默认的情况下消息发送会采取Round Robin轮询方式把消息发送到不同的queue(分区队列)；而消费消息的时候从多个queue上拉取消息，这种情况发送和消费是不能保证顺序。但是如果控制发送的顺序消息只依次发送到同一个queue中，消费的时候只从这个queue上依次拉取，则就保证了顺序。当发送和消费参与的queue只有一个，则是全局有序；如果多个queue参与，则为分区有序，即相对每个queue，消息都是有序的。
+下面用订单进行分区有序的示例。
+一个订单的顺序流程是：下订单、发短信通知、物流、签收。订单顺序号相同的消息会被先后发送到同一个队列中，消费时，同一个顺序获取到的肯定是同一个队列。
+1.4.6 批量消息Rocketmq可以一次性发送一组消息，那么这一组消息会被当做一个消息消费
+1.4.7 过滤消息Rocketmq提供消息过滤功能，通过tag或者key进行区分
+我们往一个主题里面发送消息的时候，根据业务逻辑，可能需要区分，比如带有tagA标签的被A消费，带有tagB标签的被B消费，还有在事务监听的类里面，只要是事务消息都要走同一个监听，我们也需要通过过滤才区别对待
+1.4.8 事务消息它可以被认为是一个两阶段的提交消息实现，以确保分布式系统的最终一致性。事务性消息确保本地事务的执行和消息的发送可以原子地执行。
+2. 项目实战2.1 项目背景介绍 - 电商高可用MQ实战环境搭建springbootDubboZookeeperRocketMQMySQL2.2 功能分析2.3 下单功能, 保证各个服务的数据一致性2.4 确认下单功能,通过消息进行数据分发2.5 整体联调3. 高级功能和源码分析]]></content>
       <categories>
         <category>Tech</category>
       </categories>
@@ -9156,53 +8395,6 @@ S1, S2
       </tags>
   </entry>
   <entry>
-    <title>2025-07-21-Mon-T-RocketMQ</title>
-    <url>/2025/07/21/2025-07-21-Mon-T-RocketMQ/</url>
-    <content><![CDATA[1. 核心功能1.1 MQ介绍RocketMQ基本组件
-Topic： 消息归类的基本单元
-Queue： 消息队列
-Producer
-Consumer
-ConsumerGroup：
-NameServer：可以理解为注册中心，负责更新和发现Broker
-Broker集群：Broker 可以有一个或多个，每一个Brocker就是一个Kafka实例（RacketMQ实例)
-
-1.2 RocketMQ环境搭建#[Step 1] :拉取 RocketMQ 镜像docker pull apache/rocketmq:5.1.0# [Step 2] : 创建容器共享网络 rocketmqdocker network create rocketmq# [Step 3] : 部署 NameServer 前提条件# 创建目录mkdir -p /data/rocketmq/nameserver/&#123;bin,logs&#125;# 授权文件chmod 777 -R /data/rocketmq/nameserver/*# 创建容器docker run -d \--privileged=true --name rmqnamesrv \apache/rocketmq:5.1.0 sh mqnamesrv# 拷贝启动脚本docker cp rmqnamesrv:/home/rocketmq/rocketmq-5.1.0/bin/runserver.sh /data/rocketmq/nameserver/bin/# 删除容器 NameServerdocker rm -f rmqnamesrv# [Step 4] : 启动容器 NameServer# 启动容器 NameServerdocker run -d --network rocketmq \--privileged=true --restart=always \--name rmqnamesrv -p 9876:9876 \-v /data/rocketmq/nameserver/logs:/home/rocketmq/logs \-v /data/rocketmq/nameserver/bin/runserver.sh:/home/rocketmq/rocketmq-5.1.0/bin/runserver.sh \apache/rocketmq:5.1.0 sh mqnamesrv# 部分命令解释 : 1. -e &quot;MAX_HEAP_SIZE=256M&quot; 设置最大堆内存和堆内存初始大小2. -e &quot;HEAP_NEWSIZE=128M&quot;  设置新生代内存大小# [Step 5] : 查看 NameServer 启动日志# 查看启动日志docker logs -f rmqnamesrv# 成功，则进行下一步# [Step 6] : 部署 Broker + Proxymkdir -p /data/rocketmq/broker/&#123;store,logs,conf,bin&#125;chmod 777 -R /data/rocketmq/broker/*# [Step 7] : 创建broker.conf文件vim /data/rocketmq/broker/conf/broker.conf
-
-# nameServer 地址多个用;隔开 默认值null# 例：127.0.0.1:6666;127.0.0.1:8888 namesrvAddr = 192.168.56.2:9876# 集群名称brokerClusterName = DefaultCluster# 节点名称. 主节点的名称必须要和从节点名称一致brokerName = broker-a# broker id节点ID， 0 表示 master, 其他的正整数表示 slave，不能小于0 brokerId = 0# Broker服务地址	String	内部使用填内网ip，如果是需要给外部使用填公网ipbrokerIP1 = 192.168.56.2# Broker角色brokerRole = ASYNC_MASTER# 刷盘方式flushDiskType = ASYNC_FLUSH# 在每天的什么时间删除已经超过文件保留时间的 commit log，默认值04deleteWhen = 04# 以小时计算的文件保留时间 默认值72小时fileReservedTime = 72# 是否允许Broker 自动创建Topic，建议线下开启，线上关闭autoCreateTopicEnable=true# 是否允许Broker自动创建订阅组，建议线下开启，线上关闭autoCreateSubscriptionGroup=true# 禁用 tsltlsTestModeEnable = false# 下面是没有注释的版本, 记得修改&quot;namesrvAddr&quot;, &quot;brokerIP1&quot;的地址# namesrvAddr = 192.168.56.2:9876# brokerClusterName = DefaultCluster# brokerName = broker-a# brokerId = 0# brokerIP1 = 192.168.56.2# brokerRole = ASYNC_MASTER# flushDiskType = ASYNC_FLUSH# deleteWhen = 04# fileReservedTime = 72# autoCreateTopicEnable=true# autoCreateSubscriptionGroup=true# tlsTestModeEnable = false
-
-# [Step 8] : 拷贝启动脚本# 启动 Broker 容器docker run -d \--name rmqbroker --privileged=true \apache/rocketmq:5.1.0 sh mqbroker# 拷贝脚本文件docker cp rmqbroker:/home/rocketmq/rocketmq-5.1.0/bin/runbroker.sh /data/rocketmq/broker/bin# [Step 9] : 启动容器 Broker# 删除容器 Brokerdocker rm -f rmqbroker# 启动容器 Brokerdocker run -d --network rocketmq \--restart=always --name rmqbroker --privileged=true \-p 10911:10911 -p 10909:10909 \-v /data/rocketmq/broker/logs:/root/logs \-v /data/rocketmq/broker/store:/root/store \-v /data/rocketmq/broker/conf/broker.conf:/home/rocketmq/broker.conf \-v /data/rocketmq/broker/bin/runbroker.sh:/home/rocketmq/rocketmq-5.1.0/bin/runbroker.sh \-e &quot;NAMESRV_ADDR=rmqnamesrv:9876&quot; \apache/rocketmq:5.1.0 sh mqbroker --enable-proxy -c /home/rocketmq/broker.conf# 查看启动日志docker logs -f rmqbroker# [Step 10] : 部署RocketMQ控制台（rocketmq-dashboard）docker pull apacherocketmq/rocketmq-dashboard:latest# [Step 11] : 启动容器 Rocketmq-dashboarddocker run -d \--restart=always --name rmq-dashboard \-p 8080:8080 --network rocketmq \-e &quot;JAVA_OPTS=-Xmx256M -Xms256M -Xmn128M -Drocketmq.namesrv.addr=rmqnamesrv:9876 -Dcom.rocketmq.sendMessageWithVIPChannel=false&quot; \apacherocketmq/rocketmq-dashboard# 日志docker logs -f rmq-dashboard
-
-
-
-整合springboot
-
-
-1.3 RocketMQ高可用集群搭建1.3.1 集群各个角色介绍1.3.2  双主双从搭建1.4 消息发送样例1.4.1 同步消息同步消息，发送过后会有一个返回值，也就是mq服务器接收到消息后返回的一个确认，这种方式非常安全，但是性能上并没有这么高，而且在mq集群中，也是要等到所有的从机都复制了消息以后才会返回，所以针对重要的消息可以选择这种方式
-
-1.4.2 异步消息异步消息通常用在对响应时间敏感的业务场景，即发送端不能容忍长时间地等待Broker的响应。发送完以后会有一个异步消息通知
-1.4.3 单向消息这种方式主要用在不关心发送结果的场景，这种方式吞吐量很大，但是存在消息丢失的风险，例如日志信息的发送
-1.4.4 延迟消息消息放入mq后，过一段时间，才会被监听到，然后消费
-比如下订单业务，提交了一个订单就可以发送一个延时消息，30min后去检查这个订单的状态，如果还是未付款就取消订单释放库存
-1.4.5 顺序消息消息有序指的是可以按照消息的发送顺序来消费(FIFO)。RocketMQ可以严格的保证消息有序，可以分为：分区有序或者全局有序。
-可能大家会有疑问，mq不就是FIFO吗？
-rocketMq的broker的机制，导致了rocketMq会有这个问题. 因为一个broker中对应了四个queue
-顺序消费的原理解析，在默认的情况下消息发送会采取Round Robin轮询方式把消息发送到不同的queue(分区队列)；而消费消息的时候从多个queue上拉取消息，这种情况发送和消费是不能保证顺序。但是如果控制发送的顺序消息只依次发送到同一个queue中，消费的时候只从这个queue上依次拉取，则就保证了顺序。当发送和消费参与的queue只有一个，则是全局有序；如果多个queue参与，则为分区有序，即相对每个queue，消息都是有序的。
-下面用订单进行分区有序的示例。
-一个订单的顺序流程是：下订单、发短信通知、物流、签收。订单顺序号相同的消息会被先后发送到同一个队列中，消费时，同一个顺序获取到的肯定是同一个队列。
-1.4.6 批量消息Rocketmq可以一次性发送一组消息，那么这一组消息会被当做一个消息消费
-1.4.7 过滤消息Rocketmq提供消息过滤功能，通过tag或者key进行区分
-我们往一个主题里面发送消息的时候，根据业务逻辑，可能需要区分，比如带有tagA标签的被A消费，带有tagB标签的被B消费，还有在事务监听的类里面，只要是事务消息都要走同一个监听，我们也需要通过过滤才区别对待
-1.4.8 事务消息它可以被认为是一个两阶段的提交消息实现，以确保分布式系统的最终一致性。事务性消息确保本地事务的执行和消息的发送可以原子地执行。
-2. 项目实战2.1 项目背景介绍 - 电商高可用MQ实战环境搭建springbootDubboZookeeperRocketMQMySQL2.2 功能分析2.3 下单功能, 保证各个服务的数据一致性2.4 确认下单功能,通过消息进行数据分发2.5 整体联调3. 高级功能和源码分析]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>Tech</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2025-08-04-Mon-T-权限管理</title>
     <url>/2025/08/04/2025-08-04-Mon-T-%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/</url>
     <content><![CDATA[1. Spring Security快速入门
@@ -9266,6 +8458,814 @@ SpringSecurity自动使用DBUserDetailsManager的loadUserByUserName方法从数�
       </tags>
   </entry>
   <entry>
+    <title>2025-08-02-Sat-T-RabbitMQ</title>
+    <url>/2025/08/02/2025-08-02-Sat-T-RabbitMQ/</url>
+    <content><![CDATA[
+基础篇
+1. 初识MQ1.1 同步调用同步调用是一种线性执行模式。当你调用一个函数后，程序会暂停在当前位置，直到这个函数执行完毕并返回结果后，才会继续执行下一行代码。这就像你在餐厅点餐后，站在柜台前一直等到厨师做好餐品拿到手后才离开.
+缺点:
+
+拓展性差: 拓展服务需要更改通知代码
+性能下降: 串行执行, 效果慢
+级联失败: 前面服务失败, 后面服务也失败
+
+使用场景: 下一步操作需要上一步操作的结果才使用同步调用, 否则可优化为异步调用
+1.2 异步调用异步调用是一种非阻塞的执行模式。发出调用后，程序不会傻等，而是立即继续执行后续代码。被调用的函数（或任务）会在后台（例如在另一个线程中）执行，当它完成时，会通过一种通知机制（如回调函数、事件或消息）来告知调用方结果已就绪 。这就好比你在餐厅点餐后，拿到一个取餐号，然后可以回座位玩手机，当餐准备好时，服务员会叫号通知你取餐 .
+对于消息队列的异步调用, 一般包含三个角色:
+
+消息发送者: 消息生产者
+消息代理: 管理, 暂存, 转发消息
+消息接收者: 消息消费者
+
+优点:
+
+解除耦合, 拓展性强
+无需等待, 性能好
+故障隔离
+缓存消息, 流量削峰填谷
+
+缺点:
+
+时效性差
+无法确认下游服务对消息的处理情况
+业务安全依赖于Broker(消息代理&#x2F;消息队列) 的可靠性
+
+
+
+
+特性维度
+同步调用
+异步调用
+
+
+
+核心机制
+调用后必须等待返回结果才继续执行
+调用后无需等待，可立即执行后续操作
+
+
+执行时序
+强时序性，顺序执行，上下文一致
+非线性，完成顺序不确定，可能先调用的后完成
+
+
+线程状态
+调用线程可能被阻塞（挂起）
+调用线程非阻塞，可自由执行其他任务
+
+
+结果获取
+直接通过函数返回值获取
+通过回调函数、事件通知、Future&#x2F;Promise等方式获取
+
+
+资源利用率
+较低，等待期间线程资源可能闲置
+较高，线程资源可被充分利用
+
+
+代码复杂度
+逻辑简单直观，易于理解和调试
+相对复杂，需要处理回调地狱、线程安全等问题
+
+
+典型应用
+简单的顺序任务、短时间操作
+高并发服务、I&#x2F;O密集型任务、GUI应用
+
+
+1.3 MQ技术选型MQ (MessageQueue)，中文是消息队列，字面来看就是存放消息的队列。也就是异步调用中的Broker。
+
+
+
+特性维度
+Kafka
+RabbitMQ
+RocketMQ
+ActiveMQ
+
+
+
+核心协议
+自定义协议
+AMQP, MQTT, STOMP
+自研协议
+JMS, AMQP, MQTT
+
+
+吞吐量
+极高 (百万级TPS)
+中等 (万级TPS)
+高 (十万级TPS)
+低 (万级TPS)
+
+
+延迟
+较高 (毫秒-秒级)
+极低 (毫秒级)
+低 (毫秒级)
+毫秒级
+
+
+可靠性
+高 (多副本机制)
+高 (ACK机制)
+极高 (金融级)
+中 (依赖配置)
+
+
+事务消息
+不支持
+插件支持
+原生支持
+支持
+
+
+顺序消息
+分区内有序
+单队列有序
+分区内严格有序
+单队列有序
+
+
+扩展性
+水平扩展极佳
+集群扩展复杂
+水平扩展良好
+垂直扩展为主
+
+
+学习成本
+高
+中 (文档详细, 社区支持全面)
+中
+低
+
+
+2. RabbitMQ2.1 介绍和安装
+基本介绍
+
+RabbitMQ是基于Erlang语言开发的开源消息通信中间件，官网地址:https://www.rabbitmg.com/
+
+核心概念
+publisher: 消息发送者
+consumer: 消息消费者
+queue: 队列, 存储消息
+exchange: 交换机, 负责消息的路由
+binding: 交换机绑定队列
+routing key: 路由条件
+
+
+
+2.2 快速入门
+不挂载
+
+docker run -d --name rabbitmq -p 5671:5671 -p 5672:5672 -p 4369:4369 -p 25672:25672 -p 15671:15671 -p 15672:15672 ----restart=always rabbitmq:management
+
+
+使用数据卷挂载
+
+docker run -e RABBITMQ_DEFAULT_USER=fei \-e RABBITMQ_DEFAULT_PASS=fei \-v mq-plugins:/plugins \--name mq \--hostname mq \-p 15672:15672 \-p 5672:5672 \--network hmall \-d \--restart=always \rabbitmq:management
+
+
+使用数据卷挂载：mq-plugins是数据卷名，那么已有的插件会复制到这个数据卷中。
+这里不存在该数据卷，会自动创建该数据卷。存放的主机目录可通过 docker inspect mq-plugins进行查看
+
+
+
+
+操作类型
+核心命令
+关键参数&#x2F;说明
+
+
+
+创建数据卷
+docker volume create [卷名]
+创建命名的数据卷，便于管理
+
+
+挂载数据卷
+docker run -v [卷名]:[容器路径] ...
+将数据卷挂载到容器内指定路径
+
+
+查看数据卷
+docker volume ls, docker volume inspect [卷名]
+列出所有卷或查看详细信息
+
+
+删除数据卷
+docker volume rm [卷名]
+删除指定的数据卷
+
+
+清理无用卷
+docker volume prune
+清理所有未被容器引用的数据卷
+
+
+
+新建队列hello.queue1和hello.queue2
+向默认的amp.fanout交换机发送一条消息
+查看消息是否到达hello.queue1和hello.queue2
+总结规律
+
+2.3 数据隔离需求:在RabbitMQ的控制台完成下列操作
+
+新建一个用户hmall
+为hmall用户创建一个virtual host
+测试不同virtualhost之间的数据隔离现象
+
+只有本用户创建的virtual host 才能被本用户访问
+3. Java客户端3.1 快速入门需求如下
+
+利用控制台创建队列simple.queue
+
+在publisher服务中，利用SpringAMQP直接向simple.queue发送消息
+
+在consumer服务中，利用SpringAMQP编写消费者，监听simple.queue队列
+
+引入依赖
+
+
+&lt;!--引入RabbitMQ : AMQP（高级消息队列协议） Advanced--&gt;&lt;dependency&gt;    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;    &lt;artifactId&gt;spring-boot-starter-amqp&lt;/artifactId&gt;&lt;/dependency&gt;
+
+
+配置
+
+# 在生产者或者消费者引入MQ服务端信息spring:  rabbitmq:    host: 192.168.56.2    port: 5672     virtual-host: &quot;/&quot; # 虚拟主机    username: guest    password: guest
+
+
+发送消息
+
+@Autowiredprivate RabbitTemplate rabbitTemplate;@Testvoid contextLoads() &#123;    rabbitTemplate.convertAndSend(&quot;hello.queue1&quot;, &quot;hello from java&quot;);&#125;
+
+
+消息接收
+
+SpringAMQP提供声明式的消息监听，我们只需要通过注解在方法上声明要监听的队列名称，将来SpringAMQP就会把消息传递给当前方法:
+@Component@Slf4jpublic class SpringRabbitMQListener &#123;    @RabbitListener(queues = &#123;&quot;hello.queue1&quot;&#125;)    public void receive(String message) &#123;        log.info(&quot;receive message: &#123;&#125;&quot;, message);    &#125;&#125;
+
+
+
+
+
+
+
+3.2 WorkQueue
+案例: 一个队列绑定多个消费者
+基本思路如下:
+
+在RabbitMQ的控制台创建一个队列，名为work.queue
+在publisher服务中定义测试方法，在1秒内产生50条消息，发送到work.queue
+在consumer服务中定义两个消息监听者，都监听work.queue队列
+消费者1每秒处理50条消息，消费者2每秒处理5条消息
+
+
+
+生产者
+
+@Testvoid testWQ()&#123;    for (int i = 0; i &lt; 50; i++) &#123;        rabbitTemplate.convertAndSend(&quot;work.queue&quot;, &quot;hello from java = &quot; + i);        try &#123;            TimeUnit.MILLISECONDS.sleep(20);        &#125; catch (InterruptedException e) &#123;            throw new RuntimeException(e);        &#125;    &#125;&#125;
+
+
+
+
+
+
+消费者
+
+@RabbitListener(queues = &#123;&quot;work.queue&quot;&#125;)public void receiveWQ1(String message) &#123;    System.out.println(&quot;消费者1 接收work.queue = &quot; + message);&#125;@RabbitListener(queues = &#123;&quot;work.queue&quot;&#125;)public void receiveWQ2(String message) throws InterruptedException &#123;    System.err.println(&quot;消费者2 接收work.queue = &quot; + message);    TimeUnit.MILLISECONDS.sleep(200);// 1s / 5 == 200 ms&#125;
+
+
+
+默认情况下，RabbitMQ的会将消息依次轮询投递给绑定在队列上的每一个消费者。但这并没有考虑到消费者是否已经处理完消息，可能出现消息堆积。因此我们需要修改application.yml，设置preFetch值为1，确保同一时刻最多投递给消费者1条消息:
+spring:  rabbitmq:    listener:      simple:        prefetch: 1 # 每次只能获取一条消息，处理完成才能获取下一个消息 # 能者多劳
+
+
+
+3.3 Fanout交换机真正生产环境都会经过exchange来发送消息，而不是直接发送到队列，常用的交换机类型有以下三种:
+
+Fanout: 广播
+Direct: 定向
+Topic: 话题
+headers
+x-local-random
+
+Fanout Exchange 会将接收到的消息广播到每一个跟其绑定的queue，所以也叫广播模式
+
+案例
+
+在RabbitMQ控制台中，声明队列fanout.queue1和fanout.queue2
+在RabbitMQ控制台中，声明交换机hmall.fanout，将两个队列与其绑定
+在consumer服务中，编写两个消费者方法，分别监听fanout.queue1和fanout.queue2
+在publisher中编写测试方法，向hmall.fanout发送消息
+
+
+
+总结: 交换机的作用
+接收publisher发送的消息
+将消息按照规则路由到与之绑定的队列
+FanoutExchange的会将消息路由到每个绑定的队列
+
+
+
+3.4 Direct交换机Direct Exchange 会将接收到的消息根据规则路由到指定的Queue，因此称为定向路由。
+
+每一个Queue都与Exchange设置一个BindingKey
+发布者发送消息时，指定消息的RoutingKey
+Exchange将消息路由到BindingKey与消息RoutingKey一致的队列
+
+
+案例
+
+在RabbitMQ控制台中，声明队列direct.queue1和direct.queue2
+在RabbitMQ控制台中，声明交换机hmall.direct，将两个队列与其绑定
+在consumer服务中，编写两个消费者方法，分别监听direct.queue1和direct.queue2
+在publisher中编写测试方法，利用不同的RoutingKey向hmall.direct发送消息
+
+
+@Testvoid testDirect()&#123;	rabbitTemplate.convertAndSend(&quot;hmall.direct&quot;, &quot;dq1&quot;, &quot;direct test&quot;); // 只有按dq1绑定的queue可以接收&#125;
+
+
+
+
+
+
+
+3.5 Topic交换机TopicExchange与DirectExchange类似，区别在于routingKey可以是多个单词的列表，并且以.分割。
+Queue与Exchange指定BindingKey时可以使用通配符
+
+# : 代指0个或多个单词
+* : 代指一个单词
+
+
+例子:
+
+china.# : 以china开头的routingkey, 比如china.sc.bz, china.sc 都可以路由到
+china.* : 以china 开头的routingkey, 只有china.sc可以接收到, china.sc.bz接收不到
+
+
+描述下Direct交换机与Topic交换机的差异?
+
+Topic交换机接收的消息RoutingKey可以是多个单词，以.分割
+Topic交换机与队列绑定时的bindingKey可以指定通配符
+# : 代表0个或多个词
+* : 代表1个词
+
+3.6 队列交换机的声明SpringAMQP提供了几个类，用来声明队列、交换机及其绑定关系:
+
+Queue:用于声明队列，可以用工厂类QueueBuilder构建
+
+Exchange:用于声明交换机，可以用工厂类ExchangeBuilder构建
+
+Binding:用于声明队列和交换机的绑定关系，可以用工厂类BindingBuilder构建
+
+配置声明方式
+
+
+package com.fei.mq.publisher.config;import org.springframework.amqp.core.Binding;import org.springframework.amqp.core.BindingBuilder;import org.springframework.amqp.core.FanoutExchange;import org.springframework.amqp.core.Queue;import org.springframework.context.annotation.Bean;import org.springframework.context.annotation.Configuration;@Configurationpublic class RabbitMQConfig &#123;    /**     * 声明FanoutExchange交换机     * @return     */    @Bean    public FanoutExchange fanoutExchange() &#123;        return new FanoutExchange(&quot;mall.fanout&quot;);    &#125;    /**     * 声明队列     * @return     */    @Bean    public Queue Queue1() &#123;        return new Queue(&quot;mall.queue1&quot;);    &#125;    /**     * 声明绑定关系     * @param Queue1 已声明的队列     * @param fanoutExchange 已声明的交换机     * @return     */    @Bean    public Binding bindingQueue(Queue Queue1, FanoutExchange fanoutExchange) &#123;        return BindingBuilder.bind(Queue1).to(fanoutExchange);    &#125;&#125;
+
+
+注解声明方式
+
+@RabbitListener(        bindings = @QueueBinding(                value = @Queue(name = &quot;inject.queue1&quot;),                exchange = @Exchange(name = &quot;inject.direct&quot;,type = ExchangeTypes.DIRECT),                key = &#123;&quot;inject.d&quot;,&quot;d.i&quot;&#125;        ))public void receiveDirect(String message) &#123;    System.out.println(&quot;消费者接收到Direct消息：&quot; + message);&#125;
+
+
+
+
+声明队列、交换机、绑定关系的Bean是什么?
+
+Queue
+
+FanoutExchange、DirectExchange、TopicExchange
+
+Binding
+
+
+
+基于@RabbitListener注解声明队列和交换机有哪些常见注解?
+
+@Queue
+@Exchange
+
+
+
+3.7 消息转换器
+需求:  测试利用SpringAMQP发送对象类型的消息
+
+声明一个队列，名为object.queue
+编写单元测试，向队列中直接发送一条消息，消息类型为Map
+在控制台查看消息，总结你能发现的问题
+
+
+Spring的对消息对象的处理是出org.springframework.amqp.support.converter.MessageConverter来处理的。而默认实现是SimpleMessageConverter，基于JDK的ObjectOutputStream完成序列化。存在下列问题:
+
+JDK的序列化有安全风险
+JDK序列化的消息太大
+JDK序列化的消息可读性差
+
+建议采用JSON序列化代替默认的JDK序列化，要做两件事情:在publisher和consumer中都要引入jackson依赖:
+&lt;dependency&gt;    &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;    &lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;&lt;/dependency&gt;
+
+@Beanpublic MessageConverter messageConverter() &#123;    return new Jackson2JsonMessageConverter();&#125;
+
+
+发送者
+
+@Testvoid testMap()&#123;	HashMap&lt;String, String&gt; map = new HashMap&lt;&gt;();	map.put(&quot;name&quot;,&quot;jack&quot;);	rabbitTemplate.convertAndSend(  &quot;hmall.topic&quot;,&quot;china&quot;, map);&#125;
+
+
+
+
+消费者
+
+@RabbitListener(queues = &quot;topic.queue1&quot;)public void receiveTopic(Map&lt;String,String &gt; message) &#123;    System.out.println(&quot;消费者 map 绑定  = &quot; + message);&#125;
+
+消息发送者和消息消费者处理消息的类型需要保持一致
+
+案例: 
+需求: 改造余额支付功能，不再同步调用交易服务的0penFeign接口，而是采用异步MQ通知交易服务
+
+
+订单服务 - 消费者
+
+@Component@RequiredArgsConstructorpublic class PayStatusListener &#123;        private final OrderService orderService;        @RabbitListener(bindings = @QueueBinding(            value = @Queue(name = &quot;mark.queue.pay.queue&quot;, durable = &quot;true&quot;),            exchange = @Exchange(name = &quot;pay.topic&quot;, type = ExchangeTypes.TOPIC),            key =  &quot;pay.success&quot;    ))    public void listen(Long orderId)&#123;        orderService.markOrderPaySuccess(orderId);    &#125;        &#125;
+
+
+支付服务 - 生产者
+
+@Testvoid testPay()&#123;	rabbitTemplate.convertAndSend(&quot;pay.topic&quot;,&quot;pay.success&quot;,910101010);&#125;
+
+
+
+
+
+
+高级篇
+4. 消息可靠性4.1 发送者的可靠性4.1.1 生产者重连有的时候由于网络波动，可能会出现客户端连接MQ失败的情况。通过配置我们可以开启连接失败后的重连机制:
+server:  port: 8056# 在生产者或者消费者引入MQ服务端信息spring:  rabbitmq:    host: 192.168.56.2    port: 5672    virtual-host: &quot;/&quot; # 虚拟主机    username: guest    password: guest    listener:      simple:        prefetch: 1 # 每次只能获取一条消息，处理完成才能获取下一个消息    connection-timeout: 1s # 设置MQ连接超时时间    template:      retry:        enabled: true # 开启超时重连机制        initial-interval: 1000ms # 失败后的初始等待时间        multiplier: 1 # 失败后下次等待时长的倍数，下次等待时长 = initial-interval * multiplier        max-attempts: 3 # 最大重试次数
+
+当网络不稳定的时候，利用重试机制可以有效提高消息发送的成功率。不过SpringAMQP提供的重试机制是阻塞式的重试，也就是说多次重试等待的过程中，当前线程是被阻塞的，会影响业务性能。
+如果对于业务性能有要求，建议禁用重试机制。如果一定要使用，请合理配置等待时长和重试次数，当然也可以考虑使用异步线程来执行发送消息的代码。
+4.1.2 生产者确认RabbitMQ有Publisher Confirm和Publisher Return两种确认机制。开启确机制认后，在MQ成功收到消息后会返回确认消息给生产者。返回的结果有以下几种情况:
+
+消息投递到了MQ，但是路由失败。此时会通过Publisher Return返回路由异常原因，然后返回ACK，告知投递成功
+临时消息投递到了MQ，并且入队成功，返回ACK，告知投递成功
+持久消息投递到了MQ，并且入队完成持久化，返回ACK，告知投递成功
+其它情况都会返回NACK，告知投递失败
+
+spring:  rabbitmq:    publisher-confirm-type: correlated # 开启publisher confirm机制，并设置confirm类型    publisher-return: true # 开启publisher return 机制
+
+
+配置说明
+这里publisher-confirm-type有三种模式:
+
+none: 关闭confirm机制
+simple: 同步阻塞等待MQ的回执消息
+correlated: MQ异步回调方式返回回执信息
+
+
+
+ReturnCallback : 每个RabbitTemplate只能配置一个ReturnCallback, 因此需要在项目启动中配置
+消息成功抵达交换机，但无法路由到任何队列（全局性路由失败）
+全局的、基础保障型的回调。类似于一个“故障报警器”，监听某种特定类型的系统问题。
+通过 rabbitTemplate.setReturnsCallback()全局设置一次，通常在配置类中完成
+
+
+
+@Beanpublic RabbitTemplate initTemplate(ConnectionFactory connectionFactory) &#123;    RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);            rabbitTemplate.setReturnsCallback((msg)-&gt;&#123;        log.info(msg.toString());    &#125;);    rabbitTemplate.setMessageConverter(messageConverter());    return rabbitTemplate;&#125;
+
+
+
+
+
+
+
+
+ConfrimCallback : 发送消息, 指定消息ID, 消息ConfirmCallback
+
+在每次调用 convertAndSend()方法时，通过 CorrelationData动态关联 
+
+ConfirmCallback用于确认消息是否成功抵达交换机（ack&#x2F;nack）。它的处理逻辑则复杂和个性化得多. 
+
+与具体业务逻辑相关的、可定制化的回调。类似于给每个寄出的快递单独设置“送达通知”。
+
+
+
+
+// 发送消息1：支付消息   | 老版本CorrelationData payData = new CorrelationData(&quot;ORDER_PAY_001&quot;);payData.getFuture().addCallback(result -&gt; &#123;    if (result.isAck()) &#123;        log.debug(&quot;支付消息发送成功&quot;);    &#125; else &#123;        // 支付消息发送失败的特殊处理逻辑，如通知支付系统        handlePayMessageFailure(result.getReason());    &#125;&#125;);rabbitTemplate.convertAndSend(&quot;exchange.pay&quot;, &quot;routing.pay&quot;, payMessage, payData);
+
+// 发送消息1：支付消息   | 新版本	@Test	void testConfirmCallback()&#123;		// 发送消息1：支付消息		CorrelationData payData = new CorrelationData(&quot;ORDER_PAY_001&quot;);		payData.getFuture().thenAccept(result-&gt;&#123;			if (result.isAck()) &#123;				System.out.println(&quot;消息发送成功 callback ack&quot;);			&#125; else &#123;				// 支付消息发送失败的特殊处理逻辑，如通知支付系统				System.out.println(&quot;消息发送失败 callback ack&quot;);			&#125;		&#125;);		rabbitTemplate.convertAndSend(&quot;pay.topic&quot;, &quot;pay.success&quot;, &quot;支付消息001&quot;, payData);	&#125;
+
+
+
+4.1.3 总结
+SpringAMQP中生产者消息确认的几种返回值情况:
+消息投递到了MQ，但是路由失败。会return路由异常原因，返回ACK
+临时消息投递到了MQ，并且入队成功，返回ACK
+持久消息投递到了MQ，并且入队完成持久化，返回ACK
+其它情况都会返回NACK，告知投递失败
+
+
+如何处理生产者的确认消息?
+生产者确认需要额外的网络和系统资源开销，尽量不要使用, 除非对消息的可靠性有较高的要求
+如果一定要使用，无需开启Publisher-Return机制，因为一般路由失败是自己业务问题
+对于nack消息可以有限次数重试，依然失败则记录异常消息
+
+
+
+4.2 MQ的可靠性在默认情况下，RabbitMO会将接收到的信息保存在内存中以降低消息收发的延迟。这样会导致两个问题:
+
+一旦MO宕机，内存中的消息会丢失
+内存空间有限，当消费者故障或处理过慢时，会导致消息积压，引发MQ阻塞
+
+4.2.1 数据持久化RabbitMQ实现数据持久化包括3个方面:
+
+交换机持久化 ( 默认持久化) : 交换机属性设置为持久化, 保证交换机持久化存在, 否则重启交换机消失
+队列持久化 (默认持久化) : 队列设置为持久化, 保证队列持久化存在, 否则重启队列消失
+消息持久化: delivery_mode: 2
+
+4.2.3 Lazy Queue从RabbitMQ的3.6.0版本开始，就增加了LazyQueue的概念，也就是惰性队列。惰性队列的特征如下:
+
+接收到消息后直接存入磁盘而非内存(内存中只保留最近的消息，默认2048条)
+消费者要消费消息时才会从磁盘中读取并加载到内存
+支持数百万条的消息存储
+在3.12版本后，所有队列都是LazyOueue模式，无法更改。
+
+要设置一个队列为惰性队列，只需要在声明队列时，指定x-queue-mode属性为lazy即可:
+// 基于Bean@Beanpublic Queue lazyQueue()&#123;    return QueueBuilder        .durable(&quot;queue.name&quot;)        .lazy()        .build();&#125;
+
+// 基于注解    @RabbitListener(bindings = @QueueBinding(            value = @Queue(name = &quot;mark.queue.pay.queue&quot;, durable = &quot;true&quot;),            exchange = @Exchange(name = &quot;pay.topic&quot;, type = ExchangeTypes.TOPIC),            arguments = @Argument(name = &quot;x-queue-mode&quot;,value = &quot;lazy&quot;),            key =  &quot;pay.success&quot;    ))    public void listen(Long orderId)&#123;        orderService.markOrderPaySuccess(orderId);    &#125;
+
+
+
+
+
+4.3 消费者的可靠性4.3.1 消费者确认机制当消费者为了确认消费者是否成功处理消息，RabbitMO提供了消费者确认机制(Consumer Acknowledgement)处理消息结束后，应该向RabbitMO发送一个回执，告知RabbitM0自己消息处理状态。回执有三种可选值:
+
+ack: 成功处理消息，RabbitMO从队列中删除该消息
+nack: 消息处理失败，RabbitMO需要再次投递消息
+reject: 消息处理失败并拒绝该消息，RabbitMQ从队列中删除该消息
+
+SpringAMOP已经实现了消息确认功能。并允许我们通过配置文件选择ACK处理方式，有三种方式:
+
+none : 不处理。即消息投递给消费者后立刻ack，消息会立刻从MQ删除。非常不安全，不建议使用
+manual : 手动模式。需要自己在业务代码中调用api，发送ack或reject，存在业务入侵，但更灵活
+auto : 自动模式。SpringAMQP利用AOP对我们的消息处理逻辑做了环绕增强，当业务正常执行时则自动返回ack当业务出现异常时，根据异常判断返回不同结果:
+如果是业务异常，会自动返回nack
+如果是消息处理或校验异常，自动返回reject
+
+
+
+spring:  rabbitmq:    host: 192.168.56.2    port: 5672    virtual-host: &quot;/&quot; # 虚拟主机    username: guest    password: guest    listener:      simple:        prefetch: 1 # 每次只能获取一条消息，处理完成才能获取下一个消息        acknowledge-mode: manual # 手动确认接受消息，不确认不成功处理
+
+
+
+
+
+4.3.2 消费失败处理当消费者出现异常后，消息会不断requeue(重新入队)到队列，再重新发送给消费者，然后再次异常，再次requeue无限循环，导致mq的消息处理飙升，带来不必要的压力。
+们可以利用Spring的retry机制，在消费者出现异常时利用本地重试，而不是无限制的requeue到mq队列:
+server:  port: 8056# 在生产者或者消费者引入MQ服务端信息spring:  rabbitmq:    host: 192.168.56.2    port: 5672    virtual-host: &quot;/&quot; # 虚拟主机    username: guest    password: guest    listener:      simple:        prefetch: 1 # 每次只能获取一条消息，处理完成才能获取下一个消息        acknowledge-mode:  auto # manual # 手动确认接受消息，不确认不成功处理        retry:          enabled: true # 开启消费者失败重试          initial-interval: 1000ms # 初始化的失败等待时长为1秒          multiplier: 1 #  失败后下次等待时长的倍数，下次等待时长 = initial-interval * multiplier          max-attempts: 3 #大重试次数          stateless: true # 无状态。 如果有事务操作，此处改为false              connection-timeout: 1s # 设置MQ连接超时时间    template:      retry:        enabled: true # 开启超时重连机制        initial-interval: 1000ms # 失败后的初始等待时间        multiplier: 1 # 失败后下次等待时长的倍数，下次等待时长 = initial-interval * multiplier        max-attempts: 3 # 最大重试次数
+
+
+什么是无状态服务？无状态服务就像是一个“金鱼脑”的厨师：你每次点餐都需要告诉他完整的订单，他做完这份餐后就会忘记你。下一次你来，即使间隔只有一秒，他也需要你重新报一遍菜单。
+
+技术本质：服务实例在处理请求时，不依赖任何之前交互产生的数据。请求本身必须包含服务所需的所有信息（如认证Token、用户ID等）。
+优势：这种设计带来了极佳的可扩展性。因为每个实例都一样，你可以通过简单地增加实例数量来应对高流量，负载均衡器可以将请求发送到任意一个可用的实例上。同时，故障恢复也很快，一个实例宕机，新的实例可以立刻顶替上来。
+典型场景：RESTful API 是无状态设计的典范。每个HTTP请求都携带认证头和所有必要参数。微服务架构中的大部分业务逻辑服务（如用户查询、订单计算）也通常被设计为无状态的，以便独立部署和伸缩。
+
+什么是有状态服务？有状态服务则像是一位“记忆力超群”的私人管家。你第一次告诉他你的喜好后，之后每次服务，他都记得你的习惯，无需你重复。
+
+技术本质：服务实例在内存或本地存储中保存了客户端的会话状态。后续请求的处理依赖于这些保存的信息。
+挑战：这导致扩展性复杂。如果你有多个实例，用户第一次请求被实例A处理，其状态保存在A上；用户的第二次请求如果被负载均衡器发给了实例B，B由于没有该用户的状态，就会认为用户未登录或会话无效，从而导致错误。因此，必须使用“粘性会话”等技术确保同一用户的请求总是发往同一个实例。
+典型场景：传统单机应用、关系型数据库（如MySQL主从复制）、以及需要维持长期连接的场景（如WebSocket通信）通常是有状态的。
+
+总之, 无状态服务就是无记忆服务, 有状态服务就是有记忆服务
+
+在开启重试模式后，重试次数耗尽，如果消息依然失败，则需要有MessageRecoverer接口来处理，它包含三种不同的实现:
+
+RejectAndDontRequeueRecoverer: 重试耗尽后，直接reiect，丢弃消息。默认就是这种方式
+ImmediateRequeueMessageRecoverer: 重试耗尽后，返回nack，消息重新入队
+RepublishMessageRecoverer : 重试耗尽后，将失败消息投递到指定的交换机 error.exchange =&gt; error.queue
+
+（1）自动处理acknowledge-mode: auto
+将失败处理策略改为RepublishMessageRecoverer:
+
+首先，定义接收失败消息的交换机、队列及其绑定关系
+
+然后，定义RepublishMessageRecoverer:
+
+
+package com.fei.mq.consumer.config;import org.springframework.amqp.core.Binding;import org.springframework.amqp.core.BindingBuilder;import org.springframework.amqp.core.DirectExchange;import org.springframework.amqp.core.Queue;import org.springframework.amqp.rabbit.core.RabbitTemplate;import org.springframework.amqp.rabbit.retry.MessageRecoverer;import org.springframework.amqp.rabbit.retry.RepublishMessageRecoverer;import org.springframework.boot.autoconfigure.condition.ConditionalOnProperties;import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;import org.springframework.context.annotation.Bean;import org.springframework.context.annotation.Configuration;@Configuration@ConditionalOnProperty(prefix = &quot;spring.rabbitmq.listener.simple.retry&quot;, name = &quot;enabled&quot;, havingValue = &quot;true&quot;) // 只有在配置true方可生效public class MQErrorConfig &#123;    @Bean    public Queue errorQueue() &#123;        return new Queue(&quot;error.queue&quot;);    &#125;    @Bean    public DirectExchange errorExchange() &#123;        return new DirectExchange(&quot;error.direct&quot;);    &#125;    @Bean    public Binding errorBinding() &#123;        return BindingBuilder.bind(errorQueue()).to(errorExchange()).with(&quot;error&quot;);    &#125;    /**     * 消息恢复 重试耗尽后，将失败消息投递到指定的交换机 `error.exchange =&gt; error.queue`     * @param rabbitTemplate     * @return     */    @Bean    public MessageRecoverer messageRecoverer(RabbitTemplate rabbitTemplate) &#123;        return new RepublishMessageRecoverer(rabbitTemplate, &quot;error.direct&quot;, &quot;error&quot;);    &#125;&#125;
+
+@RabbitListener(bindings = @QueueBinding(            value = @Queue(name = &quot;mark.queue.pay.queue&quot;, durable = &quot;true&quot;),            exchange = @Exchange(name = &quot;pay.topic&quot;, type = ExchangeTypes.TOPIC),//        arguments = @Argument(name = &quot;x-queue-mode&quot;,value = &quot;lazy&quot;),            key =  &quot;pay.success&quot;    ))    public void listen(Long orderId, Channel channel, Message message) throws IOException, RuntimeException &#123;            orderService.markOrderPaySuccess(orderId);            System.out.println(&quot;消息处理中&quot;);        	throw new RuntimeException(&quot;故意的&quot;); // 发生异常时，AOP增强将消息发送给error.exchange交换机    &#125; 
+
+
+
+（2）手动处理 acknowledge-mode: manual
+@RabbitListener(bindings = @QueueBinding(        value = @Queue(name = &quot;mark.queue.pay.queue&quot;, durable = &quot;true&quot;),        exchange = @Exchange(name = &quot;pay.topic&quot;, type = ExchangeTypes.TOPIC),        key =  &quot;pay.success&quot;))public void listen(Long orderId, Channel channel, Message message) throws IOException, RuntimeException &#123;    try&#123;        orderService.markOrderPaySuccess(orderId);         channel.basicAck(message.getMessageProperties().getDeliveryTag(),false);        System.out.println(&quot;消息处理成功&quot;);    &#125;catch (IOException e) &#123;        System.out.println(&quot;异常发生，消息退回消息队列&quot;);        channel.basicReject(message.getMessageProperties().getDeliveryTag(),true);    &#125;&#125;
+
+
+
+
+
+（3）总结消费者如何保证消息一定被消费?
+
+开启消费者确认机制为auto，由spring确认消息处理成功后返回ack，异常时返回nack
+开启消费者失败重试机制，并设置MessageRecoverer，多次重试失败后将消息投递到异常交换机，交由人工处理
+
+4.3.3 业务幂等性幂等是一个数学概念，用函数表达式来描述是这样的:f(x)&#x3D;f(f(x)。在程序开发中，则是指同一个业务，执行一次或多次对业务状态的影响是一致的。
+（1）唯一消息ID方案一，是给每个消息都设置一个唯一id，利用id区分是否是重复消息:
+
+每一条消息都生成一个唯一的id，与消息一起投递给消费者
+消费者接收到消息后处理自己的业务，业务处理成功后将消息ID保存到数据库
+如果下次又收到相同消息，去数据库（Redis) 查询判断是否存在，存在则为重复消息放弃处理
+
+@Beanpublic MessageConverter messageConverter() &#123;    Jackson2JsonMessageConverter converter = new Jackson2JsonMessageConverter();    converter.setCreateMessageIds(true); // UUID | 多节点时，应当使用全局ID    return converter;&#125;
+
+（2）业务状态判断方案二，是结合业务逻辑，基于业务本身做判断。以我们的业务为例: 我们要在支付后修改订单状态为已支付，应该在修改订单状态前先查询订单状态，判断状态是否是未支付。只有未支付订单才需要修改，其它状态不做处理。
+（3）总结如何保证支付服务与交易服务之间的订单状态一致性?
+
+消息通知：首先，支付服务会在用户支付成功以后利用MQ消息通知交易服务完成订单状态同步。
+避免消息丢失：其次，为了保证MQ消息的可靠性，我们采用了生产者确认机制、消费者确认、消费者失败重试等策略，确保消息投递和处理的可靠性。同时也开启了MQ的持久化，避免因服务宕机导致消息丢失
+幂等判断：最后，我们还在交易服务更新订单状态时做了业务幂等判断，避免因消息重复消费导致订单状态异常
+
+如果交易服务消息处理失败，有没有什么兜底方案?
+
+定时任务：我们可以在交易服务设置定时任务，定期查询订单支付状态。这样即便MO通知失败，还可以利用定时任务作为兜底方案，确保订单支付状态的最终一致性。
+
+4.4 延迟消息延迟消息: 生产者发送消息时指定一个时间，消费者不会立刻收到消息，而是在指定时间之后才收到消息。
+延迟任务: 设置在一定时间之后才执行的任务
+4.4.1 死信交换机当一个队列中的消息满足下列情况之一时，就会成为死信(dead letter)
+
+消费失败：消费者使用basic.reject或 basic.nack声明消费失败，并且消息的requeue参数设置为false
+消息过期：消息是一个过期消息(达到了队列或消息本身设置的过期时间)，超时无人消费要投递的队列
+消息积压：消息堆积满了，最早的消息可能成为死信
+
+如果队列通过x-dead-letter-exchange属性指定了一个交换机，那么该队列中的死信就会投递到这个交换机中。这个交换机称为死信交换机(Dead LetterExchange，简称DLX)。
+
+关键点：
+
+两个交换机、两个队列，一个消费者
+第一个交换机是普通交换机
+死信队列为普通队列，只是设置了x-dead-letter-exchange, 以及消息的过期时间
+第二个交换机是一个普通交换机
+
+分析可知，实际上可以使用一个交换机，两个不同的bindingkey即可。
+
+
+组件配置
+
+package com.fei.mq.consumer.config;import org.springframework.amqp.core.*;import org.springframework.context.annotation.Bean;import org.springframework.context.annotation.Configuration;@Configurationpublic class DelayMQConfig &#123;    private static final String DEAD_LETTER_EXCHANGE = &quot;order-event-exchange&quot;;    private static final String DEAD_LETTER_QUEUE = &quot;order.delay.queue&quot;;      private static final int DEAD_TTL = 10000; // 过期时间，毫秒    private static final String RELEASE_QUEUE = &quot;order.release.queue&quot;;  // 死信队列    private static final String DEAD_LETTER_CREATE = &quot;order.create.order&quot;; // 普通路由， 从生产者发送到交换机，交换机通过此路由，路由到死信队列（无消费者队列）    private static final String DEAD_LETTER_RELEASE = &quot;order.release.order&quot;; // 死信路由 == 2 次路由： 第一次从死信队列路由到交换机， 第二次又从交换机路由到普通队列    /**     * 普通路由， 通过此路由，将消息发送到交换机，由交换机路由到死信队列（无消费者队列）     * @return     */    @Bean    public Binding createBinding()&#123;        return BindingBuilder.bind(deadLetterQueue()).to(deadLetterExchange()).with(DEAD_LETTER_CREATE);    &#125;    /**     * 交换机，延迟消息中唯一的交换机，两个用处：     *  第一： 将生产者的消息路由到死信队列     *  第二： 将死信队列的消息路由到普通队列     * @return     */    @Bean    public TopicExchange deadLetterExchange() &#123;        return new TopicExchange(DEAD_LETTER_EXCHANGE);    &#125;    /**     * 死信队列。需要设置：     * 1. 死信队列名     * 2. 死信交换机名     * 3. 死信路由键     * 4. 消息过期时间     * @return     */    @Bean    public Queue deadLetterQueue() &#123;        return QueueBuilder                .durable(DEAD_LETTER_QUEUE) // 死信队列名                .deadLetterExchange(DEAD_LETTER_EXCHANGE) // 交换机名                .deadLetterRoutingKey(DEAD_LETTER_RELEASE) // 死信路由 == 2 次路由： 第一次从死信队列路由到交换机， 第二次又从交换机路由到普通队列                .ttl(DEAD_TTL)  // the time to live (milliseconds).                .build();    &#125;    /**     * 发布路由，此路由将死信交换机与普通队列（有消费者队列）绑定。路由键名需要和死信路由键保持相同。     * 此路由将死信交换机的消息路由到普通队列     * @return     */    @Bean    public Binding releaseBinding()&#123;        return BindingBuilder.bind(releaseQueue()).to(deadLetterExchange()).with(DEAD_LETTER_RELEASE);    &#125;    /**     * 普通队列（有消费者的队列）     * @return     */    @Bean    public Queue releaseQueue()&#123;        return QueueBuilder                .durable(RELEASE_QUEUE)                .build();    &#125;&#125;
+
+
+
+
+生产者
+
+@Testvoid testDelayMsg()&#123;	rabbitTemplate.convertAndSend(&quot;order-event-exchange&quot;,&quot;order.create.order&quot;,&quot;延迟消息 + &quot; + new Date());&#125;
+
+
+
+
+消费者
+
+@Componentpublic class DelayMessageListener &#123;    @RabbitListener(bindings = @QueueBinding(            value = @Queue(name = &quot;order.release.queue&quot;, durable = &quot;true&quot;),            exchange = @Exchange(name = &quot;order-event-exchange&quot;, type = ExchangeTypes.TOPIC),//        arguments = @Argument(name = &quot;x-queue-mode&quot;,value = &quot;lazy&quot;),            key =  &quot;order.release.order&quot;    ))    public void receive(String msg) &#123;        System.out.println(msg);        System.out.println(&quot;定时消息处理成功&quot;);    &#125;&#125;
+
+
+
+4.4.2 延迟消息插件
+Community Plugins | RabbitMQ
+
+RabbitMQ的官方也推出了一个插件，原生支持延迟消息功能。该插件的原理是设计了一种支持延迟消息功能的交换机当消息投递到交换机后可以暂存一定时间，到期后再投递到队列。
+
+GitHub - rabbitmq&#x2F;rabbitmq-delayed-message-exchange: Delayed Messaging for RabbitMQ
+
+
+安装:
+
+将安装包放入插件目录 ：docker inspect mq-plugins查看挂载目录
+执行docker exec -it mq rabbitmq-plugins enable rabbitmq_delayed_message_exchange
+
+
+
+生产者
+
+@Testvoid testDelayMsg2()&#123;	rabbitTemplate.convertAndSend(&quot;delayed.exchange&quot;, &quot;delay.key&quot;,&quot;插件路由延迟消息&quot;, new MessagePostProcessor() &#123;		@Override		public Message postProcessMessage(Message message) throws AmqpException &#123;			message.getMessageProperties().setDelayLong(10000L);// 毫秒			return message;		&#125;	&#125;);	System.out.println(&quot;消息发送成功---&quot;);&#125;
+
+
+
+
+
+
+消费者
+
+@RabbitListener(bindings = @QueueBinding(        value = @Queue(name = &quot;delayed.mq&quot;, durable = &quot;true&quot;),        exchange = @Exchange(name = &quot;delayed.exchange&quot;, type = ExchangeTypes.TOPIC, delayed = &quot;true&quot;),        key =  &quot;delay.key&quot;))public void receiveDelayByPlugin(String msg) &#123;    System.out.println(msg);    System.out.println(&quot;延迟消息处理成功&quot;);&#125;
+
+
+
+
+
+4.4.3 取消超时订单
+5. RabbitMQ集群RabbitMQ 集群通过将多个 RabbitMQ 节点（服务器）组织在一起，形成一个逻辑上的消息代理（Broker），旨在提供高可用性、容错性和可扩展性。
+🔍 集群核心概念与工作原理数据同步：元数据与消息数据如架构图所示，RabbitMQ 集群中，所有节点都保存相同的元数据（Metadata），包括交换机、队列的定义、绑定关系、用户权限等。这使得客户端可以连接至集群中任何一个节点，都能看到完整的结构。然而，队列中的消息内容本身并不会在所有节点间自动复制。消息只存储在创建该队列的节点（主节点）上。当客户端连接到一个不包含该队列数据的节点（非主节点）时，集群内部会进行消息的路由转发。
+节点类型：磁盘节点与内存节点
+磁盘节点：将元数据存储在磁盘中。集群中必须至少有一个磁盘节点，通常建议配置两个或以上，以防止单点故障导致整个集群无法修改配置。
+内存节点：将元数据存储在内存中，性能更好，但节点重启后元数据会丢失。它依赖磁盘节点来持久化元数据信息。
+
+⚙️ 集群模式详解1. 普通集群模式这是默认模式。如图左侧所示，队列的消息实体仅存在于其主节点上。其他节点仅保存元数据和指向主节点的指针。
+
+优点：提高了集群的总体消息吞吐能力，因为消息可以被分片到不同节点上。
+缺点：无法保证高可用。如果某个队列的主节点宕机，那么该队列及其消息将不可用，直到节点恢复。
+
+2. 镜像集群模式这是实现高可用性的推荐方案。如图右侧“镜像队列数据流”部分所示，它基于普通集群，通过配置镜像队列，使得队列中的消息会被同步到集群中的多个节点上。
+
+工作方式：一个队列有且仅有一个主节点，但可以配置一个或多个镜像节点。所有针对队列的操作（如消息发布）首先在主节点完成，然后同步到所有镜像节点。
+高可用：当主节点故障时，资历最老的镜像节点会自动提升为新的主节点，服务几乎不中断，从而保证了队列的可用性。
+配置策略：可以通过策略灵活定义镜像规则，例如：
+ha-mode: all：队列镜像到集群中的所有节点。
+ha-mode: exactly：指定镜像节点的确切数量。
+ha-sync-mode: automatic：配置自动同步。
+
+
+
+3. 仲裁队列这是 RabbitMQ 3.8 版本后引入的，旨在替代镜像队列的现代实现。
+
+核心机制：基于 Raft 一致性算法，实现了强一致性的数据复制，能有效避免脑裂问题。
+优势：配置更简单，默认内置高可用特性，提供了比传统镜像队列更可靠和高效的数据同步机制
+
+生产规范5.1 命名规则
+
+
+组件
+命名结构
+示例
+核心要点
+
+
+
+Exchange (交换机)
+EX.[SourceAppId].[模块名].[业务名1].[业务名2]
+EX.order.payment.status.update
+清晰体现消息来源和业务职责
+
+
+Queue (队列)
+MQ.[SourceAppId].[TargetAppId].[业务名1].[业务名2]
+MQ.order.user.notification.levelup
+明确标识消息的生产者(Source)和消费者(Target)
+
+
+Routing Key (路由键)
+RK.[SourceAppId].[业务名1].[业务名2]或 [服务名].[消息类型].[动作].[子动作]
+RK.order.payment.success或 user.notification.levelup
+采用点分层级，便于 Topic 交换机使用通配符 (*, #) 进行灵活路由
+
+
+5.2 其他
+
+
+规范领域
+核心目标
+关键规范要点
+
+
+
+消息可靠性规范
+确保消息不丢失、不被重复消费
+持久化、确认机制（ACK）、事务消息、幂等性设计
+
+
+安全规范
+防止未授权访问和数据泄露
+认证与授权、传输加密（TLS&#x2F;SSL）、网络隔离
+
+
+协议与模型规范
+保证系统兼容性和接口清晰
+协议选型（AMQP, JMS, MQTT等）、消息模型统一（点对点&#x2F;发布订阅）
+
+
+运维与监控规范
+保障系统高可用和可维护性
+集群化部署、监控告警、日志追踪、灾备方案
+
+
+性能与可用性规范
+应对高并发，保证服务连续性
+资源规划、流量控制（削峰填谷）、优雅降级
+
+
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>Tech</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2025-08-07-Thu-T-品达通用权限系统</title>
     <url>/2025/08/07/2025-08-07-Thu-T-%E5%93%81%E8%BE%BE%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F/</url>
     <content><![CDATA[1. 项目概述1.1 项目介绍用户权限管理具有用户、部门、岗位、角色、菜单管理。并通过网关进行统一的权限认证
@@ -9281,39 +9281,6 @@ SpringSecurity自动使用DBUserDetailsManager的loadUserByUserName方法从数�
       </categories>
       <tags>
         <tag>Tech</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2025-09-10-Wed-T-AI基础知识</title>
-    <url>/2025/09/10/2025-09-10-Wed-T-AI%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
-    <content><![CDATA[12 MCPWhat is the Model Context Protocol (MCP)? - Model Context Protocol
-2.1 MCP能干什么举例： 开发部署
-开发者通过自然语言指令”部署新版本到测试环境“，触发MCP链式调用GitLab API（代码合并），Jenkins API（构建镜像），Slack API（通知团队）。
-举例：旅游规划
-出门旅游时，旅游规划助手通过MCP同时调用天气API（获取目的地天气），交通API（查询航班动态），地图API(规划路线). AI自动生成实时数据的行程方案。
-2.2 MCP是什么MCP(Model context Protocol，模型上下文协议)，2024年11月底，由Anthropic 推出的一种开放标准。旨在为大语言模型(LLM)提供统一的、标准化方式与外部数据源和工具之间进行通信。
-What is the Model Context Protocol (MCP)? - Model Context Protocol
-2.3 如何使用MCPmodelcontextprotocol&#x2F;servers: Model Context Protocol Servers
-Smithery - Extend your agent’s capabilities
-MCP Servers
-
-2.4 MCP工作原理
-MCP主机
-MCP客户端
-MCP服务器
-本地资源
-远程资源
-
-2.5 MCP项目（C&#x2F;S）案例需求：
-本项目旨在构建一个本地智能舆情分析系统。通过自然语言处理与多工具协作，实现用户查询意图的自动理解，新闻检索、情绪分析、结构化输出与邮件推送。
-
-2.6 热门MCP Servers推荐2.7 A2A协议：开启Agent间协作]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>Tech</tag>
-        <tag>AI</tag>
       </tags>
   </entry>
   <entry>
@@ -10479,57 +10446,6 @@ LFU: 最少频率使用， 访问频率越低，则删除
       </tags>
   </entry>
   <entry>
-    <title>2025-09-10-Wed-T-Milvus</title>
-    <url>/2025/09/10/2025-09-10-Wed-T-Milvus/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>Tech</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2025-09-10-Wed-T-Langchain</title>
-    <url>/2025/09/10/2025-09-10-Wed-T-Langchain/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>Tech</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2022/07/18/hello-world/</url>
-    <content><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post$ hexo new &quot;My New Post&quot; # 需要在根目录下执行
-
-More info: Writing
-Run server$ hexo server # 需要在根目录下执行
-
-More info: Server
-Generate static files$ hexo generate # 需要在根目录下执行
-
-More info: Generating
-Deploy to remote sites$ hexo deploy
-
-More info: Deployment
-]]></content>
-  </entry>
-  <entry>
-    <title>2025-09-10-Wed-T-SpringAI</title>
-    <url>/2025/09/10/2025-09-10-Wed-T-SpringAI/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>Tech</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2025-08-16-Sat-T-Drools规则引擎</title>
     <url>/2025/08/16/2025-08-16-Sat-T-Drools%E8%A7%84%E5%88%99%E5%BC%95%E6%93%8E/</url>
     <content><![CDATA[规则引擎 Drools1. 简介业务规则引擎，业务规则管理系统， BRMS。
@@ -11269,6 +11185,90 @@ public List&lt;String&gt; insuranceInfoCheck(InsuranceInfo insuranceInfo) throws
       <tags>
         <tag>Tech</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>2025-09-10-Wed-T-Langchain</title>
+    <url>/2025/09/10/2025-09-10-Wed-T-Langchain/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>Tech</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2025-09-10-Wed-T-AI基础知识</title>
+    <url>/2025/09/10/2025-09-10-Wed-T-AI%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
+    <content><![CDATA[1 Transformer2 MCPWhat is the Model Context Protocol (MCP)? - Model Context Protocol
+2.1 MCP能干什么举例： 开发部署
+开发者通过自然语言指令”部署新版本到测试环境“，触发MCP链式调用GitLab API（代码合并），Jenkins API（构建镜像），Slack API（通知团队）。
+举例：旅游规划
+出门旅游时，旅游规划助手通过MCP同时调用天气API（获取目的地天气），交通API（查询航班动态），地图API(规划路线). AI自动生成实时数据的行程方案。
+2.2 MCP是什么MCP(Model context Protocol，模型上下文协议)，2024年11月底，由Anthropic 推出的一种开放标准。旨在为大语言模型(LLM)提供统一的、标准化方式与外部数据源和工具之间进行通信。
+What is the Model Context Protocol (MCP)? - Model Context Protocol
+2.3 如何使用MCPmodelcontextprotocol&#x2F;servers: Model Context Protocol Servers
+Smithery - Extend your agent’s capabilities
+MCP Servers
+
+2.4 MCP工作原理
+MCP主机
+MCP客户端
+MCP服务器
+本地资源
+远程资源
+
+2.5 MCP项目（C&#x2F;S）案例需求：
+本项目旨在构建一个本地智能舆情分析系统。通过自然语言处理与多工具协作，实现用户查询意图的自动理解，新闻检索、情绪分析、结构化输出与邮件推送。
+
+2.6 热门MCP Servers推荐2.7 A2A协议：开启Agent间协作]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>Tech</tag>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2025-09-10-Wed-T-Milvus</title>
+    <url>/2025/09/10/2025-09-10-Wed-T-Milvus/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>Tech</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2025-09-10-Wed-T-SpringAI</title>
+    <url>/2025/09/10/2025-09-10-Wed-T-SpringAI/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>Tech</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/07/18/hello-world/</url>
+    <content><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post$ hexo new &quot;My New Post&quot; # 需要在根目录下执行
+
+More info: Writing
+Run server$ hexo server # 需要在根目录下执行
+
+More info: Server
+Generate static files$ hexo generate # 需要在根目录下执行
+
+More info: Generating
+Deploy to remote sites$ hexo deploy
+
+More info: Deployment
+]]></content>
   </entry>
   <entry>
     <title>2025-09-10-Wed-T-Kubernetes</title>

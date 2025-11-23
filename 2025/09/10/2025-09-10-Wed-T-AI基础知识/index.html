@@ -20,17 +20,17 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"fei-cn-xie.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.26.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="12 MCPWhat is the Model Context Protocol (MCP)? - Model Context Protocol 2.1 MCP能干什么举例： 开发部署 开发者通过自然语言指令”部署新版本到测试环境“，触发MCP链式调用GitLab API（代码合并），Jenkins API（构建镜像），Slack API（通知团队）。 举例：旅游规划 出门旅游时，旅游规划助手通过">
+    <meta name="description" content="1 Transformer2 MCPWhat is the Model Context Protocol (MCP)? - Model Context Protocol 2.1 MCP能干什么举例： 开发部署 开发者通过自然语言指令”部署新版本到测试环境“，触发MCP链式调用GitLab API（代码合并），Jenkins API（构建镜像），Slack API（通知团队）。 举例：旅游规划 出门">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="2025-09-10-Wed-T-AI基础知识">
 <meta property="og:url" content="https://fei-cn-xie.github.io/2025/09/10/2025-09-10-Wed-T-AI%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html">
 <meta property="og:site_name" content="Fei">
-<meta property="og:description" content="12 MCPWhat is the Model Context Protocol (MCP)? - Model Context Protocol 2.1 MCP能干什么举例： 开发部署 开发者通过自然语言指令”部署新版本到测试环境“，触发MCP链式调用GitLab API（代码合并），Jenkins API（构建镜像），Slack API（通知团队）。 举例：旅游规划 出门旅游时，旅游规划助手通过">
+<meta property="og:description" content="1 Transformer2 MCPWhat is the Model Context Protocol (MCP)? - Model Context Protocol 2.1 MCP能干什么举例： 开发部署 开发者通过自然语言指令”部署新版本到测试环境“，触发MCP链式调用GitLab API（代码合并），Jenkins API（构建镜像），Slack API（通知团队）。 举例：旅游规划 出门">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250911152429661.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/fei-cn-xie/blogimage/main/image-20250911163851922.png">
 <meta property="article:published_time" content="2025-09-10T02:31:04.000Z">
-<meta property="article:modified_time" content="2025-11-23T11:56:13.775Z">
+<meta property="article:modified_time" content="2025-11-23T13:04:43.318Z">
 <meta property="article:author" content="Fei">
 <meta property="article:tag" content="Tech">
 <meta property="article:tag" content="AI">
@@ -165,7 +165,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1"><span class="nav-number">1.</span> <span class="nav-text">1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-MCP"><span class="nav-number">2.</span> <span class="nav-text">2 MCP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-MCP%E8%83%BD%E5%B9%B2%E4%BB%80%E4%B9%88"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 MCP能干什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-MCP%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 MCP是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8MCP"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 如何使用MCP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-MCP%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 MCP工作原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-MCP%E9%A1%B9%E7%9B%AE%EF%BC%88C-S%EF%BC%89"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 MCP项目（C&#x2F;S）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-%E7%83%AD%E9%97%A8MCP-Servers%E6%8E%A8%E8%8D%90"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 热门MCP Servers推荐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-7-A2A%E5%8D%8F%E8%AE%AE%EF%BC%9A%E5%BC%80%E5%90%AFAgent%E9%97%B4%E5%8D%8F%E4%BD%9C"><span class="nav-number">2.7.</span> <span class="nav-text">2.7 A2A协议：开启Agent间协作</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Transformer"><span class="nav-number">1.</span> <span class="nav-text">1 Transformer</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-MCP"><span class="nav-number">2.</span> <span class="nav-text">2 MCP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-MCP%E8%83%BD%E5%B9%B2%E4%BB%80%E4%B9%88"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 MCP能干什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-MCP%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 MCP是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8MCP"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 如何使用MCP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-MCP%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 MCP工作原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-MCP%E9%A1%B9%E7%9B%AE%EF%BC%88C-S%EF%BC%89"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 MCP项目（C&#x2F;S）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-%E7%83%AD%E9%97%A8MCP-Servers%E6%8E%A8%E8%8D%90"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 热门MCP Servers推荐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-7-A2A%E5%8D%8F%E8%AE%AE%EF%BC%9A%E5%BC%80%E5%90%AFAgent%E9%97%B4%E5%8D%8F%E4%BD%9C"><span class="nav-number">2.7.</span> <span class="nav-text">2.7 A2A协议：开启Agent间协作</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -311,7 +311,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-11-23 19:56:13" itemprop="dateModified" datetime="2025-11-23T19:56:13+08:00">2025-11-23</time>
+      <time title="修改时间：2025-11-23 21:04:43" itemprop="dateModified" datetime="2025-11-23T21:04:43+08:00">2025-11-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -339,7 +339,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><h1 id="2-MCP"><a href="#2-MCP" class="headerlink" title="2 MCP"></a>2 MCP</h1><p><a target="_blank" rel="noopener" href="https://modelcontextprotocol.io/docs/getting-started/intro">What is the Model Context Protocol (MCP)? - Model Context Protocol</a></p>
+    <div class="post-body" itemprop="articleBody"><h1 id="1-Transformer"><a href="#1-Transformer" class="headerlink" title="1 Transformer"></a>1 Transformer</h1><h1 id="2-MCP"><a href="#2-MCP" class="headerlink" title="2 MCP"></a>2 MCP</h1><p><a target="_blank" rel="noopener" href="https://modelcontextprotocol.io/docs/getting-started/intro">What is the Model Context Protocol (MCP)? - Model Context Protocol</a></p>
 <h2 id="2-1-MCP能干什么"><a href="#2-1-MCP能干什么" class="headerlink" title="2.1 MCP能干什么"></a>2.1 MCP能干什么</h2><p>举例： 开发部署</p>
 <p>开发者通过自然语言指令”部署新版本到测试环境“，触发MCP链式调用GitLab API（代码合并），Jenkins API（构建镜像），Slack API（通知团队）。</p>
 <p>举例：旅游规划</p>
