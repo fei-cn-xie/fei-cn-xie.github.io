@@ -1163,34 +1163,42 @@ pre code {
 .use-motion .menu-item {
   visibility: hidden;
 }
-.book-mark-link {
-  border-bottom: 0;
-  position: fixed;
-  top: -10px;
-  transition: top 0.3s;
-  right: 30px;
+.github-corner :hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+.github-corner svg {
+  color: #fff;
+  fill: var(--theme-color);
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 5;
 }
 @media (max-width: 991px) {
-  .book-mark-link {
-    right: 20px;
-  }
-}
-@media (max-width: 991px) {
-  .book-mark-link {
+  .github-corner {
     display: none;
   }
+  .github-corner svg {
+    color: var(--theme-color);
+    fill: #fff;
+  }
+  .github-corner .github-corner:hover .octo-arm {
+    animation: none;
+  }
+  .github-corner .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
 }
-.book-mark-link::before {
-  color: #7010be;
-  font-size: 32px;
-  line-height: 1;
-  content: '\f02e';
-  font-family: 'Font Awesome 7 Free';
-  font-weight: 900;
-}
-.book-mark-link:hover,
-.book-mark-link-fixed {
-  top: -2px;
+@keyframes octocat-wave {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  20%, 60% {
+    transform: rotate(-25deg);
+  }
+  40%, 80% {
+    transform: rotate(10deg);
+  }
 }
 @media (max-width: 991px) {
   .sidebar {
@@ -1230,7 +1238,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #9cddf9;
+    background: #c4af8c;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -1766,6 +1774,16 @@ pre code {
 }
 .back-to-top.back-to-top-on:hover {
   opacity: 0.8;
+}
+.reading-progress-bar {
+  --progress: 0;
+  background: #37c6c0;
+  height: 2px;
+  position: fixed;
+  z-index: 50;
+  width: var(--progress);
+  left: 0;
+  top: 0;
 }
 .rtl.post-body p,
 .rtl.post-body a,
@@ -2421,89 +2439,89 @@ ul.breadcrumb li:last-child {
   color: #aaa;
 }
 .tag-cloud-1 {
-  border-bottom-color: #9a9a9a;
-  color: #9a9a9a;
+  border-bottom-color: #a1ae99;
+  color: #a1ae99;
 }
 .tag-cloud-2 {
-  border-bottom-color: #8b8b8b;
-  color: #8b8b8b;
+  border-bottom-color: #99b388;
+  color: #99b388;
 }
 .tag-cloud-3 {
-  border-bottom-color: #7c7c7c;
-  color: #7c7c7c;
+  border-bottom-color: #90b776;
+  color: #90b776;
 }
 .tag-cloud-4 {
-  border-bottom-color: #6c6c6c;
-  color: #6c6c6c;
+  border-bottom-color: #88bc66;
+  color: #88bc66;
 }
 .tag-cloud-5 {
-  border-bottom-color: #5d5d5d;
-  color: #5d5d5d;
+  border-bottom-color: #80c155;
+  color: #80c155;
 }
 .tag-cloud-6 {
-  border-bottom-color: #4e4e4e;
-  color: #4e4e4e;
+  border-bottom-color: #77c544;
+  color: #77c544;
 }
 .tag-cloud-7 {
-  border-bottom-color: #3e3e3e;
-  color: #3e3e3e;
+  border-bottom-color: #6fca33;
+  color: #6fca33;
 }
 .tag-cloud-8 {
-  border-bottom-color: #2f2f2f;
-  color: #2f2f2f;
+  border-bottom-color: #66ce21;
+  color: #66ce21;
 }
 .tag-cloud-9 {
-  border-bottom-color: #202020;
-  color: #202020;
+  border-bottom-color: #5ed310;
+  color: #5ed310;
 }
 .tag-cloud-10 {
-  border-bottom-color: #111;
-  color: #111;
+  border-bottom-color: #56d800;
+  color: #56d800;
 }
 @media (prefers-color-scheme: dark) {
   .tag-cloud-0 {
-    border-bottom-color: #555;
-    color: #555;
+    border-bottom-color: #0675be;
+    color: #0675be;
   }
   .tag-cloud-1 {
-    border-bottom-color: #646464;
-    color: #646464;
+    border-bottom-color: #0777c1;
+    color: #0777c1;
   }
   .tag-cloud-2 {
-    border-bottom-color: #737373;
-    color: #737373;
+    border-bottom-color: #097ac5;
+    color: #097ac5;
   }
   .tag-cloud-3 {
-    border-bottom-color: #828282;
-    color: #828282;
+    border-bottom-color: #0b7dc8;
+    color: #0b7dc8;
   }
   .tag-cloud-4 {
-    border-bottom-color: #929292;
-    color: #929292;
+    border-bottom-color: #0c80cc;
+    color: #0c80cc;
   }
   .tag-cloud-5 {
-    border-bottom-color: #a1a1a1;
-    color: #a1a1a1;
+    border-bottom-color: #0e83d0;
+    color: #0e83d0;
   }
   .tag-cloud-6 {
-    border-bottom-color: #b0b0b0;
-    color: #b0b0b0;
+    border-bottom-color: #1085d3;
+    color: #1085d3;
   }
   .tag-cloud-7 {
-    border-bottom-color: #c0c0c0;
-    color: #c0c0c0;
+    border-bottom-color: #1188d7;
+    color: #1188d7;
   }
   .tag-cloud-8 {
-    border-bottom-color: #cfcfcf;
-    color: #cfcfcf;
+    border-bottom-color: #138bda;
+    color: #138bda;
   }
   .tag-cloud-9 {
-    border-bottom-color: #dedede;
-    color: #dedede;
+    border-bottom-color: #158ede;
+    color: #158ede;
   }
   .tag-cloud-10 {
-    border-bottom-color: #eee;
-    color: #eee;
+    border-bottom-color: #1791e2;
+    color: #1791e2;
   }
 }
 .utterances {
