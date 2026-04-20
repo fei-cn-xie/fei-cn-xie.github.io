@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#20233E" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#20233E" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/F.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/F.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/F.png">
+  <link rel="mask-icon" href="/img/F.png" color="#20233E">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Serif+SC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"fei-cn-xie.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.26.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#7010be","save":"manual"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="1. LangChain 简介1.1 Langchain主要功能 Prompt： 优化提示词 Models： 调用各种模型，封装接口 History： 管理会话历史记录 Indexes： 管理和分析各类文档 Chains： 构建功能的执行链条 Agent： 构建智能体  1.2 Langchain环境部署1pip install langchain langchain-community lang">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="RAG开发">
+<meta property="og:url" content="https://fei-cn-xie.github.io/2026/04/19/2026-04-19-Sun-T-RAG%E5%BC%80%E5%8F%91/index.html">
+<meta property="og:site_name" content="Fei">
+<meta property="og:description" content="1. LangChain 简介1.1 Langchain主要功能 Prompt： 优化提示词 Models： 调用各种模型，封装接口 History： 管理会话历史记录 Indexes： 管理和分析各类文档 Chains： 构建功能的执行链条 Agent： 构建智能体  1.2 Langchain环境部署1pip install langchain langchain-community lang">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-04-19T10:44:56.000Z">
+<meta property="article:modified_time" content="2026-04-20T15:05:00.704Z">
+<meta property="article:author" content="Fei">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="RAG">
+<meta property="article:tag" content="Tech，&quot;技术&quot;">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://fei-cn-xie.github.io/2026/04/19/2026-04-19-Sun-T-RAG%E5%BC%80%E5%8F%91/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://fei-cn-xie.github.io/2026/04/19/2026-04-19-Sun-T-RAG%E5%BC%80%E5%8F%91/","path":"2026/04/19/2026-04-19-Sun-T-RAG开发/","title":"RAG开发"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>RAG开发 | Fei</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Fei" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Fei</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">非淡泊无以明志，非宁静无以致远</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-friends"><a href="/friends/" rel="section"><i class="far fa-comments fa-fw"></i>友链</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-LangChain-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">1. LangChain 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Langchain%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 Langchain主要功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Langchain%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 Langchain环境部署</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-RAG%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 RAG相关概念</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Langchain-%E8%B0%83%E7%94%A8%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">2. Langchain 调用模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E6%B5%81%E5%BC%8F%E8%BE%93%E5%87%BA"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 流式输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E8%81%8A%E5%A4%A9%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 聊天模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E7%B1%BB%E5%AF%B9%E8%B1%A1%E5%B0%81%E8%A3%85%E6%B6%88%E6%81%AF-%E6%98%AF%E9%9D%99%E6%80%81%E7%9A%84%EF%BC%8C%E4%B8%80%E6%AD%A5%E5%88%B0%E4%BD%8D%EF%BC%8C%E7%9B%B4%E6%8E%A5%E8%8E%B7%E5%8F%96%E5%BE%97%E5%88%B0Message%E7%B1%BB%E7%9A%84%E7%B1%BB%E5%AF%B9%E8%B1%A1%EF%BC%8C%E5%A6%82AIMessage%EF%BC%8CHumanMessage%EF%BC%8CSystemMessage"><span class="nav-number">2.3.</span> <span class="nav-text">使用类对象封装消息- 是静态的，一步到位，直接获取得到Message类的类对象，如AIMessage，HumanMessage，SystemMessage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E6%96%87%E6%9C%AC%E5%B5%8C%E5%85%A5%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.4.</span> <span class="nav-text">2.3 文本嵌入模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%A8%A1%E6%9D%BF%E4%B8%8E%E9%93%BE%E5%BC%8F%E8%B0%83%E7%94%A8"><span class="nav-number">2.5.</span> <span class="nav-text">2.3 提示词模板与链式调用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-1-%E9%80%9A%E7%94%A8%E6%8F%90%E7%A4%BA%E8%AF%8DPromptTemplate%E7%B1%BB"><span class="nav-number">2.5.1.</span> <span class="nav-text">2.3.1 通用提示词PromptTemplate类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-2-FewShotPromptTemplate"><span class="nav-number">2.5.2.</span> <span class="nav-text">2.3.2 FewShotPromptTemplate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-3-format%E5%92%8Cinvoke%E5%8C%BA%E5%88%AB"><span class="nav-number">2.5.3.</span> <span class="nav-text">2.3.3 format和invoke区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-4-ChatPromptTemplate%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">2.5.4.</span> <span class="nav-text">2.3.4 ChatPromptTemplate的使用</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Fei"
+      src="/img/avatar.png">
+  <p class="site-author-name" itemprop="name">Fei</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">56</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/fei-cn-xie" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;fei-cn-xie" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:fei.cn.xie@gmail.com" title="E-Mail → mailto:fei.cn.xie@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.cnblogs.com/fei1010" title="CNBlogs → https:&#x2F;&#x2F;www.cnblogs.com&#x2F;fei1010" rel="noopener me" target="_blank"><i class="fa fa-blog fa-fw"></i>CNBlogs</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_nd.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+
+
+        
+          <div class="links-of-blogroll" style="margin-top:20px; border-style:dotted none none none; padding-top:5px; text-align:left;padding-left: 20px; padding-right: 10px; padding-bottom: 5px;">
+              <div class="links-of-blogroll-title" style="text-align: center">
+                  <!-- 选择合适的icon --><i class="fa fa-fw fa-clock" aria-hidden="true"></i>
+                  近期更新文章
+              </div>
+              <ul class="links-of-blogroll-list" style="text-align: left">
+                  <!-- 文章排序规格,-updated 按照文章更新时间倒排 -->
+                  
+                  <!-- 显示10条近期文章 -->
+                  
+                  <li>
+                      
+                      <span style="margin-right: 5px;">1: </span>
+                      <a href="/2026/04/19/2026-04-19-Sun-T-RAG%E5%BC%80%E5%8F%91/" title="RAG开发" target="_blank">RAG开发</a>
+                  </li>
+                  
+                  <li>
+                      
+                      <span style="margin-right: 5px;">2: </span>
+                      <a href="/2026/04/17/2026-04-17-Fri-T-%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/" title="提示词工程" target="_blank">提示词工程</a>
+                  </li>
+                  
+                  <li>
+                      
+                      <span style="margin-right: 5px;">3: </span>
+                      <a href="/2025/12/24/2025-12-24-Wed-T-CPP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="CPP学习笔记" target="_blank">CPP学习笔记</a>
+                  </li>
+                  
+                  <li>
+                      
+                      <span style="margin-right: 5px;">4: </span>
+                      <a href="/2025/07/13/2025-07-13-Sun-T-AI-LangChain4j/" title="AI-LangChain4j 学习笔记" target="_blank">AI-LangChain4j 学习笔记</a>
+                  </li>
+                  
+                  <li>
+                      
+                      <span style="margin-right: 5px;">5: </span>
+                      <a href="/2025/09/10/2025-09-10-Wed-T-Kubernetes/" title="2025-09-10-Wed-T-Kubernetes学习笔记" target="_blank">2025-09-10-Wed-T-Kubernetes学习笔记</a>
+                  </li>
+                  
+                  <li>
+                      
+                      <span style="margin-right: 5px;">6: </span>
+                      <a href="/2025/11/24/2025-11-24-Mon-T-%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E5%90%8C%E6%AD%A5%E8%84%9A%E6%9C%AC/" title="2025-11-24-Mon-T-博客文章同步脚本" target="_blank">2025-11-24-Mon-T-博客文章同步脚本</a>
+                  </li>
+                  
+                  <li>
+                      
+                      <span style="margin-right: 5px;">7: </span>
+                      <a href="/2025/04/16/2025-04-16-Wed-T-Java%E9%A1%B9%E7%9B%AE-%E5%95%86%E5%9F%8E/" title="2025-04-16-Wed-T-Java项目-商城项目学习" target="_blank">2025-04-16-Wed-T-Java项目-商城项目学习</a>
+                  </li>
+                  
+                  <li>
+                      
+                      <span style="margin-right: 5px;">8: </span>
+                      <a href="/2025/04/17/2025-04-17-Thu-T-%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96/" title="2025-04-17-Thu-T-外卖项目学习" target="_blank">2025-04-17-Thu-T-外卖项目学习</a>
+                  </li>
+                  
+                  <li>
+                      
+                      <span style="margin-right: 5px;">9: </span>
+                      <a href="/2025/08/02/2025-08-02-Sat-T-RabbitMQ/" title="2025-08-02-Sat-T-RabbitMQ" target="_blank">2025-08-02-Sat-T-RabbitMQ</a>
+                  </li>
+                  
+                  <li>
+                      
+                      <span style="margin-right: 5px;">10: </span>
+                      <a href="/2025/08/02/2025-08-02-Sat-T-Redis/" title="2025-08-02-Sat-T-Redis" target="_blank">2025-08-02-Sat-T-Redis</a>
+                  </li>
+                  
+              </ul>
+          </div>
+      
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://www.bilibili.com/" title="https:&#x2F;&#x2F;www.bilibili.com" rel="noopener" target="_blank">bilibili</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://www.cnblogs.com/fei1010" title="https:&#x2F;&#x2F;www.cnblogs.com&#x2F;fei1010" rel="noopener" target="_blank">博客园</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://fei-cn-xie.github.io/2026/04/19/2026-04-19-Sun-T-RAG%E5%BC%80%E5%8F%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.png">
+      <meta itemprop="name" content="Fei">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="RAG开发 | Fei">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          RAG开发
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-04-19 18:44:56" itemprop="dateCreated datePublished" datetime="2026-04-19T18:44:56+08:00">2026-04-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-04-20 23:05:00" itemprop="dateModified" datetime="2026-04-20T23:05:00+08:00">2026-04-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Tech/" itemprop="url" rel="index"><span itemprop="name">Tech</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="1-LangChain-简介"><a href="#1-LangChain-简介" class="headerlink" title="1. LangChain 简介"></a>1. LangChain 简介</h1><h2 id="1-1-Langchain主要功能"><a href="#1-1-Langchain主要功能" class="headerlink" title="1.1 Langchain主要功能"></a>1.1 Langchain主要功能</h2><ul>
+<li>Prompt： 优化提示词</li>
+<li>Models： 调用各种模型，封装接口</li>
+<li>History： 管理会话历史记录</li>
+<li>Indexes： 管理和分析各类文档</li>
+<li>Chains： 构建功能的执行链条</li>
+<li>Agent： 构建智能体</li>
+</ul>
+<h2 id="1-2-Langchain环境部署"><a href="#1-2-Langchain环境部署" class="headerlink" title="1.2 Langchain环境部署"></a>1.2 Langchain环境部署</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install langchain langchain-community langchain-ollama dashscope chromadb</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>langchain：核心包</li>
+<li>langchian-community: 社区支持包，提供更多的第三方模型调用（例如调用阿里云模型）</li>
+<li>langchain-ollama: ollama支持包， 支持调用本地托管的本地模型</li>
+<li>dashscope: 阿里云qwen的python sdk</li>
+<li>chromadb: 轻量向量数据库</li>
+</ul>
+<h2 id="1-3-RAG相关概念"><a href="#1-3-RAG相关概念" class="headerlink" title="1.3 RAG相关概念"></a>1.3 RAG相关概念</h2><ul>
+<li>RAG: 检索增强生成：Retrieval-Augmented Generation</li>
+<li>向量：从原点坐标到目标点的矢量方向</li>
+<li>余弦相似度：两个向量的余弦值，a x b &#x2F; |a| x |b|, 值越接近1越相似</li>
+<li>文本向量模型：用于通过将文本生成相对的向量</li>
+</ul>
+<p>text-embedding-v1模型，可以生成1536维的向量。在1546（抽象的语义特征）方向上的得分</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 两个向量点积计算</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">dot_product</span>(<span class="params">vec1, vec2</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;计算两个向量的点积&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">len</span>(vec1) != <span class="built_in">len</span>(vec2)):</span><br><span class="line">        <span class="keyword">raise</span> ValueError(<span class="string">&quot;Vectors must be of the same length&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sum</span>(a * b <span class="keyword">for</span> a, b <span class="keyword">in</span> <span class="built_in">zip</span>(vec1, vec2))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 向量模长计算</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">magnitude_product</span>(<span class="params">vec</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;计算向量的模长&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sum</span>(a ** <span class="number">2</span> <span class="keyword">for</span> a <span class="keyword">in</span> vec) ** <span class="number">0.5</span></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="comment"># 余弦相似度计算</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">cosine_similarity</span>(<span class="params">vec1, vec2</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;计算两个向量的余弦相似度&quot;&quot;&quot;</span></span><br><span class="line">    dot_prod = dot_product(vec1, vec2)</span><br><span class="line">    mag_prod = magnitude_product(vec1) * magnitude_product(vec2)</span><br><span class="line">    <span class="keyword">if</span> mag_prod == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0.0</span>  <span class="comment"># 避免除以零</span></span><br><span class="line">    <span class="keyword">return</span> dot_prod / mag_prod</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    vec1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">    vec2 = [<span class="number">4</span>, <span class="number">8</span>, <span class="number">12</span>]</span><br><span class="line">    similarity = cosine_similarity(vec1, vec2)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;Cosine Similarity: <span class="subst">&#123;similarity&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="2-Langchain-调用模型"><a href="#2-Langchain-调用模型" class="headerlink" title="2. Langchain 调用模型"></a>2. Langchain 调用模型</h1><p>langchain目前支持三种模型：</p>
+<ul>
+<li>LLMs：大语言模型</li>
+<li>聊天模型： LLMS的一种</li>
+<li>文本嵌入模型：计算文本的向量</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> langchain_ollama <span class="keyword">import</span> OllamaLLM</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取 Ollama 模型对象</span></span><br><span class="line">model = OllamaLLM(model=<span class="string">&quot;qwen3:8b&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用模型获取结果</span></span><br><span class="line">res = model.invoke(<span class="string">&quot;请介绍一下你自己。&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(res)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-1-流式输出"><a href="#2-1-流式输出" class="headerlink" title="2.1 流式输出"></a>2.1 流式输出</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> langchain_ollama <span class="keyword">import</span> OllamaLLM</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取 Ollama 模型对象</span></span><br><span class="line">model = OllamaLLM(model=<span class="string">&quot;qwen3:8b&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用模型获取结果</span></span><br><span class="line">res = model.stream(<span class="built_in">input</span>=<span class="string">&quot;请介绍一下你自己。&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> chunk <span class="keyword">in</span> res:</span><br><span class="line">    <span class="comment"># print的end参数设置为&quot;&quot;，表示不换行；flush参数设置为True，表示立即刷新输出缓冲区</span></span><br><span class="line">    <span class="built_in">print</span>(chunk, end=<span class="string">&quot;&quot;</span>, flush=<span class="literal">True</span>) <span class="comment"># chunk的英文是块，表示模型返回的每一部分内容</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-2-聊天模型"><a href="#2-2-聊天模型" class="headerlink" title="2.2 聊天模型"></a>2.2 聊天模型</h2><p>聊天消息类型：</p>
+<ul>
+<li>AIMessage: AI的消息输出， 类似openai库种的assistance</li>
+<li>HumanMessage： 人类消息</li>
+<li>SystemMessage：设定信息</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> langchain_ollama <span class="keyword">import</span> ChatOllama</span><br><span class="line"><span class="keyword">from</span> langchain_core.messages <span class="keyword">import</span> HumanMessage, SystemMessage, AIMessage</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取 Ollama 模型对象</span></span><br><span class="line">model = ChatOllama(model=<span class="string">&quot;gemma4:26b&quot;</span>)</span><br><span class="line"></span><br><span class="line">messages = [</span><br><span class="line">    SystemMessage(content=<span class="string">&quot;你是一个帮助主人进行视频剪辑的AI助手，专门为用户完成视频剪辑的各类帮助，你叫山崩子&quot;</span>),</span><br><span class="line">    HumanMessage(content=<span class="string">&quot;请介绍一下你自己。&quot;</span>),</span><br><span class="line">    AIMessage(content=<span class="string">&quot;你好！我是山崩子，一个专门帮助用户进行视频剪辑的AI助手。我可以为你提供各种视频剪辑的建议和帮助，无论是剪辑技巧、软件使用还是创意构思，我都能为你提供支持。请告诉我你需要什么帮助，我会尽力满足你的需求。&quot;</span>),</span><br><span class="line">    HumanMessage(content=<span class="string">&quot;我想剪辑一个视频，内容是我和朋友在海边玩耍的片段，我想要一个欢快的背景音乐，并且希望视频的节奏感强一些，你有什么建议吗？&quot;</span>)</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment"># message简写</span></span><br><span class="line">msgs = [</span><br><span class="line">    (<span class="string">&quot;system&quot;</span>, <span class="string">&quot;你是一个帮助主人进行视频剪辑的AI助手，专门为用户完成视频剪辑的各类帮助，你叫咕咕咕嘎，你在每一个回复开始都需要加上‘咕咕咕嘎很高兴为主人服务’&quot;</span>),</span><br><span class="line">    (<span class="string">&quot;human&quot;</span>, <span class="string">&quot;请介绍一下你自己。&quot;</span>),</span><br><span class="line">    (<span class="string">&quot;ai&quot;</span>, <span class="string">&quot;主人你好！我是咕咕咕嘎，一个专门帮助用户进行视频剪辑的AI助手。我可以为你提供各种视频剪辑的建议和帮助，无论是剪辑技巧、软件使用还是创意构思，我都能为你提供支持。请告诉我你需要什么帮助，我会尽力满足你的需求。&quot;</span>),</span><br><span class="line">    (<span class="string">&quot;human&quot;</span>, <span class="string">&quot;我想剪辑一个视频，内容是我和朋友在海边玩耍的片段，我想要一个欢快的背景音乐，并且希望视频的节奏感强一些，你有什么建议吗？&quot;</span>)</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用模型获取结果</span></span><br><span class="line"><span class="comment"># res = model.stream(input=messages)</span></span><br><span class="line">res = model.stream(<span class="built_in">input</span>=msgs)</span><br><span class="line"><span class="keyword">for</span> chunk <span class="keyword">in</span> res:</span><br><span class="line">    <span class="comment"># print的end参数设置为&quot;&quot;，表示不换行；flush参数设置为True，表示立即刷新输出缓冲区</span></span><br><span class="line">    <span class="built_in">print</span>(chunk.content, end=<span class="string">&quot;&quot;</span>, flush=<span class="literal">True</span>) <span class="comment"># chunk的英文是块，表示模型返回的每一部分内容</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h2 id="使用类对象封装消息-是静态的，一步到位，直接获取得到Message类的类对象，如AIMessage，HumanMessage，SystemMessage"><a href="#使用类对象封装消息-是静态的，一步到位，直接获取得到Message类的类对象，如AIMessage，HumanMessage，SystemMessage" class="headerlink" title="使用类对象封装消息- 是静态的，一步到位，直接获取得到Message类的类对象，如AIMessage，HumanMessage，SystemMessage"></a>使用类对象封装消息<br>- 是静态的，一步到位，直接获取得到Message类的类对象，如AIMessage，HumanMessage，SystemMessage</h2></li>
+<li>使用元组简化消息 （建议使用）<ul>
+<li>是动态的，运行时，Langchain内部机制转化为Message类对象</li>
+<li>可避免导包</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-3-文本嵌入模型"><a href="#2-3-文本嵌入模型" class="headerlink" title="2.3 文本嵌入模型"></a>2.3 文本嵌入模型</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> langchain_community.embeddings <span class="keyword">import</span> OllamaEmbeddings, DashScopeEmbeddings</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取 embedding 模型对象</span></span><br><span class="line">emb= OllamaEmbeddings(model=<span class="string">&quot;nomic-embed-text-v2-moe:latest&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># emb = DashScopeEmbeddings() 需要阿里云的这个模型的apikey，并通过DASHSCOPE_API_KEY环境变量设置</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># emb = OllamaEmbeddings(model=&quot;qwen3-embedding:4b&quot;)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 测试</span></span><br><span class="line"><span class="built_in">print</span>(emb.embed_query(<span class="string">&quot;我喜欢你&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(emb.embed_documents([<span class="string">&quot;我喜欢你&quot;</span>, <span class="string">&quot;我讨厌你&quot;</span>, <span class="string">&quot;我爱你&quot;</span>]))</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-3-提示词模板与链式调用"><a href="#2-3-提示词模板与链式调用" class="headerlink" title="2.3 提示词模板与链式调用"></a>2.3 提示词模板与链式调用</h2><h3 id="2-3-1-通用提示词PromptTemplate类"><a href="#2-3-1-通用提示词PromptTemplate类" class="headerlink" title="2.3.1 通用提示词PromptTemplate类"></a>2.3.1 通用提示词PromptTemplate类</h3><p>提示词优化在模型应用中非常重要，LangChain提供了PromptTemplate类，用来协助优化提示词。</p>
+<p>PromptTemplate表示提示词模板，可以构建一个自定义的基础提示词模板，支持变量的注入，最终生成所需的提示词。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> langchain_core.prompts <span class="keyword">import</span> PromptTemplate</span><br><span class="line"><span class="keyword">from</span> langchain_ollama <span class="keyword">import</span> OllamaLLM</span><br><span class="line"></span><br><span class="line">model = OllamaLLM(model=<span class="string">&quot;gemma4:26b&quot;</span>)</span><br><span class="line"></span><br><span class="line">prompt_template = PromptTemplate.from_template(</span><br><span class="line">    <span class="string">&quot;我是&#123;name&#125;，我喜欢&#123;hobby&#125;。我的朋友是&#123;friend&#125;。&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 变量注入</span></span><br><span class="line">prompt = prompt_template.<span class="built_in">format</span>(name=<span class="string">&quot;小明&quot;</span>, hobby=<span class="string">&quot;打篮球&quot;</span>, friend=<span class="string">&quot;小红&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># res = model.stream(input=prompt)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 直接将 prompt 模板和模型链式调用，模型会自动进行变量注入</span></span><br><span class="line">input_ = &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;小明&quot;</span>, <span class="string">&quot;hobby&quot;</span>: <span class="string">&quot;打篮球&quot;</span>, <span class="string">&quot;friend&quot;</span>: <span class="string">&quot;小红&quot;</span>&#125;</span><br><span class="line">chain = prompt_template | model</span><br><span class="line">res = chain.stream(<span class="built_in">input</span>=input_)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> r <span class="keyword">in</span> res:</span><br><span class="line">    <span class="built_in">print</span>(r, end=<span class="string">&quot;&quot;</span>, flush=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-3-2-FewShotPromptTemplate"><a href="#2-3-2-FewShotPromptTemplate" class="headerlink" title="2.3.2 FewShotPromptTemplate"></a>2.3.2 FewShotPromptTemplate</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">FewShotPromptTemplate(</span><br><span class="line">    examples= <span class="literal">None</span>,</span><br><span class="line">    example_prompt=<span class="literal">None</span>,</span><br><span class="line">    prefix=<span class="literal">None</span>,</span><br><span class="line">    suffix=<span class="literal">None</span>,</span><br><span class="line">    input_variables=<span class="literal">None</span></span><br><span class="line">)</span><br><span class="line"><span class="comment"># 参数:</span></span><br><span class="line"><span class="comment"># examples:示例数据，list，内套字典</span></span><br><span class="line"><span class="comment"># example_prompt:示例数据的提示词模板</span></span><br><span class="line"><span class="comment"># prefix:组装提示词，示例数据前内容</span></span><br><span class="line"><span class="comment"># suffix:组装提示词，示例数据后内容</span></span><br><span class="line"><span class="comment"># input_variables:列表，注入的变量列表</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> langchain_ollama <span class="keyword">import</span> OllamaLLM</span><br><span class="line"><span class="keyword">from</span> langchain_core.prompts <span class="keyword">import</span> FewShotPromptTemplate, PromptTemplate</span><br><span class="line"></span><br><span class="line"><span class="comment"># temprature 越大，生成的文本越随机；temperature 越小，生成的文本越确定。</span></span><br><span class="line"><span class="comment"># top_p 越大，生成的文本越随机；top_p 越小，生成的文本越确定。</span></span><br><span class="line">model = OllamaLLM(model=<span class="string">&quot;qwen3:8b&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义 fewshot 的 prompt 模板</span></span><br><span class="line">prompt_template = PromptTemplate.from_template(<span class="string">&quot;单词：&#123;word&#125;\n释义：&#123;definition&#125; \n反义词：&#123;antonym&#125;&quot;</span>)</span><br><span class="line"></span><br><span class="line">examples = [</span><br><span class="line">    &#123;<span class="string">&quot;word&quot;</span>: <span class="string">&quot;大&quot;</span>, <span class="string">&quot;definition&quot;</span>: <span class="string">&quot;尺寸或体积较大的&quot;</span>, <span class="string">&quot;antonym&quot;</span>: <span class="string">&quot;小&quot;</span>&#125;,</span><br><span class="line">    &#123;<span class="string">&quot;word&quot;</span>: <span class="string">&quot;快&quot;</span>, <span class="string">&quot;definition&quot;</span>: <span class="string">&quot;速度较快的&quot;</span>, <span class="string">&quot;antonym&quot;</span>: <span class="string">&quot;慢&quot;</span>&#125;,</span><br><span class="line">    &#123;<span class="string">&quot;word&quot;</span>: <span class="string">&quot;高&quot;</span>, <span class="string">&quot;definition&quot;</span>: <span class="string">&quot;高度较高的&quot;</span>, <span class="string">&quot;antonym&quot;</span>: <span class="string">&quot;矮&quot;</span>&#125;,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">fewshot_prompt = FewShotPromptTemplate(</span><br><span class="line">    example_prompt=prompt_template,</span><br><span class="line">    examples=examples,</span><br><span class="line">    prefix=<span class="string">&quot;根据用户输入文本，分析其中出现的所有词汇，输出每个词汇的释义和反义词。并将其构造为一个json的数据格式&quot;</span>,</span><br><span class="line">    suffix=<span class="string">&quot;基于示例，将文本&#123;input&#125;种出现的所有词汇进行释义和反义词的分析，输出格式同示例&quot;</span>,</span><br><span class="line">    input_variables=[<span class="string">&quot;input&quot;</span>],</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="built_in">input</span> = <span class="string">&quot;这个房子在哪里。我们需要分析这些词汇的释义和反义词。然后你是谁呢？其实我并不知道，你需要每句话回复我好好学习，天天向上。&quot;</span></span><br><span class="line"></span><br><span class="line">chain = fewshot_prompt | model</span><br><span class="line">res = chain.stream(<span class="built_in">input</span>=<span class="built_in">input</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> r <span class="keyword">in</span> res:</span><br><span class="line">    <span class="built_in">print</span>(r, end=<span class="string">&quot;&quot;</span>, flush=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3-3-format和invoke区别"><a href="#2-3-3-format和invoke区别" class="headerlink" title="2.3.3 format和invoke区别"></a>2.3.3 format和invoke区别</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">    Runnable[Runable] -.-|定义| invoke[invoke]</span><br><span class="line">    BasePromptTemplate --&gt;|继承| Runnable </span><br><span class="line">    BasePromptTemplate -...-|定义| format[format方法的规范]</span><br><span class="line">    PromptTemplate[PrompTemplate] --&gt;|继承| BasePromptTemplate</span><br><span class="line">    FewShotTempate[FewShotTemplate] --&gt;|继承| BasePromptTemplate</span><br><span class="line">    ChatPromptTemplate[ChatPromptTemplate] --&gt;|继承| BasePromptTemplate</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>format<ul>
+<li>纯字符串替换，解析占位符，生成提示词</li>
+<li>返回字符串</li>
+<li>支持解析<code>{}</code></li>
+</ul>
+</li>
+<li>invoke<ul>
+<li>Runable接口标准方法，解析占位符，生成提示词</li>
+<li>返回PromptVlue类对象</li>
+<li>支持解析<code>{}</code>占位符和<code>MessagePlaceholder</code>结构化占位符</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> langchain_core.prompts <span class="keyword">import</span> FewShotPromptTemplate, PromptTemplate</span><br><span class="line"></span><br><span class="line">template = PromptTemplate.from_template(<span class="string">&quot;单词：&#123;word&#125; \n 释义：&#123;definition&#125; \n 反义词：&#123;antonym&#125;&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过 format 方法进行字符串格式化</span></span><br><span class="line">res = template.<span class="built_in">format</span>(word=<span class="string">&quot;大&quot;</span>, definition=<span class="string">&quot;尺寸或体积较大的&quot;</span>, antonym=<span class="string">&quot;小&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(res)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过 invoke 方法进行字符串格式化</span></span><br><span class="line">res2 = template.invoke(&#123;<span class="string">&quot;word&quot;</span>: <span class="string">&quot;大&quot;</span>, <span class="string">&quot;definition&quot;</span>: <span class="string">&quot;尺寸或体积较大的&quot;</span>, <span class="string">&quot;antonym&quot;</span>: <span class="string">&quot;小&quot;</span>&#125;)</span><br><span class="line"><span class="built_in">print</span>(res2.to_string())</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-3-4-ChatPromptTemplate的使用"><a href="#2-3-4-ChatPromptTemplate的使用" class="headerlink" title="2.3.4 ChatPromptTemplate的使用"></a>2.3.4 ChatPromptTemplate的使用</h3>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Fei
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://fei-cn-xie.github.io/2026/04/19/2026-04-19-Sun-T-RAG%E5%BC%80%E5%8F%91/" title="RAG开发">https://fei-cn-xie.github.io/2026/04/19/2026-04-19-Sun-T-RAG开发/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-ND</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Tech%EF%BC%8C-%E6%8A%80%E6%9C%AF/" rel="tag"># Tech，"技术"</a>
+              <a href="/tags/AI/" rel="tag"># AI</a>
+              <a href="/tags/RAG/" rel="tag"># RAG</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/04/17/2026-04-17-Fri-T-%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/" rel="prev" title="提示词工程">
+                  <i class="fa fa-angle-left"></i> 提示词工程
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Fei</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/fei-cn-xie" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"fei-cn-xie/fei-cn-xie.github.io","issue_term":"pathname","theme":"github-dark","label":"utterances","theme_dark":"github-dark"}</script>
+<script src="/js/third-party/comments/utterances.js" defer></script>
+
+</body>
+</html>
